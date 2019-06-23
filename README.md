@@ -16,6 +16,10 @@ Click the binder link to view and run these notebooks in your browser. no downlo
 | [pytest](https://docs.pytest.org/en/latest/) + [unittest.mock](https://docs.python.org/3/library/unittest.mock.html) | testing, unit testing, test driven development |
 | [pandas](https://pandas.pydata.org/) + [seaborn](https://seaborn.pydata.org/) | data analysis from csv/excel and statistical data visualization |
 | [Requests](https://2.python-requests.org/en/master/) | HTTP Client - sending HTTP requests and parsing results |
+| [django](https://www.djangoproject.com/) | Django makes it easier to build better Web apps more quickly and with less code |
+| [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) | Library for parallel computing using processes |
+| [asyncio](https://docs.python.org/3/library/asyncio.html) | library for async/await ayncio concurrent programming without threads |
+
 
 ## Suggested reading and resources
 |        |        |
