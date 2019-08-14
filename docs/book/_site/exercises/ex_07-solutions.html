@@ -1,0 +1,3736 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Ex 07-solutions</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="/learn-python/aviadr1.github.io/learn-python/exercises/ex_07-solutions.html">
+  <link rel="alternate" type="application/rss+xml" title="learn-python" href="/learn-python/aviadr1.github.io/learn-python/feed.xml">
+
+  <meta property="og:url"         content="/learn-python/aviadr1.github.io/learn-python/exercises/ex_07-solutions.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Ex 07-solutions" />
+<meta property="og:description" content="" />
+<meta property="og:image"       content="" />
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":
+    "aviadr1.github.io/learn-python/exercises/ex_07-solutions.html",
+  "headline":
+    "Ex 07-solutions",
+  "datePublished":
+    "2019-08-14T15:27:34+03:00",
+  "dateModified":
+    "2019-08-14T15:27:34+03:00",
+  "description":
+    "",
+  "author": {
+    "@type": "Person",
+    "name": "Aviad Rozenhek"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "aviadr1.github.io/learn-python",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "aviadr1.github.io/learn-python",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/learn-python/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/learn-python/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    CommonHTML: {
+        linebreaks: {
+            automatic: true,
+        },
+    },
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+
+  <!-- DOM updating function -->
+  <script>
+const runWhenDOMLoaded = cb => {
+  if (document.readyState != 'loading') {
+    cb()
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', cb)
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') cb()
+    })
+  }
+}
+
+// Helper function to init things quickly
+initFunction = function(myfunc) {
+  runWhenDOMLoaded(myfunc);
+  document.addEventListener('turbolinks:load', myfunc);
+};
+</script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/learn-python';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="/learn-python/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script>
+
+initFunction(function () {
+    anchors.add("main h1, main h2, main h3, main h4")
+});
+
+</script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="/learn-python/assets/js/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+<!-- Display Thebelab button in each code cell -->
+<script>
+/**
+ * Set up thebelab button for code blocks
+ */
+
+const thebelabCellButton = id =>
+  `<a id="thebelab-cell-button-${id}" class="btn thebebtn o-tooltip--left" data-tooltip="Interactive Mode">
+    <img src="/learn-python/assets/images/edit-button.svg" alt="Start interactive mode">
+  </a>`
+
+
+const addThebelabButtonToCodeCells =  () => {
+
+  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("thebelab-cell-button-" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', thebelabCellButton(id));
+    }
+  })
+}
+
+initFunction(addThebelabButtonToCodeCells);
+</script>
+
+
+
+<script type="text/x-thebe-config">
+    {
+      requestKernel: true,
+      binderOptions: {
+        repo: 'YOUR-ORG/YOUR-REPO',
+        ref: 'gh-pages',
+      },
+      codeMirrorConfig: {
+        theme: "abcdef"
+      },
+      kernelOptions: {
+        name: 'python3',
+      }
+    }
+</script>
+<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script>
+    /**
+     * Add attributes to Thebelab blocks
+     */
+
+    const initThebelab = () => {
+        const addThebelabToCodeCells = () => {
+            console.log("Adding thebelab to code cells...");
+            // If Thebelab hasn't loaded, wait a bit and try again. This
+            // happens because we load ClipboardJS asynchronously.
+            if (window.thebelab === undefined) {
+                setTimeout(addThebelabToCodeCells, 250)
+            return
+            }
+
+            // If we already detect a Thebelab cell, don't re-run
+            if (document.querySelectorAll('div.thebelab-cell').length > 0) {
+                return;
+            }
+
+            // Find all code cells, replace with Thebelab interactive code cells
+            const codeCells = document.querySelectorAll('.input_area pre')
+            codeCells.forEach((codeCell, index) => {
+                const id = codeCellId(index)
+                codeCell.setAttribute('data-executable', 'true')
+
+                // Figure out the language it uses and add this too
+                var parentDiv = codeCell.parentElement.parentElement;
+                var arrayLength = parentDiv.classList.length;
+                for (var ii = 0; ii < arrayLength; ii++) {
+                    var parts = parentDiv.classList[ii].split('language-');
+                    if (parts.length === 2) {
+                        // If found, assign dataLanguage and break the loop
+                        var dataLanguage = parts[1];
+                        break;
+                    }
+                }
+                codeCell.setAttribute('data-language', dataLanguage)
+
+                // If the code cell is hidden, show it
+                var inputCheckbox = document.querySelector(`input#hidebtn${codeCell.id}`);
+                if (inputCheckbox !== null) {
+                    setCodeCellVisibility(inputCheckbox, 'visible');
+                }
+            });
+
+            // Remove the event listener from the page so keyboard press doesn't
+            // Change page
+            document.removeEventListener('keydown', initPageNav)
+            keyboardListener = false;
+
+            // Init thebelab
+            thebelab.bootstrap();
+
+            // Remove copy buttons since they won't work anymore
+            const copyAndThebeButtons = document.querySelectorAll('.copybtn, .thebebtn')
+            copyAndThebeButtons.forEach((button, index) => {
+                button.remove();
+            });
+
+            // Remove outputs since they'll be stale
+            const outputs = document.querySelectorAll('.output *, .output')
+            outputs.forEach((output, index) => {
+                output.remove();
+            });
+        }
+
+        // Add event listener for the function to modify code cells
+        const thebelabButtons = document.querySelectorAll('[id^=thebelab], [id$=thebelab]')
+        thebelabButtons.forEach((thebelabButton,index) => {
+            if (thebelabButton === null) {
+                setTimeout(initThebelab, 250)
+                return
+            };
+            thebelabButton.addEventListener('click', addThebelabToCodeCells);
+        });
+    }
+
+    // Initialize Thebelab
+    initFunction(initThebelab);
+</script>
+
+
+
+  <!-- Load the auto-generating TOC -->
+  <script src="/learn-python/assets/js/tocbot.min.js"  type="text/javascript"></script>
+  <script>
+var initToc = function () {
+  tocbot.init({
+    tocSelector: 'nav.onthispage',
+    contentSelector: '.c-textbook__content',
+    headingSelector: 'h2, h3',
+    orderedList: false,
+    collapseDepth: 6,
+    listClass: 'toc__menu',
+    activeListItemClass: "",  // Not using
+    activeLinkClass: "", // Not using
+  });
+  tocbot.refresh();
+}
+initFunction(initToc);
+</script>
+
+  <!-- Google analytics -->
+  <script src="/learn-python/assets/js/ga.js" async></script>
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const codeCellId = index => `codecell${index}`
+
+const clipboardButton = id =>
+  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/learn-python/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("copy-button" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+
+  <!-- Hide cell code -->
+  <script>
+    /**
+    Add buttons to hide code cells
+    */
+
+
+    var setCodeCellVisibility = function (inputField, kind) {
+        // Update the image and class for hidden
+        var id = inputField.getAttribute('data-id');
+        var codeCell = document.querySelector(`#${id} div.highlight`);
+
+        if (kind === "visible") {
+            codeCell.classList.remove('hidden');
+            inputField.checked = true;
+        } else {
+            codeCell.classList.add('hidden');
+            inputField.checked = false;
+        }
+    }
+
+    var toggleCodeCellVisibility = function (event) {
+        // The label is clicked, and now we decide what to do based on the input field's clicked status
+        if (event.target.tagName === "LABEL") {
+            var inputField = event.target.previousElementSibling;
+        } else {
+            // It is the span inside the target
+            var inputField = event.target.parentElement.previousElementSibling;
+        }
+
+        if (inputField.checked === true) {
+            setCodeCellVisibility(inputField, "visible");
+        } else {
+            setCodeCellVisibility(inputField, "hidden");
+        }
+    }
+
+
+    // Button constructor
+    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+    var addHideButton = function () {
+        // If a hide button is already added, don't add another
+        if (document.querySelector('div.hidecode input') !== null) {
+            return;
+        }
+
+        // Find the input cells and add a hide button
+        document.querySelectorAll('div.input_area').forEach(function (item, index) {
+            if (!item.classList.contains("hidecode")) {
+                // Skip the cell if it doesn't have a hidecode class
+                return;
+            }
+
+            const id = codeCellId(index)
+            item.setAttribute('id', id);
+            // Insert the button just inside the end of the next div
+            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
+
+            // Set up the visibility toggle
+            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
+            hideLink.addEventListener('click', toggleCodeCellVisibility)
+        });
+    }
+
+
+    // Initialize the hide buttos
+    var initHiddenCells = function () {
+        // Add hide buttons to the cells
+        addHideButton();
+
+        // Toggle the code cells that should be hidden
+        document.querySelectorAll('div.hidecode input').forEach(function (item) {
+            setCodeCellVisibility(item, 'hidden');
+            item.checked = true;
+        })
+    }
+
+    initFunction(initHiddenCells);
+
+</script>
+
+  <!-- Load custom website scripts -->
+  <script src="/learn-python/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/learn-python/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/learn-python/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="/learn-python/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://jupyter.org/jupyter-book/"><img src="/learn-python/images/logo/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">learn-python</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/ex_02-questions.html"
+        >
+          
+            1.
+          
+          Ex 02-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/ex_02-solutions.html"
+        >
+          
+            2.
+          
+          Ex 02-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/notebooks/lesson_02-dictionary.html"
+        >
+          
+            3.
+          
+          Lesson 02-dictionary
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/notebooks/lesson_02-importing_math_printing_floats.html"
+        >
+          
+            4.
+          
+          Lesson 02-importing Math Printing Floats
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/notebooks/lesson_02-lists.html"
+        >
+          
+            5.
+          
+          Lesson 02-lists
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/notebooks/lesson_02-mutability_vs_immutability.html"
+        >
+          
+            6.
+          
+          Lesson 02-mutability Vs Immutability
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/02-variables/notebooks/lesson_02-variables.html"
+        >
+          
+            7.
+          
+          Lesson 02-variables
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_03-questions.html"
+        >
+          
+            8.
+          
+          Ex 03-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_03-solutions.html"
+        >
+          
+            9.
+          
+          Ex 03-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_04-questions.html"
+        >
+          
+            10.
+          
+          Ex 04-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_04-solutions.html"
+        >
+          
+            11.
+          
+          Ex 04-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_05-questions.html"
+        >
+          
+            12.
+          
+          Ex 05-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_05-solutions.html"
+        >
+          
+            13.
+          
+          Ex 05-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_06-questions.html"
+        >
+          
+            14.
+          
+          Ex 06-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_06-solutions.html"
+        >
+          
+            15.
+          
+          Ex 06-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_07-questions.html"
+        >
+          
+            16.
+          
+          Ex 07-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry c-sidebar__entry--active"
+          href="/learn-python/exercises/ex_07-solutions.html"
+        >
+          
+            17.
+          
+          Ex 07-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_08-questions.html"
+        >
+          
+            18.
+          
+          Ex 08-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_08-solutions.html"
+        >
+          
+            19.
+          
+          Ex 08-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_09-questions.html"
+        >
+          
+            20.
+          
+          Ex 09-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_09-solutions.html"
+        >
+          
+            21.
+          
+          Ex 09-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_12-questions.html"
+        >
+          
+            22.
+          
+          Ex 12-questions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/ex_12-solutions.html"
+        >
+          
+            23.
+          
+          Ex 12-solutions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/exercises/intro.html"
+        >
+          
+            24.
+          
+          Intro
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_01-bitahon_intro.html"
+        >
+          
+            25.
+          
+          Lesson 01-bitahon Intro
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_01-exploring_python_12_5_19.html"
+        >
+          
+            26.
+          
+          Lesson 01-exploring Python 12 5 19
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_01-python_basics.html"
+        >
+          
+            27.
+          
+          Lesson 01-python Basics
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_01-trying_out_python.html"
+        >
+          
+            28.
+          
+          Lesson 01-trying Out Python
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-1-100_multiplication_matrix_Luah_Kefel_.html"
+        >
+          
+            29.
+          
+          Lesson 03-1-100 Multiplication Matrix Luah Kefel 
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-break_continue.html"
+        >
+          
+            30.
+          
+          Lesson 03-break Continue
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-casting_objects_as_booleans.html"
+        >
+          
+            31.
+          
+          Lesson 03-casting Objects As Booleans
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-converting_to_bool.html"
+        >
+          
+            32.
+          
+          Lesson 03-converting To Bool
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-enumerate.html"
+        >
+          
+            33.
+          
+          Lesson 03-enumerate
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-enumerate_change_list.html"
+        >
+          
+            34.
+          
+          Lesson 03-enumerate Change List
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-for_loop.html"
+        >
+          
+            35.
+          
+          Lesson 03-for Loop
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-for_while_with_password_example.html"
+        >
+          
+            36.
+          
+          Lesson 03-for While With Password Example
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-if_elif_else-with_password_checking.html"
+        >
+          
+            37.
+          
+          Lesson 03-if Elif Else-with Password Checking
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-if_else_password.html"
+        >
+          
+            38.
+          
+          Lesson 03-if Else Password
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-july_break_continue.html"
+        >
+          
+            39.
+          
+          Lesson 03-july Break Continue
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-july_enumerate_zip.html"
+        >
+          
+            40.
+          
+          Lesson 03-july Enumerate Zip
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-while_loop-password.html"
+        >
+          
+            41.
+          
+          Lesson 03-while Loop-password
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_03-while_loop-powers_loah_kefel.html"
+        >
+          
+            42.
+          
+          Lesson 03-while Loop-powers Loah Kefel
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-formatting_bitahon.html"
+        >
+          
+            43.
+          
+          Lesson 04-formatting Bitahon
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-print_parameters.html"
+        >
+          
+            44.
+          
+          Lesson 04-print Parameters
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-split_join.html"
+        >
+          
+            45.
+          
+          Lesson 04-split Join
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-split_join_CSV.html"
+        >
+          
+            46.
+          
+          Lesson 04-split Join Csv
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-strings_multiline_strings_checkpoint.html"
+        >
+          
+            47.
+          
+          Lesson 04-strings Multiline Strings Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-string_concatenation.html"
+        >
+          
+            48.
+          
+          Lesson 04-string Concatenation
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-string_formatting.html"
+        >
+          
+            49.
+          
+          Lesson 04-string Formatting
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-string_formatting_checkpoint.html"
+        >
+          
+            50.
+          
+          Lesson 04-string Formatting Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-string_slicing.html"
+        >
+          
+            51.
+          
+          Lesson 04-string Slicing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-string_slicing_bitahon.html"
+        >
+          
+            52.
+          
+          Lesson 04-string Slicing Bitahon
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_04-string_tests.html"
+        >
+          
+            53.
+          
+          Lesson 04-string Tests
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-dictionaries_checkpoint.html"
+        >
+          
+            54.
+          
+          Lesson 05-dictionaries Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-extending_lists.html"
+        >
+          
+            55.
+          
+          Lesson 05-extending Lists
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-how_many_unique_words_in_dr_seuss_book.html"
+        >
+          
+            56.
+          
+          Lesson 05-how Many Unique Words In Dr Seuss Book
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-july_fruits_sorting_dict_zip.html"
+        >
+          
+            57.
+          
+          Lesson 05-july Fruits Sorting Dict Zip
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-july_sets.html"
+        >
+          
+            58.
+          
+          Lesson 05-july Sets
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-removing_from_lists.html"
+        >
+          
+            59.
+          
+          Lesson 05-removing From Lists
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-reverse_dictionary.html"
+        >
+          
+            60.
+          
+          Lesson 05-reverse Dictionary
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-reverse_dict_using_setdefault.html"
+        >
+          
+            61.
+          
+          Lesson 05-reverse Dict Using Setdefault
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-sets_checkpoint.html"
+        >
+          
+            62.
+          
+          Lesson 05-sets Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-slicing.html"
+        >
+          
+            63.
+          
+          Lesson 05-slicing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-slicing_bitahon.html"
+        >
+          
+            64.
+          
+          Lesson 05-slicing Bitahon
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-slicing_checkpoint.html"
+        >
+          
+            65.
+          
+          Lesson 05-slicing Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-sorting.html"
+        >
+          
+            66.
+          
+          Lesson 05-sorting
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-sorting_bitahon.html"
+        >
+          
+            67.
+          
+          Lesson 05-sorting Bitahon
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-unpacking.html"
+        >
+          
+            68.
+          
+          Lesson 05-unpacking
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_05-unpacking_bitahon.html"
+        >
+          
+            69.
+          
+          Lesson 05-unpacking Bitahon
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_06-sub_python2-to-python3.html"
+        >
+          
+            70.
+          
+          Lesson 06-sub Python2-to-python3
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-configparser.html"
+        >
+          
+            71.
+          
+          Lesson 07-configparser
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-files.html"
+        >
+          
+            72.
+          
+          Lesson 07-files
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-file_example.html"
+        >
+          
+            73.
+          
+          Lesson 07-file Example
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-file_open_write.html"
+        >
+          
+            74.
+          
+          Lesson 07-file Open Write
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-json.html"
+        >
+          
+            75.
+          
+          Lesson 07-json
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-oops_i_did_it_again.html"
+        >
+          
+            76.
+          
+          Lesson 07-oops I Did It Again
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-open_read_write_regex.html"
+        >
+          
+            77.
+          
+          Lesson 07-open Read Write Regex
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-pandas_and_csv.html"
+        >
+          
+            78.
+          
+          Lesson 07-pandas And Csv
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_07-pickle_checkpoint.html"
+        >
+          
+            79.
+          
+          Lesson 07-pickle Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-documentation.html"
+        >
+          
+            80.
+          
+          Lesson 08-documentation
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-functions_calling_functions_shapes.html"
+        >
+          
+            81.
+          
+          Lesson 08-functions Calling Functions Shapes
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-functions_with_variadic_parameter.html"
+        >
+          
+            82.
+          
+          Lesson 08-functions With Variadic Parameter
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-function_fundamentals.html"
+        >
+          
+            83.
+          
+          Lesson 08-function Fundamentals
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-lambda.html"
+        >
+          
+            84.
+          
+          Lesson 08-lambda
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-lambda_nested_functions_functional_programming.html"
+        >
+          
+            85.
+          
+          Lesson 08-lambda Nested Functions Functional Programming
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-mul_pow.html"
+        >
+          
+            86.
+          
+          Lesson 08-mul Pow
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-positional_and_named_arguments.html"
+        >
+          
+            87.
+          
+          Lesson 08-positional And Named Arguments
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-soft_intro_to_functions.html"
+        >
+          
+            88.
+          
+          Lesson 08-soft Intro To Functions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-sumnums.html"
+        >
+          
+            89.
+          
+          Lesson 08-sumnums
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-unpacking.html"
+        >
+          
+            90.
+          
+          Lesson 08-unpacking
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-variadic_functions.html"
+        >
+          
+            91.
+          
+          Lesson 08-variadic Functions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-variadic_functions_unpacking.html"
+        >
+          
+            92.
+          
+          Lesson 08-variadic Functions Unpacking
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_08-veriadic_funcs_args.html"
+        >
+          
+            93.
+          
+          Lesson 08-veriadic Funcs Args
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-coroutines.html"
+        >
+          
+            94.
+          
+          Lesson 09-coroutines
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-deepcopy_shallow_copy.html"
+        >
+          
+            95.
+          
+          Lesson 09-deepcopy Shallow Copy
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-dictionary_comprehension_generators_lazy_lists.html"
+        >
+          
+            96.
+          
+          Lesson 09-dictionary Comprehension Generators Lazy Lists
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-generators_lazy_functions.html"
+        >
+          
+            97.
+          
+          Lesson 09-generators Lazy Functions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-infinite_coroutine.html"
+        >
+          
+            98.
+          
+          Lesson 09-infinite Coroutine
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-lazy_lists_generators.html"
+        >
+          
+            99.
+          
+          Lesson 09-lazy Lists Generators
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-list_and_dictionary_comprehension_checkpoint.html"
+        >
+          
+            100.
+          
+          Lesson 09-list And Dictionary Comprehension Checkpoint
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-list_comprehension_order.html"
+        >
+          
+            101.
+          
+          Lesson 09-list Comprehension Order
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-list_comprehension_sin.html"
+        >
+          
+            102.
+          
+          Lesson 09-list Comprehension Sin
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-shallow_copy_and_deep_copy.html"
+        >
+          
+            103.
+          
+          Lesson 09-shallow Copy And Deep Copy
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_09-template_for_list_comprehension.html"
+        >
+          
+            104.
+          
+          Lesson 09-template For List Comprehension
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_10-modules.html"
+        >
+          
+            105.
+          
+          Lesson 10-modules
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_11-basic_classes.html"
+        >
+          
+            106.
+          
+          Lesson 11-basic Classes
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_11-duck_typing.html"
+        >
+          
+            107.
+          
+          Lesson 11-duck Typing
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_11-inheritance.html"
+        >
+          
+            108.
+          
+          Lesson 11-inheritance
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_12-exceptions.html"
+        >
+          
+            109.
+          
+          Lesson 12-exceptions
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_12-raise_try_except_finally.html"
+        >
+          
+            110.
+          
+          Lesson 12-raise Try Except Finally
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_13-os_system_subprocess.html"
+        >
+          
+            111.
+          
+          Lesson 13-os System Subprocess
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_13-os_system_subprocess_popen.html"
+        >
+          
+            112.
+          
+          Lesson 13-os System Subprocess Popen
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/lesson_15-namedtuple.html"
+        >
+          
+            113.
+          
+          Lesson 15-namedtuple
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/learn-python/notebooks/pickle_example.html"
+        >
+          
+            114.
+          
+          Pickle Example
+        </a>
+
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
+</nav>
+
+      
+      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+      <aside class="sidebar__right">
+          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+          <nav class="onthispage">
+          </nav>
+      </aside>
+      
+      <main class="c-textbook__page" tabindex="-1">
+          <div class="o-wrapper">
+            <div class="c-sidebar-toggle">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <button
+    id="js-sidebar-toggle"
+    class="hamburger hamburger--arrowalt is-active"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
+  </button>
+</div>
+
+            
+<div class="buttons">
+<a href="/learn-python/content/exercises/ex_07-solutions.ipynb" download>
+<button id="interact-button-download" class="interact-button">Download</button>
+</a>
+
+<button id="interact-button-thebelab" class="interact-button">Thebelab</button>
+
+
+
+
+
+</div>
+
+
+            <div class="c-textbook__content">
+              <p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/exercises/ex%2007%20-%20solutions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" title="Open this file in Google Colab" alt="Colab" />
+</a></p>
+
+<h1 id="current-working-directory">current working directory</h1>
+<p>use the following code to see what your current working directory is</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+current_working_directory = os.path.realpath('.')
+print(current_working_directory)
+</code></pre></div></div>
+
+<p>whenever you open files without specifying a full path, the operating system will assume you are using this directory</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">current_working_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">current_working_directory</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\jbt\Downloads
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h1 id="look-at-a-folder-in-windows-file-explorer">look at a folder in windows file explorer</h1>
+<blockquote>
+  <p><strong>on windows OS only</strong></p>
+</blockquote>
+
+<p>use the following code to open the windows file explorer in your current working directory. <br />
+this will be useful when you’re looking for files you are creating</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># windows only
+import subprocess
+current_working_directory = os.path.realpath('.')
+if os.name == 'nt':
+    subprocess.Popen('explorer.exe ' + current_working_directory)
+</code></pre></div></div>
+
+<p>notice how it opened a new window for you</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># windows only</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="n">current_working_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">'nt'</span><span class="p">:</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s">'explorer.exe '</span> <span class="o">+</span> <span class="n">current_working_directory</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+<h1 id="write-file">write file</h1>
+
+<ol>
+  <li>use the following code to open the file ex07.txt for writing
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> f = open('ex07.txt', 'w')
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>here’s some text to write into the file</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> dead_parrot = """
+ I wish to complain about this parrot what I purchased not half an hour ago from this very boutique.
+
+ Oh yes, the, uh, the Norwegian Blue...What's,uh...What's wrong with it?
+
+ I'll tell you what's wrong with it, my lad. 'E's dead, that's what's wrong with it!
+
+ No, no, 'e's uh,...he's resting.
+ """
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>don’t forget to close the file
+<br /><br /></p>
+  </li>
+  <li>can you find this file on your hard drive?</li>
+</ol>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'ex07.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+
+<span class="n">dead_parrot</span> <span class="o">=</span> <span class="s">"""
+I wish to complain about this parrot what I purchased not half an hour ago from this very boutique.
+
+Oh yes, the, uh, the Norwegian Blue...What's,uh...What's wrong with it?
+
+I'll tell you what's wrong with it, my lad. 'E's dead, that's what's wrong with it!
+
+No, no, 'e's uh,...he's resting.
+"""</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">dead_parrot</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">subprocess</span><span class="p">,</span> <span class="n">os</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">'nt'</span><span class="p">:</span> 
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s">'notepad.exe ex07.txt'</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+<h1 id="reading-a-file">reading a file</h1>
+
+<p>use <code class="highlighter-rouge">open()</code> and a for loop to read the contents of the <code class="highlighter-rouge">"ex07.txt"</code> file, line by line</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'ex07.txt'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+I wish to complain about this parrot what I purchased not half an hour ago from this very boutique.
+
+Oh yes, the, uh, the Norwegian Blue...What's,uh...What's wrong with it?
+
+I'll tell you what's wrong with it, my lad. 'E's dead, that's what's wrong with it!
+
+No, no, 'e's uh,...he's resting.
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h1 id="convenience-functions---read_file">convenience functions - read_file</h1>
+
+<p>Lets write a convenience function called <code class="highlighter-rouge">readfile</code> that accepts one parameter called <code class="highlighter-rouge">filename</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def readfile(filename):
+</code></pre></div></div>
+<p>the function should:</p>
+<ol>
+  <li>opens the file to a variable called f</li>
+  <li>reads and returns all the content of the file (use <code class="highlighter-rouge">f.read()</code>)</li>
+  <li>closes the file</li>
+</ol>
+
+<p>Also lets write convenience function called <code class="highlighter-rouge">printfile</code> that accepts one parameter called <code class="highlighter-rouge">filename</code> like so:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def printfile(filename):
+    print(readfile(filename))
+</code></pre></div></div>
+<p>Lets use <code class="highlighter-rouge">printfile</code> function on <code class="highlighter-rouge">'ex07.txt'</code> to read its contents</p>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">readfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">printfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">readfile</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
+
+<span class="n">printfile</span><span class="p">(</span><span class="s">'ex07.txt'</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+I wish to complain about this parrot what I purchased not half an hour ago from this very boutique.
+
+Oh yes, the, uh, the Norwegian Blue...What's,uh...What's wrong with it?
+
+I'll tell you what's wrong with it, my lad. 'E's dead, that's what's wrong with it!
+
+No, no, 'e's uh,...he's resting.
+
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h1 id="transforming-a-file">transforming a file</h1>
+<p>we want to write an ALL CAPS version of ex07.txt where all the text is in uppercase</p>
+
+<ol>
+  <li>
+    <p>open the ‘ex07.txt’ input file for reading <br /><br /></p>
+  </li>
+  <li>
+    <p>open a new ‘ex07.allcaps.txt’ output file for writing <br /><br /></p>
+  </li>
+  <li>use a for loop on the read file to read the text line by line
+    <ol>
+      <li>convert each line to uppercase</li>
+      <li>write the line to the output file 
+<br /><br /></li>
+    </ol>
+  </li>
+  <li>
+    <p>don’t forget to close the files <br /><br /></p>
+  </li>
+  <li>make sure the new file is there</li>
+</ol>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'ex07.txt'</span><span class="p">)</span>
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'ex07.allcaps.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+    
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">printfile</span><span class="p">(</span><span class="s">'ex07.allcaps.txt'</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+I WISH TO COMPLAIN ABOUT THIS PARROT WHAT I PURCHASED NOT HALF AN HOUR AGO FROM THIS VERY BOUTIQUE.
+
+OH YES, THE, UH, THE NORWEGIAN BLUE...WHAT'S,UH...WHAT'S WRONG WITH IT?
+
+I'LL TELL YOU WHAT'S WRONG WITH IT, MY LAD. 'E'S DEAD, THAT'S WHAT'S WRONG WITH IT!
+
+NO, NO, 'E'S UH,...HE'S RESTING.
+
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h1 id="renaming-and-deleting-files">renaming and deleting files</h1>
+
+<ol>
+  <li>use the following code to delete the file <code class="highlighter-rouge">"ex07.txt"</code>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+os.remove('ex07.txt')
+</code></pre></div>    </div>
+  </li>
+  <li>use the <code class="highlighter-rouge">os.rename()</code> function (use help to figure out how to use it) to rename the file <code class="highlighter-rouge">'ex07.allcaps.txt'</code> to <code class="highlighter-rouge">"ex07.txt"</code></li>
+</ol>
+
+<blockquote>
+  <p><strong>now we’ve “rewritten” the ex07.txt file to be in all caps</strong> <br />
+but what <em>really</em> happened is that we wrote a new file, and then replaced the old file with the new file
+in most cases of working on files, this is the right way to approach problems and how many scripts, editors or programs work &gt; in the real world</p>
+</blockquote>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">'ex07.txt'</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s">'ex07.allcaps.txt'</span><span class="p">,</span> <span class="s">'ex07.txt'</span><span class="p">)</span>
+
+
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+<h1 id="writing-a-csv-file">writing a CSV file</h1>
+
+<blockquote>
+  <p>The so-called CSV (Comma Separated Values) format is the most common import and export format for spreadsheets and databases. CSV format was used for many years prior to attempts to describe the format in a standardized way in RFC 4180.</p>
+</blockquote>
+
+<p>here’s a some information about bank customers, their name, current money in the bank, and the salary check that they have received</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>transactions = [
+#    name             , money in bank now  , salary
+    ['eric idle'      , 10000              , 5000  ],
+    ['terry gilliam'  ,  2500              , 12500 ],
+    ['graham chapman' , -5000              , 20000 ]
+    ]
+</code></pre></div></div>
+
+<p>can you use a loop to write this, along with a header, to a CSV file named <code class="highlighter-rouge">"transactions.csv"</code>?</p>
+
+<p>expected output in transactions.csv:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name, money in bank now, salary
+eric idle, 10000, 5000
+terry gilliam, 2500, 12500
+graham chapman, 
+</code></pre></div></div>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">transactions</span> <span class="o">=</span> <span class="p">[</span>
+<span class="c">#    name             , money in bank now  , salary  </span>
+    <span class="p">[</span><span class="s">'eric idle'</span>      <span class="p">,</span> <span class="mi">10000</span>              <span class="p">,</span> <span class="mi">5000</span>  <span class="p">],</span>
+    <span class="p">[</span><span class="s">'terry gilliam'</span>  <span class="p">,</span>  <span class="mi">2500</span>              <span class="p">,</span> <span class="mi">12500</span> <span class="p">],</span>
+    <span class="p">[</span><span class="s">'graham chapman'</span> <span class="p">,</span> <span class="o">-</span><span class="mi">5000</span>              <span class="p">,</span> <span class="mi">20000</span> <span class="p">]</span>
+    <span class="p">]</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'transactions.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="s">'money in bank now'</span><span class="p">,</span> <span class="s">'salary'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">', '</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">transactions</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">money</span><span class="p">,</span> <span class="n">salary</span> <span class="o">=</span> <span class="n">trans</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">money</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">', '</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+    
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">printfile</span><span class="p">(</span><span class="s">'transactions.csv'</span><span class="p">)</span>    
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name, money in bank now, salary
+eric idle, 10000, 5000
+terry gilliam, 2500, 12500
+graham chapman, -5000, 20000
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h1 id="transforming-a-csv-file">transforming a CSV file</h1>
+
+<p>Lets compute how much money each bank customer will have after their salary kicks in
+and write the results into a new file called <code class="highlighter-rouge">"totals.csv"</code>
+this file needs only 2 columns - we drop the salary column</p>
+
+<p>expected output for <code class="highlighter-rouge">totals.csv</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name, money in bank now 
+eric idle, 15000
+terry gilliam, 15000
+graham chapman, 15000
+</code></pre></div></div>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'transactions.csv'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'totals.csv'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="s">'money in bank now'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">', '</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">transactions</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">money</span><span class="p">,</span> <span class="n">salary</span> <span class="o">=</span> <span class="n">trans</span>
+    <span class="n">money</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">money</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">money</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">', '</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+    
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">printfile</span><span class="p">(</span><span class="s">'totals.csv'</span><span class="p">)</span>  
+
+</code></pre></div>    </div>
+  </div>
+
+  <div class="output_wrapper">
+    <div class="output_subarea">
+      <div class="output_stream highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name, money in bank now
+eric idle, 15000
+terry gilliam, 15000
+graham chapman, 15000
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+
+<h1 id="creating--and-deleting-directories">Creating  and deleting directories</h1>
+
+<ol>
+  <li>import the module <code class="highlighter-rouge">shutil</code> and use the <code class="highlighter-rouge">shutil.rmtree('mydir1') </code> function to remove a directory called mydir1 if it exists
+    <blockquote>
+      <p>CAREFUL: <code class="highlighter-rouge">rmtree</code> will delete whole folders and subdirectories without prompt and without recovery. like a <code class="highlighter-rouge">rm -rf</code></p>
+    </blockquote>
+  </li>
+  <li>use the <code class="highlighter-rouge">os.mkdir()</code> function to create a directory called <code class="highlighter-rouge">mydir1</code> in the current working directory</li>
+  <li>use the <code class="highlighter-rouge">os.makedirs()</code> function to create a sub-directory called `mydir1/mydir2/mydir3’</li>
+  <li>create a file called <code class="highlighter-rouge">surprise.txt</code> in <code class="highlighter-rouge">mydir1/mydir2/mydir3</code> and put the line <code class="highlighter-rouge">'nobody expects the spanish inquisition'</code> into that file</li>
+  <li>convince yourself that <code class="highlighter-rouge">os.remove()</code> can delete files and empty directories, but cannot delete folders with ‘stuff’ in them</li>
+</ol>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="s">'mydir1'</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s">'mydir1'</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s">'mydir1/mydir2/mydir3'</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'mydir1/mydir2/mydir3/surprise.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'nobody expects the spanish inquisition'</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+<h1 id="writing-a-json-file">writing a JSON file</h1>
+
+<ol>
+  <li>Create some complex object made of lists, tuples, dictionaries, strings, put it in variable named <code class="highlighter-rouge">data</code>
+example:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data = [{
+     "userId":"rirani",
+     "jobTitleName":"Developer",
+     "firstName":"Romin",
+     "lastName":"Irani",
+     "preferredFullName":"Romin Irani",
+     "employeeCode":"E1",
+     "region":"CA",
+     "phoneNumber":"408-1234567",
+     "emailAddress":"romin.k.irani@gmail.com"
+ },
+ {
+     "userId":"nirani",
+     "jobTitleName":"Developer",
+     "firstName":"Neil",
+     "lastName":"Irani",
+     "preferredFullName":"Neil Irani",
+     "employeeCode":"E2",
+     "region":"CA",
+     "phoneNumber":"408-1111111",
+     "emailAddress":"neilrirani@gmail.com"
+ }]
+</code></pre></div>    </div>
+  </li>
+  <li>use the <code class="highlighter-rouge">open()</code> function to open a file called <code class="highlighter-rouge">data.json.txt</code> into variable named <code class="highlighter-rouge">fout</code></li>
+  <li>import the <code class="highlighter-rouge">json</code> module and use the <code class="highlighter-rouge">json.dump(data, f)</code> function to write your object to the file</li>
+  <li>close the file</li>
+  <li>open the file with a text editor program and compare with your original</li>
+  <li>use <code class="highlighter-rouge">open()</code> function to open the file for reading with variable <code class="highlighter-rouge">fin</code></li>
+  <li>use the <code class="highlighter-rouge">data2 = json.load(fin)</code> function to read the file into a variable named <code class="highlighter-rouge">data2</code></li>
+  <li>use <code class="highlighter-rouge">==</code> to compare <code class="highlighter-rouge">data</code> and <code class="highlighter-rouge">data2</code>. do they have the same content?</li>
+</ol>
+
+<div class="cell code_cell">
+  <div class="input_area">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="p">[{</span>
+        <span class="s">"userId"</span><span class="p">:</span><span class="s">"rirani"</span><span class="p">,</span>
+        <span class="s">"jobTitleName"</span><span class="p">:</span><span class="s">"Developer"</span><span class="p">,</span>
+        <span class="s">"firstName"</span><span class="p">:</span><span class="s">"Romin"</span><span class="p">,</span>
+        <span class="s">"lastName"</span><span class="p">:</span><span class="s">"Irani"</span><span class="p">,</span>
+        <span class="s">"preferredFullName"</span><span class="p">:</span><span class="s">"Romin Irani"</span><span class="p">,</span>
+        <span class="s">"employeeCode"</span><span class="p">:</span><span class="s">"E1"</span><span class="p">,</span>
+        <span class="s">"region"</span><span class="p">:</span><span class="s">"CA"</span><span class="p">,</span>
+        <span class="s">"phoneNumber"</span><span class="p">:</span><span class="s">"408-1234567"</span><span class="p">,</span>
+        <span class="s">"emailAddress"</span><span class="p">:</span><span class="s">"romin.k.irani@gmail.com"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s">"userId"</span><span class="p">:</span><span class="s">"nirani"</span><span class="p">,</span>
+        <span class="s">"jobTitleName"</span><span class="p">:</span><span class="s">"Developer"</span><span class="p">,</span>
+        <span class="s">"firstName"</span><span class="p">:</span><span class="s">"Neil"</span><span class="p">,</span>
+        <span class="s">"lastName"</span><span class="p">:</span><span class="s">"Irani"</span><span class="p">,</span>
+        <span class="s">"preferredFullName"</span><span class="p">:</span><span class="s">"Neil Irani"</span><span class="p">,</span>
+        <span class="s">"employeeCode"</span><span class="p">:</span><span class="s">"E2"</span><span class="p">,</span>
+        <span class="s">"region"</span><span class="p">:</span><span class="s">"CA"</span><span class="p">,</span>
+        <span class="s">"phoneNumber"</span><span class="p">:</span><span class="s">"408-1111111"</span><span class="p">,</span>
+        <span class="s">"emailAddress"</span><span class="p">:</span><span class="s">"neilrirani@gmail.com"</span>
+    <span class="p">}]</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.json.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fout</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.json.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+    <span class="n">data2</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+    
+<span class="k">assert</span> <span class="n">data</span> <span class="o">==</span> <span class="n">data2</span>
+
+</code></pre></div>    </div>
+  </div>
+
+</div>
+
+
+              <nav class="c-page__nav">
+  
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/learn-python/exercises/ex_07-questions.html">
+      〈 <span class="u-margin-right-tiny"></span> Ex 07-questions
+    </a>
+  
+
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/learn-python/exercises/ex_08-questions.html">
+      Ex 08-questions <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
