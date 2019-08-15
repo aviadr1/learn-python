@@ -63,8 +63,9 @@ instance/
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
-docs/_build/
+### removed for supporting jupyter-book
+# # Sphinx documentation
+# docs/_build/
 
 # PyBuilder
 target/
