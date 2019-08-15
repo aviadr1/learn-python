@@ -25,28 +25,23 @@
 # ==============================
 
 
-- title: Lesson 02 - Variables
-  url: /02/
-  not_numbered: true
-  expand_sections: true
-  sections:
-  # ===== NEW SECTION ========================================
-  - title: Ex 02-questions
-    url: /02-variables/ex_02-questions
-  - title: Ex 02-solutions
-    url: /02-variables/ex_02-solutions
+# ===== NEW SECTION ========================================
+- title: Ex 02-questions
+  url: /02-variables/ex_02-questions
+- title: Ex 02-solutions
+  url: /02-variables/ex_02-solutions
 
-  # ===== NEW SECTION ========================================
-  - title: Lesson 02-dictionary
-    url: /02-variables/notebooks/lesson_02-dictionary
-  - title: Lesson 02-importing Math Printing Floats
-    url: /02-variables/notebooks/lesson_02-importing_math_printing_floats
-  - title: Lesson 02-lists
-    url: /02-variables/notebooks/lesson_02-lists
-  - title: Lesson 02-mutability Vs Immutability
-    url: /02-variables/notebooks/lesson_02-mutability_vs_immutability
-  - title: Lesson 02-variables
-    url: /02-variables/notebooks/lesson_02-variables
+# ===== NEW SECTION ========================================
+- title: Lesson 02-dictionary
+  url: /02-variables/notebooks/lesson_02-dictionary
+- title: Lesson 02-importing Math Printing Floats
+  url: /02-variables/notebooks/lesson_02-importing_math_printing_floats
+- title: Lesson 02-lists
+  url: /02-variables/notebooks/lesson_02-lists
+- title: Lesson 02-mutability Vs Immutability
+  url: /02-variables/notebooks/lesson_02-mutability_vs_immutability
+- title: Lesson 02-variables
+  url: /02-variables/notebooks/lesson_02-variables
 
 # ===== NEW SECTION ========================================
 - title: Ex 03-questions
