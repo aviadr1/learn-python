@@ -13,7 +13,7 @@ next_page:
   title: 'Trying Out Python'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2001%20-%20python%20basics.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/01_intro/notebooks/python_basics.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

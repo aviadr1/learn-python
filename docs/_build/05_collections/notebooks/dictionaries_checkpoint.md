@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/05_collections/notebooks/dictionaries_checkpoint.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Dictionaries Checkpoint'
+title: 'notebooks'
 prev_page:
-  url: /05_collections/notebooks/dictionaries_checkpoint.html
-  title: 'notebooks'
+  url: /05_collections/exercise/solutions.html
+  title: 'Solutions'
 next_page:
-  url: /05_collections/notebooks/extending_lists.html
-  title: 'Extending Lists'
+  url: /05_collections/notebooks/dictionaries_checkpoint.html
+  title: 'Dictionaries Checkpoint'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2005%20-%20dictionaries%20checkpoint.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/notebooks/dictionaries_checkpoint.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

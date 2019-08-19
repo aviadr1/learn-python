@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/08_functions/notebooks/documentation.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Documentation'
+title: 'notebooks'
 prev_page:
-  url: /08_functions/notebooks/documentation.html
-  title: 'notebooks'
+  url: /08_functions/exercise/solutions.html
+  title: 'Solutions'
 next_page:
-  url: /08_functions/notebooks/functions_calling_functions_shapes.html
-  title: 'Functions Calling Functions Shapes'
+  url: /08_functions/notebooks/documentation.html
+  title: 'Documentation'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2008%20-%20documentation.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/notebooks/documentation.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

@@ -13,7 +13,7 @@ next_page:
   title: 'Open Read Write Regex'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2007%20-%20oops%20i%20did%20it%20again.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/oops_i_did_it_again.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

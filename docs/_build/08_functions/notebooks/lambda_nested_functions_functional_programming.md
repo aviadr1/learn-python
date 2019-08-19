@@ -13,7 +13,7 @@ next_page:
   title: 'Mul Pow'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2008%20-%20lambda%2C%20nested%20functions%2C%20functional%20programming.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/notebooks/lambda_nested_functions_functional_programming.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

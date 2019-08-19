@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/01_intro/notebooks/bitahon_intro.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Bitahon Intro'
+title: '01 intro'
 prev_page:
+  url: 
+  title: ''
+next_page:
   url: /01_intro/notebooks/bitahon_intro.html
   title: 'notebooks'
-next_page:
-  url: /01_intro/notebooks/exploring_python_12_5_19.html
-  title: 'Exploring Python 12 5 19'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2001%20-%20bitahon%20intro.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/01_intro/notebooks/bitahon_intro.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

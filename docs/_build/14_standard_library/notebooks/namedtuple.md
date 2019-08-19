@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/14_standard_library/notebooks/namedtuple.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Namedtuple'
+title: '14 standard library'
 prev_page:
+  url: /13_multiprocessing/notebooks/os_system_subprocess_popen.html
+  title: 'Os System Subprocess Popen'
+next_page:
   url: /14_standard_library/notebooks/namedtuple.html
   title: 'notebooks'
-next_page:
-  url: 
-  title: ''
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2015%20-%20namedtuple.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/14_standard_library/notebooks/namedtuple.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

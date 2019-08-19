@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/11_classes_and_oop/notebooks/basic_classes.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Basic Classes'
+title: '11 classes and oop'
 prev_page:
+  url: /10_modules/notebooks/modules.html
+  title: 'Modules'
+next_page:
   url: /11_classes_and_oop/notebooks/basic_classes.html
   title: 'notebooks'
-next_page:
-  url: /11_classes_and_oop/notebooks/duck_typing.html
-  title: 'Duck Typing'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2011%20-%20basic%20classes.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/11_classes_and_oop/notebooks/basic_classes.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/07_files/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Questions'
+title: '07 files'
 prev_page:
+  url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3.html
+  title: 'Lesson 06-sub Python2-to-python3'
+next_page:
   url: /07_files/exercise/questions.html
   title: 'exercise'
-next_page:
-  url: /07_files/exercise/solutions.html
-  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/exercises/ex%2007%20-%20questions.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/exercise/questions.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

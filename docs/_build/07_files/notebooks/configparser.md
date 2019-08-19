@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/07_files/notebooks/configparser.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Configparser'
+title: 'notebooks'
 prev_page:
-  url: /07_files/notebooks/configparser.html
-  title: 'notebooks'
+  url: /07_files/exercise/solutions.html
+  title: 'Solutions'
 next_page:
-  url: /07_files/notebooks/files.html
-  title: 'Files'
+  url: /07_files/notebooks/configparser.html
+  title: 'Configparser'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2007%20-%20configparser.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/configparser.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

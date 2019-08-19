@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/09_advanced_collections/notebooks/coroutines.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Coroutines'
+title: 'notebooks'
 prev_page:
-  url: /09_advanced_collections/notebooks/coroutines.html
-  title: 'notebooks'
+  url: /09_advanced_collections/exercise/solutions.html
+  title: 'Solutions'
 next_page:
-  url: /09_advanced_collections/notebooks/deepcopy_shallow_copy.html
-  title: 'Deepcopy Shallow Copy'
+  url: /09_advanced_collections/notebooks/coroutines.html
+  title: 'Coroutines'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2009%20-%20coroutines.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/09_advanced_collections/notebooks/coroutines.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

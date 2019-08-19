@@ -9,11 +9,11 @@ prev_page:
   url: /03_flow_control/exercise/questions.html
   title: 'Questions'
 next_page:
-  url: /03_flow_control/notebooks/lesson_03-1-100_multiplication_matrix_Luah_Kefel_.html
+  url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_.html
   title: 'notebooks'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/exercises/ex%2003%20-%20solutions.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/exercise/solutions.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

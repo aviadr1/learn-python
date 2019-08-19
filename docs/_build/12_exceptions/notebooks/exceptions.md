@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/12_exceptions/notebooks/exceptions.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Exceptions'
+title: 'notebooks'
 prev_page:
-  url: /12_exceptions/notebooks/exceptions.html
-  title: 'notebooks'
+  url: /12_exceptions/exercise/solutions.html
+  title: 'Solutions'
 next_page:
-  url: /12_exceptions/notebooks/raise_try_except_finally.html
-  title: 'Raise Try Except Finally'
+  url: /12_exceptions/notebooks/exceptions.html
+  title: 'Exceptions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2012%20-%20exceptions.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/12_exceptions/notebooks/exceptions.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/08_functions/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Questions'
+title: '08 functions'
 prev_page:
+  url: /07_files/notebooks/pickle_example.html
+  title: 'Pickle Example'
+next_page:
   url: /08_functions/exercise/questions.html
   title: 'exercise'
-next_page:
-  url: /08_functions/exercise/solutions.html
-  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/exercises/ex%2008%20-%20questions.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/exercise/questions.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

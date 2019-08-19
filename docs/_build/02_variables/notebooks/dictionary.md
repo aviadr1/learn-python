@@ -4,16 +4,16 @@ redirect_from:
 interact_link: content/02_variables/notebooks/dictionary.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Dictionary'
+title: 'notebooks'
 prev_page:
-  url: /02_variables/notebooks/dictionary.html
-  title: 'notebooks'
+  url: /02_variables/exercise/solutions.html
+  title: 'Solutions'
 next_page:
-  url: /02_variables/notebooks/importing_math_printing_floats.html
-  title: 'Importing Math Printing Floats'
+  url: /02_variables/notebooks/dictionary.html
+  title: 'Dictionary'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2002%20-%20dictionary.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/02_variables/notebooks/dictionary.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>

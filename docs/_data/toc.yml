@@ -1,30 +1,3 @@
-# Each entry has the following schema:
-#
-# - title: mytitle   # Title of chapter or section
-#   url: /myurl  # URL of section relative to the /content/ folder.
-#   sections:  # Contains a list of more entries that make up the chapter's sections
-#   not_numbered: true  # if the section shouldn't have a number in the sidebar
-#     (e.g. Introduction or appendices)
-#   expand_sections: true  # if you'd like the sections of this chapter to always
-#     be expanded in the sidebar.
-#   external: true  # Whether the URL is an external link or points to content in the book
-#
-# Below are some special values that trigger specific behavior:
-# - search: true  # Will provide a link to a search page
-# - divider: true  # Will insert a divider in the sidebar
-# - header: My Header  # Will insert a header with no link in the sidebar
-#
-# ==============================
-# AUTOMATICALLY GENERATED TOC FILE.
-# You should review the contents of this file, re-order items as you wish,
-# and nest chapters in sections if you wish. The ======= symbols represent 
-# folder breaks.
-# 
-# See the demo `toc.yml` for the right structure to follow. You can 
-# generate a demo book by running `jupyter-book create mybook --demo`
-# ==============================
-
-
 - title: 01 intro
   sections:
   - title: notebooks
@@ -73,35 +46,35 @@
     url: /03_flow_control/exercise/questions
   - title: notebooks
     subsections:
-    - title: 'Lesson 03-1-100 Multiplication Matrix Luah Kefel '
-      url: /03_flow_control/notebooks/lesson_03-1-100_multiplication_matrix_Luah_Kefel_
-    - title: Lesson 03-break Continue
-      url: /03_flow_control/notebooks/lesson_03-break_continue
-    - title: Lesson 03-casting Objects As Booleans
-      url: /03_flow_control/notebooks/lesson_03-casting_objects_as_booleans
-    - title: Lesson 03-converting To Bool
-      url: /03_flow_control/notebooks/lesson_03-converting_to_bool
-    - title: Lesson 03-enumerate
-      url: /03_flow_control/notebooks/lesson_03-enumerate
-    - title: Lesson 03-enumerate Change List
-      url: /03_flow_control/notebooks/lesson_03-enumerate_change_list
-    - title: Lesson 03-for Loop
-      url: /03_flow_control/notebooks/lesson_03-for_loop
-    - title: Lesson 03-for While With Password Example
-      url: /03_flow_control/notebooks/lesson_03-for_while_with_password_example
-    - title: Lesson 03-if Elif Else-with Password Checking
-      url: /03_flow_control/notebooks/lesson_03-if_elif_else-with_password_checking
-    - title: Lesson 03-if Else Password
-      url: /03_flow_control/notebooks/lesson_03-if_else_password
-    - title: Lesson 03-july Break Continue
-      url: /03_flow_control/notebooks/lesson_03-july_break_continue
-    - title: Lesson 03-july Enumerate Zip
-      url: /03_flow_control/notebooks/lesson_03-july_enumerate_zip
-    - title: Lesson 03-while Loop-password
-      url: /03_flow_control/notebooks/lesson_03-while_loop-password
-    - title: Lesson 03-while Loop-powers Loah Kefel
-      url: /03_flow_control/notebooks/lesson_03-while_loop-powers_loah_kefel
-    url: /03_flow_control/notebooks/lesson_03-1-100_multiplication_matrix_Luah_Kefel_
+    - title: '1-100 Multiplication Matrix Luah Kefel '
+      url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_
+    - title: Break Continue
+      url: /03_flow_control/notebooks/break_continue
+    - title: Casting Objects As Booleans
+      url: /03_flow_control/notebooks/casting_objects_as_booleans
+    - title: Converting To Bool
+      url: /03_flow_control/notebooks/converting_to_bool
+    - title: Enumerate
+      url: /03_flow_control/notebooks/enumerate
+    - title: Enumerate Change List
+      url: /03_flow_control/notebooks/enumerate_change_list
+    - title: For Loop
+      url: /03_flow_control/notebooks/for_loop
+    - title: For While With Password Example
+      url: /03_flow_control/notebooks/for_while_with_password_example
+    - title: If Elif Else-with Password Checking
+      url: /03_flow_control/notebooks/if_elif_else-with_password_checking
+    - title: If Else Password
+      url: /03_flow_control/notebooks/if_else_password
+    - title: July Break Continue
+      url: /03_flow_control/notebooks/july_break_continue
+    - title: July Enumerate Zip
+      url: /03_flow_control/notebooks/july_enumerate_zip
+    - title: While Loop-password
+      url: /03_flow_control/notebooks/while_loop-password
+    - title: While Loop-powers Loah Kefel
+      url: /03_flow_control/notebooks/while_loop-powers_loah_kefel
+    url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_
   url: /03_flow_control/exercise/questions
 - title: 04 strings
   sections:
