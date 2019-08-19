@@ -103,5 +103,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.sass-cache/
-_site
+
+# jupyter-book
+docs/content
+docs/.sass-cache/
+docs/_site
