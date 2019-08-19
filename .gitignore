@@ -108,3 +108,4 @@ venv.bak/
 docs/content/
 docs/.sass-cache/
 docs/_site/
+docs/_data/toc.bak.yml
