@@ -1,19 +1,19 @@
 ---
 redirect_from:
-  - "/02-variables/notebooks/lesson-02-dictionary"
-interact_link: content/02-variables/notebooks/lesson_02-dictionary.ipynb
+  - "/05-collections/notebooks/sorting"
+interact_link: content/05_collections/notebooks/sorting.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Lesson 02-dictionary'
+title: 'Sorting'
 prev_page:
-  url: /02-variables/exercises/ex_02-solutions.html
-  title: 'Ex 02-solutions'
+  url: /05_collections/notebooks/slicing_checkpoint.html
+  title: 'Slicing Checkpoint'
 next_page:
-  url: /02-variables/notebooks/lesson_02-importing_math_printing_floats.html
-  title: 'Lesson 02-importing Math Printing Floats'
+  url: /05_collections/notebooks/sorting_bitahon.html
+  title: 'Sorting Bitahon'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2002%20-%20dictionary.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2005%20-%20sorting.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>
@@ -24,13 +24,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money = {
-    "avi" : 100,
-    "ben" : 900,
-    "can" : 500,
-    "dudu farouk" : 1000000,
-    "efrat" : 0
-}
+pics = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "7.jpg", "5.jpg", "9.jpg", "8.jpg", "10.jpg", "11.jpg"]
 
 ```
 </div>
@@ -42,19 +36,11 @@ bank_account_money = {
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-print(bank_account_money)
+pics.sort()
 
 ```
 </div>
 
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 0}
-```
-</div>
-</div>
 </div>
 
 
@@ -62,38 +48,7 @@ print(bank_account_money)
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money[0]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_traceback_line}
-```
-
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-4-b066f26482b3> in <module>
-    ----> 1 bank_account_money[0]
-    
-
-    KeyError: 0
-
-
-```
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money["efrat"]
+pics
 
 ```
 </div>
@@ -104,7 +59,7 @@ bank_account_money["efrat"]
 
 {:.output_data_text}
 ```
-0
+['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '7.jpg', '8.jpg', '9.jpg']
 ```
 
 
@@ -117,7 +72,7 @@ bank_account_money["efrat"]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["can"]
+list(reversed(pics))
 
 ```
 </div>
@@ -128,7 +83,7 @@ bank_account_money["can"]
 
 {:.output_data_text}
 ```
-500
+['9.jpg', '8.jpg', '7.jpg', '5.jpg', '4.jpg', '3.jpg', '2.jpg', '1.jpg']
 ```
 
 
@@ -141,50 +96,7 @@ bank_account_money["can"]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["Eftrat"]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_traceback_line}
-```
-
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-7-0dbb637de9fe> in <module>
-    ----> 1 bank_account_money["Eftrat"]
-    
-
-    KeyError: 'Eftrat'
-
-
-```
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money["efrat"] = 1000
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money["efrat"] 
+pics
 
 ```
 </div>
@@ -195,7 +107,7 @@ bank_account_money["efrat"]
 
 {:.output_data_text}
 ```
-1000
+['1.jpg', '2.jpg', '3.jpg', '4.jpg', '7.jpg', '5.jpg', '9.jpg', '8.jpg']
 ```
 
 
@@ -208,7 +120,7 @@ bank_account_money["efrat"]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["fred"] = 50
+sortedpics = sorted(pics)
 
 ```
 </div>
@@ -220,7 +132,8 @@ bank_account_money["fred"] = 50
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money
+sortedpics
+
 
 ```
 </div>
@@ -231,12 +144,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100,
- 'ben': 900,
- 'can': 500,
- 'dudu farouk': 1000000,
- 'efrat': 1000,
- 'fred': 50}
+['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '7.jpg', '8.jpg', '9.jpg']
 ```
 
 
@@ -249,19 +157,7 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-del bank_account_money["fred"]
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money
+pics
 
 ```
 </div>
@@ -272,7 +168,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 1000}
+['1.jpg', '2.jpg', '3.jpg', '4.jpg', '7.jpg', '5.jpg', '9.jpg', '8.jpg']
 ```
 
 
@@ -285,7 +181,19 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-dir(bank_account_money)
+pics.sort()
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+pics
 
 ```
 </div>
@@ -296,46 +204,7 @@ dir(bank_account_money)
 
 {:.output_data_text}
 ```
-['__class__',
- '__contains__',
- '__delattr__',
- '__delitem__',
- '__dir__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__getattribute__',
- '__getitem__',
- '__gt__',
- '__hash__',
- '__init__',
- '__init_subclass__',
- '__iter__',
- '__le__',
- '__len__',
- '__lt__',
- '__ne__',
- '__new__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__setattr__',
- '__setitem__',
- '__sizeof__',
- '__str__',
- '__subclasshook__',
- 'clear',
- 'copy',
- 'fromkeys',
- 'get',
- 'items',
- 'keys',
- 'pop',
- 'popitem',
- 'setdefault',
- 'update',
- 'values']
+['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '7.jpg', '8.jpg', '9.jpg']
 ```
 
 
@@ -348,7 +217,7 @@ dir(bank_account_money)
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money.pop("efrat")
+pics
 
 ```
 </div>
@@ -359,7 +228,16 @@ bank_account_money.pop("efrat")
 
 {:.output_data_text}
 ```
-1000
+['1.jpg',
+ '10.jpg',
+ '11.jpg',
+ '2.jpg',
+ '3.jpg',
+ '4.jpg',
+ '5.jpg',
+ '7.jpg',
+ '8.jpg',
+ '9.jpg']
 ```
 
 
@@ -372,7 +250,19 @@ bank_account_money.pop("efrat")
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money
+pics = [name.split('.')[0] for name in pics]
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+pics
 
 ```
 </div>
@@ -383,7 +273,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000}
+['1', '10', '11', '2', '3', '4', '5', '7', '8', '9']
 ```
 
 
@@ -396,7 +286,8 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["efrat"] = 1000
+def str_to_num(s):
+    return int(s)
 
 ```
 </div>
@@ -408,7 +299,7 @@ bank_account_money["efrat"] = 1000
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money
+str_to_num(pics[2])
 
 ```
 </div>
@@ -419,7 +310,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 1000}
+11
 ```
 
 
@@ -432,7 +323,7 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money
+'11' < '2'
 
 ```
 </div>
@@ -443,7 +334,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 1000}
+True
 ```
 
 
@@ -456,21 +347,7 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money['avi'] = 0
-bank_account_money['efrat'] = 0
-
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-{ name : value for name,value in bank_account_money.items() if value == 0}
+11 > 2
 
 ```
 </div>
@@ -481,7 +358,7 @@ bank_account_money['efrat'] = 0
 
 {:.output_data_text}
 ```
-{'avi': 0, 'efrat': 0}
+True
 ```
 
 
@@ -494,7 +371,7 @@ bank_account_money['efrat'] = 0
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-[ name  for name,value in bank_account_money.items() if value == 0 ]
+sorted(pics, key=str_to_num)
 
 ```
 </div>
@@ -505,7 +382,7 @@ bank_account_money['efrat'] = 0
 
 {:.output_data_text}
 ```
-['avi', 'efrat']
+['1', '2', '3', '4', '5', '7', '8', '9', '10', '11']
 ```
 
 
@@ -518,31 +395,21 @@ bank_account_money['efrat'] = 0
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-x = list(range(1000* 10000))
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-for num in x:
-    if num == 10*1000*1000 -1:
-        print("yes!")
+int('11')
 
 ```
 </div>
 
 <div class="output_wrapper" markdown="1">
 <div class="output_subarea" markdown="1">
-{:.output_stream}
+
+
+{:.output_data_text}
 ```
-yes!
+11
 ```
+
+
 </div>
 </div>
 </div>
@@ -552,30 +419,254 @@ yes!
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-y = { num : num for num in range(10 * 1000 * 1000)}
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-print(y[10*1000*1000 -1])
+sorted(pics, key=int)
 
 ```
 </div>
 
 <div class="output_wrapper" markdown="1">
 <div class="output_subarea" markdown="1">
-{:.output_stream}
+
+
+{:.output_data_text}
 ```
-9999999
+['1', '2', '3', '4', '5', '7', '8', '9', '10', '11']
 ```
+
+
 </div>
 </div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+pics
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+['1', '10', '11', '2', '3', '4', '5', '7', '8', '9']
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+bank_customers = [
+    { "name": "aviad", "tel": "053", "id" : "0358"},
+    { "name": "moshe", "tel": "054", "id" : "0123"},
+    { "name": "david", "tel": "055", "id" : "456"}
+]
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+def name_from_customer(customer):
+    """
+    { "name": "aviad", "tel": "053", "id" : "0358"},
+    """
+    return customer["name"]
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+sorted(bank_customers, key=name_from_customer)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+[{'name': 'aviad', 'tel': '053', 'id': '0358'},
+ {'name': 'david', 'tel': '055', 'id': '456'},
+ {'name': 'moshe', 'tel': '054', 'id': '0123'}]
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+def id_from_customer(customer):
+    """
+    { "name": "aviad", "tel": "053", "id" : "0358"},
+    """
+    return customer["id"]
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+sorted(bank_customers, key=id_from_customer)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+[{'name': 'moshe', 'tel': '054', 'id': '0123'},
+ {'name': 'aviad', 'tel': '053', 'id': '0358'},
+ {'name': 'david', 'tel': '055', 'id': '456'}]
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+pics
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+['1', '10', '11', '2', '3', '4', '5', '7', '8', '9']
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+sorted(pics, key=int, reverse=True)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+['11', '10', '9', '8', '7', '5', '4', '3', '2', '1']
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+"the quick brown fox jumped over the lazy dog".split()[1:].index("the")
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+5
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+"helo".find("e")
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+1
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+"the quick brown fox jumped over the lazy dog".split().
+
+```
+</div>
+
 </div>
 

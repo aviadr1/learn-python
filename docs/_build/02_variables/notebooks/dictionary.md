@@ -1,16 +1,16 @@
 ---
 redirect_from:
-  - "/02-variables/notebooks/lesson-02-dictionary"
-interact_link: content/02-variables/notebooks/lesson_02-dictionary.ipynb
+  - "/02-variables/notebooks/dictionary"
+interact_link: content/02_variables/notebooks/dictionary.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Lesson 02-dictionary'
+title: 'Dictionary'
 prev_page:
-  url: /02-variables/exercises/ex_02-solutions.html
-  title: 'Ex 02-solutions'
+  url: /02_variables/notebooks/dictionary.html
+  title: 'notebooks'
 next_page:
-  url: /02-variables/notebooks/lesson_02-importing_math_printing_floats.html
-  title: 'Lesson 02-importing Math Printing Floats'
+  url: /02_variables/notebooks/importing_math_printing_floats.html
+  title: 'Importing Math Printing Floats'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2002%20-%20dictionary.ipynb" target="_blank">

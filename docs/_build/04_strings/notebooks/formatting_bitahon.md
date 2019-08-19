@@ -1,19 +1,19 @@
 ---
 redirect_from:
-  - "/02-variables/notebooks/lesson-02-dictionary"
-interact_link: content/02-variables/notebooks/lesson_02-dictionary.ipynb
+  - "/04-strings/notebooks/formatting-bitahon"
+interact_link: content/04_strings/notebooks/formatting_bitahon.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'Lesson 02-dictionary'
+title: 'Formatting Bitahon'
 prev_page:
-  url: /02-variables/exercises/ex_02-solutions.html
-  title: 'Ex 02-solutions'
+  url: /04_strings/notebooks/formatting_bitahon.html
+  title: 'notebooks'
 next_page:
-  url: /02-variables/notebooks/lesson_02-importing_math_printing_floats.html
-  title: 'Lesson 02-importing Math Printing Floats'
+  url: /04_strings/notebooks/print_parameters.html
+  title: 'Print Parameters'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2002%20-%20dictionary.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/live%20class%20demonstrations/lesson%2004%20-%20formatting%20bitahon.ipynb" target="_blank">
 <img src="https://colab.research.google.com/assets/colab-badge.svg" 
      title="Open this file in Google Colab" alt="Colab"/>
 </a>
@@ -24,17 +24,23 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money = {
-    "avi" : 100,
-    "ben" : 900,
-    "can" : 500,
-    "dudu farouk" : 1000000,
-    "efrat" : 0
-}
+"the quick brown fox jumped over the lazy dog".find("quick")
 
 ```
 </div>
 
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+4
+```
+
+
+</div>
+</div>
 </div>
 
 
@@ -42,7 +48,69 @@ bank_account_money = {
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-print(bank_account_money)
+age = 30
+height = 180
+name = "ben"
+score =85
+
+"hi {}, happy {} birthday, your height is {}, your score is {}".format(name, age, height, score)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+'hi ben, happy 30 birthday, your height is 180, your score is 85'
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+age = 30
+height = 180
+name = "ben"
+score =85
+
+"hi {2}, happy {0} birthday, your height is {1}, your score is {3}".format(age, height, name, score)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+'hi ben, happy 30 birthday, your height is 180, your score is 85'
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+x= """hi {0}, 
+{0} is a nice name
+goodbye {0}
+""".format(name, "this is not used")
+print(x)
 
 ```
 </div>
@@ -51,37 +119,9 @@ print(bank_account_money)
 <div class="output_subarea" markdown="1">
 {:.output_stream}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 0}
-```
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money[0]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_traceback_line}
-```
-
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-4-b066f26482b3> in <module>
-    ----> 1 bank_account_money[0]
-    
-
-    KeyError: 0
-
+hi ben, 
+ben is a nice name
+goodbye ben
 
 ```
 </div>
@@ -93,7 +133,7 @@ bank_account_money[0]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["efrat"]
+"{}".format(10/3)
 
 ```
 </div>
@@ -104,7 +144,7 @@ bank_account_money["efrat"]
 
 {:.output_data_text}
 ```
-0
+'3.3333333333333335'
 ```
 
 
@@ -117,7 +157,8 @@ bank_account_money["efrat"]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["can"]
+import math
+math.sin(math.pi)
 
 ```
 </div>
@@ -128,7 +169,7 @@ bank_account_money["can"]
 
 {:.output_data_text}
 ```
-500
+1.2246467991473532e-16
 ```
 
 
@@ -141,50 +182,7 @@ bank_account_money["can"]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["Eftrat"]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_traceback_line}
-```
-
-    ---------------------------------------------------------------------------
-
-    KeyError                                  Traceback (most recent call last)
-
-    <ipython-input-7-0dbb637de9fe> in <module>
-    ----> 1 bank_account_money["Eftrat"]
-    
-
-    KeyError: 'Eftrat'
-
-
-```
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money["efrat"] = 1000
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money["efrat"] 
+"{:.2f}".format(math.sin(math.pi))
 
 ```
 </div>
@@ -195,7 +193,7 @@ bank_account_money["efrat"]
 
 {:.output_data_text}
 ```
-1000
+'0.00'
 ```
 
 
@@ -208,19 +206,7 @@ bank_account_money["efrat"]
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["fred"] = 50
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money
+"{:.20f}".format(math.sin(math.pi))
 
 ```
 </div>
@@ -231,12 +217,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100,
- 'ben': 900,
- 'can': 500,
- 'dudu farouk': 1000000,
- 'efrat': 1000,
- 'fred': 50}
+'0.00000000000000012246'
 ```
 
 
@@ -249,19 +230,7 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-del bank_account_money["fred"]
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money
+ord(' ')
 
 ```
 </div>
@@ -272,7 +241,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 1000}
+32
 ```
 
 
@@ -285,7 +254,7 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-dir(bank_account_money)
+"0x{:x}".format(ord(' '))
 
 ```
 </div>
@@ -296,46 +265,7 @@ dir(bank_account_money)
 
 {:.output_data_text}
 ```
-['__class__',
- '__contains__',
- '__delattr__',
- '__delitem__',
- '__dir__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__getattribute__',
- '__getitem__',
- '__gt__',
- '__hash__',
- '__init__',
- '__init_subclass__',
- '__iter__',
- '__le__',
- '__len__',
- '__lt__',
- '__ne__',
- '__new__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__setattr__',
- '__setitem__',
- '__sizeof__',
- '__str__',
- '__subclasshook__',
- 'clear',
- 'copy',
- 'fromkeys',
- 'get',
- 'items',
- 'keys',
- 'pop',
- 'popitem',
- 'setdefault',
- 'update',
- 'values']
+'0x20'
 ```
 
 
@@ -348,7 +278,7 @@ dir(bank_account_money)
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money.pop("efrat")
+"{:.2}".format(math.sin(math.pi))
 
 ```
 </div>
@@ -359,7 +289,7 @@ bank_account_money.pop("efrat")
 
 {:.output_data_text}
 ```
-1000
+'1.2e-16'
 ```
 
 
@@ -372,7 +302,14 @@ bank_account_money.pop("efrat")
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money
+"""
+steak:                150.00 NIS
+pita:                   1.50 NIS
+shakshuka im thi na:   25.00 NIS
+vat%                   17.00 %
+vat:                   35.56
+total:                222.40 NIS
+"""
 
 ```
 </div>
@@ -383,7 +320,7 @@ bank_account_money
 
 {:.output_data_text}
 ```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000}
+'\nsteak:                150.00 NIS\npita:                   1.50 NIS\nshakshuka im thi na:   25.00 NIS\nvat%                   17.00 %\nvat:                   35.56\ntotal:                222.40 NIS\n'
 ```
 
 
@@ -396,143 +333,9 @@ bank_account_money
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-bank_account_money["efrat"] = 1000
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 1000}
-```
-
-
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-{'avi': 100, 'ben': 900, 'can': 500, 'dudu farouk': 1000000, 'efrat': 1000}
-```
-
-
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-bank_account_money['avi'] = 0
-bank_account_money['efrat'] = 0
-
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-{ name : value for name,value in bank_account_money.items() if value == 0}
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-{'avi': 0, 'efrat': 0}
-```
-
-
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-[ name  for name,value in bank_account_money.items() if value == 0 ]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-['avi', 'efrat']
-```
-
-
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-x = list(range(1000* 10000))
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-for num in x:
-    if num == 10*1000*1000 -1:
-        print("yes!")
+print("{:7.2f}".format(1.5))
+print("{:7.2f}".format(222.49))
+print("{:7.2f}".format(-10))
 
 ```
 </div>
@@ -541,7 +344,9 @@ for num in x:
 <div class="output_subarea" markdown="1">
 {:.output_stream}
 ```
-yes!
+  +1.50
+ 222.49
+ -10.00
 ```
 </div>
 </div>
@@ -552,19 +357,9 @@ yes!
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-y = { num : num for num in range(10 * 1000 * 1000)}
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-print(y[10*1000*1000 -1])
+print("{:+7.2f}".format(1.5))
+print("{:+7.2f}".format(222.49))
+print("{:+7.2f}".format(-10))
 
 ```
 </div>
@@ -573,7 +368,148 @@ print(y[10*1000*1000 -1])
 <div class="output_subarea" markdown="1">
 {:.output_stream}
 ```
-9999999
+  +1.50
++222.49
+ -10.00
+```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+print("{:^10.2f}".format(1.5))
+print("{:^10.2f}".format(222.49))
+print("{:^10.2f}".format(-10))
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+   1.50   
+  222.49  
+  -10.00  
+```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+print("{:-^10.2f}".format(1.5))
+print("{:-^10.2f}".format(222.49))
+print("{:-^10.2f}".format(-10))
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+---1.50---
+--222.49--
+---10.00--
+```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+print("{:#x}".format(32))
+print("{:#o}".format(32))
+print("{:#b}".format(32))
+print("{:#d}".format(32))
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+0x20
+0o40
+0b100000
+32
+```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+x= "hi {2}, happy {0} birthday, your height is {1}, your score is {3}".format(age, height, name, score)
+print(x)
+
+x = f"hi {name}, happy {age} birthday, your height is {height}, your score is {score}"
+print(x)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+hi ben, happy 30 birthday, your height is 180, your score is 85
+hi ben, happy 30 birthday, your height is 180, your score is 85
+```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+print(f"""freedom is the right to say that {1}+{1} = {1+1}""")
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+freedom is the right to say that 1+1 = 2
+```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+print(f"""{"the quick brown fox".upper().replace("FOX", "cat")}""")
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+THE QUICK BROWN cat
 ```
 </div>
 </div>
