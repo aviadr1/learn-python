@@ -27,7 +27,7 @@ use a loop and the `int` function to find all the numbers embedded in the quote 
 
 expected outout:
 ```
-[3, 4, 5]
+[3, 3, 3, 4, 2, 3, 5]
 ```
 
 
@@ -38,9 +38,9 @@ expected outout:
 ### useful: use the `int` functions to grab all the numbers from this string
 holy_hand_grenade_of_antioch = """\
 First shalt thou take out the Holy Pin, 
-then shalt thou count to 3, no more, no less. 
-3 shall be the number thou shalt count, and the number of the counting shall be 3. 
-4 shalt thou not count, neither count thou 2, excepting that thou then proceed to 3. 
+then shalt thou count to 3 , no more, no less. 
+3 shall be the number thou shalt count, and the number of the counting shall be 3 . 
+4 shalt thou not count, neither count thou 2 , excepting that thou then proceed to 3 . 
 5 is right out."""
 
 ```
@@ -69,7 +69,7 @@ print(numbers)
 <div class="output_subarea" markdown="1">
 {:.output_stream}
 ```
-[3, 4, 5]
+[3, 3, 3, 4, 2, 3, 5]
 ```
 </div>
 </div>

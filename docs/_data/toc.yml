@@ -173,6 +173,8 @@
   url: /06_regular_expressions/exercise/questions
 - title: 07 files
   sections:
+  - title: Path And Shutil
+    url: /07_files/path_and_shutil
   - title: exercise
     subsections:
     - title: Questions
@@ -203,7 +205,7 @@
     - title: Pickle Example
       url: /07_files/notebooks/pickle_example
     url: /07_files/notebooks/configparser
-  url: /07_files/exercise/questions
+  url: /07_files/path_and_shutil
 - title: 08 functions
   sections:
   - title: exercise
