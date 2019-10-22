@@ -165,6 +165,46 @@ assert my_abs(15) == 15
 
 
 
+# calculate VAT "מס ערך מוסף"
+
+### a) write a function called `calc_vat` that takes a price and the VAT and calculates how much the price is after VAT
+
+for instance:
+```
+>>> calc_vat(100, 17)
+117
+```
+
+### b) make the vat a default parameter with value 17
+```
+>>> calc_vat(100)
+117
+
+>>> calc_vat(100, 15)
+115
+```
+
+
+
+
+
+# zip-ing two lists together
+1. create a list of fruits, put it in  a variable called `fruits`.
+
+   example: ```['apple', 'guava', 'pineapple', 'pear', 'peach']```
+
+1. create a list of prices for these fruits. it should have the same length as your list of fruits. put it in a variable called `prices`. 
+
+   example: ```[10, 12, 20, 5, 8]```
+
+1. use the `zip` function (look it up on google) to create a list of fruit/price pairs. 
+
+   it could look like this: ```[('apple', 10), ('guava', 12), ('pineapple', 20), ('pear', 5), ('peach', 8)]``` 
+   ```
+
+
+
+
 # make_matrix() function
 
 write a function called `make_matrix(nrows=10, ncols=10)` that returns a multiplication matrix (×œ×•×— ×›×¤×œ)

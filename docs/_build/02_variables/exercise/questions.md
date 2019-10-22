@@ -21,8 +21,65 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 
 
+# basic values and types
+1. calculate `2+8` and put the result in tha variable `x`. 
+   - print the value of `x`
+     > hint: use the function `print()`
+   - what is the type of `x`?
+     > hint: use the function `type()`
+2. calculate `5 / 2` and put the result in the variable `y`. print `y` and the type of `y`
+3. put `"hello world"` into a variable named _`greeting`_. 
+   - print the variable and the type of the variable
+   - what is the `len` of _`greeting`_?
+     > hint: use the function `len()`
+4. put the values `1`, `2` and `3` into _`list1`_ and the values `"a"`, `"b"` and `"c"` into _`list2`_.
+   - calcluate _`list1`_ + _`list2`_ and put the result into _`list3`_
+    - print _`list3`_ 
+    - print the `type` of _`list3`_
+    - print the `len` of _`list3`_
+    
+
+
+
+# getting help
+suppose we want to understand how to use a function. we can use the `help()` function for that!
+
+1. let's try to use the function _`str.upper()`_, by copying this code below and running it:
+```python
+print( "hello".upper() )
+```
+2. lets see how to get help for a function. type the following code into a cell below. this will explain what the function _`str.upper`_ does
+```python
+help("hello".upper)
+```
+
+
+
+
+
+# some simple string functions
+1. lets get help for __all__ the cool functions the type _`str`_ has. lets call `help(str)`. run the following code:
+```python
+help(str)
+```
+
+2. read the documentation you've just printed, for the following functions: 
+`lower, upper, title, islower, isupper` and try to figure out what they do. you can try to use them, read the documentation again, google for them. anything that helps you understand.
+
+3. convert this string to uppercase
+`"the quick brown fox jumped over the lazy dog"`
+> hint: use one of the functions you've learned in question #2
+
+4. is the string `"I JusT mEt YoU, anD tHIs is CraaZy, sO CAll mE mayBe"` in lower case? can you convert it to lower case?
+> hints :
+> 1. there is a function that checks if a string is lower case
+> 2. there is a function that converts a string to lower case
+
+
+
 # help for str.split() function
-print the help for the function str.split
+print the `help` for the function _`str.split`_
+> hint: use the `help()` function
 
 
 
@@ -86,6 +143,26 @@ expected output:
 ```
 "the quick brown FOX jumped over the lazy DOG"
 ```
+
+
+
+# 7 boom
+use the following code, which puts an important string in a variable named _`song`_ 
+```python
+song = """
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+"""
+```
+now replace the 7th, 14th, 21st, 28th word with the word "boom"
+
+print the result
+
+[![This is important](https://cdn.instructables.com/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.LARGE.jpg?auto=webp&frame=1&width=320)](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Everything Is AWESOME")
 
 
 
