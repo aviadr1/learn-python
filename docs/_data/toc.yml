@@ -6,6 +6,8 @@
       url: /01_intro/notebooks/bitahon_intro
     - title: Exploring Python 12 5 19
       url: /01_intro/notebooks/exploring_python_12_5_19
+    - title: Intro To Basic Types
+      url: /01_intro/notebooks/intro_to_basic_types
     - title: Python Basics
       url: /01_intro/notebooks/python_basics
     - title: Trying Out Python
@@ -29,6 +31,10 @@
       url: /02_variables/notebooks/importing_math_printing_floats
     - title: Lists
       url: /02_variables/notebooks/lists
+    - title: Lists And Indexing
+      url: /02_variables/notebooks/lists_and_indexing
+    - title: List And Dictionary
+      url: /02_variables/notebooks/list_and_dictionary
     - title: Mutability Vs Immutability
       url: /02_variables/notebooks/mutability_vs_immutability
     - title: Variables
