@@ -250,7 +250,8 @@ Never gonna tell a boom and hurt you
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```### useful: data
+```python
+### useful: data
 song = """Never gonna give you up
 Never gonna let you down
 Never gonna run around and desert you
