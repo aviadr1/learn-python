@@ -60,37 +60,6 @@ bad_matches = [
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-import re
-
-regex = r"\b[0-9]+\b"
-for test in good_matches:
-    if not re.fullmatch(regex, test):
-        print("failed:", test)
-
-for test in bad_matches:
-    if re.fullmatch(regex, test):
-        print("failed:", test)
-
-print(regex)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-\b[0-9]+\b
-```
-</div>
-</div>
-</div>
-
-
-
 # regex for positive or negative integers
 create and test a regex to:
  match positive or negative integers
@@ -124,35 +93,6 @@ bad_matches = [
 ```
 </div>
 
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-regex = r"([+\-]?[1-9][0-9]*)|0"
-for test in good_matches:
-    if not re.fullmatch(regex, test):
-        print("failed:", test)
-
-for test in bad_matches:
-    if re.fullmatch(regex, test):
-        print("failed:", test)
-
-print(regex)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-([+\-]?[1-9][0-9]*)|0
-```
-</div>
-</div>
 </div>
 
 
@@ -198,36 +138,6 @@ bad_matches = [
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-regex = r"([+-]?[0-9]+\.[0-9]+)|([+\-]?[1-9][0-9]*)|0"
-
-for test in good_matches:
-    if not re.fullmatch(regex, test):
-        print("failed:", test)
-
-for test in bad_matches:
-    if re.fullmatch(regex, test):
-        print("failed:", test)
-
-print(regex)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-([+-]?[0-9]+\.[0-9]+)|([+\-]?[1-9][0-9]*)|0
-```
-</div>
-</div>
-</div>
-
-
-
 # verbs
 create and test a regex to:
    find words that look like verbs and end in '-ing'
@@ -264,36 +174,6 @@ bad_matches = [
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-regex = r"[a-zA-Z]+ing"
-
-for test in good_matches:
-    if not re.fullmatch(regex, test):
-        print("failed:", test)
-
-for test in bad_matches:
-    if re.fullmatch(regex, test):
-        print("failed:", test)
-
-print(regex)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-[a-zA-Z]+ing
-```
-</div>
-</div>
-</div>
-
-
-
 # cats are awesome
 create and test a regex to match:
 lines that start with the word 'cats' and end with the words 'are awesome' 
@@ -322,36 +202,6 @@ bad_matches = [
 ```
 </div>
 
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-regex = r'cats.*are awesome'
-
-for test in good_matches:
-    if not re.fullmatch(regex, test):
-        print("failed:", test)
-
-for test in bad_matches:
-    if re.fullmatch(regex, test):
-        print("failed:", test)
-
-print(regex)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-cats.*are awesome
-```
-</div>
-</div>
 </div>
 
 

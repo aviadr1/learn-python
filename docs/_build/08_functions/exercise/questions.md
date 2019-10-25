@@ -30,33 +30,6 @@ create a function named 'multiply_by_10' that
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def multiply_by_10(x):
-    return x*10
-
-multiply_by_10(3)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-30
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # 2. triangles
 we're going to write function to print triangles that look like this:
 ```
@@ -80,42 +53,6 @@ create a function called 'print_asterics' that
    
 use this function and a for loop to print a triangle having 10 lines
 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-
-def print_asterics(n):
-    line = '*' * n
-    print(line)
-    
-for i in range(10):
-    print_asterics(i+1)
-
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-*
-**
-***
-****
-*****
-******
-*******
-********
-*********
-**********
-```
-</div>
-</div>
-</div>
 
 
 
@@ -144,36 +81,6 @@ use this function to create this triangle with a loop
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-
-def print_char(n, c='*'):
-    line = c * n
-    print(line)
-    
-for i in range(5):
-    print_char(i+1, '@')
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-@
-@@
-@@@
-@@@@
-@@@@@
-```
-</div>
-</div>
-</div>
-
-
-
 # 4. function print_trian()
 create a function `print_trian` to print triangles like in #3 
 it should receive two parameters:
@@ -194,34 +101,6 @@ $$$$$
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def print_trian(n, c='*'):
-    for i in range(n):
-        print_char(i+1, c)
-        
-print_trian(5, '$')
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-$
-$$
-$$$
-$$$$
-$$$$$
-```
-</div>
-</div>
-</div>
-
-
-
 # 4.b write get_trian() function with return value
 
 create a new function called `get_trian`, that is very similar to
@@ -237,51 +116,6 @@ $$$
 $$$$
 $$$$$
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def get_trian(n, c='*'):
-    result = []
-    for i in range(n):
-        line = c * (i+1)
-        result.append(line)
-    
-    return "\n".join(result)
-
-x = get_trian(5, '@')
-print(x)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-@
-@@
-@@@
-@@@@
-@@@@@
-```
-</div>
-</div>
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-# w
-
-```
-</div>
-
-</div>
 
 
 
@@ -307,22 +141,6 @@ and we're going to do it in 3 styles.
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-def my_abs(x):
-  if x<0:
-    return -x
-  else:
-    return x
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
 ### useful: this tests your function
 assert my_abs(0) == 0
 assert my_abs(-10) == 10
@@ -342,61 +160,8 @@ assert my_abs(15) == 15
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def my_abs2(x):
-  return -x if x<0 else x
-
-my_abs2(-10)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-10
-```
-
-
-</div>
-</div>
-</div>
-
-
-
    
 > 3. implement absolute value function using `lambda` syntax, put the result in a variable called my_abs3
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-my_abs3 = lambda x: -x if x<0 else x
-
-my_abs3(-10)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-10
-```
-
-
-</div>
-</div>
-</div>
 
 
 
@@ -423,34 +188,6 @@ for instance:
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def calc_vat(price, vat=17):
-    return price * (1 + vat/100.0)
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### important: test your function
-assert calc_vat(100, 17) == 117
-assert calc_vat(200, 20) == 240
-assert calc_vat(100) == 117
-
-```
-</div>
-
-</div>
-
-
-
 # zip-ing two lists together
 1. create a list of fruits, put it in  a variable called `fruits`.
 
@@ -465,33 +202,6 @@ assert calc_vat(100) == 117
    it could look like this: ```[('apple', 10), ('guava', 12), ('pineapple', 20), ('pear', 5), ('peach', 8)]``` 
    ```
 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-fruits = ['apple', 'guava', 'pineapple', 'pear', 'peach']
-fruits_prices = [10, 12, 20, 5, 8]
-menu = dict(zip(fruits, fruits_prices))
-
-def double_price(menu):
-    return { name: price*2 for name, price in menu.items() }
-
-print(double_price(menu))
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-{'apple': 20, 'guava': 24, 'pineapple': 40, 'pear': 10, 'peach': 16}
-```
-</div>
-</div>
-</div>
 
 
 
@@ -520,42 +230,6 @@ for example:
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-from pprint import pprint
-def make_matrix(nrows=10, ncols=10):
-    matrix = []
-    for i in range(nrows):
-        row = []
-        matrix.append(row)
-        for j in range(ncols):
-            row.append(i*j)
-        
-    return matrix
-
-x = make_matrix(5,5)
-pprint(x)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-[[0, 0, 0, 0, 0],
- [0, 1, 2, 3, 4],
- [0, 2, 4, 6, 8],
- [0, 3, 6, 9, 12],
- [0, 4, 8, 12, 16]]
-```
-</div>
-</div>
-</div>
-
-
-
 # write maxitem() function
 create a function called maxitem 
 that finds and returns the maximum item in a list
@@ -564,37 +238,6 @@ that finds and returns the maximum item in a list
 >>> maxitem([1,2,3,4,3,1])
 4
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def maxitem(lst):
-    themax = lst[0]
-    for x in lst[1:]:
-        if x > themax:
-            themax = x
-    return themax
-
-maxitem([1,2,3,4,3,1])
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-4
-```
-
-
-</div>
-</div>
-</div>
 
 
 
@@ -627,38 +270,6 @@ and the existing function `sorted`
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def sort_lists(lst):
-    return sorted(lst, key=maxitem)
-
-sort_lists([
-         [1,2,3],
-         [2,3,4],
-         [1,1,1],
-         [2]
-        ])
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-[[1, 1, 1], [2], [1, 2, 3], [2, 3, 4]]
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # make_add_x - difficult
 create a function called `make_add_x() `
 that receives one parameter x
@@ -675,39 +286,6 @@ and return `x+y`
 >>> add10(100)
 110
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-
-def make_add_x(x):
-    def add_x(y):
-        return x+y
-    return add_x
-
-add7 = make_add_x(7)
-print(add7(3)) # 10
-print(add7(5)) # 12
-
-add10 = make_add_x(10)
-print(add10(100)) # 110
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-10
-12
-110
-```
-</div>
-</div>
-</div>
 
 
 
@@ -731,36 +309,6 @@ it differrs from print by prefering the character @
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-
-
-import sys
-def myprint(*args, sep=' @ ', end=' @\n', file=sys.stdout):
-    return print(*args, sep=sep, end=end, file=file)
-
-myprint(1, 2, 3)                #     1 @ 2 @ 3 @
-myprint( [1, 2, 3], [4, 5, 6] ) #    [1, 2, 3] @ [4, 5, 6] @
-myprint(1, 2, 3, file=sys.stdout, sep=' ', end='\n') # 1 2 3
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-1 @ 2 @ 3 @
-[1, 2, 3] @ [4, 5, 6] @
-1 2 3
-```
-</div>
-</div>
-</div>
-
-
-
 # make_debuggable() - very difficult
 
 create a function called make_debuggable(func) that:
@@ -775,53 +323,4 @@ and can accept any argument that func accepts.
 hints:
 - use a nested function that accepts variadic positional and keyword arguments
 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def make_debuggable(func):
-    def __get_signature(func, args, kwargs):
-        fullargs = [str(a) for a in args] + [ f"{k}={v}" for k,v in kwargs.items()]
-        return "{}({})".format(func.__name__, ', '.join(fullargs))
-        
-    def nested(*args, **kwargs):
-        print(f"calling {__get_signature(func, args, kwargs)}")
-        
-        v = func(*args, **kwargs)
-        
-        print(f"{__get_signature(func, args, kwargs)} -->> {v}")
-        return v
-    
-    return nested
-
-import math
-debug_sqrt = make_debuggable(math.sqrt)
-debug_sqrt(100)
-#debug_sqrt(-100)
-
-print()
-
-debug_print = make_debuggable(print)
-debug_print(1,2,3, sep = ' @@@ ')
-
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-calling sqrt(100)
-sqrt(100) -->> 10.0
-
-calling print(1, 2, 3, sep= @@@ )
-1 @@@ 2 @@@ 3
-print(1, 2, 3, sep= @@@ ) -->> None
-```
-</div>
-</div>
-</div>
 

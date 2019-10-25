@@ -50,33 +50,6 @@ then shalt thou count to 3 , no more, no less.
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-numbers = []
-for word in holy_hand_grenade_of_antioch.split():
-    try:
-        numbers.append(int(word))
-    except:
-        pass
-    
-print(numbers)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-[3, 3, 3, 4, 2, 3, 5]
-```
-</div>
-</div>
-</div>
-
-
-
 # finally
 
 we've provided an important function called `answer_to_universe_and_everything()`
@@ -106,28 +79,6 @@ def answer_to_universe_and_everything():
     else:
         return 42
     
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-f = open('answer.txt', 'w')
-try:
-    for i in range(100):
-        try:
-            print(answer_to_universe_and_everything(), file=f)
-        except Exception as ex:
-            print (ex, file=f)
-finally:
-    f.close()
-        
-        
 
 ```
 </div>

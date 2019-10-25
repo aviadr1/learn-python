@@ -32,30 +32,6 @@ i.e.  `[2**0, 2**1, 2**2, 2**3, ..., 2**15]`
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-[2**i for i in range(16)]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768]
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # list comprehension with filtering
 take the sentnence `"everything shuold be as simple as possible but no simpler"` (this is a qoute by albert einstein). <br>
 use list comprehension to 
@@ -78,30 +54,6 @@ words = "everything should be as simple as possible but no simpler".split()
 ```
 </div>
 
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-[word.upper() for word in words if len(word) < 6]
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-['BE', 'AS', 'AS', 'BUT', 'NO']
-```
-
-
-</div>
-</div>
 </div>
 
 
@@ -133,30 +85,6 @@ what have the Romans ever done for us?”
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-max([len(word) for word in brian.split()])
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-11
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # max lengh of words, and the actual word too
 
 build on the [previous exercise](#max-length-of-words-in-a-list) <br>
@@ -171,34 +99,6 @@ or alternatively:
 ```
 [[11, 'sanitation,'], [11, 'irrigation,'], [11, 'fresh-water']]
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-# method one
-result = max([ [len(word), word] for word in brian.split()])
-print(result)
-
-# method two
-longest_word = max([len(word) for word in brian.split()])
-result = [[len(word), word] for word in brian.split() if len(word) == longest_word]
-print(result)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-[11, 'sanitation,']
-[[11, 'sanitation,'], [11, 'irrigation,'], [11, 'fresh-water']]
-```
-</div>
-</div>
-</div>
 
 
 
@@ -228,31 +128,6 @@ expected output:
 ```
 ['0.00', '0.50', '0.87', '1.00', '0.87', '0.50', '0.00']
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-import math
-interesting = [0, 30, 60, 90, 120, 150, 180]
-rads = [deg * math.pi / 180 for deg in interesting]
-sins = [math.sin(rad) for rad in rads]
-strs = ["{:.2f}".format(x) for x in sins]
-print(strs)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-['0.00', '0.50', '0.87', '1.00', '0.87', '0.50', '0.00']
-```
-</div>
-</div>
-</div>
 
 
 
@@ -297,35 +172,6 @@ menu = {
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-{ item:price*2 for item,price in menu.items() }
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-{'steak': 300,
- 'falafel': 40,
- 'pizza': 118,
- 'hamburger': 126,
- 'chips': 36,
- 'salad': 60}
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # dictionary comprehension with filtering
 
 > doubling all prices turns out to be too expensive !
@@ -343,30 +189,6 @@ expected output:
 ```
 {'falafel': 24, 'pizza': 71, 'hamburger': 76, 'chips': 22, 'salad': 36}
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-{ item:round(price*1.2) for item,price in menu.items() if price < 100 } 
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-{'falafel': 24, 'pizza': 71, 'hamburger': 76, 'chips': 22, 'salad': 36}
-```
-
-
-</div>
-</div>
-</div>
 
 
 
@@ -415,30 +237,6 @@ order = ['steak', 'steak', 'steak', 'falafel', 'chips', 'salad', 'salad']
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-sum([menu[food] for food in order ])
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-548
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # set comprehension
 1. use set comprehension to find the unique words in the song "knights of the round table" by monty python
 2. sort the words in the set using the `sorted()` function 
@@ -482,94 +280,6 @@ I have to push the pram a lot.
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-sorted(
-    {word.lower().replace('.', '') for word in knights_of_round_table.split()}
-    )
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-['a',
- 'able',
- 'and',
- 'are',
- 'between',
- 'busy',
- 'but',
- 'camelot',
- 'clark',
- 'dance',
- 'diaphragm',
- 'dine',
- 'do',
- 'eat',
- 'footwork',
- 'formidable',
- 'from',
- 'gable',
- 'given',
- 'ham',
- 'have',
- 'here',
- 'i',
- 'impeccable',
- 'impersonate',
- 'in',
- 'indefatigable',
- "it's",
- 'jam',
- 'knights',
- 'life',
- 'lot',
- 'mad',
- 'many',
- 'of',
- 'opera',
- 'our',
- 'pram',
- 'push',
- 'quests',
- 'quite',
- 'rhymes',
- 'round',
- 'routines',
- 'scenes',
- 'sequin',
- 'shows',
- 'sing',
- 'spam',
- 'table',
- 'that',
- 'the',
- 'times',
- 'to',
- 'tough',
- 'unsingable',
- 'vests',
- 'war',
- 'we',
- "we're",
- 'well',
- "whene'er",
- 'with']
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # Create a matrix
 use list comprehension to create an NxM marix with numbers going from 0 to NxM
 
@@ -585,37 +295,6 @@ example with N=6 M=4
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-nrows = 6
-ncols = 4
-[ [i for i in range(i, i+ncols)] for i in range(0, nrows*ncols, ncols)] 
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-[[0, 1, 2, 3],
- [4, 5, 6, 7],
- [8, 9, 10, 11],
- [12, 13, 14, 15],
- [16, 17, 18, 19],
- [20, 21, 22, 23]]
-```
-
-
-</div>
-</div>
-</div>
-
-
-
 # using sets to test a password
 can you use a `set` to check that a password has one of the following special characters:
 ```
@@ -623,32 +302,6 @@ special_chars = """!@#$%^&*()-=_+`~;'"|/.,<>?"""
 ```
     
 hint: it requires only one line, no loops and no list comprehension
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-special_chars = """!@#$%^&*()-=_+`~;'"|/.,<>?"""
-passw = 'abcABC123!@#'
-set(passw) & set(special_chars)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-{'!', '#', '@'}
-```
-
-
-</div>
-</div>
-</div>
 
 
 
@@ -665,63 +318,6 @@ set(passw) & set(special_chars)
    use a `for` loop to iterate over the shorter list
 
 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-# 1
-def even_numbers():
-    y = 0
-    while True:
-        yield y
-        y += 2
-
-# 2
-evens = even_numbers()
-print(next(evens))
-print(next(evens))
-print(next(evens))
-
-# 3
-for num, _ in zip(evens, range(20)):
-    print(num)
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-0
-2
-4
-6
-8
-10
-12
-14
-16
-18
-20
-22
-24
-26
-28
-30
-32
-34
-36
-38
-40
-42
-44
-```
-</div>
-</div>
-</div>
 
 
 
@@ -768,24 +364,6 @@ def silly_open(filename):
 ### notice that the following for loop can't work
 # for line in silly_open('knights.txt'):
 #     print(line)
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def line_reader(f):
-    while True:
-        line = f.readline()
-        if line == '':
-            break
-        
-        yield line
 
 ```
 </div>
@@ -849,93 +427,8 @@ def triangle(n):
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-# 1
-def yield_triangle(n):
-    for i in range(1, n+1):
-        yield "*" * i
-
-# 2
-for line in yield_triangle(5):
-    print(line)
-    
-# 3
-lines = list(yield_triangle(5))
-print('\n'.join(lines))
-
-
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-*
-**
-***
-****
-*****
-*
-**
-***
-****
-*****
-```
-</div>
-</div>
-</div>
-
-
-
 # yield passwords
 can you write a generator function (function with 'yield' statement) that:
 1. uses input() to ask the user for a password
 2. checks the password (not too long, not too short, has both upper and lower characters)
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-def yield_password(min_len=4, max_len=12):
-    while True:
-        passw = input('make a new password: ')
-        if len(passw) < min_len:
-            yield [False, 'too short', passw]
-        elif len(passw) > max_len:
-            yield [False, 'too long', passw]
-        elif passw.islower():
-            yield [False, 'need uppercase letters', passw]
-        elif passw.isupper():
-            yield [False, 'need lowercse letters', passw]
-        elif not set(passw) & set("""!@#$%^&*()_+?><{}[]\|"""):
-            yield [False, 'need special characters', passw]
-        else:
-            yield [True, 'excellent', passw]
-            break
-            
-for ok, message, passw in yield_password():
-    print(message)
-    if ok:
-        break
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-make a new password: blahBLAH123~!
-too long
-make a new password: blAH123!
-excellent
-```
-</div>
-</div>
-</div>
 
