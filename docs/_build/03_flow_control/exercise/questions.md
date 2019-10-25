@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/03_flow_control/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: '03 flow control'
+title: 'Questions'
 prev_page:
-  url: /02_variables/notebooks/variables.html
-  title: 'Variables'
-next_page:
   url: /03_flow_control/exercise/questions.html
   title: 'exercise'
+next_page:
+  url: /03_flow_control/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/exercise/questions.ipynb" target="_blank">

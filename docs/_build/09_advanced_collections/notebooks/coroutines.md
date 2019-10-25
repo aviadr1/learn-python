@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/09_advanced_collections/notebooks/coroutines.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Coroutines'
 prev_page:
-  url: /09_advanced_collections/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /09_advanced_collections/notebooks/coroutines.html
-  title: 'Coroutines'
+  title: 'notebooks'
+next_page:
+  url: /09_advanced_collections/notebooks/deepcopy_shallow_copy.html
+  title: 'Deepcopy Shallow Copy'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/09_advanced_collections/notebooks/coroutines.ipynb" target="_blank">

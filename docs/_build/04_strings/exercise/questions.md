@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/04_strings/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: '04 strings'
+title: 'Questions'
 prev_page:
-  url: /03_flow_control/notebooks/while_loop-powers_loah_kefel.html
-  title: 'While Loop-powers Loah Kefel'
-next_page:
   url: /04_strings/exercise/questions.html
   title: 'exercise'
+next_page:
+  url: /04_strings/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/04_strings/exercise/questions.ipynb" target="_blank">

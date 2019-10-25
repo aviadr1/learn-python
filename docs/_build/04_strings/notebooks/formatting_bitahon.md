@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/04_strings/notebooks/formatting_bitahon.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Formatting Bitahon'
 prev_page:
-  url: /04_strings/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /04_strings/notebooks/formatting_bitahon.html
-  title: 'Formatting Bitahon'
+  title: 'notebooks'
+next_page:
+  url: /04_strings/notebooks/print_parameters.html
+  title: 'Print Parameters'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/04_strings/notebooks/formatting_bitahon.ipynb" target="_blank">

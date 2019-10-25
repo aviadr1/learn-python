@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/07_files/notebooks/configparser.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Configparser'
 prev_page:
-  url: /07_files/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /07_files/notebooks/configparser.html
-  title: 'Configparser'
+  title: 'notebooks'
+next_page:
+  url: /07_files/notebooks/files.html
+  title: 'Files'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/configparser.ipynb" target="_blank">

@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/02_variables/notebooks/dictionary.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Dictionary'
 prev_page:
-  url: /02_variables/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /02_variables/notebooks/dictionary.html
-  title: 'Dictionary'
+  title: 'notebooks'
+next_page:
+  url: /02_variables/notebooks/importing_math_printing_floats.html
+  title: 'Importing Math Printing Floats'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/02_variables/notebooks/dictionary.ipynb" target="_blank">

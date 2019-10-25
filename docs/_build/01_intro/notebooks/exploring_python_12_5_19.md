@@ -9,8 +9,8 @@ prev_page:
   url: /01_intro/notebooks/bitahon_intro.html
   title: 'Bitahon Intro'
 next_page:
-  url: /01_intro/notebooks/python_basics.html
-  title: 'Python Basics'
+  url: /01_intro/notebooks/intro_to_basic_types.html
+  title: 'Intro To Basic Types'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/01_intro/notebooks/exploring_python_12_5_19.ipynb" target="_blank">

@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/12_exceptions/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: '12 exceptions'
+title: 'Questions'
 prev_page:
-  url: /11_classes_and_oop/notebooks/inheritance.html
-  title: 'Inheritance'
-next_page:
   url: /12_exceptions/exercise/questions.html
   title: 'exercise'
+next_page:
+  url: /12_exceptions/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/12_exceptions/exercise/questions.ipynb" target="_blank">

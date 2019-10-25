@@ -9,8 +9,8 @@ prev_page:
   url: /02_variables/notebooks/importing_math_printing_floats.html
   title: 'Importing Math Printing Floats'
 next_page:
-  url: /02_variables/notebooks/mutability_vs_immutability.html
-  title: 'Mutability Vs Immutability'
+  url: /02_variables/notebooks/lists_and_indexing.html
+  title: 'Lists And Indexing'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/02_variables/notebooks/lists.ipynb" target="_blank">

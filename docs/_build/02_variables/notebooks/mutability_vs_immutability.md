@@ -6,8 +6,8 @@ kernel_name: python3
 has_widgets: false
 title: 'Mutability Vs Immutability'
 prev_page:
-  url: /02_variables/notebooks/lists.html
-  title: 'Lists'
+  url: /02_variables/notebooks/list_and_dictionary.html
+  title: 'List And Dictionary'
 next_page:
   url: /02_variables/notebooks/variables.html
   title: 'Variables'

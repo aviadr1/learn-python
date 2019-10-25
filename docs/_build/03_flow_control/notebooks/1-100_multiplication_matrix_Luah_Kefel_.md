@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: '1-100 Multiplication Matrix Luah Kefel '
 prev_page:
-  url: /03_flow_control/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_.html
-  title: '1-100 Multiplication Matrix Luah Kefel '
+  title: 'notebooks'
+next_page:
+  url: /03_flow_control/notebooks/break_continue.html
+  title: 'Break Continue'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_.ipynb" target="_blank">

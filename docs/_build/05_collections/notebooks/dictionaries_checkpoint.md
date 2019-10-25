@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/05_collections/notebooks/dictionaries_checkpoint.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Dictionaries Checkpoint'
 prev_page:
-  url: /05_collections/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /05_collections/notebooks/dictionaries_checkpoint.html
-  title: 'Dictionaries Checkpoint'
+  title: 'notebooks'
+next_page:
+  url: /05_collections/notebooks/extending_lists.html
+  title: 'Extending Lists'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/notebooks/dictionaries_checkpoint.ipynb" target="_blank">

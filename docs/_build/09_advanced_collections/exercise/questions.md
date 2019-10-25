@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/09_advanced_collections/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: '09 advanced collections'
+title: 'Questions'
 prev_page:
-  url: /08_functions/notebooks/veriadic_funcs_args.html
-  title: 'Veriadic Funcs Args'
-next_page:
   url: /09_advanced_collections/exercise/questions.html
   title: 'exercise'
+next_page:
+  url: /09_advanced_collections/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/09_advanced_collections/exercise/questions.ipynb" target="_blank">

@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/02_variables/exercise/questions.ipynb
 kernel_name: 
 has_widgets: false
-title: '02 variables'
+title: 'Questions'
 prev_page:
-  url: /01_intro/notebooks/trying_out_python.html
-  title: 'Trying Out Python'
-next_page:
   url: /02_variables/exercise/questions.html
   title: 'exercise'
+next_page:
+  url: /02_variables/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/02_variables/exercise/questions.ipynb" target="_blank">

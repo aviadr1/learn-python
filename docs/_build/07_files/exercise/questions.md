@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/07_files/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'exercise'
+title: 'Questions'
 prev_page:
-  url: /07_files/path_and_shutil.html
-  title: 'Path And Shutil'
-next_page:
   url: /07_files/exercise/questions.html
-  title: 'Questions'
+  title: 'exercise'
+next_page:
+  url: /07_files/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/exercise/questions.ipynb" target="_blank">

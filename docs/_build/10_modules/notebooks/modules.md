@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/10_modules/notebooks/modules.ipynb
 kernel_name: python3
 has_widgets: false
-title: '10 modules'
+title: 'Modules'
 prev_page:
-  url: /09_advanced_collections/notebooks/template_for_list_comprehension.html
-  title: 'Template For List Comprehension'
-next_page:
   url: /10_modules/notebooks/modules.html
   title: 'notebooks'
+next_page:
+  url: /11_classes_and_oop/notebooks/basic_classes.html
+  title: '11 classes and oop'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/10_modules/notebooks/modules.ipynb" target="_blank">

@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/08_functions/notebooks/documentation.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Documentation'
 prev_page:
-  url: /08_functions/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /08_functions/notebooks/documentation.html
-  title: 'Documentation'
+  title: 'notebooks'
+next_page:
+  url: /08_functions/notebooks/functions_calling_functions_shapes.html
+  title: 'Functions Calling Functions Shapes'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/notebooks/documentation.ipynb" target="_blank">

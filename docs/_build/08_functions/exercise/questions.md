@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/08_functions/exercise/questions.ipynb
 kernel_name: python3
 has_widgets: false
-title: '08 functions'
+title: 'Questions'
 prev_page:
-  url: /07_files/notebooks/pickle_example.html
-  title: 'Pickle Example'
-next_page:
   url: /08_functions/exercise/questions.html
   title: 'exercise'
+next_page:
+  url: /08_functions/exercise/solutions.html
+  title: 'Solutions'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/exercise/questions.ipynb" target="_blank">

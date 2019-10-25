@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/13_multiprocessing/notebooks/os_system_subprocess.ipynb
 kernel_name: python3
 has_widgets: false
-title: '13 multiprocessing'
+title: 'Os System Subprocess'
 prev_page:
-  url: /12_exceptions/notebooks/raise_try_except_finally.html
-  title: 'Raise Try Except Finally'
-next_page:
   url: /13_multiprocessing/notebooks/os_system_subprocess.html
   title: 'notebooks'
+next_page:
+  url: /13_multiprocessing/notebooks/os_system_subprocess_popen.html
+  title: 'Os System Subprocess Popen'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/13_multiprocessing/notebooks/os_system_subprocess.ipynb" target="_blank">

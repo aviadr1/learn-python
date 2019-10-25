@@ -6,8 +6,8 @@ kernel_name: python3
 has_widgets: false
 title: 'Python Basics'
 prev_page:
-  url: /01_intro/notebooks/exploring_python_12_5_19.html
-  title: 'Exploring Python 12 5 19'
+  url: /01_intro/notebooks/intro_to_basic_types.html
+  title: 'Intro To Basic Types'
 next_page:
   url: /01_intro/notebooks/trying_out_python.html
   title: 'Trying Out Python'

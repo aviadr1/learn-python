@@ -4,13 +4,13 @@ redirect_from:
 interact_link: content/06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3.ipynb
 kernel_name: python3
 has_widgets: false
-title: 'notebooks'
+title: 'Lesson 06-sub Python2-to-python3'
 prev_page:
-  url: /06_regular_expressions/exercise/solutions.html
-  title: 'Solutions'
-next_page:
   url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3.html
-  title: 'Lesson 06-sub Python2-to-python3'
+  title: 'notebooks'
+next_page:
+  url: /07_files/path_and_shutil.html
+  title: '07 files'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3.ipynb" target="_blank">
