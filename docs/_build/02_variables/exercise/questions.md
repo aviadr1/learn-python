@@ -77,6 +77,49 @@ help(str)
 
 
 
+# input from the user
+run the following code to get input from the _user_ (you are the user!)
+```python
+name = input("what is your name: ")
+print("hi", name)
+```
+
+your programs now have the power to ask questions!
+
+
+
+
+
+# BMI: Body mass index
+In health the BMI (body mass index) is defined as $$BMI=\frac{weight}{height^2}$$ 
+
+where the weight is in kilograms, and the height is in meters.
+
+for example for weight 80kg and height 2.0m the BMI is
+$80 / (2^2) = 80 /4 = 20 $
+
+1. put 97 into a variable called `weight`
+2. put 1.84 into a variabled called `height`
+3. write code to compute and print the bmi
+
+
+
+
+
+
+# BMI with input from user
+1. use the `input()` function to ask the user for his weight, put in variable `weight`
+2. what is the type of the variable `weight`?
+3. use the following code to convert the value to a `float`
+```python
+w = float(weight)
+```
+   what is the type of `w` now?
+4. ask the user for his height and convert to float
+5. compute and print the bmi
+
+
+
 # help for str.split() function
 print the `help` for the function _`str.split`_
 > hint: use the `help()` function
@@ -146,8 +189,12 @@ expected output:
 
 
 
-# 7 boom
-use the following code, which puts an important string in a variable named _`song`_ 
+# 4 boom
+in this exercise, we're going to take some song lyrics, and replace every 4th word of each line with the word "boom". and then print out the lyrics.
+> NOTE: this exercise is simple but takes a lot of lines of code. 
+> we _will_ learn loops __IN THE NEXT LESSON__. loops will help us write shorter solutions, but for now __YOU DONT NEED LOOPS__
+
+use the following code, which puts an _important_ 😜 string in a variable named _`song`_ 
 ```python
 song = """
 Never gonna give you up
@@ -158,11 +205,46 @@ Never gonna say goodbye
 Never gonna tell a lie and hurt you
 """
 ```
-now replace the 7th, 14th, 21st, 28th word with the word "boom"
+[![This is important](https://globalpremierbenefits.com/wp-content/uploads/2018/10/Click-Here-small-_0-300x107.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Everything Is AWESOME")
 
-print the result
+
+1. split this string into a list of lines. put it in variable called `lines`
+   > hint: string have a function called `.splitlines()`
+   
+2. split the line 0 into words. put it in variable called words0
+   - now also split line 1. put it into `words1`
+   - repeat for line 2 ..., line 5, put each into word1, ... word5
+
+   > hint: this should take you 6 simples lines.
+   
+3. replace the 4th word of line 1, line 2, ... line 6 with the word `"boom"``
+   > hint: you __don't__ need loops. this again takes 6 lines
+   
+4. now join `words0`. put the result into variable boom0
+   - continue to join `words1`, `words2` ... `words5` into `boom1`, `boom2` ... `boom5`
+   
+5. create a list that contains `boom0`, `boom1`, ... `boom5`, call it `boom`
+
+6. join the lines in `boom` back into a string. put it into a variable called `result`
+   > hint: use this code
+   ```python
+   result = "\n".join(boom)
+   ```
+
+7. print the result
 
 [![This is important](https://cdn.instructables.com/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.LARGE.jpg?auto=webp&frame=1&width=320)](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Everything Is AWESOME")
+
+
+> expected output:
+```
+Never gonna give you boom
+Never gonna let you boom
+Never gonna run around boom desert you
+Never gonna make you boom
+Never gonna say good boom
+Never gonna tell a boom and hurt you
+```
 
 
 
