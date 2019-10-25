@@ -2,7 +2,7 @@
 redirect_from:
   - "/02-variables/exercise/solutions"
 interact_link: content/02_variables/exercise/solutions.ipynb
-kernel_name: python3
+kernel_name: 
 has_widgets: false
 title: 'Solutions'
 prev_page:
@@ -1026,7 +1026,7 @@ Never gonna tell a boom and hurt you
         Camambert costs 7.75
         Bree costs 7.27
     
-1. without using "head math", compute the costs of gouda, edam and camambert together 
+1. without using "head math", write simple code to compute the costs of gouda, edam and camambert together 
 
 
 
