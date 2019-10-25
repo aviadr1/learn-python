@@ -45,19 +45,6 @@ expected output:
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: the qoute to work on
-words = "everything should be as simple as possible but no simpler".split()
-
-```
-</div>
-
-</div>
-
-
-
 # max length of words in a list
 using JUST ONE LINE, find the length of the longest word in a given sentence
     
@@ -65,23 +52,6 @@ hints - use the functions `str.split()`, `max()` and `len()`:
 - break the sentence into words using the function `str.split()`
 - use __list comprehension__ to compute the length of all words
 - use the function `max` to get the maximum length from the list of lengths
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: sentence to work on from "life of brian" 
-brian = """“
-Alright, but apart from the sanitation, the medicine, education, wine, public order, 
-irrigation, roads, the fresh-water system, and public health, 
-what have the Romans ever done for us?”
-"""
-
-```
-</div>
-
-</div>
 
 
 
@@ -152,26 +122,6 @@ can you do this in one line with a __dictionary comprehension__?
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: here is the menu
-menu = {
-       'steak' : 150,
-       'falafel' : 20,
-       'pizza' : 59,
-       'hamburger' : 63,
-       'chips' : 18,
-       'salad' : 30
-   }
-
-```
-</div>
-
-</div>
-
-
-
 # dictionary comprehension with filtering
 
 > doubling all prices turns out to be too expensive !
@@ -224,19 +174,6 @@ expected output:
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: the order
-order = ['steak', 'steak', 'steak', 'falafel', 'chips', 'salad', 'salad']
-
-```
-</div>
-
-</div>
-
-
-
 # set comprehension
 1. use set comprehension to find the unique words in the song "knights of the round table" by monty python
 2. sort the words in the set using the `sorted()` function 
@@ -245,38 +182,6 @@ order = ['steak', 'steak', 'steak', 'falafel', 'chips', 'salad', 'salad']
 3. use the .replace('.', '') to remove the coma characters in words
    - alernatively remove special characters using the `str.translate()` and `str.maketrans()` functions
 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful song lyrics
-knights_of_round_table = """
-We're knights of the round table
-We dance whene'er we're able
-We do routines and scenes
-With footwork impeccable.
-We dine well here in Camelot
-We eat ham and jam and spam a lot.
-We're knights of the Round Table
-Our shows are formidable
-But many times we're given rhymes
-That are quite unsingable
-We're opera mad in Camelot
-We sing from the diaphragm a lot.
-In war we're tough and able.
-Quite indefatigable
-Between our quests we sequin vests
-And impersonate Clark Gable
-It's a busy life in Camelot.
-I have to push the pram a lot.
-"""
-
-```
-</div>
-
-</div>
 
 
 
@@ -334,82 +239,6 @@ f = silly_open('knights.txt')
 for line in line_reader(f):
     print(line)
 ```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful:
-### 1) create a 'knights.txt' 
-### 2) create a silly_open() function that returns a file with just a .readline() function
-
-with open('knights.txt', 'w') as f:
-    f.write(knights_of_round_table)
-
-def silly_open(filename):
-    # define a "Stupid File" which only has a 'readline()' function
-    class StupidFile:
-        def __init__(self, f):
-            self.__f = f
-        def readline(self):
-            return self.__f.readline()
-        def close(self):
-            self.__f.close()
-    
-    # open the file 'knights.txt' for reading
-    f = StupidFile(open(filename, 'r'))
-    return f
-
-### notice that the following for loop can't work
-# for line in silly_open('knights.txt'):
-#     print(line)
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: test for your line_reader() function
-f = silly_open('knights.txt')
-for line in line_reader(f):
-    print(line.rstrip())
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-
-We're knights of the round table
-We dance whene'er we're able
-We do routines and scenes
-With footwork impeccable.
-We dine well here in Camelot
-We eat ham and jam and spam a lot.
-We're knights of the Round Table
-Our shows are formidable
-But many times we're given rhymes
-That are quite unsingable
-We're opera mad in Camelot
-We sing from the diaphragm a lot.
-In war we're tough and able.
-Quite indefatigable
-Between our quests we sequin vests
-And impersonate Clark Gable
-It's a busy life in Camelot.
-I have to push the pram a lot.
-```
-</div>
-</div>
-</div>
 
 
 

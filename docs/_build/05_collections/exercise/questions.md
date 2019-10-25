@@ -104,20 +104,6 @@ list2 = "the quick brown fox jumped over them lazy dog".split()
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: test data
-list1 = "the fox condemns the trap, not himself".split()
-list2 = "the quick brown fox jumped over the lazy dog".split()
-
-```
-</div>
-
-</div>
-
-
-
 # 7. intersection between lists using sets
 
 solve question #6 using `set`
@@ -170,20 +156,6 @@ example:
 2. which tests got broken by build2? that is, they worked on build1 and started failing in build2?
 3. which broken tests did not get solved by build2? that is, they failed on both build1 and build2?
 4. `**` which tests succeeded in both builds (hint: imagine there are 150 tests overall, named 1, 2, ..., 149, 150) 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: example data
-build1_fails = [1, 3, 6, 12, 13, 19, 20, 23, 24, 25, 33, 34, 45, 66, 67, 87, 100, 145, 149]
-build2_fails = [2, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 87, 88, 89, 145, 146 ]
-
-```
-</div>
-
-</div>
 
 
 

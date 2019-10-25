@@ -139,27 +139,3 @@ total          :  424.12 NIS
 ```
 
 
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: data
-prices = {
-         "steak" : 150,
-         "omelet" : 25,
-         "coca cola" : 12,
-         "orange juice" : 16,
-         "pizza" : 49,
-         "hamburger" : 59,
-         "pita" : 1.5,
-         "tomato salad" : 13.5
-     }
-
-order = ["steak", "steak", "pita", "pizza", "coca cola"]
-
-```
-</div>
-
-</div>
-

@@ -32,24 +32,6 @@ expected outout:
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: use the `int` functions to grab all the numbers from this string
-holy_hand_grenade_of_antioch = """\
-First shalt thou take out the Holy Pin, 
-then shalt thou count to 3 , no more, no less. 
-3 shall be the number thou shalt count, and the number of the counting shall be 3 . 
-4 shalt thou not count, neither count thou 2 , excepting that thou then proceed to 3 . 
-5 is right out."""
-
-```
-</div>
-
-</div>
-
-
-
 # finally
 
 we've provided an important function called `answer_to_universe_and_everything()`
@@ -60,41 +42,4 @@ we've provided an important function called `answer_to_universe_and_everything()
 4. use a `try/finally` block to make sure we close the file
 5. make sure the file indeed has exactly 100 lines
 
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: use this function
-def answer_to_universe_and_everything():
-    import random
-    x = random.randint(0, 10)
-    if x<3:
-        return 'need more time'
-    elif x<6:
-        return 'blue ... no, red!'
-    elif x<9:
-        raise Exception('too hard')
-    else:
-        return 42
-    
-
-```
-</div>
-
-</div>
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: show that the file has 100 lines
-assert len(open('answer.txt').readlines()) == 100
-
-```
-</div>
-
-</div>
 

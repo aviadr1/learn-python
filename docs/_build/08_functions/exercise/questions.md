@@ -138,22 +138,6 @@ and we're going to do it in 3 styles.
 
 
 
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-### useful: this tests your function
-assert my_abs(0) == 0
-assert my_abs(-10) == 10
-assert my_abs(15) == 15
-
-
-```
-</div>
-
-</div>
-
-
-
 > 2. write a function called `my_abs2(x)` that does the same calculation as my_abs(x) <br>
    BUT use the __single line__ `if` variant: `exprssion1 if condition else expression2`
 
