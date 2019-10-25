@@ -298,3 +298,41 @@ can you use the `round()` function to round the prices of cheese, so that it has
 
 
 
+
+
+# len and indexing
+```python
+quote = "everything should be as simple as possible, but not simpler. Albert Einstein"
+```
+
+1. write code to check how many letters/characters are in this qoute.
+> hint: use the function len()
+
+2. split this qoute into words. how many words are in this quote?
+
+3. write code to print:
+   1. the 1st letter in the quote
+   2. the 7th word
+   3. the 1st letter of the 7th word
+   4. the last letter in the quote
+   5. the last letter of the 9th word
+
+> hint: the function `len()` is useful to figuring out what is the last letter/word   
+
+
+
+# len, indexing and input
+1. what would the following code print? first try to answer yourself, then copy the code and run it to see if you guessed right
+
+```
+hi = "hello "
+greeting = hi * 3
+print(greeting)
+```
+
+2. use the `input()` function to ask the user for full name.
+
+3. print the length of the name 
+
+4. print the last letter of the name 100 times
+

@@ -1141,3 +1141,113 @@ print(costs)
 </div>
 </div>
 
+
+
+# len and indexing
+```python
+quote = "everything should be as simple as possible, but not simpler. Albert Einstein"
+```
+
+1. write code to check how many letters/characters are in this qoute.
+> hint: use the function len()
+
+2. split this qoute into words. how many words are in this quote?
+
+3. write code to print:
+   1. the 1st letter in the quote
+   2. the 7th word
+   3. the 1st letter of the 7th word
+   4. the last letter in the quote
+   5. the last letter of the 9th word
+
+> hint: the function `len()` is useful to figuring out what is the last letter/word   
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+# 1
+quote = "everything should be as simple as possible but not simpler. Albert Einstein"
+print(len(quote))
+
+# 2
+words = quote.split()
+print(len(words))
+
+# 3
+print(quote[0])
+print(words[6]) # 7th word
+print(words[6][0]) # 1st letter of 7th word
+print(quote[len(quote) - 1]) #last letter
+word8 = words[8] # 9th word
+print(word8[len(word8) -1]) #last letter of 9th word
+
+
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+75
+12
+e
+possible
+p
+n
+t
+```
+</div>
+</div>
+</div>
+
+
+
+# len, indexing and input
+1. what would the following code print? first try to answer yourself, then copy the code and run it to see if you guessed right
+
+```
+hi = "hello "
+greeting = hi * 3
+print(greeting)
+```
+
+2. use the `input()` function to ask the user for full name.
+
+3. print the length of the name 
+
+4. print the last letter of the name 100 times
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+# 1
+hi = "hello "
+greeting = hi * 3
+print(greeting)
+
+name = input("what is your full name? ")
+print(len(name))
+print(name[len(name) -1] * 100)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+hello hello hello 
+what is your full name? aviad rozenhek
+14
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+```
+</div>
+</div>
+</div>
+
