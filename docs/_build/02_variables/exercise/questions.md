@@ -2,7 +2,7 @@
 redirect_from:
   - "/02-variables/exercise/questions"
 interact_link: content/02_variables/exercise/questions.ipynb
-kernel_name: 
+kernel_name: python3
 has_widgets: false
 title: 'Questions'
 prev_page:
@@ -250,8 +250,7 @@ Never gonna tell a boom and hurt you
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-### useful: data
+```### useful: data
 song = """Never gonna give you up
 Never gonna let you down
 Never gonna run around and desert you
@@ -277,6 +276,24 @@ Never gonna tell a lie and hurt you
         Bree costs 7.27
     
 1. without using "head math", write simple code to compute the costs of gouda, edam and camambert together 
+> hint: the solution is one simple but long line of code, which uses the `+` operator 3 times
+
+1. add a new cheese to the dictionary: 
+  `Cottage` cheese, which costs `3.2`
+> hint: the solution takes just one very simple line of code
+
+1. the government has added a new tax on milk products, now every cheese costs has increased by 27% ! can you update the costs in the dictionary?
+> hint: the solution takes 5 (almost identical) lines of code
+
+1. what does the following code do?
+```python
+pi = 3.14159265
+print(pi)
+pi_rounded = round(pi, 2)
+print(pi_rounded)
+```
+can you use the `round()` function to round the prices of cheese, so that it has costs in dollars and cents (Shekels and agorot)?
+
 
 
 

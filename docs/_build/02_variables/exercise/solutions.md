@@ -2,7 +2,7 @@
 redirect_from:
   - "/02-variables/exercise/solutions"
 interact_link: content/02_variables/exercise/solutions.ipynb
-kernel_name: 
+kernel_name: python3
 has_widgets: false
 title: 'Solutions'
 prev_page:
@@ -43,8 +43,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-# 1
+```# 1
 x = 2 + 8
 print(type(x), x)
 
@@ -102,8 +101,7 @@ help("hello".upper)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-# 1
+```# 1
 print( "hello".upper() )
 
 # 2
@@ -154,8 +152,7 @@ help(str)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-# 1
+```# 1
 help(str)
 
 # 3
@@ -603,8 +600,7 @@ your programs now have the power to ask questions!
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-name = input("what is your name: ")
+```name = input("what is your name: ")
 print("hi", name)
 
 ```
@@ -642,8 +638,7 @@ $80 / (2^2) = 80 /4 = 20 $
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-weight = 97
+```weight = 97
 height = 1.84
 bmi = weight / height**2
 print(bmi)
@@ -678,8 +673,7 @@ w = float(weight)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-weight = input("what is your weight? ")
+```weight = input("what is your weight? ")
 print(type(weight), weight)
 w = float(weight)
 print(type(w), w)
@@ -715,8 +709,7 @@ print the `help` for the function _`str.split`_
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-help(str.split)
+```help(str.split)
 
 ```
 </div>
@@ -766,8 +759,7 @@ expected ouput:
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-sent = "the quick brown fox jumped over the lazy dog"
+```sent = "the quick brown fox jumped over the lazy dog"
 words = sent.split()
 print(words)
 
@@ -805,8 +797,7 @@ print(result)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-help(str.join)
+```help(str.join)
 
 # one two three
 # join will add a space ' ' between each two words in mylist
@@ -864,8 +855,7 @@ expected output:
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-words = "the quick brown fox jumped over the lazy dog".split()
+```words = "the quick brown fox jumped over the lazy dog".split()
 # print(words)
 words[3] = words[3].upper()
 words[-1] = words[-1].upper()
@@ -949,8 +939,7 @@ Never gonna tell a boom and hurt you
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-### useful: data
+```### useful: data
 song = """Never gonna give you up
 Never gonna let you down
 Never gonna run around and desert you
@@ -968,8 +957,7 @@ Never gonna tell a lie and hurt you
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
-lines = song.splitlines()
+```lines = song.splitlines()
 
 words0 = lines[0].split()
 words1 = lines[1].split()
@@ -1027,6 +1015,24 @@ Never gonna tell a boom and hurt you
         Bree costs 7.27
     
 1. without using "head math", write simple code to compute the costs of gouda, edam and camambert together 
+> hint: the solution is one simple but long line of code, which uses the `+` operator 3 times
+
+1. add a new cheese to the dictionary: 
+  `Cottage` cheese, which costs `3.2`
+> hint: the solution takes just one very simple line of code
+
+1. the government has added a new tax on milk products, now every cheese costs has increased by 27% ! can you update the costs in the dictionary?
+> hint: the solution takes 5 (almost identical) lines of code
+
+1. what does the following code do?
+```python
+pi = 3.14159265
+print(pi)
+pi_rounded = round(pi, 2)
+print(pi_rounded)
+```
+can you use the `round()` function to round the prices of cheese, so that it has costs in dollars and cents (Shekels and agorot)?
+
 
 
 
@@ -1034,16 +1040,57 @@ Never gonna tell a boom and hurt you
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```python
+```# 1
+print()
+print(1)
+print('-' * 10)
 costs = {
     "Gouda" : 4.99 ,
     "Edam" : 2.45,
     "Camambert" : 7.75,
-    "Bree" : 7.27,
-    "Cheddar":  2.89,
+    "Bree" : 7.27
 }
+print(costs)
 
+# 2
+print()
+print(2)
+print('-' * 10)
 print(costs["Gouda"] + costs["Edam"] + costs["Camambert"])
+
+# 3
+print()
+print(3)
+print('-' * 10)
+costs["Cottage"] = 3.2
+print(costs)
+
+# 4
+print()
+print(4)
+print('-' * 10)
+costs['Gouda'] = costs['Gouda'] * 1.27
+costs['Edam'] = costs['Edam'] * 1.27
+costs['Camambert'] = costs['Camambert'] * 1.27
+costs['Bree'] = costs['Bree'] * 1.27
+costs['Cottage'] = costs['Cottage'] * 1.27
+print(costs)
+
+# 5
+print()
+print(5)
+print('-' * 10)
+pi = 3.14159265
+print(pi)
+pi_rounded = round(pi, 2)
+print(pi_rounded)
+
+costs['Gouda'] = round(costs['Gouda'], 2)
+costs['Edam'] = round(costs['Edam'], 2)
+costs['Camambert'] = round(costs['Camambert'], 2)
+costs['Bree'] = round(costs['Bree'], 2)
+costs['Cottage'] = round(costs['Cottage'], 2)
+print(costs)
 
 ```
 </div>
@@ -1052,7 +1099,28 @@ print(costs["Gouda"] + costs["Edam"] + costs["Camambert"])
 <div class="output_subarea" markdown="1">
 {:.output_stream}
 ```
+
+1
+----------
+{'Gouda': 4.99, 'Edam': 2.45, 'Camambert': 7.75, 'Bree': 7.27}
+
+2
+----------
 15.190000000000001
+
+3
+----------
+{'Gouda': 4.99, 'Edam': 2.45, 'Camambert': 7.75, 'Bree': 7.27, 'Cottage': 3.2}
+
+4
+----------
+{'Gouda': 6.3373, 'Edam': 3.1115000000000004, 'Camambert': 9.8425, 'Bree': 9.232899999999999, 'Cottage': 4.064}
+
+5
+----------
+3.14159265
+3.14
+{'Gouda': 6.34, 'Edam': 3.11, 'Camambert': 9.84, 'Bree': 9.23, 'Cottage': 4.06}
 ```
 </div>
 </div>
