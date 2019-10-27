@@ -1,0 +1,437 @@
+---
+redirect_from:
+  - "/05-collections/notebooks/reverse-dictionary"
+interact_link: content/05_collections/notebooks/reverse_dictionary.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Reverse Dictionary
+prev_page:
+  url: /05_collections/notebooks/removing_from_lists.html
+  title: |-
+    Removing From Lists
+next_page:
+  url: /05_collections/notebooks/reverse_dict_using_setdefault.html
+  title: |-
+    Reverse Dict Using Setdefault
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/notebooks/reverse_dictionary.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Israel&quot;</span> <span class="p">:</span> <span class="s2">&quot;Jerusalem&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;France&quot;</span> <span class="p">:</span> <span class="s2">&quot;Paris&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;UK&quot;</span> <span class="p">:</span> <span class="s2">&quot;London&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">countries</span><span class="p">[</span><span class="s2">&quot;Finland&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Helsinki&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Israel&#39;: &#39;Jerusalem&#39;, &#39;France&#39;: &#39;Paris&#39;, &#39;UK&#39;: &#39;London&#39;, &#39;Finland&#39;: &#39;Helsinki&#39;}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">land</span><span class="p">,</span><span class="n">city</span> <span class="ow">in</span> <span class="n">countries</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">cities</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="n">land</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Jerusalem&#39;: &#39;Israel&#39;, &#39;Paris&#39;: &#39;France&#39;, &#39;London&#39;: &#39;UK&#39;, &#39;Helsinki&#39;: &#39;Finland&#39;}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">crazy_countries</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Israel&quot;</span> <span class="p">:</span> <span class="s2">&quot;Jerusalem&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;France&quot;</span> <span class="p">:</span> <span class="s2">&quot;Paris&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;UK&quot;</span> <span class="p">:</span> <span class="s2">&quot;London&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Texas&quot;</span> <span class="p">:</span> <span class="s2">&quot;Paris&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Ohio&quot;</span> <span class="p">:</span> <span class="s2">&quot;Jerusalem&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span> <span class="s2">&quot;Paris&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;France&quot;</span><span class="p">,</span> <span class="s2">&quot;Texas&quot;</span><span class="p">]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;Paris&#39;: [&#39;France&#39;, &#39;Texas&#39;]}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">crazy_cities</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">land</span><span class="p">,</span><span class="n">city</span> <span class="ow">in</span> <span class="n">crazy_countries</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">city</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">crazy_cities</span><span class="p">:</span>
+        <span class="n">crazy_cities</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="n">land</span> <span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">crazy_cities</span><span class="p">[</span><span class="n">city</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">land</span><span class="p">)</span>
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">crazy_cities</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Jerusalem&#39;: [&#39;Israel&#39;, &#39;Ohio&#39;], &#39;Paris&#39;: [&#39;France&#39;, &#39;Texas&#39;], &#39;London&#39;: [&#39;UK&#39;]}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\\.&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>\.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>\\.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>\\.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

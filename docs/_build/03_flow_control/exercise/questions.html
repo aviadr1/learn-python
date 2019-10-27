@@ -1,0 +1,350 @@
+---
+redirect_from:
+  - "/03-flow-control/exercise/questions"
+interact_link: content/03_flow_control/exercise/questions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Questions
+prev_page:
+  url: /02_variables/notebooks/variables.html
+  title: |-
+    Variables
+next_page:
+  url: /03_flow_control/exercise/solutions.html
+  title: |-
+    Solutions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/exercise/questions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="For-more-exercizes-on-loops,-see-this-link:">For more exercizes on loops, see this link:<a class="anchor-link" href="#For-more-exercizes-on-loops,-see-this-link:"> </a></h1><ul>
+<li><a href="bit.ly/aviad-python-loops">Python conditional statements and loops [44 exercises with solution]</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="if/elif/else---checking-a-password">if/elif/else - checking a password<a class="anchor-link" href="#if/elif/else---checking-a-password"> </a></h1><ol>
+<li><p>use the input() function to take a password from the user
+<br><br></p>
+</li>
+<li><p>check that the password is "good" according to the following criterions:</p>
+<ol>
+<li>the password length must be at least 4</li>
+<li>the password length must be no more than 12</li>
+<li>the password must not be just numbers</li>
+<li>the password must have both lowercase and uppercase letters
+<br><br></li>
+</ol>
+</li>
+<li><p>if the password is good, print "excellent password". 
+otherwise, print the reason why the password was rejected
+<br><br></p>
+</li>
+</ol>
+<p>HINTS:</p>
+<ul>
+<li>use the <code>len()</code>, <code>.isdigit()</code>, <code>.isupper()</code>, <code>.islower()</code> functions</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-loop---until-we-find-a-good-password">While loop - until we find a good password<a class="anchor-link" href="#While-loop---until-we-find-a-good-password"> </a></h1><ol>
+<li><p>copy the password testing code you wrote above
+<br> <br></p>
+</li>
+<li><p>now use a while loop to continue asking for a new password
+until a password that passes all the tests is given</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-loop---password-with-maximum-3-attemps">While loop - password with maximum 3 attemps<a class="anchor-link" href="#While-loop---password-with-maximum-3-attemps"> </a></h1><ol>
+<li><p>copy your answer for the while loop above
+<br><br></p>
+</li>
+<li><p>now modify the code such that no more than 3 attemps are possible
+after 3 failed attemps, the program should say "too many attemps, access denied"
+<br><br></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="while-loop---numbers-0-100-divisible-by-7">while loop - numbers 0-100 divisible by 7<a class="anchor-link" href="#while-loop---numbers-0-100-divisible-by-7"> </a></h1><p>using a while loop, print all the numbers between 0 and 100 
+that are divisible by 7</p>
+<blockquote><p><strong>we say that x is divisible by 7 when <code>x%7 == 0</code></strong></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="for-loop----numbers-0-100-divisible-by-7">for loop -  numbers 0-100 divisible by 7<a class="anchor-link" href="#for-loop----numbers-0-100-divisible-by-7"> </a></h1><blockquote><p><strong>Just like the question above, this time with a <code>for</code> loop</strong></p>
+</blockquote>
+<p>print all the numbers between 0 and 100 that are divisible by 7
+using a <code>for</code> loop and <code>range(100)</code></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-loop---multiplication-matrix">While loop - multiplication matrix<a class="anchor-link" href="#While-loop---multiplication-matrix"> </a></h1><blockquote><p>multiplication matrix = ×œ×•×— ×”×›×¤×œ</p>
+</blockquote>
+<p>using while loop(s), print the multiplication matrix
+in the following way (total of 100 lines)</p>
+
+<pre><code>  1 x 1 = 1
+  1 x 2 = 2
+  ...
+  1 x 10 = 10
+  2 x 1 = 1
+  2 x 2 = 2
+  ...
+  2 x 10 = 20
+  ...
+  ...
+  10 x 1 = 10
+  10 x 2 = 20
+  ...
+  10 x 10 = 100</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="for-loop---multiplication-matrix">for loop - multiplication matrix<a class="anchor-link" href="#for-loop---multiplication-matrix"> </a></h1><blockquote><p>multiplication matrix = ×œ×•×— ×”×›×¤×œ</p>
+</blockquote>
+<p>this time, use <code>for</code> loop(s) and <code>range</code> to print the multiplication matrix
+in the following way (total of 100 lines)</p>
+
+<pre><code>  1 x 1 = 1
+  1 x 2 = 2
+  ...
+  1 x 10 = 10
+  2 x 1 = 1
+  2 x 2 = 2
+  ...
+  2 x 10 = 20
+  ...
+  ...
+  10 x 1 = 10
+  10 x 2 = 20
+  ...
+  10 x 10 = 100</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="for-loop---multiplication-matrix-with-nice-formatting">for loop - multiplication matrix with nice formatting<a class="anchor-link" href="#for-loop---multiplication-matrix-with-nice-formatting"> </a></h1><ol>
+<li><p>copy your <em>for loop multiplication matrix</em> solution  above 
+<br><br></p>
+</li>
+<li><p>modify the solution so that it actually prints the multiplication table in table form <br>
+   hint:</p>
+
+<pre><code> &gt;&gt; print(1,2,3, end="\t")
+ &gt;&gt; print(4,5,6)
+ 1 2 3    4 5 6</code></pre>
+</li>
+</ol>
+<p>expected output:</p>
+
+<pre><code> 1    2     3     4     5     6     7     8     9     10    
+ 2    4     6     8     10    12    14    16    18    20    
+ 3    6     9     12    15    18    21    24    27    30    
+ 4    8     12    16    20    24    28    32    36    40    
+ 5    10    15    20    25    30    35    40    45    50    
+ 6    12    18    24    30    36    42    48    54    60    
+ 7    14    21    28    35    42    49    56    63    70    
+ 8    16    24    32    40    48    56    64    72    80    
+ 9    18    27    36    45    54    63    72    81    90    
+ 10   20    30    40    50    60    70    80    90    100    </code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="loop-to-find-long-words">loop to find long words<a class="anchor-link" href="#loop-to-find-long-words"> </a></h1><p>print all the words in the following sentence that are longer than 4 characters:</p>
+
+<pre><code>"The quick brown fox jumped over the lazy dog"
+
+</code></pre>
+<p>expected output:</p>
+
+<pre><code>quick
+brown
+jumped</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="squares">squares<a class="anchor-link" href="#squares"> </a></h1><p>here's a square made of the <code>'*'</code> character with length 5</p>
+
+<pre><code>*****
+*****
+*****
+*****
+*****
+
+</code></pre>
+<ol>
+<li><p>use the input() function to take a number from the user</p>
+
+<pre><code>num = int(input('how big? '))</code></pre>
+</li>
+<li><p>can you use for loop(s) to print such a square of length <code>num</code>?</p>
+</li>
+</ol>
+<p>hints:</p>
+<ul>
+<li>use <code>print('*', end="")</code> to print a single <code>'*'</code> character</li>
+<li>you need more than one for loop</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="triangles">triangles<a class="anchor-link" href="#triangles"> </a></h1><p>here's a triangle made of the <code>'*'</code> character with length 5</p>
+
+<pre><code> *
+ **
+ ***
+ ****
+ *****
+
+</code></pre>
+<p>can you use for loop(s) to print such a triangle of length 10?</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="enumerate">enumerate<a class="anchor-link" href="#enumerate"> </a></h1><ol>
+<li><p>split the string "the quick brown fox jumped over the lazy dog" into words
+using the .split() function, and put the list in the variable 'words'
+<br><br></p>
+</li>
+<li><p>use the enumerate() function to print each word on its own line, 
+along with the index of the word in the 'words' variable
+<br><br></p>
+
+<pre><code>0 the
+1 quick
+2 brown
+3 fox
+4 jumped
+5 over
+6 the
+7 lazy
+8 dog</code></pre>
+</li>
+<li><p>(harder) replace words that are longer than 4 characters to the string "too long"
+use enumerate() to do this with minimum number of code lines</p>
+
+<pre><code>['the', 'too long', 'too long', 'fox', 'too long', 'over', 'the', 'lazy', 'dog'] </code></pre>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

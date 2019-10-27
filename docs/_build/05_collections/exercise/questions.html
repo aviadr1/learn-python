@@ -1,0 +1,316 @@
+---
+redirect_from:
+  - "/05-collections/exercise/questions"
+interact_link: content/05_collections/exercise/questions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Questions
+prev_page:
+  url: /04_strings/notebooks/string_tests.html
+  title: |-
+    String Tests
+next_page:
+  url: /05_collections/exercise/solutions.html
+  title: |-
+    Solutions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/exercise/questions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.-list-of-random-numbers">1. list of random numbers<a class="anchor-link" href="#1.-list-of-random-numbers"> </a></h1><p>using the following code, create a list of <strong>25 random numbers</strong></p>
+
+<pre><code>   import random
+   random.randint(0, 100) # generates a random number between 0 and 100</code></pre>
+<p>example result: (write code to randomly create this list)</p>
+
+<pre><code>   [90, 10, 14, 15,    20, 20, 87, 23,
+    8,  2,  44, 29,    10, 13, 33, 99,
+    9,  3,  23, 25]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-create-a-sub-list">2. create a sub-list<a class="anchor-link" href="#2.-create-a-sub-list"> </a></h1><p>create a list of all the numbers between 0-100 that are dividible by 7:</p>
+<p>0, 7, 14, 21, ...</p>
+<p>how many different ways can you think of to do this?</p>
+<ol>
+<li>using a for loop</li>
+<li>using range</li>
+<li>using range and slicing</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.--removing-from-a-list-*">3.  removing from a list <code>*</code><a class="anchor-link" href="#3.--removing-from-a-list-*"> </a></h1><p>remove from the list you created in question #1, all the numbers that are divisible by 7</p>
+<p>how many ways can you think of doing this?</p>
+<ol>
+<li>using <code>.remove()</code></li>
+<li>using <code>.pop()</code></li>
+</ol>
+<p>test your solution using this code:</p>
+
+<pre><code>for x in mylist:
+    assert i % 7 != 0</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.-reversing-words-in-a-sentence">4. reversing words in a sentence<a class="anchor-link" href="#4.-reversing-words-in-a-sentence"> </a></h1><p>print the words in the following sentence in reverse order</p>
+
+<pre><code>    the quick brown fox jumped over the lazy dog   
+    --&gt; dog lazy the over jumped fox brown quick the</code></pre>
+<p>do it in as many ways as you can</p>
+<ol>
+<li>using slicing</li>
+<li>using pop</li>
+<li>using loop and range</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="5.-remove-first-and-last">5. remove first and last<a class="anchor-link" href="#5.-remove-first-and-last"> </a></h1><p>remove the first and last numbers from the list #1 and put them in variable x,y
+   how can you do this with the least number of lines?</p>
+<ol>
+<li>using indexing and -1</li>
+<li>using unpacking</li>
+<li>using pop</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="6.-intersection-between-lists">6. intersection between lists<a class="anchor-link" href="#6.-intersection-between-lists"> </a></h1><p>create any two lists list1, list2
+example:</p>
+
+<pre><code>list1 = "the fox condemns the trap, not himself".split()
+list2 = "the quick brown fox jumped over them lazy dog".split()</code></pre>
+<ol>
+<li>now, using the keyword 'in' and a loop check if list1 has <em>any</em> item that also belongs in list2</li>
+<li>now also create a list called list_1_2 that has the entire list of items that exist in both list1 and list2 </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="s2">&quot;the fox condemns the trap, not himself&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="7.-intersection-between-lists-using-sets">7. intersection between lists using sets<a class="anchor-link" href="#7.-intersection-between-lists-using-sets"> </a></h1><p>solve question #6 using <code>set</code></p>
+<p>hint: you no longer need loops</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="8.-random-numbers-without-duplicates">8. random numbers without duplicates<a class="anchor-link" href="#8.-random-numbers-without-duplicates"> </a></h1><p>using the type <code>set</code>,</p>
+<ul>
+<li>create a list of exactly 20 random numbers(between 0-100), </li>
+<li>that have no duplicates </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="9.-remove-duplicates">9. remove duplicates<a class="anchor-link" href="#9.-remove-duplicates"> </a></h1><ul>
+<li>create a list of 15 random numbers betwen 1-10</li>
+<li>using the type <code>set()</code><br>
+remove all the duplicate numbers from the list </li>
+</ul>
+<ol>
+<li>do it without caring about the order of items</li>
+<li><code>**</code> can you also do it, while preserving the original order of the list?</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="10.-uniques-and-dups-**">10. uniques and dups <code>**</code><a class="anchor-link" href="#10.-uniques-and-dups-**"> </a></h1><ul>
+<li>get a list of 20 random numbers, each in range 0-10</li>
+<li>from this list, which numbers were  ...<ol>
+<li>unique? i.e. they appeared only once in the list?</li>
+<li>dups? i.e. they appeared more than once in the list?</li>
+</ol>
+</li>
+</ul>
+<p>hint: you may need a for loop and having one or two sets</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="11.-results-of-automated-testing">11. results of automated testing<a class="anchor-link" href="#11.-results-of-automated-testing"> </a></h1><p>imagine you're running automated tests for a new build of your project. 
+and this build "build1" fails some test. 
+then the engineers go on to try to fix the bugs and create "build2" which also fails some tests</p>
+<p>example:</p>
+
+<pre><code>  build1_fails = [1, 3, 6, 12, 13, 19, 20, 23, 24, 25, 33, 34, 45, 66, 67, 87, 100, 145, 149]
+  build2_fails = [2, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 87, 88, 89, 145, 146 ]</code></pre>
+<ol>
+<li>which tests were fixed by build2? that is, they failed in build1 and stopped failing in build2?</li>
+<li>which tests got broken by build2? that is, they worked on build1 and started failing in build2?</li>
+<li>which broken tests did not get solved by build2? that is, they failed on both build1 and build2?</li>
+<li><code>**</code> which tests succeeded in both builds (hint: imagine there are 150 tests overall, named 1, 2, ..., 149, 150) </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: example data</span>
+<span class="n">build1_fails</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">149</span><span class="p">]</span>
+<span class="n">build2_fails</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">146</span> <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="12.-144-dictionary">12. 144 dictionary<a class="anchor-link" href="#12.-144-dictionary"> </a></h1><ul>
+<li>look at your phone's phonebook, and select 4 people you have phone numbers for</li>
+<li>create an "144" dictionary for these people 
+that maps names of people to their phone numbers</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="13.-reverse-411-dictionary">13. reverse 411 dictionary<a class="anchor-link" href="#13.-reverse-411-dictionary"> </a></h1><ol>
+<li>take the dictionary from the previous question and create a <em>reverse</em> "411" dictionary
+ that maps phone numbers back to people's names</li>
+</ol>
+<ol>
+<li><code>**</code> sharing phone numbers:<ul>
+<li>what happens if two people share the same phone number?</li>
+<li>can you still reverse the dictionary and preserve all the information?</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

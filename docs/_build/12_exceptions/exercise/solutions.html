@@ -1,0 +1,213 @@
+---
+redirect_from:
+  - "/12-exceptions/exercise/solutions"
+interact_link: content/12_exceptions/exercise/solutions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Solutions
+prev_page:
+  url: /12_exceptions/exercise/questions.html
+  title: |-
+    Questions
+next_page:
+  url: /12_exceptions/notebooks/exceptions.html
+  title: |-
+    Exceptions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/12_exceptions/exercise/solutions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="convert-to-int">convert to int<a class="anchor-link" href="#convert-to-int"> </a></h1><p>use a loop and the <code>int</code> function to find all the numbers embedded in the quote given below.</p>
+<ul>
+<li>hint: use <code>try/except</code> so that things which are not numbers wont stop your loop</li>
+</ul>
+<p>expected outout:</p>
+
+<pre><code>[3, 3, 3, 4, 2, 3, 5]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: use the `int` functions to grab all the numbers from this string</span>
+<span class="n">holy_hand_grenade_of_antioch</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">First shalt thou take out the Holy Pin, </span>
+<span class="s2">then shalt thou count to 3 , no more, no less. </span>
+<span class="s2">3 shall be the number thou shalt count, and the number of the counting shall be 3 . </span>
+<span class="s2">4 shalt thou not count, neither count thou 2 , excepting that thou then proceed to 3 . </span>
+<span class="s2">5 is right out.&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">holy_hand_grenade_of_antioch</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">word</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, 3, 3, 4, 2, 3, 5]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="finally">finally<a class="anchor-link" href="#finally"> </a></h1><p>we've provided an important function called <code>answer_to_universe_and_everything()</code></p>
+<ol>
+<li>open a file called <code>'answer.txt'</code> for writing</li>
+<li>use a loop to call <code>answer_to_universe_and_everything()</code> a 100 times, and write the results to the file</li>
+<li>use a <code>try/except</code> block to make sure that if answer_to_universe_and_everything() fails, we continue to call the function</li>
+<li>if the function fails, write the fail message to the file</li>
+<li>use a <code>try/finally</code> block to make sure we close the file</li>
+<li>make sure the file indeed has exactly 100 lines</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: use this function</span>
+<span class="k">def</span> <span class="nf">answer_to_universe_and_everything</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">random</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;need more time&#39;</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;blue ... no, red!&#39;</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">9</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;too hard&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">42</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;answer.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">answer_to_universe_and_everything</span><span class="p">(),</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: show that the file has 100 lines</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;answer.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">())</span> <span class="o">==</span> <span class="mi">100</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

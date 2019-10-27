@@ -1,0 +1,911 @@
+---
+redirect_from:
+  - "/05-collections/exercise/solutions"
+interact_link: content/05_collections/exercise/solutions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Solutions
+prev_page:
+  url: /05_collections/exercise/questions.html
+  title: |-
+    Questions
+next_page:
+  url: /05_collections/notebooks/dictionaries_checkpoint.html
+  title: |-
+    Dictionaries Checkpoint
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/exercise/solutions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.-list-of-random-numbers">1. list of random numbers<a class="anchor-link" href="#1.-list-of-random-numbers"> </a></h1><p>using the following code, create a list of <strong>25 random numbers</strong></p>
+
+<pre><code>   import random
+   random.randint(0, 100) # generates a random number between 0 and 100</code></pre>
+<p>example result: (write code to randomly create this list)</p>
+
+<pre><code>   [90, 10, 14, 15,    20, 20, 87, 23,
+    8,  2,  44, 29,    10, 13, 33, 99,
+    9,  3,  23, 25]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">rand</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
+    <span class="n">rand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">rand</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[17, 16, 30, 99, 35, 36, 18, 9, 24, 93, 92, 65, 62, 32, 89, 32, 26, 74, 47, 53, 38, 20, 8, 1, 1]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-create-a-sub-list">2. create a sub-list<a class="anchor-link" href="#2.-create-a-sub-list"> </a></h1><p>create a list of all the numbers between 0-100 that are dividible by 7:</p>
+<p>0, 7, 14, 21, ...</p>
+<p>how many different ways can you think of to do this?</p>
+<ol>
+<li>using a for loop</li>
+<li>using range</li>
+<li>using range and slicing</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">7</span>==0:
+        <span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1">#2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="c1">#3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))[::</span><span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+[0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+[0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.--removing-from-a-list-*">3.  removing from a list <code>*</code><a class="anchor-link" href="#3.--removing-from-a-list-*"> </a></h1><p>remove from the list you created in question #1, all the numbers that are divisible by 7</p>
+<p>how many ways can you think of doing this?</p>
+<ol>
+<li>using <code>.remove()</code></li>
+<li>using <code>.pop()</code></li>
+</ol>
+<p>test your solution using this code:</p>
+
+<pre><code>for x in mylist:
+    assert i % 7 != 0</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number7s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+
+<span class="c1"># remove</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">rand</span><span class="p">[:])</span> <span class="c1"># copy and sort list from #1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;random list: &quot;</span><span class="p">,</span> <span class="n">list1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;all divisible by 7: &#39;</span><span class="p">,</span> <span class="n">number7s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">number7s</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span> <span class="c1"># multiples of 7</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">number7s</span><span class="p">:</span>
+    <span class="k">while</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+        <span class="n">list1</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#remove() removes only the first occurance</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">!=</span> <span class="mi">0</span>
+
+<span class="c1"># pop solution #1</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="n">rand</span><span class="p">[:]</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">list2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">list2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">number7s</span><span class="p">:</span>
+        <span class="n">list2</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">list2</span><span class="p">))</span>
+        
+<span class="c1"># pop solution #2</span>
+<span class="n">list3</span> <span class="o">=</span> <span class="n">rand</span><span class="p">[:]</span>
+<span class="c1"># iterate on the list in reverse to avoid changing indexes</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="n">list3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">number7s</span><span class="p">:</span>
+        <span class="n">list3</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">list3</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>random list:  [1, 1, 8, 9, 16, 17, 18, 20, 24, 26, 30, 32, 32, 35, 36, 38, 47, 53, 62, 65, 74, 89, 92, 93, 99]
+all divisible by 7:  [0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+
+[1, 1, 8, 9, 16, 17, 18, 20, 24, 26, 30, 32, 32, 36, 38, 47, 53, 62, 65, 74, 89, 92, 93, 99]
+[1, 1, 8, 9, 16, 17, 18, 20, 24, 26, 30, 32, 32, 36, 38, 47, 53, 62, 65, 74, 89, 92, 93, 99]
+[1, 1, 8, 9, 16, 17, 18, 20, 24, 26, 30, 32, 32, 36, 38, 47, 53, 62, 65, 74, 89, 92, 93, 99]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.-reversing-words-in-a-sentence">4. reversing words in a sentence<a class="anchor-link" href="#4.-reversing-words-in-a-sentence"> </a></h1><p>print the words in the following sentence in reverse order</p>
+
+<pre><code>    the quick brown fox jumped over the lazy dog   
+    --&gt; dog lazy the over jumped fox brown quick the</code></pre>
+<p>do it in as many ways as you can</p>
+<ol>
+<li>using slicing</li>
+<li>using pop</li>
+<li>using loop and range</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span>
+
+<span class="c1"># slicing</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1"># pop</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">while</span> <span class="n">words</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="o">.</span><span class="n">pop</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># loop and range</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># loop and slicing</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># reversed</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()))))</span>
+
+<span class="c1"># in place reverse</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">words</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1"># in-place</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>dog lazy the over jumped fox brown quick the
+dog lazy the over jumped fox brown quick the 
+dog lazy the over jumped fox brown quick the 
+dog lazy the over jumped fox brown quick the 
+dog lazy the over jumped fox brown quick the
+dog lazy the over jumped fox brown quick the
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="5.-remove-first-and-last">5. remove first and last<a class="anchor-link" href="#5.-remove-first-and-last"> </a></h1><p>remove the first and last numbers from the list #1 and put them in variable x,y
+   how can you do this with the least number of lines?</p>
+<ol>
+<li>using indexing and -1</li>
+<li>using unpacking</li>
+<li>using pop</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rand</span><span class="p">)</span>
+
+<span class="c1"># using indexing and -1</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="n">rand</span><span class="p">[:]</span> <span class="c1"># list from #1</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">list1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">list1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">list1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1">#using unpacking</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="n">rand</span><span class="p">[:]</span> <span class="c1"># list from #1</span>
+<span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">everythingelse</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">list1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">everythingelse</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># using pop</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="n">rand</span><span class="p">[:]</span> <span class="c1"># list from #1</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span><span class="n">list1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">list1</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">list1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[17, 16, 30, 99, 35, 36, 18, 9, 24, 93, 92, 65, 62, 32, 89, 32, 26, 74, 47, 53, 38, 20, 8, 1, 1]
+17 [16, 30, 99, 35, 36, 18, 9, 24, 93, 92, 65, 62, 32, 89, 32, 26, 74, 47, 53, 38, 20, 8, 1] 1
+17 [16, 30, 99, 35, 36, 18, 9, 24, 93, 92, 65, 62, 32, 89, 32, 26, 74, 47, 53, 38, 20, 8, 1] 1
+17 [16, 30, 99, 35, 36, 18, 9, 24, 93, 92, 65, 62, 32, 89, 32, 26, 74, 47, 53, 38, 20, 8, 1] 1
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="6.-intersection-between-lists">6. intersection between lists<a class="anchor-link" href="#6.-intersection-between-lists"> </a></h1><p>create any two lists list1, list2
+example:</p>
+
+<pre><code>list1 = "the fox condemns the trap, not himself".split()
+list2 = "the quick brown fox jumped over them lazy dog".split()</code></pre>
+<ol>
+<li>now, using the keyword 'in' and a loop check if list1 has <em>any</em> item that also belongs in list2</li>
+<li>now also create a list called list_1_2 that has the entire list of items that exist in both list1 and list2 </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="s2">&quot;the fox condemns the trap, not himself&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1)</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">list2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1:&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+        <span class="k">break</span>
+        
+<span class="c1"># 2)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">list1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">list2</span><span class="p">:</span>
+        <span class="n">words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;2:&#39;</span><span class="p">,</span> <span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1: the
+2: [&#39;the&#39;, &#39;fox&#39;, &#39;the&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="7.-intersection-between-lists-using-sets">7. intersection between lists using sets<a class="anchor-link" href="#7.-intersection-between-lists-using-sets"> </a></h1><p>solve question #6 using <code>set</code></p>
+<p>hint: you no longer need loops</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="nb">set</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">list2</span><span class="p">))</span> <span class="c1"># &amp; calls set.intersection</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;fox&#39;, &#39;the&#39;}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="8.-random-numbers-without-duplicates">8. random numbers without duplicates<a class="anchor-link" href="#8.-random-numbers-without-duplicates"> </a></h1><p>using the type <code>set</code>,</p>
+<ul>
+<li>create a list of exactly 20 random numbers(between 0-100), </li>
+<li>that have no duplicates </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[14, 17, 18, 26, 29, 37, 43, 45, 46, 48, 54, 56, 59, 63, 70, 75, 89, 90, 92, 93]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="9.-remove-duplicates">9. remove duplicates<a class="anchor-link" href="#9.-remove-duplicates"> </a></h1><ul>
+<li>create a list of 15 random numbers betwen 1-10</li>
+<li>using the type <code>set()</code><br>
+remove all the duplicate numbers from the list </li>
+</ul>
+<ol>
+<li>do it without caring about the order of items</li>
+<li><code>**</code> can you also do it, while preserving the original order of the list?</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">):</span>
+    <span class="n">rand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">list1</span> <span class="o">=</span> <span class="n">rand</span><span class="p">[:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+
+<span class="c1"># in normal sorted order </span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+
+<span class="c1"># in the same order as the original list</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">list1</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">list1</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, 7, 0, 9, 1, 0, 6, 6, 0, 6, 2, 6, 2, 0, 1]
+{0, 1, 2, 3, 6, 7, 9}
+[3, 7, 0, 9, 1, 6, 2]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="10.-uniques-and-dups-**">10. uniques and dups <code>**</code><a class="anchor-link" href="#10.-uniques-and-dups-**"> </a></h1><ul>
+<li>get a list of 20 random numbers, each in range 0-10</li>
+<li>from this list, which numbers were  ...<ol>
+<li>unique? i.e. they appeared only once in the list?</li>
+<li>dups? i.e. they appeared more than once in the list?</li>
+</ol>
+</li>
+</ul>
+<p>hint: you may need a for loop and having one or two sets</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create random list</span>
+<span class="n">rand</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">rand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># calculate uniques</span>
+<span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">uniq</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">rand</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+        <span class="n">uniq</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">uniq</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># print results</span>
+<span class="n">dups</span> <span class="o">=</span> <span class="n">seen</span> <span class="o">-</span> <span class="n">uniq</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">rand</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;seen: &quot;</span><span class="p">,</span> <span class="n">seen</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;uniques: &quot;</span><span class="p">,</span> <span class="n">uniq</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dups: &quot;</span><span class="p">,</span> <span class="n">dups</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 6, 7, 7, 8, 9, 9, 9, 9, 10]
+seen:  {0, 1, 2, 3, 4, 6, 7, 8, 9, 10}
+uniques:  {1, 6, 8, 10}
+dups:  {0, 2, 3, 4, 7, 9}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="11.-results-of-automated-testing">11. results of automated testing<a class="anchor-link" href="#11.-results-of-automated-testing"> </a></h1><p>imagine you're running automated tests for a new build of your project. 
+and this build "build1" fails some test. 
+then the engineers go on to try to fix the bugs and create "build2" which also fails some tests</p>
+<p>example:</p>
+
+<pre><code>  build1_fails = [1, 3, 6, 12, 13, 19, 20, 23, 24, 25, 33, 34, 45, 66, 67, 87, 100, 145, 149]
+  build2_fails = [2, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 87, 88, 89, 145, 146 ]</code></pre>
+<ol>
+<li>which tests were fixed by build2? that is, they failed in build1 and stopped failing in build2?</li>
+<li>which tests got broken by build2? that is, they worked on build1 and started failing in build2?</li>
+<li>which broken tests did not get solved by build2? that is, they failed on both build1 and build2?</li>
+<li><code>**</code> which tests succeeded in both builds (hint: imagine there are 150 tests overall, named 1, 2, ..., 149, 150) </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: example data</span>
+<span class="n">build1_fails</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">149</span><span class="p">]</span>
+<span class="n">build2_fails</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">146</span> <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1: &quot;</span><span class="p">,</span> <span class="nb">set</span><span class="p">(</span><span class="n">build1_fails</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">build2_fails</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2: &quot;</span><span class="p">,</span> <span class="nb">set</span><span class="p">(</span><span class="n">build2_fails</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">build1_fails</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3: &quot;</span><span class="p">,</span> <span class="nb">set</span><span class="p">(</span><span class="n">build1_fails</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">build2_fails</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;4: &quot;</span><span class="p">,</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">150</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">build2_fails</span><span class="p">)</span> <span class="o">|</span> <span class="nb">set</span><span class="p">(</span><span class="n">build1_fails</span><span class="p">)</span> <span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1:  {1, 33, 3, 34, 66, 6, 67, 100, 45, 149, 23, 24, 25}
+2:  {2, 9, 10, 11, 14, 15, 16, 146, 88, 89}
+3:  {12, 13, 145, 19, 20, 87}
+
+4:  {0, 4, 5, 7, 8, 17, 18, 21, 22, 26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 147, 148}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="12.-144-dictionary">12. 144 dictionary<a class="anchor-link" href="#12.-144-dictionary"> </a></h1><ul>
+<li>look at your phone's phonebook, and select 4 people you have phone numbers for</li>
+<li>create an "144" dictionary for these people 
+that maps names of people to their phone numbers</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d144</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;avi&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-111&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ben&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-222&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hen&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-222&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gaddy&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-333&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;daddy&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-333&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zvi&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-444&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zvika&quot;</span> <span class="p">:</span> <span class="s2">&quot;053-444&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="13.-reverse-411-dictionary">13. reverse 411 dictionary<a class="anchor-link" href="#13.-reverse-411-dictionary"> </a></h1><ol>
+<li>take the dictionary from the previous question and create a <em>reverse</em> "411" dictionary
+ that maps phone numbers back to people's names</li>
+</ol>
+<ol>
+<li><code>**</code> sharing phone numbers:<ul>
+<li>what happens if two people share the same phone number?</li>
+<li>can you still reverse the dictionary and preserve all the information?</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#1</span>
+<span class="n">d441</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">d144</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">d441</span><span class="p">[</span><span class="n">phone</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d441</span><span class="p">)</span>
+
+<span class="c1">#2</span>
+<span class="n">d441</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span> <span class="ow">in</span> <span class="n">d144</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">phone</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d441</span><span class="p">:</span>
+        <span class="n">d441</span><span class="p">[</span><span class="n">phone</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="n">d441</span><span class="p">[</span><span class="n">phone</span><span class="p">]</span>
+        <span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">d441</span><span class="p">)</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;053-111&#39;: &#39;avi&#39;, &#39;053-222&#39;: &#39;hen&#39;, &#39;053-333&#39;: &#39;daddy&#39;, &#39;053-444&#39;: &#39;zvika&#39;}
+{&#39;053-111&#39;: [&#39;avi&#39;], &#39;053-222&#39;: [&#39;ben&#39;, &#39;hen&#39;], &#39;053-333&#39;: [&#39;gaddy&#39;, &#39;daddy&#39;], &#39;053-444&#39;: [&#39;zvi&#39;, &#39;zvika&#39;]}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

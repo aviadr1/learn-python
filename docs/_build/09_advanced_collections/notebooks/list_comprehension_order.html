@@ -1,0 +1,228 @@
+---
+redirect_from:
+  - "/09-advanced-collections/notebooks/list-comprehension-order"
+interact_link: content/09_advanced_collections/notebooks/list_comprehension_order.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  List Comprehension Order
+prev_page:
+  url: /09_advanced_collections/notebooks/list_and_dictionary_comprehension_checkpoint.html
+  title: |-
+    List And Dictionary Comprehension Checkpoint
+next_page:
+  url: /09_advanced_collections/notebooks/list_comprehension_sin.html
+  title: |-
+    List Comprehension Sin
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/09_advanced_collections/notebooks/list_comprehension_order.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;steak&#39;</span> <span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+    <span class="s1">&#39;pita&#39;</span> <span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span>
+    <span class="s1">&#39;hamburger&#39;</span> <span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+    <span class="s1">&#39;chips&#39;</span> <span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="s1">&#39;shakshuka&#39;</span> <span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+    <span class="s1">&#39;cake&#39;</span> <span class="p">:</span> <span class="mi">25</span>
+<span class="p">}</span>
+
+<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;chips&#39;</span><span class="p">,</span> <span class="s1">&#39;cake&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">order</span><span class="p">:</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">price</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>342
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">order</span> <span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>342</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cost_increase</span> <span class="o">=</span> <span class="mf">1.15</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span> <span class="n">name</span><span class="p">:</span><span class="nb">round</span><span class="p">(</span><span class="n">price</span><span class="o">*</span><span class="n">cost_increase</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">price</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;steak&#39;: 172,
+ &#39;pita&#39;: 2,
+ &#39;hamburger&#39;: 68,
+ &#39;chips&#39;: 20,
+ &#39;shakshuka&#39;: 37,
+ &#39;cake&#39;: 29}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_items([(&#39;steak&#39;, 150), (&#39;pita&#39;, 1.5), (&#39;hamburger&#39;, 59), (&#39;chips&#39;, 17), (&#39;shakshuka&#39;, 32), (&#39;cake&#39;, 25)])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

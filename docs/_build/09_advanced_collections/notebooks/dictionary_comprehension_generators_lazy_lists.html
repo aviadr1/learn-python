@@ -1,0 +1,793 @@
+---
+redirect_from:
+  - "/09-advanced-collections/notebooks/dictionary-comprehension-generators-lazy-lists"
+interact_link: content/09_advanced_collections/notebooks/dictionary_comprehension_generators_lazy_lists.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Dictionary Comprehension Generators Lazy Lists
+prev_page:
+  url: /09_advanced_collections/notebooks/deepcopy_shallow_copy.html
+  title: |-
+    Deepcopy Shallow Copy
+next_page:
+  url: /09_advanced_collections/notebooks/generators_lazy_functions.html
+  title: |-
+    Generators Lazy Functions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/09_advanced_collections/notebooks/dictionary_comprehension_generators_lazy_lists.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheeses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span> <span class="s2">&quot;bree&quot;</span><span class="p">,</span> <span class="s2">&quot;cheddar&quot;</span><span class="p">,</span> <span class="s2">&quot;rockfort&quot;</span><span class="p">]</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.9</span><span class="p">,</span> <span class="mf">2.45</span><span class="p">,</span> <span class="mf">9.90</span><span class="p">,</span> <span class="mf">6.60</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cheeses</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>range(0, 4)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="n">cheeses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">:</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;adam&#39;: 1.9, &#39;bree&#39;: 2.45, &#39;cheddar&#39;: 9.9, &#39;rockfort&#39;: 6.6}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span>  <span class="ow">in</span> <span class="n">nums</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1.4142135623730951, 2.0, 10.0, 9.0]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">newitem</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{i}</span><span class="s2"> * </span><span class="si">{j}</span><span class="s2"> = {i*j}&quot;</span>
+        <span class="n">newlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newitem</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;1 * 1 = 1&#39;, &#39;1 * 2 = 2&#39;, &#39;1 * 3 = 3&#39;, &#39;2 * 1 = 2&#39;, &#39;2 * 2 = 4&#39;, &#39;2 * 3 = 6&#39;, &#39;3 * 1 = 3&#39;, &#39;3 * 2 = 6&#39;, &#39;3 * 3 = 9&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{i}</span><span class="s2"> * </span><span class="si">{j}</span><span class="s2"> = {i*j}&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;1 * 1 = 1&#39;,
+ &#39;1 * 2 = 2&#39;,
+ &#39;1 * 3 = 3&#39;,
+ &#39;2 * 1 = 2&#39;,
+ &#39;2 * 2 = 4&#39;,
+ &#39;2 * 3 = 6&#39;,
+ &#39;3 * 1 = 3&#39;,
+ &#39;3 * 2 = 6&#39;,
+ &#39;3 * 3 = 9&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>range(0, 1000000000)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;_io.TextIOWrapper name=&#39;myfile.txt&#39; mode=&#39;r&#39; encoding=&#39;cp1252&#39;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">gen</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>                             Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-3-6e72e47198db&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>next<span class="ansi-yellow-intense-fg ansi-bold">(</span>gen<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">StopIteration</span>: </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+4
+8
+16
+32
+64
+128
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">infinite</span><span class="p">():</span>
+    <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1">#return i</span>
+        <span class="k">yield</span> <span class="n">i</span>
+        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">infinite</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;generator object infinite at 0x05E8E7B0&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">next</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>7</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read_file_line_by_line_lazily</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="n">line</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.txt&quot;</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">read_file_line_by_line_lazily</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">non_empty_lines</span> <span class="o">=</span> <span class="p">(</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;generator object read_file_line_by_line_lazily at 0x0623A770&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">non_empty_lines</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I am Daniel
+I am Sam
+Sam I am
+That Sam-I-am
+That Sam-I-am!
+I do not like
+That Sam-I-am
+Do you like
+Green eggs and ham
+I do not like them,
+Sam-I-am.
+I do not like
+Green eggs and ham.
+Would you like them
+Here or there?
+I would not like them
+Here or there.
+I would not like them
+Anywhere.
+I do not like
+Green eggs and ham.
+I do not like them,
+Sam-I-am
+Would you like them
+In a house?
+Would you like them
+With a mouse?
+I do not like them
+In a house.
+I do not like them
+With a mouse.
+I do not like them
+Here or there.
+I do not like them
+Anywhere.
+I do not like green eggs and ham.
+I do not like them, Sam-I-am.
+Would you eat them
+In a box?
+Would you eat them
+With a fox?
+Not in a box.
+Not with a fox.
+Not in a house.
+Not with a mouse.
+I would not eat them here or there.
+I would not eat them anywhere.
+I would not eat green eggs and ham.
+I do not like them, Sam-I-am.
+Would you? Could you?
+In a car?
+Eat them! Eat them!
+Here they are.
+I woould not,
+Could not,
+In a car
+You may like them.
+You will see.
+You may like them
+In a tree?
+I would not, could not in a tree.
+Not in a car! You let me be.
+I do not like them in a box.
+I do not like them with a fox
+I do not like them in a house
+I do mot like them with a mouse
+I do not like them here or there.
+I do not like them anywhere.
+I do not like green eggs and ham.
+I do not like them, Sam-I-am.
+A train! A train!
+A train! A train!
+Could you, would you
+On a train?
+Not on a train! Not in a tree!
+Not in a car! Sam! Let me be!
+I would not, could not, in a box.
+I could not, would not, with a fox.
+I will not eat them with a mouse
+I will not eat them in a house.
+I will not eat them here or there.
+I will not eat them anywhere.
+I do not like them, Sam-I-am.
+Say!
+In the dark?
+Here in the dark!
+Would you, could you, in the dark?
+I would not, could not,
+In the dark.
+Would you, could you,
+In the rain?
+I would not, could not, in the rain.
+Not in the dark. Not on a train,
+Not in a car, Not in a tree.
+I do not like them, Sam, you see.
+Not in a house. Not in a box.
+Not with a mouse. Not with a fox.
+I will not eat them here or there.
+I do not like them anywhere!
+You do not like
+Green eggs and ham?
+I do not
+Like them,
+Sam-I-am.
+Could you, would you,
+With a goat?
+I would not,
+Could not.
+With a goat!
+Would you, could you,
+On a boat?
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

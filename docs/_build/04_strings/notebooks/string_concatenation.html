@@ -1,0 +1,473 @@
+---
+redirect_from:
+  - "/04-strings/notebooks/string-concatenation"
+interact_link: content/04_strings/notebooks/string_concatenation.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  String Concatenation
+prev_page:
+  url: /04_strings/notebooks/strings_multiline_strings_checkpoint.html
+  title: |-
+    Strings Multiline Strings Checkpoint
+next_page:
+  url: /04_strings/notebooks/string_formatting.html
+  title: |-
+    String Formatting
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/04_strings/notebooks/string_concatenation.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeneggs</span> <span class="o">=</span> <span class="s2">&quot;Do you like</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;Green eggs and ham</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;I do not like them</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;Sam-I-am</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Do you like
+Green eggs and ham
+I do not like them
+Sam-I-am
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># literal strings do not need + to concatenate</span>
+<span class="n">greeneggs</span> <span class="o">=</span> <span class="s2">&quot;Do you like</span><span class="se">\n</span><span class="s2">&quot;</span>  <span class="s2">&quot;Green eggs and ham</span><span class="se">\n</span><span class="s2">&quot;</span>  <span class="s2">&quot;I do not like them</span><span class="se">\n</span><span class="s2">&quot;</span>  <span class="s2">&quot;Sam-I-am</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Do you like
+Green eggs and ham
+I do not like them
+Sam-I-am
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use \ at end of lines to continue at the next line</span>
+<span class="n">greeneggs</span> <span class="o">=</span> \
+    <span class="s2">&quot;Do you like</span><span class="se">\n</span><span class="s2">&quot;</span>  \
+    <span class="s2">&quot;Green eggs and ham</span><span class="se">\n</span><span class="s2">&quot;</span>  \
+    <span class="s2">&quot;I do not like them</span><span class="se">\n</span><span class="s2">&quot;</span>  \
+    <span class="s2">&quot;Sam-I-am</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Do you like
+Green eggs and ham
+I do not like them
+Sam-I-am
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeneggs</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Do you like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">I do not like them</span>
+<span class="s2">Sam-I-am</span>
+<span class="s2">I do not like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">Would you like them</span>
+<span class="s2">Here or there?</span>
+<span class="s2">I would not like them</span>
+<span class="s2">Here or there</span>
+<span class="s2">I would not like them</span>
+<span class="s2">Anywhere</span>
+<span class="s2">I do not like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">I do not like them</span>
+<span class="s2">Sam-I-am</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Do you like
+Green eggs and ham
+I do not like them
+Sam-I-am
+I do not like
+Green eggs and ham
+Would you like them
+Here or there?
+I would not like them
+Here or there
+I would not like them
+Anywhere
+I do not like
+Green eggs and ham
+I do not like them
+Sam-I-am
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeneggs</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Do you like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">I do not like them</span>
+<span class="s2">Sam-I-am</span>
+<span class="s2">I do not like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">Would you like them</span>
+<span class="s2">Here or there?</span>
+<span class="s2">I would not like them</span>
+<span class="s2">Here or there</span>
+<span class="s2">I would not like them</span>
+<span class="s2">Anywhere</span>
+<span class="s2">I do not like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">I do not like them</span>
+<span class="s2">Sam-I-am</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Do you like
+Green eggs and ham
+I do not like them
+Sam-I-am
+I do not like
+Green eggs and ham
+Would you like them
+Here or there?
+I would not like them
+Here or there
+I would not like them
+Anywhere
+I do not like
+Green eggs and ham
+I do not like them
+Sam-I-am
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&quot;&quot;\n&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>\n
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quoting_works_freely</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">I like &quot;sarcasm&quot;</span>
+<span class="s2">and qouting smart people like this</span>
+<span class="s2">&#39;everything should be as simple as possible, but no simpler&#39;</span>
+<span class="s2">-- albert einstein</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quoting_works_freely</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+I like &#34;sarcasm&#34;
+and qouting smart people like this
+&#39;everything should be as simple as possible, but no simpler&#39;
+-- albert einstein
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">repr</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;&#39;\\n&#39;&#34;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\n&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3]
+[3, 2, 1]
+[1, 2, 3]
+None
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,207 @@
+---
+redirect_from:
+  - "/11-classes-and-oop/notebooks/duck-typing"
+interact_link: content/11_classes_and_oop/notebooks/duck_typing.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Duck Typing
+prev_page:
+  url: /11_classes_and_oop/notebooks/basic_classes.html
+  title: |-
+    Basic Classes
+next_page:
+  url: /11_classes_and_oop/notebooks/inheritance.html
+  title: |-
+    Inheritance
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/11_classes_and_oop/notebooks/duck_typing.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MobilePhone</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">dial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phone</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mobile phone dialed&quot;</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Fax</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">dial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phone</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fax dialed&quot;</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">NotAPhone</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">[</span><span class="n">MobilePhone</span><span class="p">(),</span> <span class="n">Fax</span><span class="p">(),</span> <span class="n">NotAPhone</span><span class="p">()]:</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">dial</span><span class="p">(</span><span class="s2">&quot;053-55555&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mobile phone dialed 053-55555
+fax dialed 053-55555
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-12fa7657042c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">for</span> obj <span class="ansi-green-intense-fg ansi-bold">in</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>MobilePhone<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> Fax<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> NotAPhone<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>obj<span class="ansi-yellow-intense-fg ansi-bold">.</span>dial<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;053-55555&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;NotAPhone&#39; object has no attribute &#39;dial&#39;</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-4b1a855c9c7d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>numpy<span class="ansi-yellow-intense-fg ansi-bold">.</span>dot
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;numpy&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-9-b5dc45673dc3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>math<span class="ansi-yellow-intense-fg ansi-bold">.</span>sqrt<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">100</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: math domain error</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

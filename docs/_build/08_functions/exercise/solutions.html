@@ -1,0 +1,1089 @@
+---
+redirect_from:
+  - "/08-functions/exercise/solutions"
+interact_link: content/08_functions/exercise/solutions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Solutions
+prev_page:
+  url: /08_functions/exercise/questions.html
+  title: |-
+    Questions
+next_page:
+  url: /08_functions/notebooks/documentation.html
+  title: |-
+    Documentation
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/exercise/solutions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.-write-a-multiply_by_10()-function">1. write a multiply_by_10() function<a class="anchor-link" href="#1.-write-a-multiply_by_10()-function"> </a></h1><p>create a function named 'multiply_by_10' that</p>
+<ul>
+<li>receives one parameter x</li>
+<li>returns x multiplied by 10</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multiply_by_10</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="mi">10</span>
+
+<span class="n">multiply_by_10</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-triangles">2. triangles<a class="anchor-link" href="#2.-triangles"> </a></h1><p>we're going to write function to print triangles that look like this:</p>
+
+<pre><code>   *
+   **
+   ***
+   ****</code></pre>
+<p>create a function called 'print_asterics' that</p>
+<ul>
+<li>receives one parameter called n</li>
+<li>prints to screen one line with n asterics</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; print_asterics(4)
+****
+&gt;&gt;&gt; print_asterics(8)
+********</code></pre>
+<p>use this function and a for loop to print a triangle having 10 lines</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_asterics</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">print_asterics</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.-write-print_char()-function">3. write print_char() function<a class="anchor-link" href="#3.-write-print_char()-function"> </a></h1><p>create a new function called <code>print_char</code> that works 
+similarly to print_asterics,</p>
+<ul>
+<li>except it receives the character to print as an 
+additional parameter called 'c'</li>
+<li>the param c should have a default value of '*'</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; print_char(4)
+****
+&gt;&gt;&gt; print_char(8, '@')
+@@@@@@@@</code></pre>
+<p>use this function to create this triangle with a loop</p>
+
+<pre><code>@
+@@
+@@@
+@@@@</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_char</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">c</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">print_char</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;@&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>@
+@@
+@@@
+@@@@
+@@@@@
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.-function-print_trian()">4. function print_trian()<a class="anchor-link" href="#4.-function-print_trian()"> </a></h1><p>create a function <code>print_trian</code> to print triangles like in #3 
+it should receive two parameters:</p>
+<ul>
+<li>n determines how many lines the triangle would have</li>
+<li>c determines the character to use, with '*' as default</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; print_trian(5, '$')
+$
+$$
+$$$
+$$$$
+$$$$$</code></pre>
+<ul>
+<li>hint: this function should use print_char internally</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_trian</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">print_char</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+        
+<span class="n">print_trian</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;$&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>$
+$$
+$$$
+$$$$
+$$$$$
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.b-write-get_trian()-function-with-return-value">4.b write get_trian() function with return value<a class="anchor-link" href="#4.b-write-get_trian()-function-with-return-value"> </a></h1><p>create a new function called <code>get_trian</code>, that is very similar to
+<code>print_trian</code> from #4, but instead of printing the triangle
+it returns the triangle as a string</p>
+
+<pre><code>&gt;&gt;&gt; x = get_trian(5, '$')
+&gt;&gt;&gt; print(x)
+$
+$$
+$$$
+$$$$
+$$$$$</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_trian</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">c</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">get_trian</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>@
+@@
+@@@
+@@@@
+@@@@@
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># w</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="my_abs(x)-function"><code>my_abs(x)</code> function<a class="anchor-link" href="#my_abs(x)-function"> </a></h1><p>in this exercise we're going to implement a funtion that calculates the absolute value (×¢×¨×š ×ž×•×—×œ×˜) of a parameter x
+and we're going to do it in 3 styles.</p>
+
+<pre><code>   x = my_abs(-10)
+   print(x) # prints 10</code></pre>
+
+<pre><code>   y = my_abs(12)
+   print(y) # prints 12</code></pre>
+<blockquote><ol>
+<li>write a function called <code>my_abs(x)</code> that calculates the absolute value (×¢×¨×š ×ž×•×—×œ×˜) of a parameter x</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_abs</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">x</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: this tests your function</span>
+<span class="k">assert</span> <span class="n">my_abs</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">my_abs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="n">my_abs</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ol>
+<li>write a function called <code>my_abs2(x)</code> that does the same calculation as my_abs(x) <br>
+BUT use the <strong>single line</strong> <code>if</code> variant: <code>exprssion1 if condition else expression2</code></li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">my_abs2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="o">-</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span> <span class="k">else</span> <span class="n">x</span>
+
+<span class="n">my_abs2</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ol>
+<li>implement absolute value function using <code>lambda</code> syntax, put the result in a variable called my_abs3</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_abs3</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span> <span class="k">else</span> <span class="n">x</span>
+
+<span class="n">my_abs3</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="calculate-VAT-&quot;&#1502;&#1505;-&#1506;&#1512;&#1498;-&#1502;&#1493;&#1505;&#1507;&quot;">calculate VAT "&#1502;&#1505; &#1506;&#1512;&#1498; &#1502;&#1493;&#1505;&#1507;"<a class="anchor-link" href="#calculate-VAT-&quot;&#1502;&#1505;-&#1506;&#1512;&#1498;-&#1502;&#1493;&#1505;&#1507;&quot;"> </a></h1><h3 id="a)-write-a-function-called-calc_vat-that-takes-a-price-and-the-VAT-and-calculates-how-much-the-price-is-after-VAT">a) write a function called <code>calc_vat</code> that takes a price and the VAT and calculates how much the price is after VAT<a class="anchor-link" href="#a)-write-a-function-called-calc_vat-that-takes-a-price-and-the-VAT-and-calculates-how-much-the-price-is-after-VAT"> </a></h3><p>for instance:</p>
+
+<pre><code>&gt;&gt;&gt; calc_vat(100, 17)
+117</code></pre>
+<h3 id="b)-make-the-vat-a-default-parameter-with-value-17">b) make the vat a default parameter with value 17<a class="anchor-link" href="#b)-make-the-vat-a-default-parameter-with-value-17"> </a></h3>
+<pre><code>&gt;&gt;&gt; calc_vat(100)
+117
+
+&gt;&gt;&gt; calc_vat(100, 15)
+115</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calc_vat</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">vat</span><span class="o">=</span><span class="mi">17</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">price</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">vat</span><span class="o">/</span><span class="mf">100.0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### important: test your function</span>
+<span class="k">assert</span> <span class="n">calc_vat</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span> <span class="o">==</span> <span class="mi">117</span>
+<span class="k">assert</span> <span class="n">calc_vat</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mi">240</span>
+<span class="k">assert</span> <span class="n">calc_vat</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">117</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="zip-ing-two-lists-together">zip-ing two lists together<a class="anchor-link" href="#zip-ing-two-lists-together"> </a></h1><ol>
+<li><p>create a list of fruits, put it in  a variable called <code>fruits</code>.</p>
+<p>example: <code>['apple', 'guava', 'pineapple', 'pear', 'peach']</code></p>
+</li>
+<li><p>create a list of prices for these fruits. it should have the same length as your list of fruits. put it in a variable called <code>prices</code>.</p>
+<p>example: <code>[10, 12, 20, 5, 8]</code></p>
+</li>
+<li><p>use the <code>zip</code> function (look it up on google) to create a list of fruit/price pairs.</p>
+<p>it could look like this: <code>[('apple', 10), ('guava', 12), ('pineapple', 20), ('pear', 5), ('peach', 8)]</code> 
+```</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;guava&#39;</span><span class="p">,</span> <span class="s1">&#39;pineapple&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;peach&#39;</span><span class="p">]</span>
+<span class="n">fruits_prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">menu</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="n">fruits_prices</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">double_price</span><span class="p">(</span><span class="n">menu</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="n">name</span><span class="p">:</span> <span class="n">price</span><span class="o">*</span><span class="mi">2</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">double_price</span><span class="p">(</span><span class="n">menu</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;apple&#39;: 20, &#39;guava&#39;: 24, &#39;pineapple&#39;: 40, &#39;pear&#39;: 10, &#39;peach&#39;: 16}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="make_matrix()-function">make_matrix() function<a class="anchor-link" href="#make_matrix()-function"> </a></h1><p>write a function called <code>make_matrix(nrows=10, ncols=10)</code> that returns a multiplication matrix (×œ×•×— ×›×¤×œ)
+with <code>nrows</code> rows and <code>ncols</code> rows.</p>
+<p>the function will return a list of lists that have the following property:</p>
+
+<pre><code>make_matrix()[i][j] == i*j</code></pre>
+<p>for example:</p>
+
+<pre><code>&gt;&gt;&gt; from pprint import pprint
+&gt;&gt;&gt; x = make_matrix(5, 5)
+&gt;&gt;&gt; pprint(x)
+[[0, 0, 0, 0, 0],
+ [0, 1, 2, 3, 4],
+ [0, 2, 4, 6, 8],
+ [0, 3, 6, 9, 12],
+ [0, 4, 8, 12, 16]]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pprint</span> <span class="k">import</span> <span class="n">pprint</span>
+<span class="k">def</span> <span class="nf">make_matrix</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nrows</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ncols</span><span class="p">):</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">matrix</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">make_matrix</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[0, 0, 0, 0, 0],
+ [0, 1, 2, 3, 4],
+ [0, 2, 4, 6, 8],
+ [0, 3, 6, 9, 12],
+ [0, 4, 8, 12, 16]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="write-maxitem()-function">write maxitem() function<a class="anchor-link" href="#write-maxitem()-function"> </a></h1><p>create a function called maxitem 
+that finds and returns the maximum item in a list</p>
+
+<pre><code>&gt;&gt;&gt; maxitem([1,2,3,4,3,1])
+4</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">maxitem</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">themax</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">themax</span><span class="p">:</span>
+            <span class="n">themax</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">themax</span>
+
+<span class="n">maxitem</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="sort_lists()---difficult">sort_lists() - difficult<a class="anchor-link" href="#sort_lists()---difficult"> </a></h1><p>create a function called <code>sort_lists</code> that can sort a list of lists.
+[find hints on how to do it below.]</p>
+<p>it will work in the following way:</p>
+<ul>
+<li>we will sort lists according to which one has the maxmium item (like in #5)</li>
+<li><p>example:</p>
+
+<pre><code>&gt;&gt;&gt; sort_lists([
+[1,2,3],
+[2,3,4],
+[1,1,1],
+[2]
+])
+[
+[1,1,1],
+[2],
+[1,2,3],
+[2,3,4
+]</code></pre>
+</li>
+<li><p>hint: use the function <code>maxitem</code> from #5 
+and the existing function <code>sorted</code></p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sort_lists</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">maxitem</span><span class="p">)</span>
+
+<span class="n">sort_lists</span><span class="p">([</span>
+         <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+         <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 1, 1], [2], [1, 2, 3], [2, 3, 4]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="make_add_x---difficult">make_add_x - difficult<a class="anchor-link" href="#make_add_x---difficult"> </a></h1><p>create a function called <code>make_add_x()</code>
+that receives one parameter x
+and returns an inner <em>function</em> ...
+this inner function will receive one parameter y
+and return <code>x+y</code></p>
+
+<pre><code>&gt;&gt;&gt; add7 = make_add_x(7)
+&gt;&gt;&gt; add7(3)
+10
+&gt;&gt;&gt; add7(5)
+12
+&gt;&gt;&gt; add10 = make_add_x(10)
+&gt;&gt;&gt; add10(100)
+110</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_add_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">add_x</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">add_x</span>
+
+<span class="n">add7</span> <span class="o">=</span> <span class="n">make_add_x</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add7</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add7</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># 12</span>
+
+<span class="n">add10</span> <span class="o">=</span> <span class="n">make_add_x</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add10</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span> <span class="c1"># 110</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+12
+110
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="myprint()---challenging">myprint() - challenging<a class="anchor-link" href="#myprint()---challenging"> </a></h1><p>create a function called <code>myprint</code> that has similar properties to the built-in <code>print()</code> function:</p>
+<ul>
+<li>it is variadic: it can support 0,1,2,3 or more parameters (unlimited number)</li>
+<li>it supports the file, sep and end arguments</li>
+</ul>
+<p>it differrs from print by prefering the character @</p>
+
+<pre><code>&gt;&gt;&gt; myprint(1, 2, 3)
+1 @ 2 @ 3 @
+&gt;&gt;&gt; myprint( [1, 2, 3], [4, 5, 6] )
+[1, 2, 3] @ [4, 5, 6] @
+
+&gt;&gt;&gt; myprint(1, 2, 3, file=sys.stdout, sep=' ', end='\n')
+1 2 3</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">def</span> <span class="nf">myprint</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; @ &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; @</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">)</span>
+
+<span class="n">myprint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>                <span class="c1">#     1 @ 2 @ 3 @</span>
+<span class="n">myprint</span><span class="p">(</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span> <span class="p">)</span> <span class="c1">#    [1, 2, 3] @ [4, 5, 6] @</span>
+<span class="n">myprint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># 1 2 3</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 @ 2 @ 3 @
+[1, 2, 3] @ [4, 5, 6] @
+1 2 3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="make_debuggable()---very-difficult">make_debuggable() - very difficult<a class="anchor-link" href="#make_debuggable()---very-difficult"> </a></h1><p>create a function called make_debuggable(func) that:</p>
+<ul>
+<li>receives one paramter called func</li>
+<li>returns a new function that does the same thing as func, </li>
+</ul>
+<p>and can accept any argument that func accepts.</p>
+<ul>
+<li>but in addition the returned function also helps debugging by 
+printing out the parameters it received, and the return value it is about to return</li>
+</ul>
+<p>hints:</p>
+<ul>
+<li>use a nested function that accepts variadic positional and keyword arguments</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_debuggable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__get_signature</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">fullargs</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{k}</span><span class="s2">=</span><span class="si">{v}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fullargs</span><span class="p">))</span>
+        
+    <span class="k">def</span> <span class="nf">nested</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;calling {__get_signature(func, args, kwargs)}&quot;</span><span class="p">)</span>
+        
+        <span class="n">v</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{__get_signature(func, args, kwargs)} --&gt;&gt; </span><span class="si">{v}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span>
+    
+    <span class="k">return</span> <span class="n">nested</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="n">debug_sqrt</span> <span class="o">=</span> <span class="n">make_debuggable</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">)</span>
+<span class="n">debug_sqrt</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="c1">#debug_sqrt(-100)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">debug_print</span> <span class="o">=</span> <span class="n">make_debuggable</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+<span class="n">debug_print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39; @@@ &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>calling sqrt(100)
+sqrt(100) --&gt;&gt; 10.0
+
+calling print(1, 2, 3, sep= @@@ )
+1 @@@ 2 @@@ 3
+print(1, 2, 3, sep= @@@ ) --&gt;&gt; None
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

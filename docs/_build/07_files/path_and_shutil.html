@@ -1,0 +1,1194 @@
+---
+redirect_from:
+  - "/07-files/path-and-shutil"
+interact_link: content/07_files/path_and_shutil.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Path And Shutil
+prev_page:
+  url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3.html
+  title: |-
+    Lesson 06-sub Python2-to-python3
+next_page:
+  url: /07_files/exercise/questions.html
+  title: |-
+    Questions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/path_and_shutil.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Path</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pathlib.Path</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cwd</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
+<span class="n">cwd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>PosixPath(&#39;/content&#39;)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">cwd</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pathlib.PosixPath</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="what's-in-the-directory?">what's in the directory?<a class="anchor-link" href="#what's-in-the-directory?"> </a></h1><p>use the function <code>iterdir()</code> to see all the contents of a directory</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
+<span class="k">for</span> <span class="n">subfolder</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;my_folder&#39;</span><span class="p">,</span> <span class="s1">&#39;blah&#39;</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span> 
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cwd</span> <span class="o">/</span> <span class="n">subfolder</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cwd</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/.config
+/content/sample_data
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">cwd</span><span class="o">.</span><span class="n">iterdir</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[PosixPath(&#39;/content/.config&#39;), PosixPath(&#39;/content/sample_data&#39;)]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="create-a-subdirectory">create a subdirectory<a class="anchor-link" href="#create-a-subdirectory"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_folder</span> <span class="o">=</span> <span class="n">cwd</span> <span class="o">/</span> <span class="s1">&#39;my_folder&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">my_folder</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">my_folder</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">my_folder</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_folder</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="create-a-file-in-a-directory">create a file in a directory<a class="anchor-link" href="#create-a-file-in-a-directory"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file</span> <span class="o">=</span> <span class="n">my_folder</span> <span class="o">/</span> <span class="s1">&#39;my_file.txt&#39;</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">touch</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_file</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_file.txt
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="one-shot-write/read-content-to-file">one-shot write/read content to file<a class="anchor-link" href="#one-shot-write/read-content-to-file"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s1">&#39;hello!&#39;</span><span class="p">)</span>
+<span class="n">my_file</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello!&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="parent-folder">parent folder<a class="anchor-link" href="#parent-folder"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_file</span><span class="o">.</span><span class="n">parent</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_file</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_file</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder &lt;class &#39;pathlib.PosixPath&#39;&gt;
+/content/my_folder/my_file.txt
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="filename-without-the-path-of-the-parent-folder">filename without the path of the parent folder<a class="anchor-link" href="#filename-without-the-path-of-the-parent-folder"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;my_file.txt&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="just-the-extension-/-suffix">just the extension / suffix<a class="anchor-link" href="#just-the-extension-/-suffix"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file</span><span class="o">.</span><span class="n">suffix</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;.txt&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="filename-without-extension">filename without extension<a class="anchor-link" href="#filename-without-extension"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file</span><span class="o">.</span><span class="n">stem</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;my_file&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="new-file-name">new file name<a class="anchor-link" href="#new-file-name"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file1</span> <span class="o">=</span> <span class="n">my_file</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="n">my_file</span><span class="o">.</span><span class="n">stem</span> <span class="o">+</span> <span class="s1">&#39;-1&#39;</span> <span class="o">+</span> <span class="n">my_file</span><span class="o">.</span><span class="n">suffix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_file1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_file-1.txt
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="does-file-exist?">does file exist?<a class="anchor-link" href="#does-file-exist?"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_file</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1"> exists?&#39;</span><span class="p">,</span> <span class="n">my_file</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_file1</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1"> exists?&#39;</span><span class="p">,</span> <span class="n">my_file1</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_file.txt 	 exists? True
+/content/my_folder/my_file-1.txt 	 exists? False
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="copy-file">copy file<a class="anchor-link" href="#copy-file"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">shutil</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_file</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="n">my_file</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">my_file1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_file1</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1"> exists?&#39;</span><span class="p">,</span> <span class="n">my_file1</span><span class="o">.</span><span class="n">exists</span><span class="p">())</span>
+<span class="n">my_file1</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_file-1.txt 	 exists? True
+</pre>
+</div>
+</div>
+</div>
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;hello!&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="globbing">globbing<a class="anchor-link" href="#globbing"> </a></h1><p>globbing means searching for files with wildcards ? or *</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># lets create a csv file</span>
+<span class="n">my_csv</span> <span class="o">=</span> <span class="n">my_folder</span> <span class="o">/</span> <span class="s1">&#39;my_data.csv&#39;</span>
+<span class="n">my_csv</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s1">&#39;1, 2, 3, 4&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_csv</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_csv</span><span class="o">.</span><span class="n">read_text</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_data.csv
+1, 2, 3, 4
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>...
+now we can search for the files with wildcards!</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">my_folder</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_file.txt
+/content/my_folder/my_file-1.txt
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">my_folder</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.csv&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder/my_data.csv
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="copy-folder">copy folder<a class="anchor-link" href="#copy-folder"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_other_folder</span> <span class="o">=</span> <span class="n">cwd</span> <span class="o">/</span> <span class="s1">&#39;my_other_folder&#39;</span>
+<span class="k">if</span> <span class="n">my_other_folder</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">my_other_folder</span><span class="p">)</span>
+    
+<span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="n">my_folder</span><span class="p">,</span> <span class="n">dst</span><span class="o">=</span><span class="n">my_other_folder</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>PosixPath(&#39;/content/my_other_folder&#39;)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="recursively-walk-a-folder">recursively walk a folder<a class="anchor-link" href="#recursively-walk-a-folder"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">cwd</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dirpath</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;files: --&gt;&#39;</span><span class="p">,</span> <span class="n">filenames</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;subdirectories: --&gt;&#39;</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-f57b0f406b6e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">for</span> dirpath<span class="ansi-blue-fg">,</span> dirnames<span class="ansi-blue-fg">,</span> filenames <span class="ansi-green-fg">in</span> os<span class="ansi-blue-fg">.</span>walk<span class="ansi-blue-fg">(</span>cwd<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span>     print<span class="ansi-blue-fg">(</span>dirpath<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;files: --&gt;&#39;</span><span class="ansi-blue-fg">,</span> filenames<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;subdirectories: --&gt;&#39;</span><span class="ansi-blue-fg">,</span> dirnames<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;cwd&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="rename-directory">rename directory<a class="anchor-link" href="#rename-directory"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">blah_folder</span> <span class="o">=</span> <span class="n">my_other_folder</span><span class="o">.</span><span class="n">with_name</span><span class="p">(</span><span class="s1">&#39;blah&#39;</span><span class="p">)</span>
+
+<span class="c1"># rename cannot rename a directory, because it is not empty</span>
+<span class="c1">### my_other_folder.rename(blah_folder)</span>
+
+<span class="c1"># use shutil.move instead</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">my_other_folder</span><span class="p">),</span> <span class="n">dst</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">blah_folder</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">blah_folder</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-ab0196c931a7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>blah_folder <span class="ansi-blue-fg">=</span> my_other_folder<span class="ansi-blue-fg">.</span>with_name<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;blah&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># rename cannot rename a directory, because it is not empty</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg">### my_other_folder.rename(blah_folder)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+
+<span class="ansi-red-fg">NameError</span>: name &#39;my_other_folder&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="relative-directory">relative directory<a class="anchor-link" href="#relative-directory"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;.&#39; is current directory</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">())</span>
+
+<span class="c1"># appending /. just still means the same directory</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="n">my_folder</span> <span class="o">/</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content
+/content/my_folder
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># &#39;..&#39; means parent directory</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">())</span>
+
+<span class="c1"># appending /.. means the parent directory of the given directory</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="n">my_folder</span> <span class="o">/</span> <span class="s1">&#39;..&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/
+/content
+/content/my_folder/..
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># you can use .. to walk up in a directory</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="n">my_folder</span> <span class="o">/</span> <span class="s1">&#39;..&#39;</span> <span class="o">/</span> <span class="s1">&#39;my_folder&#39;</span> <span class="o">/</span> <span class="s1">&#39;..&#39;</span> <span class="o">/</span> <span class="s1">&#39;.&#39;</span> <span class="o">/</span> <span class="s1">&#39;my_folder&#39;</span> <span class="o">/</span> <span class="s1">&#39;..&#39;</span> <span class="o">/</span> <span class="s1">&#39;my_folder&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/content/my_folder
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

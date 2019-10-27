@@ -1,0 +1,4271 @@
+---
+redirect_from:
+  - "/01-intro/notebooks/bitahon-intro"
+interact_link: content/01_intro/notebooks/bitahon_intro.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Bitahon Intro
+prev_page:
+  url: 
+  title: |-
+    
+next_page:
+  url: /01_intro/notebooks/exploring_python_12_5_19.html
+  title: |-
+    Exploring Python 12 5 19
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/01_intro/notebooks/bitahon_intro.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">10</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>120</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">8</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>256</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5.0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>int</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>float</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;42&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;42&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;42&quot;</span> <span class="o">==</span> <span class="mi">42</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mf">42.0</span> <span class="o">==</span> <span class="mi">42</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> <span class="s2">&quot;hello &quot;</span> <span class="o">+</span> <span class="s2">&quot;world&quot;</span> <span class="o">==</span> <span class="s2">&quot;hello world&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;HELLO&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;hello&quot;</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;h&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;hello&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;e&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;hello&quot;</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;o&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;hello&quot;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;l&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-38-8510c0c4f4a4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>y<span class="ansi-yellow-intense-fg ansi-bold">.</span>index<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: 2 is not in list</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;h&quot;</span> <span class="ow">in</span> <span class="s2">&quot;hello&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;ell&quot;</span> <span class="ow">in</span> <span class="s2">&quot;hello&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;ell&quot;</span> <span class="ow">in</span> <span class="s2">&quot;world&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">10</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[[[[</span><span class="mi">0</span><span class="p">]]]]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, &#39;hello&#39;, [5.0], [[[[0]]]]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[[[[</span><span class="mi">0</span><span class="p">]]]]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">],</span> <span class="p">[[[[</span><span class="mi">0</span><span class="p">]]]]]</span> <span class="o">+</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, &#39;hello&#39;, [5.0], [[[[0]]]], 1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, &#39;hello&#39;, [5.0], [[[[0]]]]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 2, 3, 4, 5, 6], 2, 3, &#39;hello&#39;, [5.0], [[[[0]]]]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 2, 3, 4, 5, 6], 2, 3, &#39;hello&#39;, [5.0], [[[[0]]]]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;x&quot;</span> <span class="p">:</span> <span class="n">x</span><span class="p">,</span>
+    <span class="s2">&quot;y&quot;</span> <span class="p">:</span> <span class="n">y</span><span class="p">,</span>
+    <span class="s2">&quot;z&quot;</span> <span class="p">:</span> <span class="n">z</span><span class="p">,</span>
+    <span class="s2">&quot;greeting&quot;</span> <span class="p">:</span> <span class="s2">&quot;live and long and prosper&quot;</span><span class="p">,</span>
+    <span class="mi">1</span> <span class="p">:</span> <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+    <span class="mi">2</span> <span class="p">:</span> <span class="s2">&quot;two&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;greeting&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;live and long and prosper&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;two&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-65-123a9cc6df61&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>d<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>: 0</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;x&#39;, [1, 2, 3, 4, 5, 6])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">8</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>50</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;42&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;428&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;isreal&quot;</span> <span class="p">:</span> <span class="s2">&quot;jerusalem&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uk&quot;</span> <span class="p">:</span> <span class="s2">&quot;london&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;france&quot;</span> <span class="p">:</span> <span class="s2">&quot;paris&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;isreal&#39;: &#39;jerusalem&#39;, &#39;uk&#39;: &#39;london&#39;, &#39;france&#39;: &#39;paris&#39;}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="s2">&quot;germany&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;berlin&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;isreal&#39;: &#39;jerusalem&#39;, &#39;uk&#39;: &#39;london&#39;, &#39;france&#39;: &#39;paris&#39;, &#39;germany&#39;: &#39;munich&#39;}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="s2">&quot;switzerland&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;zurich&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="s2">&quot;switzerland&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;bern&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;isreal&#39;: &#39;jerusalem&#39;,
+ &#39;uk&#39;: &#39;london&#39;,
+ &#39;france&#39;: &#39;paris&#39;,
+ &#39;germany&#39;: &#39;berlin&#39;,
+ &#39;switzerland&#39;: &#39;bern&#39;}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_items([(&#39;isreal&#39;, &#39;jerusalem&#39;), (&#39;uk&#39;, &#39;london&#39;), (&#39;france&#39;, &#39;paris&#39;), (&#39;germany&#39;, &#39;berlin&#39;), (&#39;switzerland&#39;, &#39;bern&#39;)])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s1">&#39;isreal&#39;</span><span class="p">,</span> <span class="s1">&#39;jerusalem&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;isreal&#39;, &#39;jerusalem&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="s1">&#39;isreal&#39;</span><span class="p">,</span> <span class="s1">&#39;jerusalem&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;isreal&#39;, &#39;jerusalem&#39;)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;isreal&#39;</span><span class="p">,</span> <span class="s1">&#39;jerusalem&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6, 7]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;isreal&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;jerusalem&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">city</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;isreal&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;jerusalem&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span><span class="p">,</span> <span class="n">city</span> <span class="o">=</span> <span class="n">t</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;isreal&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">([])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>tuple</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">find</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function find:
+
+find(...) method of builtins.str instance
+    S.find(sub[, start[, end]]) -&gt; int
+    
+    Return the lowest index in S where substring sub is found,
+    such that sub is contained within S[start:end].  Optional
+    arguments start and end are interpreted as in slice notation.
+    
+    Return -1 on failure.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on class type in module builtins:
+
+class type(object)
+ |  type(object_or_name, bases, dict)
+ |  type(object) -&gt; the object&#39;s type
+ |  type(name, bases, dict) -&gt; a new type
+ |  
+ |  Methods defined here:
+ |  
+ |  __call__(self, /, *args, **kwargs)
+ |      Call self as a function.
+ |  
+ |  __delattr__(self, name, /)
+ |      Implement delattr(self, name).
+ |  
+ |  __dir__(...)
+ |      __dir__() -&gt; list
+ |      specialized __dir__ implementation for types
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __instancecheck__(...)
+ |      __instancecheck__() -&gt; bool
+ |      check if an object is an instance
+ |  
+ |  __new__(*args, **kwargs)
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __prepare__(...)
+ |      __prepare__() -&gt; dict
+ |      used to create the namespace for the class statement
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __setattr__(self, name, value, /)
+ |      Implement setattr(self, name, value).
+ |  
+ |  __sizeof__(...)
+ |      __sizeof__() -&gt; int
+ |      return memory consumption of the type object
+ |  
+ |  __subclasscheck__(...)
+ |      __subclasscheck__() -&gt; bool
+ |      check if a class is a subclass
+ |  
+ |  __subclasses__(...)
+ |      __subclasses__() -&gt; list of immediate subclasses
+ |  
+ |  mro(...)
+ |      mro() -&gt; list
+ |      return a type&#39;s method resolution order
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __abstractmethods__
+ |  
+ |  __dict__
+ |  
+ |  __text_signature__
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __base__ = &lt;class &#39;object&#39;&gt;
+ |      The most base type
+ |  
+ |  __bases__ = (&lt;class &#39;object&#39;&gt;,)
+ |  
+ |  __basicsize__ = 432
+ |  
+ |  __dictoffset__ = 132
+ |  
+ |  __flags__ = -2146675712
+ |  
+ |  __itemsize__ = 20
+ |  
+ |  __mro__ = (&lt;class &#39;type&#39;&gt;, &lt;class &#39;object&#39;&gt;)
+ |  
+ |  __weakrefoffset__ = 184
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>type</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on class str in module builtins:
+
+class str(object)
+ |  str(object=&#39;&#39;) -&gt; str
+ |  str(bytes_or_buffer[, encoding[, errors]]) -&gt; str
+ |  
+ |  Create a new string object from the given object. If encoding or
+ |  errors is specified, then the object must expose a data buffer
+ |  that will be decoded using the given encoding and error handler.
+ |  Otherwise, returns the result of object.__str__() (if defined)
+ |  or repr(object).
+ |  encoding defaults to sys.getdefaultencoding().
+ |  errors defaults to &#39;strict&#39;.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __format__(...)
+ |      S.__format__(format_spec) -&gt; str
+ |      
+ |      Return a formatted version of S as described by format_spec.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self&gt;=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(self, key, /)
+ |      Return self[key].
+ |  
+ |  __getnewargs__(...)
+ |  
+ |  __gt__(self, value, /)
+ |      Return self&gt;value.
+ |  
+ |  __hash__(self, /)
+ |      Return hash(self).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self&lt;value.
+ |  
+ |  __mod__(self, value, /)
+ |      Return self%value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.n
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __rmod__(self, value, /)
+ |      Return value%self.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __sizeof__(...)
+ |      S.__sizeof__() -&gt; size of S in memory, in bytes
+ |  
+ |  __str__(self, /)
+ |      Return str(self).
+ |  
+ |  capitalize(...)
+ |      S.capitalize() -&gt; str
+ |      
+ |      Return a capitalized version of S, i.e. make the first character
+ |      have upper case and the rest lower case.
+ |  
+ |  casefold(...)
+ |      S.casefold() -&gt; str
+ |      
+ |      Return a version of S suitable for caseless comparisons.
+ |  
+ |  center(...)
+ |      S.center(width[, fillchar]) -&gt; str
+ |      
+ |      Return S centered in a string of length width. Padding is
+ |      done using the specified fill character (default is a space)
+ |  
+ |  count(...)
+ |      S.count(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the number of non-overlapping occurrences of substring sub in
+ |      string S[start:end].  Optional arguments start and end are
+ |      interpreted as in slice notation.
+ |  
+ |  encode(...)
+ |      S.encode(encoding=&#39;utf-8&#39;, errors=&#39;strict&#39;) -&gt; bytes
+ |      
+ |      Encode S using the codec registered for encoding. Default encoding
+ |      is &#39;utf-8&#39;. errors may be given to set a different error
+ |      handling scheme. Default is &#39;strict&#39; meaning that encoding errors raise
+ |      a UnicodeEncodeError. Other possible values are &#39;ignore&#39;, &#39;replace&#39; and
+ |      &#39;xmlcharrefreplace&#39; as well as any other name registered with
+ |      codecs.register_error that can handle UnicodeEncodeErrors.
+ |  
+ |  endswith(...)
+ |      S.endswith(suffix[, start[, end]]) -&gt; bool
+ |      
+ |      Return True if S ends with the specified suffix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      suffix can also be a tuple of strings to try.
+ |  
+ |  expandtabs(...)
+ |      S.expandtabs(tabsize=8) -&gt; str
+ |      
+ |      Return a copy of S where all tab characters are expanded using spaces.
+ |      If tabsize is not given, a tab size of 8 characters is assumed.
+ |  
+ |  find(...)
+ |      S.find(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the lowest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  format(...)
+ |      S.format(*args, **kwargs) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from args and kwargs.
+ |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).
+ |  
+ |  format_map(...)
+ |      S.format_map(mapping) -&gt; str
+ |      
+ |      Return a formatted version of S, using substitutions from mapping.
+ |      The substitutions are identified by braces (&#39;{&#39; and &#39;}&#39;).
+ |  
+ |  index(...)
+ |      S.index(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the lowest index in S where substring sub is found, 
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Raises ValueError when the substring is not found.
+ |  
+ |  isalnum(...)
+ |      S.isalnum() -&gt; bool
+ |      
+ |      Return True if all characters in S are alphanumeric
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isalpha(...)
+ |      S.isalpha() -&gt; bool
+ |      
+ |      Return True if all characters in S are alphabetic
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isdecimal(...)
+ |      S.isdecimal() -&gt; bool
+ |      
+ |      Return True if there are only decimal characters in S,
+ |      False otherwise.
+ |  
+ |  isdigit(...)
+ |      S.isdigit() -&gt; bool
+ |      
+ |      Return True if all characters in S are digits
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  isidentifier(...)
+ |      S.isidentifier() -&gt; bool
+ |      
+ |      Return True if S is a valid identifier according
+ |      to the language definition.
+ |      
+ |      Use keyword.iskeyword() to test for reserved identifiers
+ |      such as &#34;def&#34; and &#34;class&#34;.
+ |  
+ |  islower(...)
+ |      S.islower() -&gt; bool
+ |      
+ |      Return True if all cased characters in S are lowercase and there is
+ |      at least one cased character in S, False otherwise.
+ |  
+ |  isnumeric(...)
+ |      S.isnumeric() -&gt; bool
+ |      
+ |      Return True if there are only numeric characters in S,
+ |      False otherwise.
+ |  
+ |  isprintable(...)
+ |      S.isprintable() -&gt; bool
+ |      
+ |      Return True if all characters in S are considered
+ |      printable in repr() or S is empty, False otherwise.
+ |  
+ |  isspace(...)
+ |      S.isspace() -&gt; bool
+ |      
+ |      Return True if all characters in S are whitespace
+ |      and there is at least one character in S, False otherwise.
+ |  
+ |  istitle(...)
+ |      S.istitle() -&gt; bool
+ |      
+ |      Return True if S is a titlecased string and there is at least one
+ |      character in S, i.e. upper- and titlecase characters may only
+ |      follow uncased characters and lowercase characters only cased ones.
+ |      Return False otherwise.
+ |  
+ |  isupper(...)
+ |      S.isupper() -&gt; bool
+ |      
+ |      Return True if all cased characters in S are uppercase and there is
+ |      at least one cased character in S, False otherwise.
+ |  
+ |  join(...)
+ |      S.join(iterable) -&gt; str
+ |      
+ |      Return a string which is the concatenation of the strings in the
+ |      iterable.  The separator between elements is S.
+ |  
+ |  ljust(...)
+ |      S.ljust(width[, fillchar]) -&gt; str
+ |      
+ |      Return S left-justified in a Unicode string of length width. Padding is
+ |      done using the specified fill character (default is a space).
+ |  
+ |  lower(...)
+ |      S.lower() -&gt; str
+ |      
+ |      Return a copy of the string S converted to lowercase.
+ |  
+ |  lstrip(...)
+ |      S.lstrip([chars]) -&gt; str
+ |      
+ |      Return a copy of the string S with leading whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  partition(...)
+ |      S.partition(sep) -&gt; (head, sep, tail)
+ |      
+ |      Search for the separator sep in S, and return the part before it,
+ |      the separator itself, and the part after it.  If the separator is not
+ |      found, return S and two empty strings.
+ |  
+ |  replace(...)
+ |      S.replace(old, new[, count]) -&gt; str
+ |      
+ |      Return a copy of S with all occurrences of substring
+ |      old replaced by new.  If the optional argument count is
+ |      given, only the first count occurrences are replaced.
+ |  
+ |  rfind(...)
+ |      S.rfind(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Return -1 on failure.
+ |  
+ |  rindex(...)
+ |      S.rindex(sub[, start[, end]]) -&gt; int
+ |      
+ |      Return the highest index in S where substring sub is found,
+ |      such that sub is contained within S[start:end].  Optional
+ |      arguments start and end are interpreted as in slice notation.
+ |      
+ |      Raises ValueError when the substring is not found.
+ |  
+ |  rjust(...)
+ |      S.rjust(width[, fillchar]) -&gt; str
+ |      
+ |      Return S right-justified in a string of length width. Padding is
+ |      done using the specified fill character (default is a space).
+ |  
+ |  rpartition(...)
+ |      S.rpartition(sep) -&gt; (head, sep, tail)
+ |      
+ |      Search for the separator sep in S, starting at the end of S, and return
+ |      the part before it, the separator itself, and the part after it.  If the
+ |      separator is not found, return two empty strings and S.
+ |  
+ |  rsplit(...)
+ |      S.rsplit(sep=None, maxsplit=-1) -&gt; list of strings
+ |      
+ |      Return a list of the words in S, using sep as the
+ |      delimiter string, starting at the end of the string and
+ |      working to the front.  If maxsplit is given, at most maxsplit
+ |      splits are done. If sep is not specified, any whitespace string
+ |      is a separator.
+ |  
+ |  rstrip(...)
+ |      S.rstrip([chars]) -&gt; str
+ |      
+ |      Return a copy of the string S with trailing whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  split(...)
+ |      S.split(sep=None, maxsplit=-1) -&gt; list of strings
+ |      
+ |      Return a list of the words in S, using sep as the
+ |      delimiter string.  If maxsplit is given, at most maxsplit
+ |      splits are done. If sep is not specified or is None, any
+ |      whitespace string is a separator and empty strings are
+ |      removed from the result.
+ |  
+ |  splitlines(...)
+ |      S.splitlines([keepends]) -&gt; list of strings
+ |      
+ |      Return a list of the lines in S, breaking at line boundaries.
+ |      Line breaks are not included in the resulting list unless keepends
+ |      is given and true.
+ |  
+ |  startswith(...)
+ |      S.startswith(prefix[, start[, end]]) -&gt; bool
+ |      
+ |      Return True if S starts with the specified prefix, False otherwise.
+ |      With optional start, test S beginning at that position.
+ |      With optional end, stop comparing S at that position.
+ |      prefix can also be a tuple of strings to try.
+ |  
+ |  strip(...)
+ |      S.strip([chars]) -&gt; str
+ |      
+ |      Return a copy of the string S with leading and trailing
+ |      whitespace removed.
+ |      If chars is given and not None, remove characters in chars instead.
+ |  
+ |  swapcase(...)
+ |      S.swapcase() -&gt; str
+ |      
+ |      Return a copy of S with uppercase characters converted to lowercase
+ |      and vice versa.
+ |  
+ |  title(...)
+ |      S.title() -&gt; str
+ |      
+ |      Return a titlecased version of S, i.e. words start with title case
+ |      characters, all remaining cased characters have lower case.
+ |  
+ |  translate(...)
+ |      S.translate(table) -&gt; str
+ |      
+ |      Return a copy of the string S in which each character has been mapped
+ |      through the given translation table. The table must implement
+ |      lookup/indexing via __getitem__, for instance a dictionary or list,
+ |      mapping Unicode ordinals to Unicode ordinals, strings, or None. If
+ |      this operation raises LookupError, the character is left untouched.
+ |      Characters mapped to None are deleted.
+ |  
+ |  upper(...)
+ |      S.upper() -&gt; str
+ |      
+ |      Return a copy of S converted to uppercase.
+ |  
+ |  zfill(...)
+ |      S.zfill(width) -&gt; str
+ |      
+ |      Pad a numeric string S with zeros on the left, to fill a field
+ |      of the specified width. The string S is never truncated.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  maketrans(x, y=None, z=None, /)
+ |      Return a translation table usable for str.translate().
+ |      
+ |      If there is only one argument, it must be a dictionary mapping Unicode
+ |      ordinals (integers) or characters to Unicode ordinals, strings or None.
+ |      Character keys will be then converted to ordinals.
+ |      If there are two arguments, they must be strings of equal length, and
+ |      in the resulting dictionary, each character in x will be mapped to the
+ |      character at the same position in y. If there is a third argument, it
+ |      must be a string, whose characters will be mapped to None in the result.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>7</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6, 7]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.141592653589793</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;function print&gt;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myprint</span> <span class="o">=</span> <span class="nb">print</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">myprint</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myprint</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="o">=</span> <span class="n">myprint</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;built-in function print&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">tuple</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-119-d386d5724292&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>list<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;hello&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;list&#39; object is not callable</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_</span> <span class="o">=</span> <span class="nb">list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">([])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span> <span class="o">=</span> <span class="nb">type</span><span class="p">([])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;module &#39;math&#39; (built-in)&gt;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kongfu</span> <span class="o">=</span> <span class="n">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kongfu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;module &#39;math&#39; (built-in)&gt;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kongfu</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.141592653589793</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">kongfu</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in module math:
+
+NAME
+    math
+
+DESCRIPTION
+    This module is always available.  It provides access to the
+    mathematical functions defined by the C standard.
+
+FUNCTIONS
+    acos(...)
+        acos(x)
+        
+        Return the arc cosine (measured in radians) of x.
+    
+    acosh(...)
+        acosh(x)
+        
+        Return the inverse hyperbolic cosine of x.
+    
+    asin(...)
+        asin(x)
+        
+        Return the arc sine (measured in radians) of x.
+    
+    asinh(...)
+        asinh(x)
+        
+        Return the inverse hyperbolic sine of x.
+    
+    atan(...)
+        atan(x)
+        
+        Return the arc tangent (measured in radians) of x.
+    
+    atan2(...)
+        atan2(y, x)
+        
+        Return the arc tangent (measured in radians) of y/x.
+        Unlike atan(y/x), the signs of both x and y are considered.
+    
+    atanh(...)
+        atanh(x)
+        
+        Return the inverse hyperbolic tangent of x.
+    
+    ceil(...)
+        ceil(x)
+        
+        Return the ceiling of x as an Integral.
+        This is the smallest integer &gt;= x.
+    
+    copysign(...)
+        copysign(x, y)
+        
+        Return a float with the magnitude (absolute value) of x but the sign 
+        of y. On platforms that support signed zeros, copysign(1.0, -0.0) 
+        returns -1.0.
+    
+    cos(...)
+        cos(x)
+        
+        Return the cosine of x (measured in radians).
+    
+    cosh(...)
+        cosh(x)
+        
+        Return the hyperbolic cosine of x.
+    
+    degrees(...)
+        degrees(x)
+        
+        Convert angle x from radians to degrees.
+    
+    erf(...)
+        erf(x)
+        
+        Error function at x.
+    
+    erfc(...)
+        erfc(x)
+        
+        Complementary error function at x.
+    
+    exp(...)
+        exp(x)
+        
+        Return e raised to the power of x.
+    
+    expm1(...)
+        expm1(x)
+        
+        Return exp(x)-1.
+        This function avoids the loss of precision involved in the direct evaluation of exp(x)-1 for small x.
+    
+    fabs(...)
+        fabs(x)
+        
+        Return the absolute value of the float x.
+    
+    factorial(...)
+        factorial(x) -&gt; Integral
+        
+        Find x!. Raise a ValueError if x is negative or non-integral.
+    
+    floor(...)
+        floor(x)
+        
+        Return the floor of x as an Integral.
+        This is the largest integer &lt;= x.
+    
+    fmod(...)
+        fmod(x, y)
+        
+        Return fmod(x, y), according to platform C.  x % y may differ.
+    
+    frexp(...)
+        frexp(x)
+        
+        Return the mantissa and exponent of x, as pair (m, e).
+        m is a float and e is an int, such that x = m * 2.**e.
+        If x is 0, m and e are both 0.  Else 0.5 &lt;= abs(m) &lt; 1.0.
+    
+    fsum(...)
+        fsum(iterable)
+        
+        Return an accurate floating point sum of values in the iterable.
+        Assumes IEEE-754 floating point arithmetic.
+    
+    gamma(...)
+        gamma(x)
+        
+        Gamma function at x.
+    
+    gcd(...)
+        gcd(x, y) -&gt; int
+        greatest common divisor of x and y
+    
+    hypot(...)
+        hypot(x, y)
+        
+        Return the Euclidean distance, sqrt(x*x + y*y).
+    
+    isclose(...)
+        isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0) -&gt; bool
+        
+        Determine whether two floating point numbers are close in value.
+        
+           rel_tol
+               maximum difference for being considered &#34;close&#34;, relative to the
+               magnitude of the input values
+            abs_tol
+               maximum difference for being considered &#34;close&#34;, regardless of the
+               magnitude of the input values
+        
+        Return True if a is close in value to b, and False otherwise.
+        
+        For the values to be considered close, the difference between them
+        must be smaller than at least one of the tolerances.
+        
+        -inf, inf and NaN behave similarly to the IEEE 754 Standard.  That
+        is, NaN is not close to anything, even itself.  inf and -inf are
+        only close to themselves.
+    
+    isfinite(...)
+        isfinite(x) -&gt; bool
+        
+        Return True if x is neither an infinity nor a NaN, and False otherwise.
+    
+    isinf(...)
+        isinf(x) -&gt; bool
+        
+        Return True if x is a positive or negative infinity, and False otherwise.
+    
+    isnan(...)
+        isnan(x) -&gt; bool
+        
+        Return True if x is a NaN (not a number), and False otherwise.
+    
+    ldexp(...)
+        ldexp(x, i)
+        
+        Return x * (2**i).
+    
+    lgamma(...)
+        lgamma(x)
+        
+        Natural logarithm of absolute value of Gamma function at x.
+    
+    log(...)
+        log(x[, base])
+        
+        Return the logarithm of x to the given base.
+        If the base not specified, returns the natural logarithm (base e) of x.
+    
+    log10(...)
+        log10(x)
+        
+        Return the base 10 logarithm of x.
+    
+    log1p(...)
+        log1p(x)
+        
+        Return the natural logarithm of 1+x (base e).
+        The result is computed in a way which is accurate for x near zero.
+    
+    log2(...)
+        log2(x)
+        
+        Return the base 2 logarithm of x.
+    
+    modf(...)
+        modf(x)
+        
+        Return the fractional and integer parts of x.  Both results carry the sign
+        of x and are floats.
+    
+    pow(...)
+        pow(x, y)
+        
+        Return x**y (x to the power of y).
+    
+    radians(...)
+        radians(x)
+        
+        Convert angle x from degrees to radians.
+    
+    sin(...)
+        sin(x)
+        
+        Return the sine of x (measured in radians).
+    
+    sinh(...)
+        sinh(x)
+        
+        Return the hyperbolic sine of x.
+    
+    sqrt(...)
+        sqrt(x)
+        
+        Return the square root of x.
+    
+    tan(...)
+        tan(x)
+        
+        Return the tangent of x (measured in radians).
+    
+    tanh(...)
+        tanh(x)
+        
+        Return the hyperbolic tangent of x.
+    
+    trunc(...)
+        trunc(x:Real) -&gt; Integral
+        
+        Truncates x to the nearest Integral toward 0. Uses the __trunc__ magic method.
+
+DATA
+    e = 2.718281828459045
+    inf = inf
+    nan = nan
+    pi = 3.141592653589793
+    tau = 6.283185307179586
+
+FILE
+    (built-in)
+
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

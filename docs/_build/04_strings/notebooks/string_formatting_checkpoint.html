@@ -1,0 +1,299 @@
+---
+redirect_from:
+  - "/04-strings/notebooks/string-formatting-checkpoint"
+interact_link: content/04_strings/notebooks/string_formatting_checkpoint.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  String Formatting Checkpoint
+prev_page:
+  url: /04_strings/notebooks/string_formatting.html
+  title: |-
+    String Formatting
+next_page:
+  url: /04_strings/notebooks/string_slicing.html
+  title: |-
+    String Slicing
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/04_strings/notebooks/string_formatting_checkpoint.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.2246467991473532e-16</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;0.00&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">shakshuka:        10.99 NIS</span>
+<span class="sd">break:             7.50 NIS</span>
+<span class="sd">steak:           125.00 NIS</span>
+<span class="sd">vat%              17.00%</span>
+<span class="sd">vat:              15.82 NIS  </span>
+<span class="sd">total:           142.67 NIS</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">shakshuka: </span><span class="si">{:&gt;10.2f}</span><span class="s2"> NIS</span>
+<span class="s2">break:     </span><span class="si">{:&gt;10.2f}</span><span class="s2"> NIS</span>
+<span class="s2">steak:     </span><span class="si">{:&gt;10x}</span><span class="s2"> NIS</span>
+<span class="s2">vat%       </span><span class="si">{:&gt;10.2f}</span><span class="s2"> %</span>
+<span class="s2">vat:       </span><span class="si">{:&gt;10.2f}</span><span class="s2"> NIS  </span>
+<span class="s2">total:     </span><span class="si">{:&gt;10.2f}</span><span class="s2"> NIS</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">10.99</span><span class="p">,</span> <span class="mf">7.50</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mf">15.82</span><span class="p">,</span> <span class="mf">142.67</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+shakshuka:      10.99 NIS
+break:           7.50 NIS
+steak:            175 NIS
+vat%            17.00 %
+vat:            15.82 NIS  
+total:         142.67 NIS
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;</span><span class="si">{:X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;FF&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shaksuha</span> <span class="o">=</span> <span class="mf">10.5</span>
+<span class="n">bread</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">steak</span> <span class="o">=</span> <span class="mi">125</span>
+<span class="n">vatper</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">shakshuka: </span><span class="si">{shaksuha:&gt;10.2f}</span><span class="s2"> NIS</span>
+<span class="s2">bread:     </span><span class="si">{bread:&gt;10.2f}</span><span class="s2"> NIS</span>
+<span class="s2">steak:     </span><span class="si">{steak:&gt;10.2f}</span><span class="s2"> NIS</span>
+<span class="s2">vat%:      </span><span class="si">{vatper:&gt;10.2f}</span><span class="s2"> %</span>
+<span class="s2">vat:       {(shaksuha+bread+steak)*vatper/100:&gt;10.2f} NIS</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+shakshuka:      10.50 NIS
+bread:           5.00 NIS
+steak:         125.00 NIS
+vat%:           17.00 %
+vat:            23.89 NIS
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

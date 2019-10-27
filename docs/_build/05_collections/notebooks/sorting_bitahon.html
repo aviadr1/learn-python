@@ -1,0 +1,1090 @@
+---
+redirect_from:
+  - "/05-collections/notebooks/sorting-bitahon"
+interact_link: content/05_collections/notebooks/sorting_bitahon.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Sorting Bitahon
+prev_page:
+  url: /05_collections/notebooks/sorting.html
+  title: |-
+    Sorting
+next_page:
+  url: /05_collections/notebooks/unpacking.html
+  title: |-
+    Unpacking
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/notebooks/sorting_bitahon.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num1</span>  <span class="o">=</span> <span class="mi">15</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="n">num1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">([]</span><span class="o">.</span><span class="n">extend</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function extend:
+
+extend(...) method of builtins.list instance
+    L.extend(iterable) -&gt; None -- extend list by appending elements from the iterable
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 2, 3], 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;one&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;two&#39;, &#39;three&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stuff_to_do</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;buy milk&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cancel subscription&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;go to work&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gym&quot;</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">do_stuff</span><span class="p">(</span><span class="n">work</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">work</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">stuff_to_do</span><span class="p">:</span>
+    <span class="n">work</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">do_stuff</span><span class="p">(</span><span class="n">work</span><span class="p">)</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>gym
+go to work
+cancel subscription
+buy milk
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stuff_to_do</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;work&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;live&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;breath&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;buy milk&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cancel subscription&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;go to work&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gym&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;try harder&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;catch zzs&quot;</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stuff_to_do</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;gym&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;gym&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stuff_to_do</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;buy milk&#39;, &#39;cancel subscription&#39;, &#39;go to work&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">stuff_to_do</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;breath&#39;,
+ &#39;buy milk&#39;,
+ &#39;cancel subscription&#39;,
+ &#39;catch zzs&#39;,
+ &#39;go to work&#39;,
+ &#39;gym&#39;,
+ &#39;live&#39;,
+ &#39;try harder&#39;,
+ &#39;work&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">min</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">[</span><span class="mi">1</span><span class="p">:])):</span>
+    <span class="k">if</span> <span class="nb">min</span> <span class="o">&gt;</span>  <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="nb">min</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>breath
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">)):</span>
+    
+    <span class="n">min_j</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="nb">min</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">min_j</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">min</span> <span class="o">&gt;</span>  <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">min_j</span> <span class="o">=</span> <span class="n">j</span>
+            <span class="nb">min</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">min_j</span><span class="p">]</span>
+    
+    <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">min_j</span><span class="p">]</span> <span class="o">=</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">min_j</span><span class="p">],</span> <span class="n">stuff_to_do</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;breath&#39;, &#39;buy milk&#39;, &#39;cancel subscription&#39;, &#39;catch zzs&#39;, &#39;go to work&#39;, &#39;gym&#39;, &#39;live&#39;, &#39;try harder&#39;, &#39;work&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">stuff_to_do</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;work&#39;,
+ &#39;try harder&#39;,
+ &#39;live&#39;,
+ &#39;gym&#39;,
+ &#39;go to work&#39;,
+ &#39;catch zzs&#39;,
+ &#39;cancel subscription&#39;,
+ &#39;buy milk&#39;,
+ &#39;breath&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lists</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2000</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[2], [100], [50, 50], [1, 1, 1]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">max</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 1, 1], [2], [50, 50], [100]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">min</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 1, 1], [2, 2000], [10, 20, 30], [50, 50, 90], [100, 75]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">max</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 1, 1], [10, 20, 30], [50, 50, 90], [100, 75], [2, 2000]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function pow in module math:
+
+pow(...)
+    pow(x, y)
+    
+    Return x**y (x to the power of y).
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 1, 1], [10, 20, 30], [100, 75], [2, 2000], [50, 50, 90]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[1, 1, 1], [10, 20, 30], [100, 75], [50, 50, 90], [2, 2000]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on built-in function sum in module builtins:
+
+sum(iterable, start=0, /)
+    Return the sum of a &#39;start&#39; value (default: 0) plus an iterable of numbers
+    
+    When the iterable is empty, return the start value.
+    This function is intended specifically for use with numeric values and may
+    reject non-numeric types.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lists2</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists2</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">min</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[100, -100], [10, 20, 30], [15, 75], [1000, 500, 200, 50]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">lists2</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">max</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[[10, 20, 30], [15, 75], [100, -100], [1000, 500, 200, 50]]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,270 @@
+---
+redirect_from:
+  - "/08-functions/notebooks/lambda"
+interact_link: content/08_functions/notebooks/lambda.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Lambda
+prev_page:
+  url: /08_functions/notebooks/function_fundamentals.html
+  title: |-
+    Function Fundamentals
+next_page:
+  url: /08_functions/notebooks/lambda_nested_functions_functional_programming.html
+  title: |-
+    Lambda Nested Functions Functional Programming
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/notebooks/lambda.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">return100</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="mi">100</span>
+<span class="n">return100</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sorted_bank_accounts</span><span class="p">(</span><span class="n">accounts</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    (account_name, money)</span>
+<span class="sd">    (&quot;moshe&quot;, 1000)</span>
+<span class="sd">    (&quot;david&quot;, 500) </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">get_money</span><span class="p">(</span><span class="n">account</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">account</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">accounts</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">get_money</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sorted_bank_accounts_lambda</span><span class="p">(</span><span class="n">accounts</span><span class="p">):</span>
+    <span class="n">get_money</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">account</span><span class="p">:</span> <span class="n">account</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">accounts</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">get_money</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sorted_bank_accounts_lambda_shorter</span><span class="p">(</span><span class="n">accounts</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">accounts</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">account</span><span class="p">:</span> <span class="n">account</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sorted_bank_accounts_lambda_shorter</span><span class="p">([</span>
+    <span class="p">(</span><span class="s2">&quot;moshe&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;david&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;yana&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;simha&quot;</span><span class="p">,</span> <span class="mi">9000</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;yocheved&quot;</span><span class="p">,</span> <span class="mi">700</span><span class="p">),</span>
+    
+<span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(&#39;david&#39;, 500),
+ (&#39;yocheved&#39;, 700),
+ (&#39;moshe&#39;, 1000),
+ (&#39;simha&#39;, 9000),
+ (&#39;yana&#39;, 10000)]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;__abs__&#39;,
+ &#39;__add__&#39;,
+ &#39;__and__&#39;,
+ &#39;__bool__&#39;,
+ &#39;__ceil__&#39;,
+ &#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__divmod__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__float__&#39;,
+ &#39;__floor__&#39;,
+ &#39;__floordiv__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getnewargs__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__index__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__int__&#39;,
+ &#39;__invert__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lshift__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__mod__&#39;,
+ &#39;__mul__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__neg__&#39;,
+ &#39;__new__&#39;,
+ &#39;__or__&#39;,
+ &#39;__pos__&#39;,
+ &#39;__pow__&#39;,
+ &#39;__radd__&#39;,
+ &#39;__rand__&#39;,
+ &#39;__rdivmod__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__rfloordiv__&#39;,
+ &#39;__rlshift__&#39;,
+ &#39;__rmod__&#39;,
+ &#39;__rmul__&#39;,
+ &#39;__ror__&#39;,
+ &#39;__round__&#39;,
+ &#39;__rpow__&#39;,
+ &#39;__rrshift__&#39;,
+ &#39;__rshift__&#39;,
+ &#39;__rsub__&#39;,
+ &#39;__rtruediv__&#39;,
+ &#39;__rxor__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__sub__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__truediv__&#39;,
+ &#39;__trunc__&#39;,
+ &#39;__xor__&#39;,
+ &#39;bit_length&#39;,
+ &#39;conjugate&#39;,
+ &#39;denominator&#39;,
+ &#39;from_bytes&#39;,
+ &#39;imag&#39;,
+ &#39;numerator&#39;,
+ &#39;real&#39;,
+ &#39;to_bytes&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

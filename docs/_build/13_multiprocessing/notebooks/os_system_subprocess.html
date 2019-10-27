@@ -1,0 +1,1319 @@
+---
+redirect_from:
+  - "/13-multiprocessing/notebooks/os-system-subprocess"
+interact_link: content/13_multiprocessing/notebooks/os_system_subprocess.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Os System Subprocess
+prev_page:
+  url: /12_exceptions/notebooks/raise_try_except_finally.html
+  title: |-
+    Raise Try Except Finally
+next_page:
+  url: /13_multiprocessing/notebooks/os_system_subprocess_popen.html
+  title: |-
+    Os System Subprocess Popen
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/13_multiprocessing/notebooks/os_system_subprocess.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;notepad.exe&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;explorer.exe c:</span><span class="se">\\</span><span class="s2">windows&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\jbt\Downloads\QAPYTH3_2.3\IK_QAPYTH3\DG_13_Multitasking.pptx&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on class Popen in module subprocess:
+
+class Popen(builtins.object)
+ |  Execute a child program in a new process.
+ |  
+ |  For a complete description of the arguments see the Python documentation.
+ |  
+ |  Arguments:
+ |    args: A string, or a sequence of program arguments.
+ |  
+ |    bufsize: supplied as the buffering argument to the open() function when
+ |        creating the stdin/stdout/stderr pipe file objects
+ |  
+ |    executable: A replacement program to execute.
+ |  
+ |    stdin, stdout and stderr: These specify the executed programs&#39; standard
+ |        input, standard output and standard error file handles, respectively.
+ |  
+ |    preexec_fn: (POSIX only) An object to be called in the child process
+ |        just before the child is executed.
+ |  
+ |    close_fds: Controls closing or inheriting of file descriptors.
+ |  
+ |    shell: If true, the command will be executed through the shell.
+ |  
+ |    cwd: Sets the current directory before the child is executed.
+ |  
+ |    env: Defines the environment variables for the new process.
+ |  
+ |    universal_newlines: If true, use universal line endings for file
+ |        objects stdin, stdout and stderr.
+ |  
+ |    startupinfo and creationflags (Windows only)
+ |  
+ |    restore_signals (POSIX only)
+ |  
+ |    start_new_session (POSIX only)
+ |  
+ |    pass_fds (POSIX only)
+ |  
+ |    encoding and errors: Text mode encoding and error handling to use for
+ |        file objects stdin, stdout and stderr.
+ |  
+ |  Attributes:
+ |      stdin, stdout, stderr, pid, returncode
+ |  
+ |  Methods defined here:
+ |  
+ |  __del__(self, _maxsize=9223372036854775807, _warn=&lt;built-in function warn&gt;)
+ |  
+ |  __enter__(self)
+ |  
+ |  __exit__(self, type, value, traceback)
+ |  
+ |  __init__(self, args, bufsize=-1, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=&lt;object object at 0x00000204D8CBB140&gt;, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0, restore_signals=True, start_new_session=False, pass_fds=(), *, encoding=None, errors=None)
+ |      Create new Popen instance.
+ |  
+ |  communicate(self, input=None, timeout=None)
+ |      Interact with process: Send data to stdin.  Read data from
+ |      stdout and stderr, until end-of-file is reached.  Wait for
+ |      process to terminate.
+ |      
+ |      The optional &#34;input&#34; argument should be data to be sent to the
+ |      child process (if self.universal_newlines is True, this should
+ |      be a string; if it is False, &#34;input&#34; should be bytes), or
+ |      None, if no data should be sent to the child.
+ |      
+ |      communicate() returns a tuple (stdout, stderr).  These will be
+ |      bytes or, if self.universal_newlines was True, a string.
+ |  
+ |  kill = terminate(self)
+ |  
+ |  poll(self)
+ |      Check if child process has terminated. Set and return returncode
+ |      attribute.
+ |  
+ |  send_signal(self, sig)
+ |      Send a signal to the process.
+ |  
+ |  terminate(self)
+ |      Terminates the process.
+ |  
+ |  wait(self, timeout=None, endtime=None)
+ |      Wait for child process to terminate.  Returns returncode
+ |      attribute.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;notepad.exe&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;subprocess.Popen at 0x204de562cf8&gt;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;notepad.exe&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">proc</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
+    <span class="n">proc</span><span class="o">.</span><span class="n">kill</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;subprocess.Popen at 0x204de0bb2e8&gt;,
+ &lt;subprocess.Popen at 0x204ddbe29e8&gt;,
+ &lt;subprocess.Popen at 0x204dde5db00&gt;,
+ &lt;subprocess.Popen at 0x204dde5db38&gt;,
+ &lt;subprocess.Popen at 0x204dde5d080&gt;,
+ &lt;subprocess.Popen at 0x204dde5d048&gt;,
+ &lt;subprocess.Popen at 0x204dde5db70&gt;,
+ &lt;subprocess.Popen at 0x204de013c88&gt;,
+ &lt;subprocess.Popen at 0x204de013b70&gt;,
+ &lt;subprocess.Popen at 0x204de0139e8&gt;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TimeoutExpired</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-19-31fbf64c54f2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>p<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>wait<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">10</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">c:\python36\lib\subprocess.py</span> in <span class="ansi-cyan-fg">wait</span><span class="ansi-blue-intense-fg ansi-bold">(self, timeout, endtime)</span>
+<span class="ansi-green-fg">   1055</span>                                                     timeout_millis)
+<span class="ansi-green-fg">   1056</span>                 <span class="ansi-green-intense-fg ansi-bold">if</span> result <span class="ansi-yellow-intense-fg ansi-bold">==</span> _winapi<span class="ansi-yellow-intense-fg ansi-bold">.</span>WAIT_TIMEOUT<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1057</span><span class="ansi-yellow-intense-fg ansi-bold">                     </span><span class="ansi-green-intense-fg ansi-bold">raise</span> TimeoutExpired<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span> timeout<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   1058</span>                 self<span class="ansi-yellow-intense-fg ansi-bold">.</span>returncode <span class="ansi-yellow-intense-fg ansi-bold">=</span> _winapi<span class="ansi-yellow-intense-fg ansi-bold">.</span>GetExitCodeProcess<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_handle<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   1059</span>             <span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>returncode
+
+<span class="ansi-red-intense-fg ansi-bold">TimeoutExpired</span>: Command &#39;notepad.exe&#39; timed out after 10 seconds</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;cmd /c dir&#39;</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[b&#39; Volume in drive C has no label.\r\n&#39;,
+ b&#39; Volume Serial Number is BAC2-CB8A\r\n&#39;,
+ b&#39;\r\n&#39;,
+ b&#39; Directory of C:\\Users\\jbt\r\n&#39;,
+ b&#39;\r\n&#39;,
+ b&#39;05/30/2019  02:20 PM    &lt;DIR&gt;          .\r\n&#39;,
+ b&#39;05/30/2019  02:20 PM    &lt;DIR&gt;          ..\r\n&#39;,
+ b&#39;06/24/2018  11:27 AM    &lt;DIR&gt;          .android\r\n&#39;,
+ b&#39;11/08/2016  01:13 PM    &lt;DIR&gt;          .AndroidStudio2.2\r\n&#39;,
+ b&#39;03/12/2017  12:42 PM    &lt;DIR&gt;          .AndroidStudio2.3\r\n&#39;,
+ b&#39;11/26/2017  01:37 PM    &lt;DIR&gt;          .AndroidStudio3.0\r\n&#39;,
+ b&#39;05/01/2018  12:03 PM    &lt;DIR&gt;          .AndroidStudio3.1\r\n&#39;,
+ b&#39;03/12/2017  05:11 PM    &lt;DIR&gt;          .config\r\n&#39;,
+ b&#39;06/24/2018  12:41 PM    &lt;DIR&gt;          .dotnet\r\n&#39;,
+ b&#39;11/19/2018  10:32 AM    &lt;DIR&gt;          .eclipse\r\n&#39;,
+ b&#39;11/08/2016  01:25 PM                16 .emulator_console_auth_token\r\n&#39;,
+ b&#39;11/26/2017  01:44 PM    &lt;DIR&gt;          .gradle\r\n&#39;,
+ b&#39;12/13/2015  09:56 AM    &lt;DIR&gt;          .idlerc\r\n&#39;,
+ b&#39;05/30/2019  02:10 PM    &lt;DIR&gt;          .ipynb_checkpoints\r\n&#39;,
+ b&#39;05/12/2019  10:07 AM    &lt;DIR&gt;          .ipython\r\n&#39;,
+ b&#39;05/20/2019  09:46 AM    &lt;DIR&gt;          .jupyter\r\n&#39;,
+ b&#39;11/20/2018  11:49 AM    &lt;DIR&gt;          .nbprofiler\r\n&#39;,
+ b&#39;03/12/2017  05:06 PM                75 .node_repl_history\r\n&#39;,
+ b&#39;06/24/2018  01:46 PM    &lt;DIR&gt;          .nuget\r\n&#39;,
+ b&#39;11/30/2015  01:30 PM    &lt;DIR&gt;          .oracle_jre_usage\r\n&#39;,
+ b&#39;03/07/2019  11:06 AM    &lt;DIR&gt;          .p2\r\n&#39;,
+ b&#39;05/03/2018  11:42 AM               344 .packettracer\r\n&#39;,
+ b&#39;06/24/2018  12:17 PM    &lt;DIR&gt;          .PyCharmCE2018.1\r\n&#39;,
+ b&#39;06/24/2018  01:46 PM    &lt;DIR&gt;          .templateengine\r\n&#39;,
+ b&#39;11/19/2018  10:32 AM    &lt;DIR&gt;          .tooling\r\n&#39;,
+ b&#39;11/26/2017  01:44 PM    &lt;DIR&gt;          .VirtualBox\r\n&#39;,
+ b&#39;07/03/2016  10:32 AM    &lt;DIR&gt;          .vscode\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          3D Objects\r\n&#39;,
+ b&#39;05/30/2019  11:11 AM    &lt;DIR&gt;          blah\r\n&#39;,
+ b&#39;05/12/2019  02:56 PM                78 blah.txt\r\n&#39;,
+ b&#39;05/03/2018  11:30 AM    &lt;DIR&gt;          Cisco Packet Tracer 6.2sv\r\n&#39;,
+ b&#39;05/03/2018  11:40 AM    &lt;DIR&gt;          Cisco Packet Tracer 7.0\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          Contacts\r\n&#39;,
+ b&#39;05/20/2019  04:14 PM                83 csv.txt\r\n&#39;,
+ b&#39;05/20/2019  04:53 PM               142 data.json.txt\r\n&#39;,
+ b&#39;05/23/2019  08:56 PM    &lt;DIR&gt;          Desktop\r\n&#39;,
+ b&#39;05/20/2019  04:39 PM             4,473 dir.txt\r\n&#39;,
+ b&#39;05/26/2019  08:37 PM    &lt;DIR&gt;          Documents\r\n&#39;,
+ b&#39;05/23/2019  07:15 PM    &lt;DIR&gt;          Downloads\r\n&#39;,
+ b&#39;11/29/2018  04:31 PM    &lt;DIR&gt;          eclipse-workspace\r\n&#39;,
+ b&#39;05/20/2019  04:38 PM                22 error.txt\r\n&#39;,
+ b&#39;05/20/2019  02:30 PM            20,018 ex 05.ipynb\r\n&#39;,
+ b&#39;05/23/2019  02:52 PM            19,486 ex 08.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:22 PM             7,665 ex 09.ipynb\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          Favorites\r\n&#39;,
+ b&#39;05/12/2019  10:27 AM             1,386 file example.ipynb\r\n&#39;,
+ b&#39;05/12/2019  02:12 PM               462 green eggs and ham.txt\r\n&#39;,
+ b&#39;05/20/2019  04:16 PM               384 green.txt\r\n&#39;,
+ b&#39;05/12/2016  07:08 PM    &lt;DIR&gt;          Intel\r\n&#39;,
+ b&#39;05/12/2019  10:23 AM            22,688 lesson 01 - exploring python 12.5.19.ipynb\r\n&#39;,
+ b&#39;05/20/2019  04:54 PM            12,285 lesson 07 - files.ipynb\r\n&#39;,
+ b&#39;05/23/2019  12:05 PM            12,203 lesson 08 - nested functions.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:58 PM            12,328 lesson 08 - veriadic funcs.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:59 PM             4,401 lesson 08 -lambda.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:47 PM             4,165 lesson 09 - lazy lists generators.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:07 PM             2,668 lesson 09 - list comprehension order.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:39 PM             2,104 lesson 09 - template for list comprehension.ipynb\r\n&#39;,
+ b&#39;12/24/2018  12:21 AM    &lt;DIR&gt;          Links\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          Music\r\n&#39;,
+ b&#39;05/30/2019  11:23 AM               540 myfirstmodule.py\r\n&#39;,
+ b&#39;05/30/2019  10:50 AM                74 myfirstmodule.txt\r\n&#39;,
+ b&#39;11/22/2018  02:03 PM                 0 New Text Document.txt\r\n&#39;,
+ b&#39;03/15/2017  02:42 PM    &lt;DIR&gt;          node_modules\r\n&#39;,
+ b&#39;05/20/2019  04:38 PM                23 normal.txt\r\n&#39;,
+ b&#39;05/23/2019  01:35 PM    &lt;DIR&gt;          OneDrive\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          Pictures\r\n&#39;,
+ b&#39;05/30/2019  09:58 AM    &lt;DIR&gt;          PycharmProjects\r\n&#39;,
+ b&#39;12/24/2018  12:21 AM    &lt;DIR&gt;          Saved Games\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          Searches\r\n&#39;,
+ b&#39;06/24/2018  01:41 PM    &lt;DIR&gt;          source\r\n&#39;,
+ b&#39;05/20/2019  04:37 PM               109 streams.py\r\n&#39;,
+ b&#39;05/23/2019  09:43 AM                 7 test.json\r\n&#39;,
+ b&#39;05/12/2019  11:13 AM                36 test.py\r\n&#39;,
+ b&#39;05/12/2019  02:26 PM             1,974 test.xml\r\n&#39;,
+ b&#39;05/23/2019  11:41 AM                51 testfunc.py\r\n&#39;,
+ b&#39;05/12/2019  12:16 PM            17,835 Untitled.ipynb\r\n&#39;,
+ b&#39;05/12/2019  01:32 PM             7,730 Untitled1.ipynb\r\n&#39;,
+ b&#39;05/20/2019  11:50 AM             6,324 Untitled10.ipynb\r\n&#39;,
+ b&#39;05/20/2019  12:06 PM             1,873 Untitled11.ipynb\r\n&#39;,
+ b&#39;05/20/2019  01:51 PM            20,857 Untitled12.ipynb\r\n&#39;,
+ b&#39;05/20/2019  02:40 PM             8,299 Untitled13.ipynb\r\n&#39;,
+ b&#39;05/20/2019  02:47 PM             2,999 Untitled14.ipynb\r\n&#39;,
+ b&#39;05/20/2019  02:57 PM             2,553 Untitled15.ipynb\r\n&#39;,
+ b&#39;05/20/2019  03:59 PM             1,371 Untitled16.ipynb\r\n&#39;,
+ b&#39;05/20/2019  04:19 PM             1,875 Untitled17.ipynb\r\n&#39;,
+ b&#39;05/23/2019  09:56 AM            19,385 Untitled18.ipynb\r\n&#39;,
+ b&#39;05/23/2019  04:53 PM            19,017 Untitled19.ipynb\r\n&#39;,
+ b&#39;05/12/2019  02:10 PM             6,781 Untitled2.ipynb\r\n&#39;,
+ b&#39;05/30/2019  09:49 AM             4,486 Untitled20.ipynb\r\n&#39;,
+ b&#39;05/23/2019  01:44 PM             2,780 Untitled21.ipynb\r\n&#39;,
+ b&#39;05/23/2019  02:02 PM               669 Untitled22.ipynb\r\n&#39;,
+ b&#39;05/30/2019  10:00 AM             2,763 Untitled23.ipynb\r\n&#39;,
+ b&#39;05/30/2019  10:16 AM             2,729 Untitled24.ipynb\r\n&#39;,
+ b&#39;05/30/2019  10:35 AM             5,035 Untitled25.ipynb\r\n&#39;,
+ b&#39;05/30/2019  10:49 AM            37,403 Untitled26.ipynb\r\n&#39;,
+ b&#39;05/30/2019  11:24 AM            20,264 Untitled27.ipynb\r\n&#39;,
+ b&#39;05/30/2019  11:58 AM            10,260 Untitled28.ipynb\r\n&#39;,
+ b&#39;05/30/2019  12:04 PM             3,068 Untitled29.ipynb\r\n&#39;,
+ b&#39;05/12/2019  02:16 PM             1,961 Untitled3.ipynb\r\n&#39;,
+ b&#39;05/30/2019  12:25 PM            10,265 Untitled30.ipynb\r\n&#39;,
+ b&#39;05/30/2019  02:03 PM            21,511 Untitled31.ipynb\r\n&#39;,
+ b&#39;05/30/2019  02:20 PM            11,261 Untitled32.ipynb\r\n&#39;,
+ b&#39;05/12/2019  02:37 PM            15,257 Untitled4.ipynb\r\n&#39;,
+ b&#39;05/12/2019  03:00 PM             9,291 Untitled5.ipynb\r\n&#39;,
+ b&#39;05/12/2019  04:01 PM            14,554 Untitled6.ipynb\r\n&#39;,
+ b&#39;05/12/2019  04:54 PM             6,235 Untitled7.ipynb\r\n&#39;,
+ b&#39;05/20/2019  09:54 AM             5,756 Untitled8.ipynb\r\n&#39;,
+ b&#39;05/20/2019  10:14 AM            11,148 Untitled9.ipynb\r\n&#39;,
+ b&#39;12/24/2018  12:20 AM    &lt;DIR&gt;          Videos\r\n&#39;,
+ b&#39;03/01/2016  08:13 AM    &lt;DIR&gt;          workspace\r\n&#39;,
+ b&#39;05/30/2019  11:23 AM    &lt;DIR&gt;          __pycache__\r\n&#39;,
+ b&#39;              64 File(s)        443,885 bytes\r\n&#39;,
+ b&#39;              47 Dir(s)  162,530,553,856 bytes free\r\n&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">multiprocessing</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">multiprocessing</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on package multiprocessing:
+
+NAME
+    multiprocessing
+
+DESCRIPTION
+    # Package analogous to &#39;threading.py&#39; but using processes
+    #
+    # multiprocessing/__init__.py
+    #
+    # This package is intended to duplicate the functionality (and much of
+    # the API) of threading.py but uses processes instead of threads.  A
+    # subpackage &#39;multiprocessing.dummy&#39; has the same API but is a simple
+    # wrapper for &#39;threading&#39;.
+    #
+    # Copyright (c) 2006-2008, R Oudkerk
+    # Licensed to PSF under a Contributor Agreement.
+    #
+
+PACKAGE CONTENTS
+    connection
+    context
+    dummy (package)
+    forkserver
+    heap
+    managers
+    pool
+    popen_fork
+    popen_forkserver
+    popen_spawn_posix
+    popen_spawn_win32
+    process
+    queues
+    reduction
+    resource_sharer
+    semaphore_tracker
+    sharedctypes
+    spawn
+    synchronize
+    util
+
+SUBMODULES
+    reducer
+
+CLASSES
+    builtins.Exception(builtins.BaseException)
+        multiprocessing.context.ProcessError
+            multiprocessing.context.AuthenticationError
+            multiprocessing.context.BufferTooShort
+            multiprocessing.context.TimeoutError
+    multiprocessing.process.BaseProcess(builtins.object)
+        multiprocessing.context.Process
+    
+    class AuthenticationError(ProcessError)
+     |  Common base class for all non-exit exceptions.
+     |  
+     |  Method resolution order:
+     |      AuthenticationError
+     |      ProcessError
+     |      builtins.Exception
+     |      builtins.BaseException
+     |      builtins.object
+     |  
+     |  Data descriptors inherited from ProcessError:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.Exception:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.BaseException:
+     |  
+     |  __delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      helper for pickle
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __setattr__(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  with_traceback(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from builtins.BaseException:
+     |  
+     |  __cause__
+     |      exception cause
+     |  
+     |  __context__
+     |      exception context
+     |  
+     |  __dict__
+     |  
+     |  __suppress_context__
+     |  
+     |  __traceback__
+     |  
+     |  args
+    
+    class BufferTooShort(ProcessError)
+     |  Common base class for all non-exit exceptions.
+     |  
+     |  Method resolution order:
+     |      BufferTooShort
+     |      ProcessError
+     |      builtins.Exception
+     |      builtins.BaseException
+     |      builtins.object
+     |  
+     |  Data descriptors inherited from ProcessError:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.Exception:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.BaseException:
+     |  
+     |  __delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      helper for pickle
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __setattr__(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  with_traceback(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from builtins.BaseException:
+     |  
+     |  __cause__
+     |      exception cause
+     |  
+     |  __context__
+     |      exception context
+     |  
+     |  __dict__
+     |  
+     |  __suppress_context__
+     |  
+     |  __traceback__
+     |  
+     |  args
+    
+    class Process(multiprocessing.process.BaseProcess)
+     |  Process objects represent activity that is run in a separate process
+     |  
+     |  The class is analogous to `threading.Thread`
+     |  
+     |  Method resolution order:
+     |      Process
+     |      multiprocessing.process.BaseProcess
+     |      builtins.object
+     |  
+     |  Methods inherited from multiprocessing.process.BaseProcess:
+     |  
+     |  __init__(self, group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __repr__(self)
+     |      Return repr(self).
+     |  
+     |  is_alive(self)
+     |      Return whether process is alive
+     |  
+     |  join(self, timeout=None)
+     |      Wait until child process terminates
+     |  
+     |  run(self)
+     |      Method to be run in sub-process; can be overridden in sub-class
+     |  
+     |  start(self)
+     |      Start child process
+     |  
+     |  terminate(self)
+     |      Terminate process; sends SIGTERM signal or uses TerminateProcess()
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from multiprocessing.process.BaseProcess:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  authkey
+     |  
+     |  daemon
+     |      Return whether process is a daemon
+     |  
+     |  exitcode
+     |      Return exit code of process or `None` if it has yet to stop
+     |  
+     |  ident
+     |      Return identifier (PID) of process or `None` if it has yet to start
+     |  
+     |  name
+     |  
+     |  pid
+     |      Return identifier (PID) of process or `None` if it has yet to start
+     |  
+     |  sentinel
+     |      Return a file descriptor (Unix) or handle (Windows) suitable for
+     |      waiting for process termination.
+    
+    class ProcessError(builtins.Exception)
+     |  Common base class for all non-exit exceptions.
+     |  
+     |  Method resolution order:
+     |      ProcessError
+     |      builtins.Exception
+     |      builtins.BaseException
+     |      builtins.object
+     |  
+     |  Data descriptors defined here:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.Exception:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.BaseException:
+     |  
+     |  __delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      helper for pickle
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __setattr__(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  with_traceback(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from builtins.BaseException:
+     |  
+     |  __cause__
+     |      exception cause
+     |  
+     |  __context__
+     |      exception context
+     |  
+     |  __dict__
+     |  
+     |  __suppress_context__
+     |  
+     |  __traceback__
+     |  
+     |  args
+    
+    class TimeoutError(ProcessError)
+     |  Common base class for all non-exit exceptions.
+     |  
+     |  Method resolution order:
+     |      TimeoutError
+     |      ProcessError
+     |      builtins.Exception
+     |      builtins.BaseException
+     |      builtins.object
+     |  
+     |  Data descriptors inherited from ProcessError:
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.Exception:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __new__(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.BaseException:
+     |  
+     |  __delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __reduce__(...)
+     |      helper for pickle
+     |  
+     |  __repr__(self, /)
+     |      Return repr(self).
+     |  
+     |  __setattr__(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |  
+     |  __setstate__(...)
+     |  
+     |  __str__(self, /)
+     |      Return str(self).
+     |  
+     |  with_traceback(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from builtins.BaseException:
+     |  
+     |  __cause__
+     |      exception cause
+     |  
+     |  __context__
+     |      exception context
+     |  
+     |  __dict__
+     |  
+     |  __suppress_context__
+     |  
+     |  __traceback__
+     |  
+     |  args
+
+FUNCTIONS
+    Array(typecode_or_type, size_or_initializer, *, lock=True) method of multiprocessing.context.DefaultContext instance
+        Returns a synchronized shared array
+    
+    Barrier(parties, action=None, timeout=None) method of multiprocessing.context.DefaultContext instance
+        Returns a barrier object
+    
+    BoundedSemaphore(value=1) method of multiprocessing.context.DefaultContext instance
+        Returns a bounded semaphore object
+    
+    Condition(lock=None) method of multiprocessing.context.DefaultContext instance
+        Returns a condition object
+    
+    Event() method of multiprocessing.context.DefaultContext instance
+        Returns an event object
+    
+    JoinableQueue(maxsize=0) method of multiprocessing.context.DefaultContext instance
+        Returns a queue object
+    
+    Lock() method of multiprocessing.context.DefaultContext instance
+        Returns a non-recursive lock object
+    
+    Manager() method of multiprocessing.context.DefaultContext instance
+        Returns a manager associated with a running server process
+        
+        The managers methods such as `Lock()`, `Condition()` and `Queue()`
+        can be used to create shared objects.
+    
+    Pipe(duplex=True) method of multiprocessing.context.DefaultContext instance
+        Returns two connection object connected by a pipe
+    
+    Pool(processes=None, initializer=None, initargs=(), maxtasksperchild=None) method of multiprocessing.context.DefaultContext instance
+        Returns a process pool object
+    
+    Queue(maxsize=0) method of multiprocessing.context.DefaultContext instance
+        Returns a queue object
+    
+    RLock() method of multiprocessing.context.DefaultContext instance
+        Returns a recursive lock object
+    
+    RawArray(typecode_or_type, size_or_initializer) method of multiprocessing.context.DefaultContext instance
+        Returns a shared array
+    
+    RawValue(typecode_or_type, *args) method of multiprocessing.context.DefaultContext instance
+        Returns a shared object
+    
+    Semaphore(value=1) method of multiprocessing.context.DefaultContext instance
+        Returns a semaphore object
+    
+    SimpleQueue() method of multiprocessing.context.DefaultContext instance
+        Returns a queue object
+    
+    Value(typecode_or_type, *args, lock=True) method of multiprocessing.context.DefaultContext instance
+        Returns a synchronized shared object
+    
+    active_children()
+        Return list of process objects corresponding to live child processes
+    
+    allow_connection_pickling() method of multiprocessing.context.DefaultContext instance
+        Install support for sending connections and sockets
+        between processes
+    
+    cpu_count() method of multiprocessing.context.DefaultContext instance
+        Returns the number of CPUs in the system
+    
+    current_process()
+        Return process object representing the current process
+    
+    freeze_support() method of multiprocessing.context.DefaultContext instance
+        Check whether this is a fake forked process in a frozen executable.
+        If so then run code specified by commandline and exit.
+    
+    get_all_start_methods() method of multiprocessing.context.DefaultContext instance
+    
+    get_context(method=None) method of multiprocessing.context.DefaultContext instance
+    
+    get_logger() method of multiprocessing.context.DefaultContext instance
+        Return package logger -- if it does not already exist then
+        it is created.
+    
+    get_start_method(allow_none=False) method of multiprocessing.context.DefaultContext instance
+    
+    log_to_stderr(level=None) method of multiprocessing.context.DefaultContext instance
+        Turn on logging and add a handler which prints to stderr
+    
+    set_executable(executable) method of multiprocessing.context.DefaultContext instance
+        Sets the path to a python.exe or pythonw.exe binary used to run
+        child processes instead of sys.executable when using the &#39;spawn&#39;
+        start method.  Useful for people embedding Python.
+    
+    set_forkserver_preload(module_names) method of multiprocessing.context.DefaultContext instance
+        Set list of module names to try to load in forkserver process.
+        This is really just a hint.
+    
+    set_start_method(method, force=False) method of multiprocessing.context.DefaultContext instance
+
+DATA
+    __all__ = [&#39;Array&#39;, &#39;AuthenticationError&#39;, &#39;Barrier&#39;, &#39;BoundedSemaphor...
+
+FILE
+    c:\python36\lib\multiprocessing\__init__.py
+
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Queue</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;bound method BaseContext.Queue of &lt;multiprocessing.context.DefaultContext object at 0x00000204DB93EF98&gt;&gt;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Queue</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">q</span><span class="o">.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

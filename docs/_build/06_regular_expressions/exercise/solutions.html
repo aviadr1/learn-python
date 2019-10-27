@@ -1,0 +1,504 @@
+---
+redirect_from:
+  - "/06-regular-expressions/exercise/solutions"
+interact_link: content/06_regular_expressions/exercise/solutions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Solutions
+prev_page:
+  url: /06_regular_expressions/exercise/questions.html
+  title: |-
+    Questions
+next_page:
+  url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3.html
+  title: |-
+    Lesson 06-sub Python2-to-python3
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/06_regular_expressions/exercise/solutions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="regex-to-match-positive-integers">regex to match positive integers<a class="anchor-link" href="#regex-to-match-positive-integers"> </a></h1><p>create and test a regex to:
+match positive integer numbers</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">good_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;65324&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">bad_matches</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;blah&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;f123&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;245fsd&quot;</span>
+    <span class="s2">&quot;4-5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;4.0&quot;</span>
+    <span class="s2">&quot;-10&quot;</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\b[0-9]+\b&quot;</span>
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">good_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">bad_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">regex</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>\b[0-9]+\b
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="regex-for-positive-or-negative-integers">regex for positive or negative integers<a class="anchor-link" href="#regex-for-positive-or-negative-integers"> </a></h1><p>create and test a regex to:
+ match positive or negative integers</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">good_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;65324&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;+19&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;-10&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;0&quot;</span>
+<span class="p">]</span>
+
+<span class="n">bad_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;-0&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;+0&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;blah&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;f123&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;123you&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;4-5&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;4.0&quot;</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;([+\-]?[1-9][0-9]*)|0&quot;</span>
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">good_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">bad_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">regex</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>([+\-]?[1-9][0-9]*)|0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="decimal-numbers-*">decimal numbers <code>*</code><a class="anchor-link" href="#decimal-numbers-*"> </a></h1><p>create and test a regex to:
+   match decimal numbers</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">good_matches</span> <span class="o">=</span> <span class="p">[</span>
+       <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;123.4554&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;0.43&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;-10&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;+2.3&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;-2.3&quot;</span>
+   <span class="p">]</span>
+   
+<span class="n">bad_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;-0&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;+0&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;blah&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;f123&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;123you&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;4-5&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;..34&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;.34&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;0.&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;234.&quot;</span>
+<span class="p">]</span>      
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;([+-]?[0-9]+\.[0-9]+)|([+\-]?[1-9][0-9]*)|0&quot;</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">good_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">bad_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">regex</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>([+-]?[0-9]+\.[0-9]+)|([+\-]?[1-9][0-9]*)|0
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="verbs">verbs<a class="anchor-link" href="#verbs"> </a></h1><p>create and test a regex to:
+   find words that look like verbs and end in '-ing'</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">good_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;jumping&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;eating&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;sleeping&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;ting&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;bing&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;zipziplinging&#39;</span>
+<span class="p">]</span>
+
+<span class="n">bad_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;jump&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;ing&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;jump ing&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;_ing&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;234ing&#39;</span>
+<span class="p">]</span>         
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[a-zA-Z]+ing&quot;</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">good_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">bad_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">regex</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[a-zA-Z]+ing
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="cats-are-awesome">cats are awesome<a class="anchor-link" href="#cats-are-awesome"> </a></h1><p>create and test a regex to match:
+lines that start with the word 'cats' and end with the words 'are awesome'</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test data</span>
+<span class="n">good_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s2">&quot;cats are awesome&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;cats that sleep are awesome&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;cats that can count to 10 are awesome&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;cats 1234567890-/.,gdf/.g, are awesome&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">bad_matches</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;cat&#39;</span>
+   <span class="s1">&#39;awesome&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;cats are&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;cats are awesome too&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;my cats are awesome&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;cats.*are awesome&#39;</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">good_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">bad_matches</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;failed:&quot;</span><span class="p">,</span> <span class="n">test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">regex</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>cats.*are awesome
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="TODO">TODO<a class="anchor-link" href="#TODO"> </a></h1><p>TODO: excersizes for iterall and match groups</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

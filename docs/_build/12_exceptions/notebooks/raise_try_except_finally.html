@@ -1,0 +1,101 @@
+---
+redirect_from:
+  - "/12-exceptions/notebooks/raise-try-except-finally"
+interact_link: content/12_exceptions/notebooks/raise_try_except_finally.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Raise Try Except Finally
+prev_page:
+  url: /12_exceptions/notebooks/exceptions.html
+  title: |-
+    Exceptions
+next_page:
+  url: /13_multiprocessing/notebooks/os_system_subprocess.html
+  title: |-
+    Os System Subprocess
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/12_exceptions/notebooks/raise_try_except_finally.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">B</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">LogicError</span><span class="p">(</span><span class="s2">&quot;I dont like negative numbers&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+    
+<span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Starting A(</span><span class="si">{x}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">B</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;finished A(</span><span class="si">{x}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">A</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;A(</span><span class="si">{i}</span><span class="s2">)=</span><span class="si">{y}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">x</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;failed running A(</span><span class="si">{i}</span><span class="s2">): &quot;</span><span class="p">,</span> <span class="p">)</span>
+        
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Starting A(-1)
+finished A(-1)
+failed running A(-1): 
+Starting A(0)
+finished A(0)
+A(0)=0
+Starting A(1)
+finished A(1)
+A(1)=1
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

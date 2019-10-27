@@ -1,0 +1,1094 @@
+---
+redirect_from:
+  - "/03-flow-control/exercise/solutions"
+interact_link: content/03_flow_control/exercise/solutions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Solutions
+prev_page:
+  url: /03_flow_control/exercise/questions.html
+  title: |-
+    Questions
+next_page:
+  url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_.html
+  title: |-
+    1-100 Multiplication Matrix Luah Kefel 
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/exercise/solutions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="For-more-exercizes-on-loops,-see-this-link:">For more exercizes on loops, see this link:<a class="anchor-link" href="#For-more-exercizes-on-loops,-see-this-link:"> </a></h1><ul>
+<li><a href="bit.ly/aviad-python-loops">Python conditional statements and loops [44 exercises with solution]</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="if/elif/else---checking-a-password">if/elif/else - checking a password<a class="anchor-link" href="#if/elif/else---checking-a-password"> </a></h1><ol>
+<li><p>use the input() function to take a password from the user
+<br><br></p>
+</li>
+<li><p>check that the password is "good" according to the following criterions:</p>
+<ol>
+<li>the password length must be at least 4</li>
+<li>the password length must be no more than 12</li>
+<li>the password must not be just numbers</li>
+<li>the password must have both lowercase and uppercase letters
+<br><br></li>
+</ol>
+</li>
+<li><p>if the password is good, print "excellent password". 
+otherwise, print the reason why the password was rejected
+<br><br></p>
+</li>
+</ol>
+<p>HINTS:</p>
+<ul>
+<li>use the <code>len()</code>, <code>.isdigit()</code>, <code>.isupper()</code>, <code>.islower()</code> functions</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;your password, sir/madam? &quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;password too short&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;password too long&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cannot be just numbers&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;need uppercase letters&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;need lowercase letters&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;excellent password&quot;</span><span class="p">)</span>
+    <span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>your password, sir/madam? blah
+need uppercase letters
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-loop---until-we-find-a-good-password">While loop - until we find a good password<a class="anchor-link" href="#While-loop---until-we-find-a-good-password"> </a></h1><ol>
+<li><p>copy the password testing code you wrote above
+<br> <br></p>
+</li>
+<li><p>now use a while loop to continue asking for a new password
+until a password that passes all the tests is given</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">finished</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">finished</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;your password, sir/madam? &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;password too short&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;password too long&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cannot be just numbers&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;need uppercase letters&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;need lowercase letters&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;excellent password&quot;</span><span class="p">)</span>
+        <span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>your password, sir/madam? BLAH
+need lowercase letters
+your password, sir/madam? blahBLAH
+excellent password
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-loop---password-with-maximum-3-attemps">While loop - password with maximum 3 attemps<a class="anchor-link" href="#While-loop---password-with-maximum-3-attemps"> </a></h1><ol>
+<li><p>copy your answer for the while loop above
+<br><br></p>
+</li>
+<li><p>now modify the code such that no more than 3 attemps are possible
+after 3 failed attemps, the program should say "too many attemps, access denied"
+<br><br></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tries_left</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">finished</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">finished</span> <span class="ow">and</span> <span class="n">tries_left</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">tries_left</span> <span class="o">=</span> <span class="n">tries_left</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;your password, sir/madam? &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;password too short&quot;</span><span class="p">)</span>   
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;password too long&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cannot be just numbers&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;need uppercase letters&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">p</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;need lowercase letters&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;excellent password&quot;</span><span class="p">)</span>
+        <span class="n">finished</span> <span class="o">=</span> <span class="kc">True</span>
+        
+<span class="k">if</span> <span class="n">tries_left</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">finished</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;too many attempts, access denied&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>your password, sir/madam? 123
+password too short
+your password, sir/madam? 1242
+cannot be just numbers
+your password, sir/madam? blah
+need uppercase letters
+too many attempts, access denied
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="while-loop---numbers-0-100-divisible-by-7">while loop - numbers 0-100 divisible by 7<a class="anchor-link" href="#while-loop---numbers-0-100-divisible-by-7"> </a></h1><p>using a while loop, print all the numbers between 0 and 100 
+that are divisible by 7</p>
+<blockquote><p><strong>we say that x is divisible by 7 when <code>x%7 == 0</code></strong></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">100</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">7</span>==0:
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+77
+84
+91
+98
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="for-loop----numbers-0-100-divisible-by-7">for loop -  numbers 0-100 divisible by 7<a class="anchor-link" href="#for-loop----numbers-0-100-divisible-by-7"> </a></h1><blockquote><p><strong>Just like the question above, this time with a <code>for</code> loop</strong></p>
+</blockquote>
+<p>print all the numbers between 0 and 100 that are divisible by 7
+using a <code>for</code> loop and <code>range(100)</code></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="k">7</span> ==0:
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+77
+84
+91
+98
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-loop---multiplication-matrix">While loop - multiplication matrix<a class="anchor-link" href="#While-loop---multiplication-matrix"> </a></h1><blockquote><p>multiplication matrix = ×œ×•×— ×”×›×¤×œ</p>
+</blockquote>
+<p>using while loop(s), print the multiplication matrix
+in the following way (total of 100 lines)</p>
+
+<pre><code>  1 x 1 = 1
+  1 x 2 = 2
+  ...
+  1 x 10 = 10
+  2 x 1 = 1
+  2 x 2 = 2
+  ...
+  2 x 10 = 20
+  ...
+  ...
+  10 x 1 = 10
+  10 x 2 = 20
+  ...
+  10 x 10 = 100</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
+    <span class="n">j</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">j</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
+        <span class="n">j</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+1 * 4 = 4
+1 * 5 = 5
+1 * 6 = 6
+1 * 7 = 7
+1 * 8 = 8
+1 * 9 = 9
+1 * 10 = 10
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+2 * 4 = 8
+2 * 5 = 10
+2 * 6 = 12
+2 * 7 = 14
+2 * 8 = 16
+2 * 9 = 18
+2 * 10 = 20
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+3 * 4 = 12
+3 * 5 = 15
+3 * 6 = 18
+3 * 7 = 21
+3 * 8 = 24
+3 * 9 = 27
+3 * 10 = 30
+4 * 1 = 4
+4 * 2 = 8
+4 * 3 = 12
+4 * 4 = 16
+4 * 5 = 20
+4 * 6 = 24
+4 * 7 = 28
+4 * 8 = 32
+4 * 9 = 36
+4 * 10 = 40
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+6 * 4 = 24
+6 * 5 = 30
+6 * 6 = 36
+6 * 7 = 42
+6 * 8 = 48
+6 * 9 = 54
+6 * 10 = 60
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+8 * 1 = 8
+8 * 2 = 16
+8 * 3 = 24
+8 * 4 = 32
+8 * 5 = 40
+8 * 6 = 48
+8 * 7 = 56
+8 * 8 = 64
+8 * 9 = 72
+8 * 10 = 80
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+9 * 6 = 54
+9 * 7 = 63
+9 * 8 = 72
+9 * 9 = 81
+9 * 10 = 90
+10 * 1 = 10
+10 * 2 = 20
+10 * 3 = 30
+10 * 4 = 40
+10 * 5 = 50
+10 * 6 = 60
+10 * 7 = 70
+10 * 8 = 80
+10 * 9 = 90
+10 * 10 = 100
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="for-loop---multiplication-matrix">for loop - multiplication matrix<a class="anchor-link" href="#for-loop---multiplication-matrix"> </a></h1><blockquote><p>multiplication matrix = ×œ×•×— ×”×›×¤×œ</p>
+</blockquote>
+<p>this time, use <code>for</code> loop(s) and <code>range</code> to print the multiplication matrix
+in the following way (total of 100 lines)</p>
+
+<pre><code>  1 x 1 = 1
+  1 x 2 = 2
+  ...
+  1 x 10 = 10
+  2 x 1 = 1
+  2 x 2 = 2
+  ...
+  2 x 10 = 20
+  ...
+  ...
+  10 x 1 = 10
+  10 x 2 = 20
+  ...
+  10 x 10 = 100</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+1 * 4 = 4
+1 * 5 = 5
+1 * 6 = 6
+1 * 7 = 7
+1 * 8 = 8
+1 * 9 = 9
+1 * 10 = 10
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+2 * 4 = 8
+2 * 5 = 10
+2 * 6 = 12
+2 * 7 = 14
+2 * 8 = 16
+2 * 9 = 18
+2 * 10 = 20
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+3 * 4 = 12
+3 * 5 = 15
+3 * 6 = 18
+3 * 7 = 21
+3 * 8 = 24
+3 * 9 = 27
+3 * 10 = 30
+4 * 1 = 4
+4 * 2 = 8
+4 * 3 = 12
+4 * 4 = 16
+4 * 5 = 20
+4 * 6 = 24
+4 * 7 = 28
+4 * 8 = 32
+4 * 9 = 36
+4 * 10 = 40
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+6 * 4 = 24
+6 * 5 = 30
+6 * 6 = 36
+6 * 7 = 42
+6 * 8 = 48
+6 * 9 = 54
+6 * 10 = 60
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+8 * 1 = 8
+8 * 2 = 16
+8 * 3 = 24
+8 * 4 = 32
+8 * 5 = 40
+8 * 6 = 48
+8 * 7 = 56
+8 * 8 = 64
+8 * 9 = 72
+8 * 10 = 80
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+9 * 6 = 54
+9 * 7 = 63
+9 * 8 = 72
+9 * 9 = 81
+9 * 10 = 90
+10 * 1 = 10
+10 * 2 = 20
+10 * 3 = 30
+10 * 4 = 40
+10 * 5 = 50
+10 * 6 = 60
+10 * 7 = 70
+10 * 8 = 80
+10 * 9 = 90
+10 * 10 = 100
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="for-loop---multiplication-matrix-with-nice-formatting">for loop - multiplication matrix with nice formatting<a class="anchor-link" href="#for-loop---multiplication-matrix-with-nice-formatting"> </a></h1><ol>
+<li><p>copy your <em>for loop multiplication matrix</em> solution  above 
+<br><br></p>
+</li>
+<li><p>modify the solution so that it actually prints the multiplication table in table form <br>
+   hint:</p>
+
+<pre><code> &gt;&gt; print(1,2,3, end="\t")
+ &gt;&gt; print(4,5,6)
+ 1 2 3    4 5 6</code></pre>
+</li>
+</ol>
+<p>expected output:</p>
+
+<pre><code> 1    2     3     4     5     6     7     8     9     10    
+ 2    4     6     8     10    12    14    16    18    20    
+ 3    6     9     12    15    18    21    24    27    30    
+ 4    8     12    16    20    24    28    32    36    40    
+ 5    10    15    20    25    30    35    40    45    50    
+ 6    12    18    24    30    36    42    48    54    60    
+ 7    14    21    28    35    42    49    56    63    70    
+ 8    16    24    32    40    48    56    64    72    80    
+ 9    18    27    36    45    54    63    72    81    90    
+ 10   20    30    40    50    60    70    80    90    100    </code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1	2	3	4	5	6	7	8	9	10	
+2	4	6	8	10	12	14	16	18	20	
+3	6	9	12	15	18	21	24	27	30	
+4	8	12	16	20	24	28	32	36	40	
+5	10	15	20	25	30	35	40	45	50	
+6	12	18	24	30	36	42	48	54	60	
+7	14	21	28	35	42	49	56	63	70	
+8	16	24	32	40	48	56	64	72	80	
+9	18	27	36	45	54	63	72	81	90	
+10	20	30	40	50	60	70	80	90	100	
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="loop-to-find-long-words">loop to find long words<a class="anchor-link" href="#loop-to-find-long-words"> </a></h1><p>print all the words in the following sentence that are longer than 4 characters:</p>
+
+<pre><code>"The quick brown fox jumped over the lazy dog"
+
+</code></pre>
+<p>expected output:</p>
+
+<pre><code>quick
+brown
+jumped</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sent</span> <span class="o">=</span> <span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">sent</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>quick
+brown
+jumped
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="squares">squares<a class="anchor-link" href="#squares"> </a></h1><p>here's a square made of the <code>'*'</code> character with length 5</p>
+
+<pre><code>*****
+*****
+*****
+*****
+*****
+
+</code></pre>
+<ol>
+<li><p>use the input() function to take a number from the user</p>
+
+<pre><code>num = int(input('how big? '))</code></pre>
+</li>
+<li><p>can you use for loop(s) to print such a square of length <code>num</code>?</p>
+</li>
+</ol>
+<p>hints:</p>
+<ul>
+<li>use <code>print('*', end="")</code> to print a single <code>'*'</code> character</li>
+<li>you need more than one for loop</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;how big? &#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>how big? 6
+******
+******
+******
+******
+******
+******
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="triangles">triangles<a class="anchor-link" href="#triangles"> </a></h1><p>here's a triangle made of the <code>'*'</code> character with length 5</p>
+
+<pre><code> *
+ **
+ ***
+ ****
+ *****
+
+</code></pre>
+<p>can you use for loop(s) to print such a triangle of length 10?</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="enumerate">enumerate<a class="anchor-link" href="#enumerate"> </a></h1><ol>
+<li><p>split the string "the quick brown fox jumped over the lazy dog" into words
+using the .split() function, and put the list in the variable 'words'
+<br><br></p>
+</li>
+<li><p>use the enumerate() function to print each word on its own line, 
+along with the index of the word in the 'words' variable
+<br><br></p>
+
+<pre><code>0 the
+1 quick
+2 brown
+3 fox
+4 jumped
+5 over
+6 the
+7 lazy
+8 dog</code></pre>
+</li>
+<li><p>(harder) replace words that are longer than 4 characters to the string "too long"
+use enumerate() to do this with minimum number of code lines</p>
+
+<pre><code>['the', 'too long', 'too long', 'fox', 'too long', 'over', 'the', 'lazy', 'dog'] </code></pre>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a</span>
+<span class="n">words</span> <span class="o">=</span> <span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="c1"># b </span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+    
+<span class="c1"># c</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;too long&quot;</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 the
+1 quick
+2 brown
+3 fox
+4 jumped
+5 over
+6 the
+7 lazy
+8 dog
+[&#39;the&#39;, &#39;too long&#39;, &#39;too long&#39;, &#39;fox&#39;, &#39;too long&#39;, &#39;over&#39;, &#39;the&#39;, &#39;lazy&#39;, &#39;dog&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

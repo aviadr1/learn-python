@@ -1,0 +1,570 @@
+---
+redirect_from:
+  - "/09-advanced-collections/exercise/questions"
+interact_link: content/09_advanced_collections/exercise/questions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Questions
+prev_page:
+  url: /08_functions/notebooks/veriadic_funcs_args.html
+  title: |-
+    Veriadic Funcs Args
+next_page:
+  url: /09_advanced_collections/exercise/solutions.html
+  title: |-
+    Solutions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/09_advanced_collections/exercise/questions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="simple-list-comprehension:-powers-of-2">simple list comprehension: powers of 2<a class="anchor-link" href="#simple-list-comprehension:-powers-of-2"> </a></h1><p>use <strong>list comprehension</strong> to compute a list containing the powers of 2:
+i.e.  <code>[2**0, 2**1, 2**2, 2**3, ..., 2**15]</code></p>
+<blockquote><p>NOTE: the code should be one just line <br>
+reminder: list comprehensions look like <code>[ _____ for _____ in ____ ]</code> where you fill in the blanks</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="list-comprehension-with-filtering">list comprehension with filtering<a class="anchor-link" href="#list-comprehension-with-filtering"> </a></h1><p>take the sentnence <code>"everything shuold be as simple as possible but no simpler"</code> (this is a qoute by albert einstein). <br>
+use list comprehension to</p>
+<ol>
+<li>take only words that are shorter than 6 letters</li>
+<li>convert words to uppercase</li>
+</ol>
+<p>expected output:
+<code>['BE', 'AS', 'AS', 'BUT', 'NO']</code></p>
+<blockquote><p>reminder: list comprehension with filtering has the form <code>[ _____ for ____ in ____ if ____ ]</code></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: the qoute to work on</span>
+<span class="n">words</span> <span class="o">=</span> <span class="s2">&quot;everything should be as simple as possible but no simpler&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="max-length-of-words-in-a-list">max length of words in a list<a class="anchor-link" href="#max-length-of-words-in-a-list"> </a></h1><p>using JUST ONE LINE, find the length of the longest word in a given sentence</p>
+<p>hints - use the functions <code>str.split()</code>, <code>max()</code> and <code>len()</code>:</p>
+<ul>
+<li>break the sentence into words using the function <code>str.split()</code></li>
+<li>use <strong>list comprehension</strong> to compute the length of all words</li>
+<li>use the function <code>max</code> to get the maximum length from the list of lengths</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: sentence to work on from &quot;life of brian&quot; </span>
+<span class="n">brian</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;“</span>
+<span class="s2">Alright, but apart from the sanitation, the medicine, education, wine, public order, </span>
+<span class="s2">irrigation, roads, the fresh-water system, and public health, </span>
+<span class="s2">what have the Romans ever done for us?”</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="max-lengh-of-words,-and-the-actual-word-too">max lengh of words, and the actual word too<a class="anchor-link" href="#max-lengh-of-words,-and-the-actual-word-too"> </a></h1><p>build on the <a href="#max-length-of-words-in-a-list">previous exercise</a> <br>
+now, get the <em>length</em> of the longest word <em>as well as</em> the <strong>actual word</strong></p>
+<p>expected output for the life of brian qoute:</p>
+
+<pre><code>[11, 'sanitation']</code></pre>
+<p>or alternatively:</p>
+
+<pre><code>[[11, 'sanitation,'], [11, 'irrigation,'], [11, 'fresh-water']]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="multiple-comprehensions">multiple comprehensions<a class="anchor-link" href="#multiple-comprehensions"> </a></h1><p>for the list of "interesting" angles: <code>0, 30, 60, 90, 120, 150, 180</code></p>
+<p>a) compute the list of radian values using list comprehension</p>
+
+<pre><code>        0  --&gt; 0
+        30 --&gt; 30 *math.pi/180
+        60 --&gt; 60 *math.pi/180
+         x --&gt;  x *math.pi/180
+       180 --&gt; 180*math.pi/180</code></pre>
+<p>b) compute the math.sin value for each of the rad from (a) using list comprehension</p>
+
+<pre><code>        0        --&gt; math.sin(0)
+        x        --&gt; math.sin(x)</code></pre>
+<p>c) use the format <code>"{:.2f}"</code> and list comprehension to compute nicely formatted strings for the numbers in (b)</p>
+
+<pre><code>      x --&gt; "{:.2f}".format(x)</code></pre>
+<p>expected output:</p>
+
+<pre><code>['0.00', '0.50', '0.87', '1.00', '0.87', '0.50', '0.00']</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="dictionary-comprehension">dictionary comprehension<a class="anchor-link" href="#dictionary-comprehension"> </a></h1><p>a restaurant stores the menu and prices of items in a dictionary.
+now it needs to <strong>double the prices of all the items</strong>.
+can you do this in one line with a <strong>dictionary comprehension</strong>?</p>
+
+<pre><code>   menu = {
+       'steak' : 150,
+       'falafel' : 20,
+       'pizza' : 59,
+       'hamburger' : 63,
+       'chips' : 18,
+       'salad' : 30
+   }</code></pre>
+<blockquote><p>reminders:</p>
+<ul>
+<li>dictionary comprehension has the form <code>{ ____ : ____ for ___ in ____ }</code></li>
+<li>remember the <code>.items()</code> function of dictionaries</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: here is the menu</span>
+<span class="n">menu</span> <span class="o">=</span> <span class="p">{</span>
+       <span class="s1">&#39;steak&#39;</span> <span class="p">:</span> <span class="mi">150</span><span class="p">,</span>
+       <span class="s1">&#39;falafel&#39;</span> <span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+       <span class="s1">&#39;pizza&#39;</span> <span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+       <span class="s1">&#39;hamburger&#39;</span> <span class="p">:</span> <span class="mi">63</span><span class="p">,</span>
+       <span class="s1">&#39;chips&#39;</span> <span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+       <span class="s1">&#39;salad&#39;</span> <span class="p">:</span> <span class="mi">30</span>
+   <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="dictionary-comprehension-with-filtering">dictionary comprehension with filtering<a class="anchor-link" href="#dictionary-comprehension-with-filtering"> </a></h1><blockquote><p>doubling all prices turns out to be too expensive !</p>
+</blockquote>
+<p>we want raise prices in a different way:</p>
+<ol>
+<li>remove all the items that already cost 100 NIS or more from the menu</li>
+<li>all other items should have their price increased by 20%</li>
+<li>make sure every price is in whole shekels (no pennies / agorot) </li>
+</ol>
+<blockquote><p>hint:</p>
+<ul>
+<li>instead of removing, just keep the ones that are cheaper than 100</li>
+<li>use the function <code>round()</code></li>
+</ul>
+</blockquote>
+<p>expected output:</p>
+
+<pre><code>{'falafel': 24, 'pizza': 71, 'hamburger': 76, 'chips': 22, 'salad': 36}</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="cost-of-a-meal">cost of a meal<a class="anchor-link" href="#cost-of-a-meal"> </a></h1><p>People came into our restaurant and ordered a meal for the table:</p>
+
+<pre><code>order = ['steak', 'steak', 'steak', 'falafel', 'chips', 'salad', 'salad']</code></pre>
+<p>lets use the original menu</p>
+
+<pre><code>   menu = {
+       'steak' : 150,
+       'falafel' : 20,
+       'pizza' : 59,
+       'hamburger' : 63,
+       'chips' : 18,
+       'salad' : 30
+   }</code></pre>
+<p>and <em>using list comprehension</em> calculate the cost of the meal
+hint:</p>
+<ul>
+<li>use list comprehension</li>
+<li>use the function <code>sum()</code></li>
+</ul>
+<p>expected output:</p>
+
+<pre><code>548</code></pre>
+<blockquote><p>also see <a href="https://www.youtube.com/watch?v=kyCWPqQYHEA">This video</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: the order</span>
+<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;steak&#39;</span><span class="p">,</span> <span class="s1">&#39;falafel&#39;</span><span class="p">,</span> <span class="s1">&#39;chips&#39;</span><span class="p">,</span> <span class="s1">&#39;salad&#39;</span><span class="p">,</span> <span class="s1">&#39;salad&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="set-comprehension">set comprehension<a class="anchor-link" href="#set-comprehension"> </a></h1><ol>
+<li>use set comprehension to find the unique words in the song "knights of the round table" by monty python</li>
+<li>sort the words in the set using the <code>sorted()</code> function </li>
+<li>see if there are words that look similar</li>
+<li>remove duplicates by turning all words into lowercase</li>
+<li>use the .replace('.', '') to remove the coma characters in words<ul>
+<li>alernatively remove special characters using the <code>str.translate()</code> and <code>str.maketrans()</code> functions</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful song lyrics</span>
+<span class="n">knights_of_round_table</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">We&#39;re knights of the round table</span>
+<span class="s2">We dance whene&#39;er we&#39;re able</span>
+<span class="s2">We do routines and scenes</span>
+<span class="s2">With footwork impeccable.</span>
+<span class="s2">We dine well here in Camelot</span>
+<span class="s2">We eat ham and jam and spam a lot.</span>
+<span class="s2">We&#39;re knights of the Round Table</span>
+<span class="s2">Our shows are formidable</span>
+<span class="s2">But many times we&#39;re given rhymes</span>
+<span class="s2">That are quite unsingable</span>
+<span class="s2">We&#39;re opera mad in Camelot</span>
+<span class="s2">We sing from the diaphragm a lot.</span>
+<span class="s2">In war we&#39;re tough and able.</span>
+<span class="s2">Quite indefatigable</span>
+<span class="s2">Between our quests we sequin vests</span>
+<span class="s2">And impersonate Clark Gable</span>
+<span class="s2">It&#39;s a busy life in Camelot.</span>
+<span class="s2">I have to push the pram a lot.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Create-a-matrix">Create a matrix<a class="anchor-link" href="#Create-a-matrix"> </a></h1><p>use list comprehension to create an NxM marix with numbers going from 0 to NxM</p>
+<p>example with N=6 M=4</p>
+
+<pre><code>[[0,  1,  2,  3],
+ [4,  5,  6,  7],
+ [8,  9,  10, 11],
+ [12, 13, 14, 15],
+ [16, 17, 18, 19],
+ [20, 21, 22, 23]]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="using-sets-to-test-a-password">using sets to test a password<a class="anchor-link" href="#using-sets-to-test-a-password"> </a></h1><p>can you use a <code>set</code> to check that a password has one of the following special characters:</p>
+
+<pre><code>special_chars = """!@#$%^&amp;*()-=_+`~;'"|/.,&lt;&gt;?"""</code></pre>
+<p>hint: it requires only one line, no loops and no list comprehension</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="even_numbers()">even_numbers()<a class="anchor-link" href="#even_numbers()"> </a></h1><ol>
+<li><p>write a function called <code>even_numbers()</code> that returns an infinite lazy list with all the even numbers</p>
+
+<pre><code>0, 2, 4, 6, 8, ...</code></pre>
+<blockquote><p>hint: write a generator function (function with 'yield' statement) with an infinite loop</p>
+</blockquote>
+</li>
+<li><p>call <code>even_numbers()</code> and use the <code>next()</code> function to print the first 3 values from the list</p>
+</li>
+<li><p>use a combination of the <code>zip()</code> function with the <code>range(20)</code> function to create a lazy list of the next 20 numbers.
+use a <code>for</code> loop to iterate over the shorter list</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="line_reader()">line_reader()<a class="anchor-link" href="#line_reader()"> </a></h1><p>imagine files had only one function: <code>.readline()</code>
+can you write a generator function called <code>line_reader</code> so that you could still write an easy for loop over the file's content?</p>
+<ul>
+<li>use the <code>silly_open()</code> function provided below to get file objects that indeed only have a <code>.readline()</code> function and nothing else</li>
+</ul>
+<p>after your write your <code>line_reader</code> function you should be able to write code like this</p>
+
+<pre><code>f = silly_open('knights.txt')
+for line in line_reader(f):
+    print(line)</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful:</span>
+<span class="c1">### 1) create a &#39;knights.txt&#39; </span>
+<span class="c1">### 2) create a silly_open() function that returns a file with just a .readline() function</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;knights.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">knights_of_round_table</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">silly_open</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># define a &quot;Stupid File&quot; which only has a &#39;readline()&#39; function</span>
+    <span class="k">class</span> <span class="nc">StupidFile</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__f</span> <span class="o">=</span> <span class="n">f</span>
+        <span class="k">def</span> <span class="nf">readline</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    <span class="c1"># open the file &#39;knights.txt&#39; for reading</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">StupidFile</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">f</span>
+
+<span class="c1">### notice that the following for loop can&#39;t work</span>
+<span class="c1"># for line in silly_open(&#39;knights.txt&#39;):</span>
+<span class="c1">#     print(line)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: test for your line_reader() function</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">silly_open</span><span class="p">(</span><span class="s1">&#39;knights.txt&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">line_reader</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+We&#39;re knights of the round table
+We dance whene&#39;er we&#39;re able
+We do routines and scenes
+With footwork impeccable.
+We dine well here in Camelot
+We eat ham and jam and spam a lot.
+We&#39;re knights of the Round Table
+Our shows are formidable
+But many times we&#39;re given rhymes
+That are quite unsingable
+We&#39;re opera mad in Camelot
+We sing from the diaphragm a lot.
+In war we&#39;re tough and able.
+Quite indefatigable
+Between our quests we sequin vests
+And impersonate Clark Gable
+It&#39;s a busy life in Camelot.
+I have to push the pram a lot.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="yield-triangles">yield triangles<a class="anchor-link" href="#yield-triangles"> </a></h1><p>remember the function <code>triangle(n)</code> that prints a triangle?</p>
+
+<pre><code>def triangle(n):
+    for i in range(1, n+1):
+        print("*" * i)</code></pre>
+<p>1) rewrite this function with yield so that it yields every line of the triangle instead of printing it
+2) do a for loop on the function and print each line
+3) take all the lines from the functions into a list, print the list</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="yield-passwords">yield passwords<a class="anchor-link" href="#yield-passwords"> </a></h1><p>can you write a generator function (function with 'yield' statement) that:</p>
+<ol>
+<li>uses input() to ask the user for a password</li>
+<li>checks the password (not too long, not too short, has both upper and lower characters)</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

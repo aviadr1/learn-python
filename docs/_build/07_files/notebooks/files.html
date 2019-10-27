@@ -1,0 +1,757 @@
+---
+redirect_from:
+  - "/07-files/notebooks/files"
+interact_link: content/07_files/notebooks/files.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Files
+prev_page:
+  url: /07_files/notebooks/configparser.html
+  title: |-
+    Configparser
+next_page:
+  url: /07_files/notebooks/file_example.html
+  title: |-
+    File Example
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/files.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">greeneggs</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">Green Eggs And Ham</span>
+<span class="s2">I am Sam</span>
+<span class="s2">I am Sam</span>
+<span class="s2">Sam I am</span>
+<span class="s2">That Sam-I-am</span>
+<span class="s2">That Sam-I-am!</span>
+<span class="s2">I do not like</span>
+<span class="s2">That Sam-I-am</span>
+<span class="s2">Do you like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">I do not like them</span>
+<span class="s2">Sam-I-am</span>
+<span class="s2">I do not like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">Would you like them</span>
+<span class="s2">Here or there?</span>
+<span class="s2">I would not like them</span>
+<span class="s2">Here or there</span>
+<span class="s2">I would not like them</span>
+<span class="s2">Anywhere</span>
+<span class="s2">I do not like</span>
+<span class="s2">Green eggs and ham</span>
+<span class="s2">I do not like them</span>
+<span class="s2">Sam-I-am</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;green.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;green.txt&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Green Eggs And Ham
+
+I am Sam
+
+I am Sam
+
+Sam I am
+
+That Sam-I-am
+
+That Sam-I-am!
+
+I do not like
+
+That Sam-I-am
+
+Do you like
+
+Green eggs and ham
+
+I do not like them
+
+Sam-I-am
+
+I do not like
+
+Green eggs and ham
+
+Would you like them
+
+Here or there?
+
+I would not like them
+
+Here or there
+
+I would not like them
+
+Anywhere
+
+I do not like
+
+Green eggs and ham
+
+I do not like them
+
+Sam-I-am
+
+
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">csv</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">name, age, money</span>
+<span class="s2">david, 30, 1000</span>
+<span class="s2">moshe, 25, 500</span>
+<span class="s2">lea, 35, 50000</span>
+<span class="s2">tamar, 29, 600&quot;&quot;&quot;</span>
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;csv.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">csv</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;csv.txt&quot;</span><span class="p">)</span>
+<span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="o">*</span><span class="n">others</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">money</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;name=</span><span class="si">{name}</span><span class="s2">, age=</span><span class="si">{age}</span><span class="s2">, money=</span><span class="si">{money}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>name=david,, age=30,, money=1000
+name=moshe,, age=25,, money=500
+name=lea,, age=35,, money=50000
+name=tamar,, age=29,, money=600
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">others</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;money&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;green.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">greeneggs</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;here fout has been closed already&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>here fout has been closed already
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">fout</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;_CHUNK_SIZE&#39;,
+ &#39;__class__&#39;,
+ &#39;__del__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__enter__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__exit__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__getstate__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__iter__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__next__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;_checkClosed&#39;,
+ &#39;_checkReadable&#39;,
+ &#39;_checkSeekable&#39;,
+ &#39;_checkWritable&#39;,
+ &#39;_finalizing&#39;,
+ &#39;buffer&#39;,
+ &#39;close&#39;,
+ &#39;closed&#39;,
+ &#39;detach&#39;,
+ &#39;encoding&#39;,
+ &#39;errors&#39;,
+ &#39;fileno&#39;,
+ &#39;flush&#39;,
+ &#39;isatty&#39;,
+ &#39;line_buffering&#39;,
+ &#39;mode&#39;,
+ &#39;name&#39;,
+ &#39;newlines&#39;,
+ &#39;read&#39;,
+ &#39;readable&#39;,
+ &#39;readline&#39;,
+ &#39;readlines&#39;,
+ &#39;seek&#39;,
+ &#39;seekable&#39;,
+ &#39;tell&#39;,
+ &#39;truncate&#39;,
+ &#39;writable&#39;,
+ &#39;write&#39;,
+ &#39;writelines&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>error
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;csv.txt&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#column1, column2, *others = f.readline().split()</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">money</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;name=</span><span class="si">{name}</span><span class="s2">, age=</span><span class="si">{age}</span><span class="s2">, money=</span><span class="si">{money}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>name=e,, age=age,, money=money
+name=david,, age=30,, money=1000
+name=moshe,, age=25,, money=500
+name=lea,, age=35,, money=50000
+name=tamar,, age=29,, money=600
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">]}],</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;blah&quot;</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="p">[[[],[],[</span><span class="mi">123</span><span class="p">]]]</span>
+     
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fout</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fin</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json.txt&quot;</span><span class="p">)</span>
+<span class="n">dataout</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fin</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataout</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;1&#39;: [], &#39;2&#39;: [{&#39;1&#39;: [&#39;one&#39;]}], &#39;3&#39;: &#39;blah&#39;, &#39;4&#39;: [[[], [], [123456]]]}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">]}],</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="s2">&quot;blah&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">:</span> <span class="p">[[[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">123456</span><span class="p">]]]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;1&#39;: [], &#39;2&#39;: [{&#39;1&#39;: [&#39;one&#39;]}], &#39;3&#39;: &#39;blah&#39;, &#39;4&#39;: [[[], [], [123456]]]}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataout</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">[],</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">]}],</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="s2">&quot;blah&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">:</span> <span class="p">[[[],</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">123456</span><span class="p">]]]}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function dump in module json:
+
+dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)
+    Serialize ``obj`` as a JSON formatted stream to ``fp`` (a
+    ``.write()``-supporting file-like object).
+    
+    If ``skipkeys`` is true then ``dict`` keys that are not basic types
+    (``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped
+    instead of raising a ``TypeError``.
+    
+    If ``ensure_ascii`` is false, then the strings written to ``fp`` can
+    contain non-ASCII characters if they appear in strings contained in
+    ``obj``. Otherwise, all such characters are escaped in JSON strings.
+    
+    If ``check_circular`` is false, then the circular reference check
+    for container types will be skipped and a circular reference will
+    result in an ``OverflowError`` (or worse).
+    
+    If ``allow_nan`` is false, then it will be a ``ValueError`` to
+    serialize out of range ``float`` values (``nan``, ``inf``, ``-inf``)
+    in strict compliance of the JSON specification, instead of using the
+    JavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).
+    
+    If ``indent`` is a non-negative integer, then JSON array elements and
+    object members will be pretty-printed with that indent level. An indent
+    level of 0 will only insert newlines. ``None`` is the most compact
+    representation.
+    
+    If specified, ``separators`` should be an ``(item_separator, key_separator)``
+    tuple.  The default is ``(&#39;, &#39;, &#39;: &#39;)`` if *indent* is ``None`` and
+    ``(&#39;,&#39;, &#39;: &#39;)`` otherwise.  To get the most compact JSON representation,
+    you should specify ``(&#39;,&#39;, &#39;:&#39;)`` to eliminate whitespace.
+    
+    ``default(obj)`` is a function that should return a serializable version
+    of obj or raise TypeError. The default simply raises TypeError.
+    
+    If *sort_keys* is true (default: ``False``), then the output of
+    dictionaries will be sorted by key.
+    
+    To use a custom ``JSONEncoder`` subclass (e.g. one that overrides the
+    ``.default()`` method to serialize additional types), specify it with
+    the ``cls`` kwarg; otherwise ``JSONEncoder`` is used.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

@@ -1,0 +1,275 @@
+---
+redirect_from:
+  - "/07-files/notebooks/pickle-checkpoint"
+interact_link: content/07_files/notebooks/pickle_checkpoint.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Pickle Checkpoint
+prev_page:
+  url: /07_files/notebooks/pandas_and_csv.html
+  title: |-
+    Pandas And Csv
+next_page:
+  url: /07_files/notebooks/pickle_example.html
+  title: |-
+    Pickle Example
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/pickle_checkpoint.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_giant_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;my string&quot;</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;important&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">]</span> <span class="p">],</span>
+        <span class="s2">&quot;blah&quot;</span> <span class="p">:</span> <span class="p">{</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;two&quot;</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="n">big_giant_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;my string&#39;,
+ 1,
+ 2,
+ 3,
+ {&#39;important&#39;: [[1, 2], [&#39;one&#39;, &#39;two&#39;]], &#39;blah&#39;: {1: &#39;one&#39;, 2: &#39;two&#39;}}]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;mypicklefile.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">big_giant_data</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">big_giant_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_giant_data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-f55cfec9910d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>big_giant_data
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;big_giant_data&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;mypicklefile.bin&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">big_giant_data2</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">big_giant_data2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;my string&#39;,
+ 1,
+ 2,
+ 3,
+ {&#39;important&#39;: [[1, 2], [&#39;one&#39;, &#39;two&#39;]], &#39;blah&#39;: {1: &#39;one&#39;, 2: &#39;two&#39;}}]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myobject.json.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">big_giant_data</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;my string&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;important&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">]],</span> <span class="s2">&quot;blah&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="s2">&quot;two&quot;</span><span class="p">}}]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;my string&#39;,
+ 1,
+ 2,
+ 3,
+ {&#39;important&#39;: [[1, 2], [&#39;one&#39;, &#39;two&#39;]], &#39;blah&#39;: {&#39;1&#39;: &#39;one&#39;, &#39;2&#39;: &#39;two&#39;}}]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

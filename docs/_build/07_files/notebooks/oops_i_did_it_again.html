@@ -1,0 +1,100 @@
+---
+redirect_from:
+  - "/07-files/notebooks/oops-i-did-it-again"
+interact_link: content/07_files/notebooks/oops_i_did_it_again.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Oops I Did It Again
+prev_page:
+  url: /07_files/notebooks/json.html
+  title: |-
+    Json
+next_page:
+  url: /07_files/notebooks/open_read_write_regex.html
+  title: |-
+    Open Read Write Regex
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/oops_i_did_it_again.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">oops</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">oops I did it again</span>
+<span class="s2">I played with your heart</span>
+<span class="s2">got lost in the game</span>
+<span class="s2">oh baby baby</span>
+
+<span class="s2">oops you think I&#39;m in love</span>
+<span class="s2">that I&#39;m sent from above</span>
+<span class="s2">I&#39;m not that innocent</span>
+
+<span class="s2">oh baby baby</span>
+<span class="s2">oh baby baby</span>
+<span class="s2">oh</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;oops.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">oops</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;oops.txt&#39;</span><span class="p">)</span>
+<span class="n">fout</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;oops.double.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">nextline</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">nextline</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">file</span><span class="o">=</span><span class="n">fout</span><span class="p">)</span>
+
+<span class="n">fout</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

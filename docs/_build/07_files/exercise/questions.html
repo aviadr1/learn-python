@@ -1,0 +1,306 @@
+---
+redirect_from:
+  - "/07-files/exercise/questions"
+interact_link: content/07_files/exercise/questions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Questions
+prev_page:
+  url: /07_files/path_and_shutil.html
+  title: |-
+    Path And Shutil
+next_page:
+  url: /07_files/exercise/solutions.html
+  title: |-
+    Solutions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/exercise/questions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="current-working-directory">current working directory<a class="anchor-link" href="#current-working-directory"> </a></h1><p>use the following code to see what your current working directory is</p>
+
+<pre><code>import os
+current_working_directory = os.path.realpath('.')
+print(current_working_directory)</code></pre>
+<p>whenever you open files without specifying a full path, the operating system will assume you are using this directory</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="look-at-a-folder-in-windows-file-explorer">look at a folder in windows file explorer<a class="anchor-link" href="#look-at-a-folder-in-windows-file-explorer"> </a></h1><blockquote><p><strong>on windows OS only</strong></p>
+</blockquote>
+<p>use the following code to open the windows file explorer in your current working directory. <br>
+this will be useful when you're looking for files you are creating</p>
+
+<pre><code># windows only
+import subprocess
+current_working_directory = os.path.realpath('.')
+if os.name == 'nt':
+    subprocess.Popen('explorer.exe ' + current_working_directory)</code></pre>
+<p>notice how it opened a new window for you</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="write-file">write file<a class="anchor-link" href="#write-file"> </a></h1><ol>
+<li><p>use the following code to open the file ex07.txt for writing</p>
+
+<pre><code> f = open('ex07.txt', 'w')</code></pre>
+</li>
+<li><p>here's some text to write into the file</p>
+
+<pre><code> dead_parrot = """
+ I wish to complain about this parrot what I purchased not half an hour ago from this very boutique.
+
+ Oh yes, the, uh, the Norwegian Blue...What's,uh...What's wrong with it?
+
+ I'll tell you what's wrong with it, my lad. 'E's dead, that's what's wrong with it!
+
+ No, no, 'e's uh,...he's resting.
+ """</code></pre>
+</li>
+<li><p>don't forget to close the file
+<br><br></p>
+</li>
+<li><p>can you find this file on your hard drive?</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="reading-a-file">reading a file<a class="anchor-link" href="#reading-a-file"> </a></h1><p>use <code>open()</code> and a for loop to read the contents of the <code>"ex07.txt"</code> file, line by line</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="convenience-functions---read_file">convenience functions - read_file<a class="anchor-link" href="#convenience-functions---read_file"> </a></h1><p>Lets write a convenience function called <code>readfile</code> that accepts one parameter called <code>filename</code></p>
+
+<pre><code>def readfile(filename):</code></pre>
+<p>the function should:</p>
+<ol>
+<li>opens the file to a variable called f</li>
+<li>reads and returns all the content of the file (use <code>f.read()</code>)</li>
+<li>closes the file</li>
+</ol>
+<p>Also lets write convenience function called <code>printfile</code> that accepts one parameter called <code>filename</code> like so:</p>
+
+<pre><code>def printfile(filename):
+    print(readfile(filename))</code></pre>
+<p>Lets use <code>printfile</code> function on <code>'ex07.txt'</code> to read its contents</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="transforming-a-file">transforming a file<a class="anchor-link" href="#transforming-a-file"> </a></h1><p>we want to write an ALL CAPS version of ex07.txt where all the text is in uppercase</p>
+<ol>
+<li><p>open the 'ex07.txt' input file for reading <br><br></p>
+</li>
+<li><p>open a new 'ex07.allcaps.txt' output file for writing <br><br></p>
+</li>
+<li><p>use a for loop on the read file to read the text line by line</p>
+<ol>
+<li>convert each line to uppercase</li>
+<li>write the line to the output file 
+<br><br></li>
+</ol>
+</li>
+<li><p>don't forget to close the files <br><br></p>
+</li>
+<li><p>make sure the new file is there</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="renaming-and-deleting-files">renaming and deleting files<a class="anchor-link" href="#renaming-and-deleting-files"> </a></h1><ol>
+<li><p>use the following code to delete the file <code>"ex07.txt"</code></p>
+
+<pre><code>import os
+os.remove('ex07.txt')</code></pre>
+</li>
+<li><p>use the <code>os.rename()</code> function (use help to figure out how to use it) to rename the file <code>'ex07.allcaps.txt'</code> to <code>"ex07.txt"</code></p>
+</li>
+</ol>
+<blockquote><p><strong>now we've "rewritten" the ex07.txt file to be in all caps</strong> <br>
+but what <em>really</em> happened is that we wrote a new file, and then replaced the old file with the new file
+in most cases of working on files, this is the right way to approach problems and how many scripts, editors or programs work &gt; in the real world</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="writing-a-CSV-file">writing a CSV file<a class="anchor-link" href="#writing-a-CSV-file"> </a></h1><blockquote><p>The so-called CSV (Comma Separated Values) format is the most common import and export format for spreadsheets and databases. CSV format was used for many years prior to attempts to describe the format in a standardized way in RFC 4180.</p>
+</blockquote>
+<p>here's a some information about bank customers, their name, current money in the bank, and the salary check that they have received</p>
+
+<pre><code>transactions = [
+#    name             , money in bank now  , salary
+    ['eric idle'      , 10000              , 5000  ],
+    ['terry gilliam'  ,  2500              , 12500 ],
+    ['graham chapman' , -5000              , 20000 ]
+    ]</code></pre>
+<p>can you use a loop to write this, along with a header, to a CSV file named <code>"transactions.csv"</code>?</p>
+<p>expected output in transactions.csv:</p>
+
+<pre><code>name, money in bank now, salary
+eric idle, 10000, 5000
+terry gilliam, 2500, 12500
+graham chapman, </code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="transforming-a-CSV-file">transforming a CSV file<a class="anchor-link" href="#transforming-a-CSV-file"> </a></h1><p>Lets compute how much money each bank customer will have after their salary kicks in
+and write the results into a new file called <code>"totals.csv"</code>
+this file needs only 2 columns - we drop the salary column</p>
+<p>expected output for <code>totals.csv</code>:</p>
+
+<pre><code>name, money in bank now 
+eric idle, 15000
+terry gilliam, 15000
+graham chapman, 15000</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Creating--and-deleting-directories">Creating  and deleting directories<a class="anchor-link" href="#Creating--and-deleting-directories"> </a></h1><ol>
+<li>import the module <code>shutil</code> and use the <code>shutil.rmtree('mydir1')</code> function to remove a directory called mydir1 if it exists<blockquote><p>CAREFUL: <code>rmtree</code> will delete whole folders and subdirectories without prompt and without recovery. like a <code>rm -rf</code></p>
+</blockquote>
+</li>
+<li>use the <code>os.mkdir()</code> function to create a directory called <code>mydir1</code> in the current working directory</li>
+<li>use the <code>os.makedirs()</code> function to create a sub-directory called `mydir1/mydir2/mydir3'</li>
+<li>create a file called <code>surprise.txt</code> in <code>mydir1/mydir2/mydir3</code> and put the line <code>'nobody expects the spanish inquisition'</code> into that file</li>
+<li>convince yourself that <code>os.remove()</code> can delete files and empty directories, but cannot delete folders with 'stuff' in them</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="writing-a-JSON-file">writing a JSON file<a class="anchor-link" href="#writing-a-JSON-file"> </a></h1><ol>
+<li>Create some complex object made of lists, tuples, dictionaries, strings, put it in variable named <code>data</code>
+example:
+<pre><code>data = [{
+     "userId":"rirani",
+     "jobTitleName":"Developer",
+     "firstName":"Romin",
+     "lastName":"Irani",
+     "preferredFullName":"Romin Irani",
+     "employeeCode":"E1",
+     "region":"CA",
+     "phoneNumber":"408-1234567",
+     "emailAddress":"romin.k.irani@gmail.com"
+ },
+ {
+     "userId":"nirani",
+     "jobTitleName":"Developer",
+     "firstName":"Neil",
+     "lastName":"Irani",
+     "preferredFullName":"Neil Irani",
+     "employeeCode":"E2",
+     "region":"CA",
+     "phoneNumber":"408-1111111",
+     "emailAddress":"neilrirani@gmail.com"
+ }]</code></pre>
+</li>
+<li>use the <code>open()</code> function to open a file called <code>data.json.txt</code> into variable named <code>fout</code></li>
+<li>import the <code>json</code> module and use the <code>json.dump(data, f)</code> function to write your object to the file</li>
+<li>close the file </li>
+<li>open the file with a text editor program and compare with your original </li>
+<li>use <code>open()</code> function to open the file for reading with variable <code>fin</code></li>
+<li>use the <code>data2 = json.load(fin)</code> function to read the file into a variable named <code>data2</code></li>
+<li>use <code>==</code> to compare <code>data</code> and <code>data2</code>. do they have the same content? </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

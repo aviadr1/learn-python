@@ -1,0 +1,195 @@
+---
+redirect_from:
+  - "/07-files/notebooks/open-read-write-regex"
+interact_link: content/07_files/notebooks/open_read_write_regex.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Open Read Write Regex
+prev_page:
+  url: /07_files/notebooks/oops_i_did_it_again.html
+  title: |-
+    Oops I Did It Again
+next_page:
+  url: /07_files/notebooks/pandas_and_csv.html
+  title: |-
+    Pandas And Csv
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/07_files/notebooks/open_read_write_regex.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;([ \t]*)print[ \t]+(.*)&quot;</span>
+<span class="n">replacement</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\1print(\2)&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.py&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    
+    <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">replacement</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>print(1,2,3)
+print(&#34;hello&#34;, &#34;world&#34;)
+if True:
+	print(1,2,3)
+
+	</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.py&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    
+    <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">replacement</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">result</span> <span class="o">!=</span> <span class="n">line</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2"># &lt;-- &quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>print(1,2,3) 	# &lt;--  print 1,2,3
+print(&#34;hello&#34;, &#34;world&#34;) 	# &lt;--  print &#34;hello&#34;, &#34;world&#34;
+if True:
+	print(1,2,3) 	# &lt;--  	print 1,2,3
+
+	</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.py&quot;</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test-py3.py&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    
+    <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">replacement</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f2</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">newf2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test-py3.py&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">newf2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">newf2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>print(1,2,3)
+print(&#34;hello&#34;, &#34;world&#34;)
+if True:
+	print(1,2,3)
+
+	</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

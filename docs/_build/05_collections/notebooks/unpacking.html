@@ -1,0 +1,447 @@
+---
+redirect_from:
+  - "/05-collections/notebooks/unpacking"
+interact_link: content/05_collections/notebooks/unpacking.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Unpacking
+prev_page:
+  url: /05_collections/notebooks/sorting_bitahon.html
+  title: |-
+    Sorting Bitahon
+next_page:
+  url: /05_collections/notebooks/unpacking_bitahon.html
+  title: |-
+    Unpacking Bitahon
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/05_collections/notebooks/unpacking.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheeses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span> <span class="s2">&quot;bree&quot;</span><span class="p">,</span> <span class="s2">&quot;cheDDar&quot;</span><span class="p">,</span> <span class="s2">&quot;GOUDA&quot;</span><span class="p">,</span> <span class="s2">&quot;camambert&quot;</span><span class="p">]</span>
+<span class="c1"># change the names to Title case</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cheeses</span><span class="p">)):</span>
+    <span class="n">cheeses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cheeses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cheeses</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Adam&#39;, &#39;Bree&#39;, &#39;Cheddar&#39;, &#39;Gouda&#39;, &#39;Camambert&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">cheese</span> <span class="ow">in</span> <span class="n">cheeses</span><span class="p">:</span>
+    <span class="n">cheeses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="n">cheese</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">cheeses</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Adam&#39;, &#39;Bree&#39;, &#39;Cheddar&#39;, &#39;Gouda&#39;, &#39;Camambert&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cheese</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cheeses</span><span class="p">):</span>
+    <span class="n">cheeses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cheese</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">cheeses</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Adam&#39;, &#39;Bree&#39;, &#39;Cheddar&#39;, &#39;Gouda&#39;, &#39;Camambert&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">cheeses</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0, &#39;Adam&#39;), (1, &#39;Bree&#39;), (2, &#39;Cheddar&#39;), (3, &#39;Gouda&#39;), (4, &#39;Camambert&#39;)]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">b</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">c</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># unpacking</span>
+<span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">cc</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 2 3
+1 2 3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># unpacking doesnt work with unbalanced left and right hand sides of &#39;=&#39;</span>
+<span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">,</span> <span class="n">cc</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-11-8b65758a2680&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold"># unpacking doesnt work with unbalanced left and right hand sides of &#39;=&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>aa<span class="ansi-yellow-intense-fg ansi-bold">,</span> bb<span class="ansi-yellow-intense-fg ansi-bold">,</span> cc <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">4</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: too many values to unpack (expected 3)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># classic swap</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">z</span>
+
+<span class="c1"># swap using unpacking</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="c1"># list</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="c1"># tuple</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span>  <span class="n">y</span><span class="p">,</span><span class="n">x</span>  <span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 100
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">4</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>20</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="p">)</span> <span class="p">)</span>
+<span class="n">x</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(10, 20, 30)
+(10, 20)
+(10,)
+(10,)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">csv</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">name, family, age, country</span>
+<span class="s2">moshe, cohen, 20, israel</span>
+<span class="s2">david, lev, 30, france</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">lines</span><span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+<span class="n">header</span><span class="p">,</span> <span class="o">*</span><span class="n">content</span> <span class="o">=</span> <span class="n">lines</span>
+<span class="c1">#header, content= lines[0], lines[1:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<span class="n">mosheline</span> <span class="o">=</span> <span class="n">content</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mosheline</span><span class="p">)</span>
+<span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">eveything</span><span class="p">,</span> <span class="n">country</span> <span class="o">=</span> <span class="n">mosheline</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">eveything</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;name, family, age, country&#39;, &#39;moshe, cohen, 20, israel&#39;, &#39;david, lev, 30, france&#39;]
+name, family, age, country
+[&#39;moshe, cohen, 20, israel&#39;, &#39;david, lev, 30, france&#39;]
+[&#39;moshe,&#39;, &#39;cohen,&#39;, &#39;20,&#39;, &#39;israel&#39;]
+moshe, israel [&#39;cohen,&#39;, &#39;20,&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

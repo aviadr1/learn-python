@@ -1,0 +1,417 @@
+---
+redirect_from:
+  - "/08-functions/exercise/questions"
+interact_link: content/08_functions/exercise/questions.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Questions
+prev_page:
+  url: /07_files/notebooks/pickle_example.html
+  title: |-
+    Pickle Example
+next_page:
+  url: /08_functions/exercise/solutions.html
+  title: |-
+    Solutions
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/08_functions/exercise/questions.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="1.-write-a-multiply_by_10()-function">1. write a multiply_by_10() function<a class="anchor-link" href="#1.-write-a-multiply_by_10()-function"> </a></h1><p>create a function named 'multiply_by_10' that</p>
+<ul>
+<li>receives one parameter x</li>
+<li>returns x multiplied by 10</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-triangles">2. triangles<a class="anchor-link" href="#2.-triangles"> </a></h1><p>we're going to write function to print triangles that look like this:</p>
+
+<pre><code>   *
+   **
+   ***
+   ****</code></pre>
+<p>create a function called 'print_asterics' that</p>
+<ul>
+<li>receives one parameter called n</li>
+<li>prints to screen one line with n asterics</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; print_asterics(4)
+****
+&gt;&gt;&gt; print_asterics(8)
+********</code></pre>
+<p>use this function and a for loop to print a triangle having 10 lines</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.-write-print_char()-function">3. write print_char() function<a class="anchor-link" href="#3.-write-print_char()-function"> </a></h1><p>create a new function called <code>print_char</code> that works 
+similarly to print_asterics,</p>
+<ul>
+<li>except it receives the character to print as an 
+additional parameter called 'c'</li>
+<li>the param c should have a default value of '*'</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; print_char(4)
+****
+&gt;&gt;&gt; print_char(8, '@')
+@@@@@@@@</code></pre>
+<p>use this function to create this triangle with a loop</p>
+
+<pre><code>@
+@@
+@@@
+@@@@</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.-function-print_trian()">4. function print_trian()<a class="anchor-link" href="#4.-function-print_trian()"> </a></h1><p>create a function <code>print_trian</code> to print triangles like in #3 
+it should receive two parameters:</p>
+<ul>
+<li>n determines how many lines the triangle would have</li>
+<li>c determines the character to use, with '*' as default</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; print_trian(5, '$')
+$
+$$
+$$$
+$$$$
+$$$$$</code></pre>
+<ul>
+<li>hint: this function should use print_char internally</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.b-write-get_trian()-function-with-return-value">4.b write get_trian() function with return value<a class="anchor-link" href="#4.b-write-get_trian()-function-with-return-value"> </a></h1><p>create a new function called <code>get_trian</code>, that is very similar to
+<code>print_trian</code> from #4, but instead of printing the triangle
+it returns the triangle as a string</p>
+
+<pre><code>&gt;&gt;&gt; x = get_trian(5, '$')
+&gt;&gt;&gt; print(x)
+$
+$$
+$$$
+$$$$
+$$$$$</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="my_abs(x)-function"><code>my_abs(x)</code> function<a class="anchor-link" href="#my_abs(x)-function"> </a></h1><p>in this exercise we're going to implement a funtion that calculates the absolute value (×¢×¨×š ×ž×•×—×œ×˜) of a parameter x
+and we're going to do it in 3 styles.</p>
+
+<pre><code>   x = my_abs(-10)
+   print(x) # prints 10</code></pre>
+
+<pre><code>   y = my_abs(12)
+   print(y) # prints 12</code></pre>
+<blockquote><ol>
+<li>write a function called <code>my_abs(x)</code> that calculates the absolute value (×¢×¨×š ×ž×•×—×œ×˜) of a parameter x</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### useful: this tests your function</span>
+<span class="k">assert</span> <span class="n">my_abs</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">my_abs</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="n">my_abs</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ol>
+<li>write a function called <code>my_abs2(x)</code> that does the same calculation as my_abs(x) <br>
+BUT use the <strong>single line</strong> <code>if</code> variant: <code>exprssion1 if condition else expression2</code></li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><ol>
+<li>implement absolute value function using <code>lambda</code> syntax, put the result in a variable called my_abs3</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="calculate-VAT-&quot;&#1502;&#1505;-&#1506;&#1512;&#1498;-&#1502;&#1493;&#1505;&#1507;&quot;">calculate VAT "&#1502;&#1505; &#1506;&#1512;&#1498; &#1502;&#1493;&#1505;&#1507;"<a class="anchor-link" href="#calculate-VAT-&quot;&#1502;&#1505;-&#1506;&#1512;&#1498;-&#1502;&#1493;&#1505;&#1507;&quot;"> </a></h1><h3 id="a)-write-a-function-called-calc_vat-that-takes-a-price-and-the-VAT-and-calculates-how-much-the-price-is-after-VAT">a) write a function called <code>calc_vat</code> that takes a price and the VAT and calculates how much the price is after VAT<a class="anchor-link" href="#a)-write-a-function-called-calc_vat-that-takes-a-price-and-the-VAT-and-calculates-how-much-the-price-is-after-VAT"> </a></h3><p>for instance:</p>
+
+<pre><code>&gt;&gt;&gt; calc_vat(100, 17)
+117</code></pre>
+<h3 id="b)-make-the-vat-a-default-parameter-with-value-17">b) make the vat a default parameter with value 17<a class="anchor-link" href="#b)-make-the-vat-a-default-parameter-with-value-17"> </a></h3>
+<pre><code>&gt;&gt;&gt; calc_vat(100)
+117
+
+&gt;&gt;&gt; calc_vat(100, 15)
+115</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="zip-ing-two-lists-together">zip-ing two lists together<a class="anchor-link" href="#zip-ing-two-lists-together"> </a></h1><ol>
+<li><p>create a list of fruits, put it in  a variable called <code>fruits</code>.</p>
+<p>example: <code>['apple', 'guava', 'pineapple', 'pear', 'peach']</code></p>
+</li>
+<li><p>create a list of prices for these fruits. it should have the same length as your list of fruits. put it in a variable called <code>prices</code>.</p>
+<p>example: <code>[10, 12, 20, 5, 8]</code></p>
+</li>
+<li><p>use the <code>zip</code> function (look it up on google) to create a list of fruit/price pairs.</p>
+<p>it could look like this: <code>[('apple', 10), ('guava', 12), ('pineapple', 20), ('pear', 5), ('peach', 8)]</code> 
+```</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="make_matrix()-function">make_matrix() function<a class="anchor-link" href="#make_matrix()-function"> </a></h1><p>write a function called <code>make_matrix(nrows=10, ncols=10)</code> that returns a multiplication matrix (×œ×•×— ×›×¤×œ)
+with <code>nrows</code> rows and <code>ncols</code> rows.</p>
+<p>the function will return a list of lists that have the following property:</p>
+
+<pre><code>make_matrix()[i][j] == i*j</code></pre>
+<p>for example:</p>
+
+<pre><code>&gt;&gt;&gt; from pprint import pprint
+&gt;&gt;&gt; x = make_matrix(5, 5)
+&gt;&gt;&gt; pprint(x)
+[[0, 0, 0, 0, 0],
+ [0, 1, 2, 3, 4],
+ [0, 2, 4, 6, 8],
+ [0, 3, 6, 9, 12],
+ [0, 4, 8, 12, 16]]</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="write-maxitem()-function">write maxitem() function<a class="anchor-link" href="#write-maxitem()-function"> </a></h1><p>create a function called maxitem 
+that finds and returns the maximum item in a list</p>
+
+<pre><code>&gt;&gt;&gt; maxitem([1,2,3,4,3,1])
+4</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="sort_lists()---difficult">sort_lists() - difficult<a class="anchor-link" href="#sort_lists()---difficult"> </a></h1><p>create a function called <code>sort_lists</code> that can sort a list of lists.
+[find hints on how to do it below.]</p>
+<p>it will work in the following way:</p>
+<ul>
+<li>we will sort lists according to which one has the maxmium item (like in #5)</li>
+<li><p>example:</p>
+
+<pre><code>&gt;&gt;&gt; sort_lists([
+[1,2,3],
+[2,3,4],
+[1,1,1],
+[2]
+])
+[
+[1,1,1],
+[2],
+[1,2,3],
+[2,3,4
+]</code></pre>
+</li>
+<li><p>hint: use the function <code>maxitem</code> from #5 
+and the existing function <code>sorted</code></p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="make_add_x---difficult">make_add_x - difficult<a class="anchor-link" href="#make_add_x---difficult"> </a></h1><p>create a function called <code>make_add_x()</code>
+that receives one parameter x
+and returns an inner <em>function</em> ...
+this inner function will receive one parameter y
+and return <code>x+y</code></p>
+
+<pre><code>&gt;&gt;&gt; add7 = make_add_x(7)
+&gt;&gt;&gt; add7(3)
+10
+&gt;&gt;&gt; add7(5)
+12
+&gt;&gt;&gt; add10 = make_add_x(10)
+&gt;&gt;&gt; add10(100)
+110</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="myprint()---challenging">myprint() - challenging<a class="anchor-link" href="#myprint()---challenging"> </a></h1><p>create a function called <code>myprint</code> that has similar properties to the built-in <code>print()</code> function:</p>
+<ul>
+<li>it is variadic: it can support 0,1,2,3 or more parameters (unlimited number)</li>
+<li>it supports the file, sep and end arguments</li>
+</ul>
+<p>it differrs from print by prefering the character @</p>
+
+<pre><code>&gt;&gt;&gt; myprint(1, 2, 3)
+1 @ 2 @ 3 @
+&gt;&gt;&gt; myprint( [1, 2, 3], [4, 5, 6] )
+[1, 2, 3] @ [4, 5, 6] @
+
+&gt;&gt;&gt; myprint(1, 2, 3, file=sys.stdout, sep=' ', end='\n')
+1 2 3</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="make_debuggable()---very-difficult">make_debuggable() - very difficult<a class="anchor-link" href="#make_debuggable()---very-difficult"> </a></h1><p>create a function called make_debuggable(func) that:</p>
+<ul>
+<li>receives one paramter called func</li>
+<li>returns a new function that does the same thing as func, </li>
+</ul>
+<p>and can accept any argument that func accepts.</p>
+<ul>
+<li>but in addition the returned function also helps debugging by 
+printing out the parameters it received, and the return value it is about to return</li>
+</ul>
+<p>hints:</p>
+<ul>
+<li>use a nested function that accepts variadic positional and keyword arguments</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

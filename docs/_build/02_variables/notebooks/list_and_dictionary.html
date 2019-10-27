@@ -1,0 +1,1405 @@
+---
+redirect_from:
+  - "/02-variables/notebooks/list-and-dictionary"
+interact_link: content/02_variables/notebooks/list_and_dictionary.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  List And Dictionary
+prev_page:
+  url: /02_variables/notebooks/lists_and_indexing.html
+  title: |-
+    Lists And Indexing
+next_page:
+  url: /02_variables/notebooks/mutability_vs_immutability.html
+  title: |-
+    Mutability Vs Immutability
+suffix: .ipynb
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/02_variables/notebooks/list_and_dictionary.ipynb" target="_blank">
+<img src="https://colab.research.google.com/assets/colab-badge.svg" 
+     title="Open this file in Google Colab" alt="Colab"/>
+</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>compute 10+90</li>
+<li>put the result </li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fox</span> <span class="o">=</span> <span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fox</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;lazy dog&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;DOG&quot;</span> <span class="o">==</span> <span class="s2">&quot;dog&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>one two three
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;one two three&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>list</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>str</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>13</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;sdklfjhasdlkfh&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;sdklfjhasdlkfh&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s2">&quot;f.xd,ghdflskjgh&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s2">&quot;hewllo&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;f.xd,ghdflskjgh&#39;, 10, 100, 0.5, &#39;hewllo&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">song</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Yeah yeah yeah yeah yeah</span>
+<span class="s2">Yeah yeah yeah yeah yeah yeah</span>
+<span class="s2">I think I did it again</span>
+<span class="s2">I made you believe we&#39;re more than just friends</span>
+<span class="s2">Oh baby</span>
+<span class="s2">It might seem like a crush</span>
+<span class="s2">But it doesn&#39;t mean that I&#39;m serious</span>
+<span class="s2">&#39;Cause to lose all my senses</span>
+<span class="s2">That is just so typically me</span>
+<span class="s2">Oh baby, baby</span>
+<span class="s2">Oops, I did it again</span>
+<span class="s2">I played with your heart, got lost in the game</span>
+<span class="s2">Oh baby, baby</span>
+<span class="s2">Oops, you think I&#39;m in love</span>
+<span class="s2">That I&#39;m sent from above</span>
+<span class="s2">I&#39;m not that innocent</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">song</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Yeah yeah yeah yeah yeah
+Yeah yeah yeah yeah yeah yeah
+I think I did it again
+I made you believe we&#39;re more than just friends
+Oh baby
+It might seem like a crush
+But it doesn&#39;t mean that I&#39;m serious
+&#39;Cause to lose all my senses
+That is just so typically me
+Oh baby, baby
+Oops, I did it again
+I played with your heart, got lost in the game
+Oh baby, baby
+Oops, you think I&#39;m in love
+That I&#39;m sent from above
+I&#39;m not that innocent
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">song</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>74</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Yeah&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;boom&quot;</span>
+<span class="n">words</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;boom&quot;</span>
+<span class="n">words</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;boom&quot;</span>
+<span class="n">words</span><span class="p">[</span><span class="mi">28</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;boom&quot;</span>
+<span class="n">words</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;boom&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Yeah&#39;, &#39;yeah&#39;, &#39;yeah&#39;, &#39;yeah&#39;, &#39;yeah\nYeah&#39;, &#39;yeah&#39;, &#39;yeah&#39;, &#39;boom&#39;, &#39;yeah&#39;, &#39;yeah\nI&#39;, &#39;think&#39;, &#39;I&#39;, &#39;did&#39;, &#39;it&#39;, &#39;boom&#39;, &#39;made&#39;, &#39;you&#39;, &#39;believe&#39;, &#34;we&#39;re&#34;, &#39;more&#39;, &#39;than&#39;, &#39;boom&#39;, &#39;friends\nOh&#39;, &#39;baby\nIt&#39;, &#39;might&#39;, &#39;seem&#39;, &#39;like&#39;, &#39;a&#39;, &#39;boom&#39;, &#39;it&#39;, &#34;doesn&#39;t&#34;, &#39;mean&#39;, &#39;that&#39;, &#34;I&#39;m&#34;, &#34;serious\n&#39;Cause&#34;, &#39;boom&#39;, &#39;lose&#39;, &#39;all&#39;, &#39;my&#39;, &#39;senses\nThat&#39;, &#39;is&#39;, &#39;just&#39;, &#39;so&#39;, &#39;typically&#39;, &#39;me\nOh&#39;, &#39;baby,&#39;, &#39;baby\nOops,&#39;, &#39;I&#39;, &#39;did&#39;, &#39;it&#39;, &#39;again\nI&#39;, &#39;played&#39;, &#39;with&#39;, &#39;your&#39;, &#39;heart,&#39;, &#39;got&#39;, &#39;lost&#39;, &#39;in&#39;, &#39;the&#39;, &#39;game\nOh&#39;, &#39;baby,&#39;, &#39;baby\nOops,&#39;, &#39;you&#39;, &#39;think&#39;, &#34;I&#39;m&#34;, &#39;in&#39;, &#39;love\nThat&#39;, &#34;I&#39;m&#34;, &#39;sent&#39;, &#39;from&#39;, &#34;above\nI&#39;m&#34;, &#39;not&#39;, &#39;that&#39;, &#39;innocent\n&#39;]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">songboom</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">songboom</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Yeah yeah yeah yeah yeah
+Yeah yeah yeah boom yeah yeah
+I think I did it boom made you believe we&#39;re more than boom friends
+Oh baby
+It might seem like a boom it doesn&#39;t mean that I&#39;m serious
+&#39;Cause boom lose all my senses
+That is just so typically me
+Oh baby, baby
+Oops, I did it again
+I played with your heart, got lost in the game
+Oh baby, baby
+Oops, you think I&#39;m in love
+That I&#39;m sent from above
+I&#39;m not that innocent
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">song</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Y3ah y3ah y3ah y3ah y3ah
+Y3ah y3ah y3ah y3ah y3ah y3ah
+I th1nk I d1d 1t aga1n
+I mad3 you b3l13v3 w3&#39;r3 mor3 than ju5t fr13nd5
+Oh baby
+It m1ght 533m l1k3 a cru5h
+But 1t do35n&#39;t m3an that I&#39;m 53r1ou5
+&#39;Cau53 to lo53 all my 53n535
+That 15 ju5t 5o typ1cally m3
+Oh baby, baby
+Oop5, I d1d 1t aga1n
+I play3d w1th your h3art, got lo5t 1n th3 gam3
+Oh baby, baby
+Oop5, you th1nk I&#39;m 1n lov3
+That I&#39;m 53nt from abov3
+I&#39;m not that 1nnoc3nt
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;the quick brown fox jumped over the lazy dog&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;da&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;da quick brown fox jumped over da lazy dog&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;israel&quot;</span> <span class="p">:</span>         <span class="s2">&quot;jerusalem&quot;</span>      <span class="p">,</span>
+    <span class="s2">&quot;uk&quot;</span> <span class="p">:</span> <span class="s2">&quot;london&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;russia&quot;</span> <span class="p">:</span> <span class="s2">&quot;moscow&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;israel&#39;: &#39;jerusalem&#39;, &#39;uk&#39;: &#39;london&#39;, &#39;russia&#39;: &#39;moscow&#39;}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="s1">&#39;israel&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;jerusalem&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="s2">&quot;france&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;paris&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;israel&#39;: &#39;jerusalem&#39;, &#39;uk&#39;: &#39;london&#39;, &#39;russia&#39;: &#39;moscow&#39;, &#39;france&#39;: &#39;paris&#39;}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cities</span><span class="p">[</span><span class="s1">&#39;france&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;paris&#39;</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">leet</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;i&#39;</span> <span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;e&#39;</span> <span class="p">:</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;s&#39;</span> <span class="p">:</span> <span class="s1">&#39;5&#39;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">synonyms</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;good&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;great&#39;</span><span class="p">,</span> <span class="s1">&#39;amzing&#39;</span><span class="p">,</span> <span class="s1">&#39;wonderful&#39;</span><span class="p">,</span> <span class="s2">&quot;not bad&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;sad&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;depressed&#39;</span><span class="p">,</span> <span class="s1">&#39;down&#39;</span><span class="p">,</span> <span class="s1">&#39;gloom&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">synonyms</span><span class="p">[</span><span class="s1">&#39;sad&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;blue&#39;, &#39;depressed&#39;, &#39;down&#39;, &#39;gloom&#39;]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>create a dictionary that maps the name of cheeses to prices of 100mg of that cheese.</p>
+
+<pre><code> gouda costs 4.99 
+ Edam costs 2.45
+ Camambert costs 7.75
+ Bree costs 7.27</code></pre>
+<p>without using "head math", compute the costs of gouda, edam and camambert together</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;gouda&quot;</span> <span class="p">:</span> <span class="mf">4.99</span><span class="p">,</span>
+    <span class="s2">&quot;edam&quot;</span> <span class="p">:</span> <span class="mf">2.45</span><span class="p">,</span>
+    <span class="s2">&quot;camambert&quot;</span> <span class="p">:</span> <span class="mf">7.75</span><span class="p">,</span>
+    <span class="s2">&quot;bree&quot;</span> <span class="p">:</span> <span class="mf">7.27</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span><span class="p">[</span><span class="s2">&quot;gouda&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">cheese</span><span class="p">[</span><span class="s1">&#39;edam&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">cheese</span><span class="p">[</span><span class="s1">&#39;camambert&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>15.190000000000001</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">cheese</span><span class="p">[</span><span class="s2">&quot;gouda&quot;</span><span class="p">]</span> <span class="p">,</span> <span class="n">cheese</span><span class="p">[</span><span class="s1">&#39;edam&#39;</span><span class="p">]</span> <span class="p">,</span> <span class="n">cheese</span><span class="p">[</span><span class="s1">&#39;camambert&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4.99, 2.45, 7.75]</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_keys([&#39;gouda&#39;, &#39;edam&#39;, &#39;camambert&#39;, &#39;bree&#39;])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_values([4.99, 2.45, 7.75, 7.27])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>dict_items([(&#39;gouda&#39;, 4.99), (&#39;edam&#39;, 2.45), (&#39;camambert&#39;, 7.75), (&#39;bree&#39;, 7.27)])</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">cheese</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">pair</span><span class="p">:</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;edam&#39;, 2.45)</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;gouda&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4.99</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cheese</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;edam&#39;: 2.45, &#39;camambert&#39;: 7.75, &#39;bree&#39;: 7.27}</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">{</span>
+    
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
