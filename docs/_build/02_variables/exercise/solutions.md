@@ -1038,14 +1038,14 @@ Never gonna tell a boom and hurt you
 1. the government has added a new tax on milk products, now every cheese costs has increased by 27% ! can you update the costs in the dictionary?
 > hint: the solution takes 5 (almost identical) lines of code
 
-1. what does the following code do?
-```python
-pi = 3.14159265
-print(pi)
-pi_rounded = round(pi, 2)
-print(pi_rounded)
-```
-can you use the `round()` function to round the prices of cheese, so that it has costs in dollars and cents (Shekels and agorot)?
+1. can you use the `round()` function to round the prices of cheese, so that it has costs in dollars and cents (Shekels and agorot)?
+   > hint: what does the following code do?
+    ```python
+    pi = 3.14159265
+    print(pi)
+    pi_rounded = round(pi, 2)
+    print(pi_rounded)
+    ```
 
 
 
