@@ -2,297 +2,354 @@
   sections:
   - title: notebooks
     subsections:
-    - title: Bitahon Intro
+    - title: 01 intro
+      sections:
+      - title: notebooks
+        subsections:
+        - title: Bitahon Intro
+          url: /01_intro/notebooks/bitahon_intro
+        - title: Exploring Python 12 5 19
+          url: /01_intro/notebooks/exploring_python_12_5_19
+        - title: Intro To Basic Types
+          url: /01_intro/notebooks/intro_to_basic_types
+        - title: Python Basics
+          url: /01_intro/notebooks/python_basics
+        - title: Trying Out Python
+          url: /01_intro/notebooks/trying_out_python
+        url: /01_intro/notebooks/bitahon_intro
       url: /01_intro/notebooks/bitahon_intro
-    - title: Exploring Python 12 5 19
-      url: /01_intro/notebooks/exploring_python_12_5_19
-    - title: Intro To Basic Types
-      url: /01_intro/notebooks/intro_to_basic_types
-    - title: Python Basics
-      url: /01_intro/notebooks/python_basics
-    - title: Trying Out Python
-      url: /01_intro/notebooks/trying_out_python
     url: /01_intro/notebooks/bitahon_intro
   url: /01_intro/notebooks/bitahon_intro
 - title: 02 variables
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 02 variables
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /02_variables/exercise/questions
+        - title: Solutions
+          url: /02_variables/exercise/solutions
+        url: /02_variables/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Dictionary
+          url: /02_variables/notebooks/dictionary
+        - title: Importing Math Printing Floats
+          url: /02_variables/notebooks/importing_math_printing_floats
+        - title: Lists
+          url: /02_variables/notebooks/lists
+        - title: Lists And Indexing
+          url: /02_variables/notebooks/lists_and_indexing
+        - title: List And Dictionary
+          url: /02_variables/notebooks/list_and_dictionary
+        - title: Mutability Vs Immutability
+          url: /02_variables/notebooks/mutability_vs_immutability
+        - title: Variables
+          url: /02_variables/notebooks/variables
+        url: /02_variables/notebooks/dictionary
       url: /02_variables/exercise/questions
-    - title: Solutions
-      url: /02_variables/exercise/solutions
     url: /02_variables/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Dictionary
-      url: /02_variables/notebooks/dictionary
-    - title: Importing Math Printing Floats
-      url: /02_variables/notebooks/importing_math_printing_floats
-    - title: Lists
-      url: /02_variables/notebooks/lists
-    - title: Lists And Indexing
-      url: /02_variables/notebooks/lists_and_indexing
-    - title: List And Dictionary
-      url: /02_variables/notebooks/list_and_dictionary
-    - title: Mutability Vs Immutability
-      url: /02_variables/notebooks/mutability_vs_immutability
-    - title: Variables
-      url: /02_variables/notebooks/variables
-    url: /02_variables/notebooks/dictionary
   url: /02_variables/exercise/questions
 - title: 03 flow control
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 03 flow control
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /03_flow_control/exercise/questions
+        - title: Solutions
+          url: /03_flow_control/exercise/solutions
+        url: /03_flow_control/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: '1-100 Multiplication Matrix Luah Kefel '
+          url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_
+        - title: Break Continue
+          url: /03_flow_control/notebooks/break_continue
+        - title: Casting Objects As Booleans
+          url: /03_flow_control/notebooks/casting_objects_as_booleans
+        - title: Converting To Bool
+          url: /03_flow_control/notebooks/converting_to_bool
+        - title: Enumerate
+          url: /03_flow_control/notebooks/enumerate
+        - title: Enumerate Change List
+          url: /03_flow_control/notebooks/enumerate_change_list
+        - title: For Loop
+          url: /03_flow_control/notebooks/for_loop
+        - title: For While With Password Example
+          url: /03_flow_control/notebooks/for_while_with_password_example
+        - title: If Elif Else-with Password Checking
+          url: /03_flow_control/notebooks/if_elif_else-with_password_checking
+        - title: If Else Password
+          url: /03_flow_control/notebooks/if_else_password
+        - title: July Break Continue
+          url: /03_flow_control/notebooks/july_break_continue
+        - title: July Enumerate Zip
+          url: /03_flow_control/notebooks/july_enumerate_zip
+        - title: While Loop-password
+          url: /03_flow_control/notebooks/while_loop-password
+        - title: While Loop-powers Loah Kefel
+          url: /03_flow_control/notebooks/while_loop-powers_loah_kefel
+        url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_
       url: /03_flow_control/exercise/questions
-    - title: Solutions
-      url: /03_flow_control/exercise/solutions
     url: /03_flow_control/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: '1-100 Multiplication Matrix Luah Kefel '
-      url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_
-    - title: Break Continue
-      url: /03_flow_control/notebooks/break_continue
-    - title: Casting Objects As Booleans
-      url: /03_flow_control/notebooks/casting_objects_as_booleans
-    - title: Converting To Bool
-      url: /03_flow_control/notebooks/converting_to_bool
-    - title: Enumerate
-      url: /03_flow_control/notebooks/enumerate
-    - title: Enumerate Change List
-      url: /03_flow_control/notebooks/enumerate_change_list
-    - title: For Loop
-      url: /03_flow_control/notebooks/for_loop
-    - title: For While With Password Example
-      url: /03_flow_control/notebooks/for_while_with_password_example
-    - title: If Elif Else-with Password Checking
-      url: /03_flow_control/notebooks/if_elif_else-with_password_checking
-    - title: If Else Password
-      url: /03_flow_control/notebooks/if_else_password
-    - title: July Break Continue
-      url: /03_flow_control/notebooks/july_break_continue
-    - title: July Enumerate Zip
-      url: /03_flow_control/notebooks/july_enumerate_zip
-    - title: While Loop-password
-      url: /03_flow_control/notebooks/while_loop-password
-    - title: While Loop-powers Loah Kefel
-      url: /03_flow_control/notebooks/while_loop-powers_loah_kefel
-    url: /03_flow_control/notebooks/1-100_multiplication_matrix_Luah_Kefel_
   url: /03_flow_control/exercise/questions
 - title: 04 strings
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 04 strings
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /04_strings/exercise/questions
+        - title: Solutions
+          url: /04_strings/exercise/solutions
+        url: /04_strings/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Formatting Bitahon
+          url: /04_strings/notebooks/formatting_bitahon
+        - title: Print Parameters
+          url: /04_strings/notebooks/print_parameters
+        - title: Split Join
+          url: /04_strings/notebooks/split_join
+        - title: Split Join Csv
+          url: /04_strings/notebooks/split_join_CSV
+        - title: Strings Multiline Strings Checkpoint
+          url: /04_strings/notebooks/strings_multiline_strings_checkpoint
+        - title: String Concatenation
+          url: /04_strings/notebooks/string_concatenation
+        - title: String Formatting
+          url: /04_strings/notebooks/string_formatting
+        - title: String Formatting Checkpoint
+          url: /04_strings/notebooks/string_formatting_checkpoint
+        - title: String Slicing
+          url: /04_strings/notebooks/string_slicing
+        - title: String Slicing Bitahon
+          url: /04_strings/notebooks/string_slicing_bitahon
+        - title: String Tests
+          url: /04_strings/notebooks/string_tests
+        url: /04_strings/notebooks/formatting_bitahon
       url: /04_strings/exercise/questions
-    - title: Solutions
-      url: /04_strings/exercise/solutions
     url: /04_strings/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Formatting Bitahon
-      url: /04_strings/notebooks/formatting_bitahon
-    - title: Print Parameters
-      url: /04_strings/notebooks/print_parameters
-    - title: Split Join
-      url: /04_strings/notebooks/split_join
-    - title: Split Join Csv
-      url: /04_strings/notebooks/split_join_CSV
-    - title: Strings Multiline Strings Checkpoint
-      url: /04_strings/notebooks/strings_multiline_strings_checkpoint
-    - title: String Concatenation
-      url: /04_strings/notebooks/string_concatenation
-    - title: String Formatting
-      url: /04_strings/notebooks/string_formatting
-    - title: String Formatting Checkpoint
-      url: /04_strings/notebooks/string_formatting_checkpoint
-    - title: String Slicing
-      url: /04_strings/notebooks/string_slicing
-    - title: String Slicing Bitahon
-      url: /04_strings/notebooks/string_slicing_bitahon
-    - title: String Tests
-      url: /04_strings/notebooks/string_tests
-    url: /04_strings/notebooks/formatting_bitahon
   url: /04_strings/exercise/questions
 - title: 05 collections
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 05 collections
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /05_collections/exercise/questions
+        - title: Solutions
+          url: /05_collections/exercise/solutions
+        url: /05_collections/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Dictionaries Checkpoint
+          url: /05_collections/notebooks/dictionaries_checkpoint
+        - title: Extending Lists
+          url: /05_collections/notebooks/extending_lists
+        - title: How Many Unique Words In Dr Seuss Book
+          url: /05_collections/notebooks/how_many_unique_words_in_dr_seuss_book
+        - title: July Fruits Sorting Dict Zip
+          url: /05_collections/notebooks/july_fruits_sorting_dict_zip
+        - title: July Sets
+          url: /05_collections/notebooks/july_sets
+        - title: Removing From Lists
+          url: /05_collections/notebooks/removing_from_lists
+        - title: Reverse Dictionary
+          url: /05_collections/notebooks/reverse_dictionary
+        - title: Reverse Dict Using Setdefault
+          url: /05_collections/notebooks/reverse_dict_using_setdefault
+        - title: Sets Checkpoint
+          url: /05_collections/notebooks/sets_checkpoint
+        - title: Slicing
+          url: /05_collections/notebooks/slicing
+        - title: Slicing Bitahon
+          url: /05_collections/notebooks/slicing_bitahon
+        - title: Slicing Checkpoint
+          url: /05_collections/notebooks/slicing_checkpoint
+        - title: Sorting
+          url: /05_collections/notebooks/sorting
+        - title: Sorting Bitahon
+          url: /05_collections/notebooks/sorting_bitahon
+        - title: Unpacking
+          url: /05_collections/notebooks/unpacking
+        - title: Unpacking Bitahon
+          url: /05_collections/notebooks/unpacking_bitahon
+        url: /05_collections/notebooks/dictionaries_checkpoint
       url: /05_collections/exercise/questions
-    - title: Solutions
-      url: /05_collections/exercise/solutions
     url: /05_collections/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Dictionaries Checkpoint
-      url: /05_collections/notebooks/dictionaries_checkpoint
-    - title: Extending Lists
-      url: /05_collections/notebooks/extending_lists
-    - title: How Many Unique Words In Dr Seuss Book
-      url: /05_collections/notebooks/how_many_unique_words_in_dr_seuss_book
-    - title: July Fruits Sorting Dict Zip
-      url: /05_collections/notebooks/july_fruits_sorting_dict_zip
-    - title: July Sets
-      url: /05_collections/notebooks/july_sets
-    - title: Removing From Lists
-      url: /05_collections/notebooks/removing_from_lists
-    - title: Reverse Dictionary
-      url: /05_collections/notebooks/reverse_dictionary
-    - title: Reverse Dict Using Setdefault
-      url: /05_collections/notebooks/reverse_dict_using_setdefault
-    - title: Sets Checkpoint
-      url: /05_collections/notebooks/sets_checkpoint
-    - title: Slicing
-      url: /05_collections/notebooks/slicing
-    - title: Slicing Bitahon
-      url: /05_collections/notebooks/slicing_bitahon
-    - title: Slicing Checkpoint
-      url: /05_collections/notebooks/slicing_checkpoint
-    - title: Sorting
-      url: /05_collections/notebooks/sorting
-    - title: Sorting Bitahon
-      url: /05_collections/notebooks/sorting_bitahon
-    - title: Unpacking
-      url: /05_collections/notebooks/unpacking
-    - title: Unpacking Bitahon
-      url: /05_collections/notebooks/unpacking_bitahon
-    url: /05_collections/notebooks/dictionaries_checkpoint
   url: /05_collections/exercise/questions
 - title: 06 regular expressions
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 06 regular expressions
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /06_regular_expressions/exercise/questions
+        - title: Solutions
+          url: /06_regular_expressions/exercise/solutions
+        url: /06_regular_expressions/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Lesson 06-sub Python2-to-python3
+          url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3
+        url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3
       url: /06_regular_expressions/exercise/questions
-    - title: Solutions
-      url: /06_regular_expressions/exercise/solutions
     url: /06_regular_expressions/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Lesson 06-sub Python2-to-python3
-      url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3
-    url: /06_regular_expressions/notebooks/lesson_06-sub_python2-to-python3
   url: /06_regular_expressions/exercise/questions
 - title: 07 files
   sections:
-  - title: Path And Shutil
-    url: /07_files/path_and_shutil
-  - title: exercise
-    subsections:
-    - title: Questions
+  - title: 07 files
+    sections:
+    - title: Path And Shutil
+      url: /07_files/path_and_shutil
+    - title: exercise
+      subsections:
+      - title: Questions
+        url: /07_files/exercise/questions
+      - title: Solutions
+        url: /07_files/exercise/solutions
       url: /07_files/exercise/questions
-    - title: Solutions
-      url: /07_files/exercise/solutions
-    url: /07_files/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Configparser
+    - title: notebooks
+      subsections:
+      - title: Configparser
+        url: /07_files/notebooks/configparser
+      - title: Files
+        url: /07_files/notebooks/files
+      - title: File Example
+        url: /07_files/notebooks/file_example
+      - title: File Open Write
+        url: /07_files/notebooks/file_open_write
+      - title: Json
+        url: /07_files/notebooks/json
+      - title: Oops I Did It Again
+        url: /07_files/notebooks/oops_i_did_it_again
+      - title: Open Read Write Regex
+        url: /07_files/notebooks/open_read_write_regex
+      - title: Pandas And Csv
+        url: /07_files/notebooks/pandas_and_csv
+      - title: Pickle Checkpoint
+        url: /07_files/notebooks/pickle_checkpoint
+      - title: Pickle Example
+        url: /07_files/notebooks/pickle_example
       url: /07_files/notebooks/configparser
-    - title: Files
-      url: /07_files/notebooks/files
-    - title: File Example
-      url: /07_files/notebooks/file_example
-    - title: File Open Write
-      url: /07_files/notebooks/file_open_write
-    - title: Json
-      url: /07_files/notebooks/json
-    - title: Oops I Did It Again
-      url: /07_files/notebooks/oops_i_did_it_again
-    - title: Open Read Write Regex
-      url: /07_files/notebooks/open_read_write_regex
-    - title: Pandas And Csv
-      url: /07_files/notebooks/pandas_and_csv
-    - title: Pickle Checkpoint
-      url: /07_files/notebooks/pickle_checkpoint
-    - title: Pickle Example
-      url: /07_files/notebooks/pickle_example
-    url: /07_files/notebooks/configparser
+    url: /07_files/path_and_shutil
   url: /07_files/path_and_shutil
 - title: 08 functions
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 08 functions
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /08_functions/exercise/questions
+        - title: Solutions
+          url: /08_functions/exercise/solutions
+        url: /08_functions/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Documentation
+          url: /08_functions/notebooks/documentation
+        - title: Functions Calling Functions Shapes
+          url: /08_functions/notebooks/functions_calling_functions_shapes
+        - title: Functions With Variadic Parameter
+          url: /08_functions/notebooks/functions_with_variadic_parameter
+        - title: Function Fundamentals
+          url: /08_functions/notebooks/function_fundamentals
+        - title: Lambda
+          url: /08_functions/notebooks/lambda
+        - title: Lambda Nested Functions Functional Programming
+          url: /08_functions/notebooks/lambda_nested_functions_functional_programming
+        - title: Mul Pow
+          url: /08_functions/notebooks/mul_pow
+        - title: Positional And Named Arguments
+          url: /08_functions/notebooks/positional_and_named_arguments
+        - title: Soft Intro To Functions
+          url: /08_functions/notebooks/soft_intro_to_functions
+        - title: Sumnums
+          url: /08_functions/notebooks/sumnums
+        - title: Unpacking
+          url: /08_functions/notebooks/unpacking
+        - title: Variadic Functions
+          url: /08_functions/notebooks/variadic_functions
+        - title: Variadic Functions Unpacking
+          url: /08_functions/notebooks/variadic_functions_unpacking
+        - title: Veriadic Funcs Args
+          url: /08_functions/notebooks/veriadic_funcs_args
+        url: /08_functions/notebooks/documentation
       url: /08_functions/exercise/questions
-    - title: Solutions
-      url: /08_functions/exercise/solutions
     url: /08_functions/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Documentation
-      url: /08_functions/notebooks/documentation
-    - title: Functions Calling Functions Shapes
-      url: /08_functions/notebooks/functions_calling_functions_shapes
-    - title: Functions With Variadic Parameter
-      url: /08_functions/notebooks/functions_with_variadic_parameter
-    - title: Function Fundamentals
-      url: /08_functions/notebooks/function_fundamentals
-    - title: Lambda
-      url: /08_functions/notebooks/lambda
-    - title: Lambda Nested Functions Functional Programming
-      url: /08_functions/notebooks/lambda_nested_functions_functional_programming
-    - title: Mul Pow
-      url: /08_functions/notebooks/mul_pow
-    - title: Positional And Named Arguments
-      url: /08_functions/notebooks/positional_and_named_arguments
-    - title: Soft Intro To Functions
-      url: /08_functions/notebooks/soft_intro_to_functions
-    - title: Sumnums
-      url: /08_functions/notebooks/sumnums
-    - title: Unpacking
-      url: /08_functions/notebooks/unpacking
-    - title: Variadic Functions
-      url: /08_functions/notebooks/variadic_functions
-    - title: Variadic Functions Unpacking
-      url: /08_functions/notebooks/variadic_functions_unpacking
-    - title: Veriadic Funcs Args
-      url: /08_functions/notebooks/veriadic_funcs_args
-    url: /08_functions/notebooks/documentation
   url: /08_functions/exercise/questions
 - title: 09 advanced collections
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 09 advanced collections
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /09_advanced_collections/exercise/questions
+        - title: Solutions
+          url: /09_advanced_collections/exercise/solutions
+        url: /09_advanced_collections/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Coroutines
+          url: /09_advanced_collections/notebooks/coroutines
+        - title: Deepcopy Shallow Copy
+          url: /09_advanced_collections/notebooks/deepcopy_shallow_copy
+        - title: Dictionary Comprehension Generators Lazy Lists
+          url: /09_advanced_collections/notebooks/dictionary_comprehension_generators_lazy_lists
+        - title: Generators Lazy Functions
+          url: /09_advanced_collections/notebooks/generators_lazy_functions
+        - title: Infinite Coroutine
+          url: /09_advanced_collections/notebooks/infinite_coroutine
+        - title: Lazy Lists Generators
+          url: /09_advanced_collections/notebooks/lazy_lists_generators
+        - title: List And Dictionary Comprehension Checkpoint
+          url: /09_advanced_collections/notebooks/list_and_dictionary_comprehension_checkpoint
+        - title: List Comprehension Order
+          url: /09_advanced_collections/notebooks/list_comprehension_order
+        - title: List Comprehension Sin
+          url: /09_advanced_collections/notebooks/list_comprehension_sin
+        - title: Shallow Copy And Deep Copy
+          url: /09_advanced_collections/notebooks/shallow_copy_and_deep_copy
+        - title: Template For List Comprehension
+          url: /09_advanced_collections/notebooks/template_for_list_comprehension
+        url: /09_advanced_collections/notebooks/coroutines
       url: /09_advanced_collections/exercise/questions
-    - title: Solutions
-      url: /09_advanced_collections/exercise/solutions
     url: /09_advanced_collections/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Coroutines
-      url: /09_advanced_collections/notebooks/coroutines
-    - title: Deepcopy Shallow Copy
-      url: /09_advanced_collections/notebooks/deepcopy_shallow_copy
-    - title: Dictionary Comprehension Generators Lazy Lists
-      url: /09_advanced_collections/notebooks/dictionary_comprehension_generators_lazy_lists
-    - title: Generators Lazy Functions
-      url: /09_advanced_collections/notebooks/generators_lazy_functions
-    - title: Infinite Coroutine
-      url: /09_advanced_collections/notebooks/infinite_coroutine
-    - title: Lazy Lists Generators
-      url: /09_advanced_collections/notebooks/lazy_lists_generators
-    - title: List And Dictionary Comprehension Checkpoint
-      url: /09_advanced_collections/notebooks/list_and_dictionary_comprehension_checkpoint
-    - title: List Comprehension Order
-      url: /09_advanced_collections/notebooks/list_comprehension_order
-    - title: List Comprehension Sin
-      url: /09_advanced_collections/notebooks/list_comprehension_sin
-    - title: Shallow Copy And Deep Copy
-      url: /09_advanced_collections/notebooks/shallow_copy_and_deep_copy
-    - title: Template For List Comprehension
-      url: /09_advanced_collections/notebooks/template_for_list_comprehension
-    url: /09_advanced_collections/notebooks/coroutines
   url: /09_advanced_collections/exercise/questions
 - title: 10 modules
   sections:
   - title: notebooks
     subsections:
-    - title: Modules
+    - title: 10 modules
+      sections:
+      - title: notebooks
+        subsections:
+        - title: Modules
+          url: /10_modules/notebooks/modules
+        url: /10_modules/notebooks/modules
       url: /10_modules/notebooks/modules
     url: /10_modules/notebooks/modules
   url: /10_modules/notebooks/modules
@@ -300,46 +357,70 @@
   sections:
   - title: notebooks
     subsections:
-    - title: Basic Classes
+    - title: 11 classes and oop
+      sections:
+      - title: notebooks
+        subsections:
+        - title: Basic Classes
+          url: /11_classes_and_oop/notebooks/basic_classes
+        - title: Duck Typing
+          url: /11_classes_and_oop/notebooks/duck_typing
+        - title: Inheritance
+          url: /11_classes_and_oop/notebooks/inheritance
+        url: /11_classes_and_oop/notebooks/basic_classes
       url: /11_classes_and_oop/notebooks/basic_classes
-    - title: Duck Typing
-      url: /11_classes_and_oop/notebooks/duck_typing
-    - title: Inheritance
-      url: /11_classes_and_oop/notebooks/inheritance
     url: /11_classes_and_oop/notebooks/basic_classes
   url: /11_classes_and_oop/notebooks/basic_classes
 - title: 12 exceptions
   sections:
   - title: exercise
     subsections:
-    - title: Questions
+    - title: 12 exceptions
+      sections:
+      - title: exercise
+        subsections:
+        - title: Questions
+          url: /12_exceptions/exercise/questions
+        - title: Solutions
+          url: /12_exceptions/exercise/solutions
+        url: /12_exceptions/exercise/questions
+      - title: notebooks
+        subsections:
+        - title: Exceptions
+          url: /12_exceptions/notebooks/exceptions
+        - title: Raise Try Except Finally
+          url: /12_exceptions/notebooks/raise_try_except_finally
+        url: /12_exceptions/notebooks/exceptions
       url: /12_exceptions/exercise/questions
-    - title: Solutions
-      url: /12_exceptions/exercise/solutions
     url: /12_exceptions/exercise/questions
-  - title: notebooks
-    subsections:
-    - title: Exceptions
-      url: /12_exceptions/notebooks/exceptions
-    - title: Raise Try Except Finally
-      url: /12_exceptions/notebooks/raise_try_except_finally
-    url: /12_exceptions/notebooks/exceptions
   url: /12_exceptions/exercise/questions
 - title: 13 multiprocessing
   sections:
   - title: notebooks
     subsections:
-    - title: Os System Subprocess
+    - title: 13 multiprocessing
+      sections:
+      - title: notebooks
+        subsections:
+        - title: Os System Subprocess
+          url: /13_multiprocessing/notebooks/os_system_subprocess
+        - title: Os System Subprocess Popen
+          url: /13_multiprocessing/notebooks/os_system_subprocess_popen
+        url: /13_multiprocessing/notebooks/os_system_subprocess
       url: /13_multiprocessing/notebooks/os_system_subprocess
-    - title: Os System Subprocess Popen
-      url: /13_multiprocessing/notebooks/os_system_subprocess_popen
     url: /13_multiprocessing/notebooks/os_system_subprocess
   url: /13_multiprocessing/notebooks/os_system_subprocess
 - title: 14 standard library
   sections:
   - title: notebooks
     subsections:
-    - title: Namedtuple
+    - title: 14 standard library
+      sections:
+      - title: notebooks
+        subsections:
+        - title: Namedtuple
+          url: /14_standard_library/notebooks/namedtuple
+        url: /14_standard_library/notebooks/namedtuple
       url: /14_standard_library/notebooks/namedtuple
     url: /14_standard_library/notebooks/namedtuple
   url: /14_standard_library/notebooks/namedtuple
