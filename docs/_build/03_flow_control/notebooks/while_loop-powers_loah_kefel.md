@@ -6,8 +6,8 @@ kernel_name: python3
 has_widgets: false
 title: 'While Loop-powers Loah Kefel'
 prev_page:
-  url: /03_flow_control/notebooks/while_loop-password.html
-  title: 'While Loop-password'
+  url: /03_flow_control/notebooks/july_enumerate_zip.html
+  title: 'July Enumerate Zip'
 next_page:
   url: /04_strings/exercise/questions.html
   title: '04 strings'

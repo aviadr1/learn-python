@@ -9,8 +9,8 @@ prev_page:
   url: /03_flow_control/notebooks/july_break_continue.html
   title: 'July Break Continue'
 next_page:
-  url: /03_flow_control/notebooks/while_loop-password.html
-  title: 'While Loop-password'
+  url: /03_flow_control/notebooks/while_loop-powers_loah_kefel.html
+  title: 'While Loop-powers Loah Kefel'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/notebooks/july_enumerate_zip.ipynb" target="_blank">

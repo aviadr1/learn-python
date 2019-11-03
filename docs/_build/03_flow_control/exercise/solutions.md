@@ -27,6 +27,563 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 
 
+# iterating over a word list with a `for` loop
+Here's a line from [some old movie](https://www.youtube.com/watch?v=ZtYU87QNjPw)
+```python
+quote = "Strange women lying in ponds, distributing swords, is no basis for a system of government!"
+```
+
+1. use the .split() function to split it into a list of words. 
+2. use the `for` loop to iterate over each word in the list
+   - for each word, print the word and its `len()`
+
+expected output:
+```
+Strange 7
+women 5
+lying 5
+in 2
+ponds, 6
+distributing 12
+swords, 7
+is 2
+no 2
+basis 5
+for 3
+a 1
+system 6
+of 2
+government! 11
+```
+
+
+
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+quote = "Strange women lying in ponds, distributing swords, is no basis for a system of government!"
+words = quote.split()
+for word in words:
+    print(word, len(word))
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+Strange 7
+women 5
+lying 5
+in 2
+ponds, 6
+distributing 12
+swords, 7
+is 2
+no 2
+basis 5
+for 3
+a 1
+system 6
+of 2
+government! 11
+```
+</div>
+</div>
+</div>
+
+
+
+# comments
+
+> - Sometimes we want to write something that will explain the code we write, for this we can use comments.
+> ``` python
+> # this is a comment
+> x = 10 + 90
+> x = x * 2 # this is a comment at the end of a line 
+> print(x) # will print 200
+> ```
+> 
+> - comments start with the `#` character and continue until the end of the line
+> - comments are just for reading by humans, the python interepreter completely ignores them
+
+#### write helpful comments
+copy this code to the answer below, and write short comments between the lines that explain the code
+```python
+hamburger = 59
+pizza = 39
+steak = 150
+soup = 42
+salad = 35
+chips=18
+
+dinner = [
+    hamburger,
+    hamburger,
+    salad,
+    chips
+]
+
+cost_of_dinner = 0
+for food_item_cost in dinner:
+    cost_of_dinner = cost_of_dinner + food_item_cost
+
+print(cost_of_dinner)
+```
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+# put the cost of each item in the menu in a variable
+hamburger = 59
+pizza = 39
+steak = 150
+soup = 42
+salad = 35
+chips=18
+ 
+# create a list of all the item costs for a particular dinner
+dinner = [
+    hamburger,
+    hamburger,
+    salad,
+    chips,
+    steak,
+    salad,
+    soup
+]
+
+# calculate the cost of the dinner :
+cost_of_dinner = 0 # before people ordered food, the cost of the dinner was 0
+for food_item_cost in dinner: # now go through each item people ordered for dinner
+    cost_of_dinner = cost_of_dinner + food_item_cost # add the cost of this item to the total cost
+
+# now we have the full cost of the dinner, let's print it
+print(cost_of_dinner)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+171
+```
+</div>
+</div>
+</div>
+
+
+
+# a nice dinner for two
+1. copy this code below
+```python
+dinner = [
+        # Sashimi plate
+        60, 
+        # some maki
+        30, 35, 39,
+        # agadashi 
+        28,
+        # miso
+        18, 18,
+        # lots of sake
+        33, 39, 33,
+        ]
+```
+
+
+1. use a `for` loop to calculate the cost of the dinner
+   > this should take 3 lines
+
+1. this is a dinner for two. what is the average cost per person for this dinner?
+   > hint: divide by 2
+
+
+
+
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+dinner = [
+    # Sashimi plate
+    60, 
+    # some maki
+    30, 35, 39,
+    # agadashi 
+    28,
+    # miso
+    18, 18,
+    # lots of sake
+    33, 39, 33,
+    ]
+
+cost_of_dinner = 0
+for food_item_cost in dinner:
+    # we use += because it is just a shorter way of writing
+    # cost_of_dinner = cost_of_dinner + food_item_cost
+    cost_of_dinner += food_item_cost
+
+number_of_people = 2
+average_per_person = cost_of_dinner/ number_of_people
+print(average_per_person)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+166.5
+```
+</div>
+</div>
+</div>
+
+
+
+# range() - lists of numbers
+
+1. run the following code
+   ```python
+   print(range(10))
+   ```
+   what does it print? 
+
+1. the function `range(10)` __actually__ returns a _list-like_ object . iterate over all the elements of `range(10)` using a `for` loop and print each item in that list
+   - repeat for `range(15)`
+2. what does the function `range(10,20)` return ? print everything in that list 
+   - repeat for `range(1,5)`
+3. what does the function `range(0,10,2)` return? print everything in that list 
+   - repeat for `range(0, 100, 10)`
+   - repeat for `range(100, 0, -10)`
+
+4. generally speaking, can you explain what function `range` does? 
+
+5. 😵 can you solve this exercise with much fewer lines of code?
+   > hint:
+   > 1. put all the interesting ranges into a list of ranges
+   > 2. iterate over the list of ranges with a `for` loop
+   > 3. for each range in the list, use another _nested_/_inner_ `for` loop to print out all the elements of the list  
+
+
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+###
+### solution #1
+### 
+print(range(10))
+for x in range(10):
+   print(x, end=' ')
+
+print("\n")
+print(range(15))
+for x in range(15):
+   print(x, end=' ')
+
+print("\n")
+print(range(10, 20))
+for x in range(10, 20):
+   print(x, end=' ')
+
+print("\n")
+print(range(1, 5))
+for x in range(1, 5):
+   print(x, end=' ')
+
+print("\n")
+print(range(0, 10, 2))
+for x in range(0, 10, 2):
+   print(x, end=' ')
+
+print("\n")
+print(range(0, 100, 10))
+for x in range(0, 100, 10):
+   print(x, end=' ')
+
+print("\n")
+print(range(100, 0, -10))
+for x in range(100, 0, -10):
+   print(x, end=' ')
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+range(0, 10)
+0 1 2 3 4 5 6 7 8 9 
+
+range(0, 15)
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 
+
+range(10, 20)
+10 11 12 13 14 15 16 17 18 19 
+
+range(1, 5)
+1 2 3 4 
+
+range(0, 10, 2)
+0 2 4 6 8 
+
+range(0, 100, 10)
+0 10 20 30 40 50 60 70 80 90 
+
+range(100, 0, -10)
+100 90 80 70 60 50 40 30 20 10 ```
+</div>
+</div>
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+###
+### solution #2
+###
+my_ranges = [range(10), range(15), range(10, 20), range(1, 5), range(0, 10, 2), range(0, 100, 10), range(100, 0, -10)]
+for my_range in my_ranges:
+    print("\n")
+    print(my_range)
+    for x in my_range:
+        print(x, end=' ')
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+
+
+range(0, 10)
+0 1 2 3 4 5 6 7 8 9 
+
+range(0, 15)
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 
+
+range(10, 20)
+10 11 12 13 14 15 16 17 18 19 
+
+range(1, 5)
+1 2 3 4 
+
+range(0, 10, 2)
+0 2 4 6 8 
+
+range(0, 100, 10)
+0 10 20 30 40 50 60 70 80 90 
+
+range(100, 0, -10)
+100 90 80 70 60 50 40 30 20 10 ```
+</div>
+</div>
+</div>
+
+
+
+# sum of numbers
+
+calculate the sum of the numbers between 0 and 1000
+$$0 + 1 + 2 + 3 + 4 + ... + 997 + 998 +999$$ 
+
+> hint: 
+> - you dont need math or any formula ...
+> - use the `range()` function and a `for` loop
+> - to test your code you can see if it gets the right answer for numbers between 0 and 5 $$0+ 1+ 2+ 3+ 4 = 10$$
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+total = 0
+for x in range(1000):
+    total += x
+
+print(total)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+499500
+```
+</div>
+</div>
+</div>
+
+
+
+# printing asterics
+1. what does the following code do?
+```python
+print('*', end="")
+print('*', end="")
+print('*', end="")
+print('*', end="")
+```
+
+1. use a `for` loop, `range()` and `print('*', end="")` to print a line of 10 asterics
+   > expected output:
+   >   ```
+   >   **********
+   >   ```
+   > hint: this takes just two lines
+
+
+
+
+use a for loop
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+for i in range(10):
+    print('*', end="")
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+**********```
+</div>
+</div>
+</div>
+
+
+
+# squares
+
+here's a square made of the `'*'` character with length 5
+
+    *****
+    *****
+    *****
+    *****
+    *****
+
+1. use the input() function to take a number from the user
+   ```
+   num = int(input('how big? '))
+   ```
+   
+1. can you use for loop(s) to print such a square of length `num`?
+
+hints: 
+* use `print('*', end="")` to print a single `'*'` character
+* you need more than one for loop
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+num = int(input('how big? '))
+for row in range(num):
+    for i in range(num):
+        print('*', end="")
+    print()
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+how big? 6
+******
+******
+******
+******
+******
+******
+```
+</div>
+</div>
+</div>
+
+
+
+# triangles
+here's a triangle made of the `'*'` character with length 5
+   
+     *
+     **
+     ***
+     ****
+     *****
+
+can you use for loop(s) to print such a triangle of length 10?
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+for row in range(10):
+    for i in range(row+1):
+        print('*', end="")
+    print()
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+```
+</div>
+</div>
+</div>
+
+
+
 # if/elif/else - checking a password
 
 1. use the input() function to take a password from the user
@@ -670,105 +1227,6 @@ for word in words:
 quick
 brown
 jumped
-```
-</div>
-</div>
-</div>
-
-
-
-# squares
-
-here's a square made of the `'*'` character with length 5
-
-    *****
-    *****
-    *****
-    *****
-    *****
-
-1. use the input() function to take a number from the user
-   ```
-   num = int(input('how big? '))
-   ```
-   
-1. can you use for loop(s) to print such a square of length `num`?
-
-hints: 
-* use `print('*', end="")` to print a single `'*'` character
-* you need more than one for loop
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-num = int(input('how big? '))
-for row in range(num):
-    for i in range(num):
-        print('*', end="")
-    print()
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-how big? 6
-******
-******
-******
-******
-******
-******
-```
-</div>
-</div>
-</div>
-
-
-
-# triangles
-here's a triangle made of the `'*'` character with length 5
-   
-     *
-     **
-     ***
-     ****
-     *****
-
-can you use for loop(s) to print such a triangle of length 10?
-
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-for row in range(10):
-    for i in range(row+1):
-        print('*', end="")
-    print()
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-{:.output_stream}
-```
-*
-**
-***
-****
-*****
-******
-*******
-********
-*********
-**********
 ```
 </div>
 </div>
