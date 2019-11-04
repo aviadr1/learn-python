@@ -21,13 +21,21 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 
 
-# For more exercizes on loops, see this link:
-* [Python conditional statements and loops [44 exercises with solution]](bit.ly/aviad-python-loops)
+# IMPORTANT
+
+this is an incredibly crucial lesson. and requirs A LOT of excersizes to really get the hang of. please do all the excersizes, and if you found them challenging, keep doing more excersizes and even doing the same excersizes again and again until you can reliably solve them easily.
+
+### Where to find more excercises?
+
+For more exercizes on loops, see this [link](https://bit.ly/aviad-python-loops) which contains 44 exercises with solutions:
 
 
 
+# for loops
 
-# iterating over a word list with a `for` loop
+
+
+### iterating over a word list with a `for` loop
 Here's a line from [some old movie](https://www.youtube.com/watch?v=ZtYU87QNjPw)
 ```python
 quote = "Strange women lying in ponds, distributing swords, is no basis for a system of government!"
@@ -62,7 +70,7 @@ government! 11
 
 
 
-# comments
+### comments
 
 > - Sometimes we want to write something that will explain the code we write, for this we can use comments.
 > ``` python
@@ -101,7 +109,7 @@ print(cost_of_dinner)
 
 
 
-# a nice dinner for two
+### a nice dinner for two
 1. copy this code below
 ```python
 dinner = [
@@ -132,7 +140,29 @@ dinner = [
 
 
 
-# range() - lists of numbers
+### iterating over letters in a string
+1. what does the following code do? try it
+```python 
+monty = "This is an ex parrot"
+for letter in monty:
+    print(letter, end=" ")
+``` 
+2. what does the `end=" "` part do? try to chage it to different values:
+   - `" @ "` 
+   - `""`
+   - `" --- "` 
+   - `"\n"`
+
+3. can you write a loop that prints each letter twice?
+   > expected output:
+   ```
+   TThhiiss  iiss  aann  eexx  ppaarrrroott
+   ```
+
+
+
+
+### range() - lists of numbers
 
 1. run the following code
    ```python
@@ -161,7 +191,7 @@ dinner = [
 
 
 
-# sum of numbers
+### sum of numbers
 
 calculate the sum of the numbers between 0 and 1000
 $$0 + 1 + 2 + 3 + 4 + ... + 997 + 998 +999$$ 
@@ -174,7 +204,22 @@ $$0 + 1 + 2 + 3 + 4 + ... + 997 + 998 +999$$
 
 
 
-# printing asterics
+### average grades
+here are some grades for students in a class. calculate the average grade
+
+```python
+grades = [ 60, 90, 70, 100, 65, 95, 80, 80, 80]
+```
+
+> hints:
+> 1. use a for loop
+> 2. $average = \frac{grade_1 + grade_2 + ... + grade_{n-1} + grade_n}{n}$
+
+
+
+
+
+### printing asterics
 1. what does the following code do?
 ```python
 print('*', end="")
@@ -197,7 +242,7 @@ use a for loop
 
 
 
-# squares
+### squares
 
 here's a square made of the `'*'` character with length 5
 
@@ -220,7 +265,7 @@ hints:
 
 
 
-# triangles
+### triangles
 here's a triangle made of the `'*'` character with length 5
    
      *
@@ -234,97 +279,9 @@ can you use for loop(s) to print such a triangle of length 10?
 
 
 
-# if/elif/else - checking a password
-
-1. use the input() function to take a password from the user
-   <br><br>
-   
-1. check that the password is "good" according to the following criterions:
-   1. the password length must be at least 4
-   1. the password length must be no more than 12
-   1. the password must not be just numbers
-   1. the password must have both lowercase and uppercase letters
-   <br><br>
-   
-1. if the password is good, print "excellent password". 
-   otherwise, print the reason why the password was rejected
-   <br><br>
-   
-HINTS:
-* use the `len()`, `.isdigit()`, `.isupper()`, `.islower()` functions
-
-
-
-
-# While loop - until we find a good password
-
-1. copy the password testing code you wrote above
-   <br> <br>
-   
-1. now use a while loop to continue asking for a new password
-   until a password that passes all the tests is given
-
-
-
-# While loop - password with maximum 3 attemps
-
-1. copy your answer for the while loop above
-   <br><br>
-   
-1. now modify the code such that no more than 3 attemps are possible
-   after 3 failed attemps, the program should say "too many attemps, access denied"
-   <br><br>
-
-
-
-
-# while loop - numbers 0-100 divisible by 7
-
-using a while loop, print all the numbers between 0 and 100 
-that are divisible by 7
-
-> **we say that x is divisible by 7 when `x%7 == 0`**
-
-
-
-
-# for loop -  numbers 0-100 divisible by 7
-
-> **Just like the question above, this time with a `for` loop**
-
-print all the numbers between 0 and 100 that are divisible by 7
-using a `for` loop and `range(100)`
-
-
-
-
-# While loop - multiplication matrix
-
-> multiplication matrix = ×œ×•×— ×”×›×¤×œ
-
-using while loop(s), print the multiplication matrix
-in the following way (total of 100 lines)
-
-      1 x 1 = 1
-      1 x 2 = 2
-      ...
-      1 x 10 = 10
-      2 x 1 = 1
-      2 x 2 = 2
-      ...
-      2 x 10 = 20
-      ...
-      ...
-      10 x 1 = 10
-      10 x 2 = 20
-      ...
-      10 x 10 = 100
-
-
-
-# for loop - multiplication matrix
-
-> multiplication matrix = ×œ×•×— ×”×›×¤×œ
+### for loop - multiplication matrix
+> - this question is slightly harder 🤯
+> - multiplication matrix = לוח הכפל
 
 this time, use `for` loop(s) and `range` to print the multiplication matrix
 in the following way (total of 100 lines)
@@ -346,7 +303,8 @@ in the following way (total of 100 lines)
 
 
 
-# for loop - multiplication matrix with nice formatting
+### for loop - multiplication matrix with nice formatting
+- > this question is harder 🤯🤯
 
 1. copy your _for loop multiplication matrix_ solution  above 
    <br><br>
@@ -373,7 +331,99 @@ expected output:
 
 
 
-# loop to find long words
+# conditionals and while loop
+
+
+
+### if/elif/else - checking a password
+
+1. use the input() function to take a password from the user
+   <br><br>
+   
+1. check that the password is "good" according to the following criterions:
+   1. the password length must be at least 4
+   1. the password length must be no more than 12
+   1. the password must not be just numbers
+   1. the password must have both lowercase and uppercase letters
+   <br><br>
+   
+1. if the password is good, print "excellent password". 
+   otherwise, print the reason why the password was rejected
+   <br><br>
+   
+HINTS:
+* use the `len()`, `.isdigit()`, `.isupper()`, `.islower()` functions
+
+
+
+
+### While loop - until we find a good password
+
+1. copy the password testing code you wrote above
+   <br> <br>
+   
+1. now use a while loop to continue asking for a new password
+   until a password that passes all the tests is given
+
+
+
+### While loop - password with maximum 3 attemps
+
+1. copy your answer for the while loop above
+   <br><br>
+   
+1. now modify the code such that no more than 3 attemps are possible
+   after 3 failed attemps, the program should say "too many attemps, access denied"
+   <br><br>
+
+
+
+
+# while loop - numbers 0-100 divisible by 7
+
+using a while loop, print all the numbers between 0 and 100 
+that are divisible by 7
+
+> **we say that x is divisible by 7 when `x%7 == 0`**
+
+
+
+
+### for loop -  numbers 0-100 divisible by 7
+
+> **Just like the question above, this time with a `for` loop**
+
+print all the numbers between 0 and 100 that are divisible by 7
+using a `for` loop and `range(100)`
+
+
+
+
+### While loop - multiplication matrix
+- > this question is harder 🤯🤯🤯
+- > multiplication matrix = לוח הכפל
+
+using while loop(s), print the multiplication matrix
+in the following way (total of 100 lines)
+
+      1 x 1 = 1
+      1 x 2 = 2
+      ...
+      1 x 10 = 10
+      2 x 1 = 1
+      2 x 2 = 2
+      ...
+      2 x 10 = 20
+      ...
+      ...
+      10 x 1 = 10
+      10 x 2 = 20
+      ...
+      10 x 10 = 100
+
+
+
+### loop to find long words
 
 print all the words in the following sentence that are longer than 4 characters:
    
@@ -387,7 +437,7 @@ expected output:
 
 
 
-# enumerate
+### enumerate
 1. split the string "the quick brown fox jumped over the lazy dog" into words
   using the .split() function, and put the list in the variable 'words'
   <br><br>
