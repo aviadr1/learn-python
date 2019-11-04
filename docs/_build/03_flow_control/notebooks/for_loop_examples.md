@@ -23,7 +23,8 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```costs = {
+```python
+costs = {
     "Gouda" : 4.99 ,
     "Edam" : 2.45,
     "Camambert" : 7.75,
@@ -44,7 +45,8 @@ costs['Bree'] = costs['Bree'] * 1.27
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```prices = [4.99 , 2.45, 7.75, 7.27, 10, 20, 30, 40, 50, 60]
+```python
+prices = [4.99 , 2.45, 7.75, 7.27, 10, 20, 30, 40, 50, 60]
 
 ```
 </div>
@@ -55,7 +57,8 @@ costs['Bree'] = costs['Bree'] * 1.27
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```total = 0
+```python
+total = 0
 total = total + prices[0]
 total = total + prices[1]
 total = total + prices[2]
@@ -79,7 +82,8 @@ print(total)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```total = 0
+```python
+total = 0
 for price in prices:
     #print('this price:', price)
     total = total + price
@@ -106,7 +110,8 @@ result:  232.46
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```print("a")
+```python
+print("a")
 print("b")
 print("c")
 
@@ -130,7 +135,8 @@ c
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```print("a", end=" ")
+```python
+print("a", end=" ")
 print("b", end=" ")
 print("c", end=" ")
 
@@ -150,7 +156,8 @@ a b c ```
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```quote = "ill be back"
+```python
+quote = "ill be back"
 for character in quote:
     print(character)
 
@@ -183,7 +190,8 @@ k
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```quote
+```python
+quote
 
 ```
 </div>
@@ -206,7 +214,8 @@ k
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```for word in quote.split():
+```python
+for word in quote.split():
     print(word, end=' ')
     print(word, end=' ')
 
@@ -226,7 +235,8 @@ ill ill be be back back ```
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```for char in quote:
+```python
+for char in quote:
     print('!', end='')
 
 ```
@@ -245,7 +255,8 @@ ill ill be be back back ```
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```for x in range(10):
+```python
+for x in range(10):
     print(x, end=' ')
 
 ```
@@ -264,7 +275,8 @@ ill ill be be back back ```
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```for x in range(10, 20):
+```python
+for x in range(10, 20):
     print(x, end=' ')
 
 ```
@@ -283,7 +295,8 @@ ill ill be be back back ```
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```nums = []
+```python
+nums = []
 nums.append(0)
 nums.append(1)
 nums.append(2)
@@ -317,7 +330,8 @@ nums
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```nums = []
+```python
+nums = []
 for x in range(10):
     nums.append(x)
 
@@ -340,7 +354,8 @@ print(nums)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```for x in range(10):
+```python
+for x in range(10):
     print('*', end="")
 
 ```
@@ -359,7 +374,8 @@ print(nums)
 
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
-```for x in range(10):
+```python
+for x in range(10):
     for y in range(10):
         print('*', end="")
     print()
