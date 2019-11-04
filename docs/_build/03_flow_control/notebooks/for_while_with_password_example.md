@@ -6,8 +6,8 @@ kernel_name: python3
 has_widgets: false
 title: 'For While With Password Example'
 prev_page:
-  url: /03_flow_control/notebooks/for_loop.html
-  title: 'For Loop'
+  url: /03_flow_control/notebooks/for_loop_examples.html
+  title: 'For Loop Examples'
 next_page:
   url: /03_flow_control/notebooks/if_elif_else-with_password_checking.html
   title: 'If Elif Else-with Password Checking'

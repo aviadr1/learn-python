@@ -9,8 +9,8 @@ prev_page:
   url: /03_flow_control/notebooks/enumerate_change_list.html
   title: 'Enumerate Change List'
 next_page:
-  url: /03_flow_control/notebooks/for_while_with_password_example.html
-  title: 'For While With Password Example'
+  url: /03_flow_control/notebooks/for_loop_examples.html
+  title: 'For Loop Examples'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 <a href="https://colab.research.google.com/github/aviadr1/learn-python/blob/master/content/03_flow_control/notebooks/for_loop.ipynb" target="_blank">
