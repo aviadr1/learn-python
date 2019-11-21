@@ -21,7 +21,11 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 
 
-# simple list comprehension: powers of 2
+# List comprehension
+
+
+
+### simple list comprehension: powers of 2
 use __list comprehension__ to compute a list containing the powers of 2:
 i.e.  `[2**0, 2**1, 2**2, 2**3, ..., 2**15]`
 
@@ -56,7 +60,7 @@ i.e.  `[2**0, 2**1, 2**2, 2**3, ..., 2**15]`
 
 
 
-# list comprehension with filtering
+### list comprehension with filtering
 take the sentnence `"everything shuold be as simple as possible but no simpler"` (this is a qoute by albert einstein). <br>
 use list comprehension to 
 1. take only words that are shorter than 6 letters
@@ -106,7 +110,7 @@ words = "everything should be as simple as possible but no simpler".split()
 
 
 
-# max length of words in a list
+### max length of words in a list
 using JUST ONE LINE, find the length of the longest word in a given sentence
     
 hints - use the functions `str.split()`, `max()` and `len()`:
@@ -157,7 +161,7 @@ max([len(word) for word in brian.split()])
 
 
 
-# max lengh of words, and the actual word too
+### max lengh of words, and the actual word too
 
 build on the [previous exercise](#max-length-of-words-in-a-list) <br>
 now, get the _length_ of the longest word _as well as_ the __actual word__
@@ -202,7 +206,7 @@ print(result)
 
 
 
-# multiple comprehensions
+### multiple comprehensions
 for the list of "interesting" angles: `0, 30, 60, 90, 120, 150, 180`
    
    a) compute the list of radian values using list comprehension
@@ -256,7 +260,7 @@ print(strs)
 
 
 
-# dictionary comprehension
+### dictionary comprehension
 a restaurant stores the menu and prices of items in a dictionary.
 now it needs to __double the prices of all the items__.
 can you do this in one line with a __dictionary comprehension__?
@@ -326,7 +330,7 @@ menu = {
 
 
 
-# dictionary comprehension with filtering
+### dictionary comprehension with filtering
 
 > doubling all prices turns out to be too expensive !
 
@@ -370,7 +374,7 @@ expected output:
 
 
 
-# cost of a meal
+### cost of a meal
 
 People came into our restaurant and ordered a meal for the table:
 ```
@@ -439,13 +443,63 @@ sum([menu[food] for food in order ])
 
 
 
-# set comprehension
-1. use set comprehension to find the unique words in the song "knights of the round table" by monty python
-2. sort the words in the set using the `sorted()` function 
-1. see if there are words that look similar
-2. remove duplicates by turning all words into lowercase
-3. use the .replace('.', '') to remove the coma characters in words
-   - alernatively remove special characters using the `str.translate()` and `str.maketrans()` functions
+### 😵Create a matrix using list comprehension
+use list comprehension to create an NxM marix with numbers going from 0 to NxM
+> hint: you need nested list comprehension - list comprehension within list comprehension
+
+example with N=6 M=4
+```
+[[0,  1,  2,  3],
+ [4,  5,  6,  7],
+ [8,  9,  10, 11],
+ [12, 13, 14, 15],
+ [16, 17, 18, 19],
+ [20, 21, 22, 23]]
+```
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+nrows = 6
+ncols = 4
+[ [i for i in range(i, i+ncols)] for i in range(0, nrows*ncols, ncols)] 
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+
+
+{:.output_data_text}
+```
+[[0, 1, 2, 3],
+ [4, 5, 6, 7],
+ [8, 9, 10, 11],
+ [12, 13, 14, 15],
+ [16, 17, 18, 19],
+ [20, 21, 22, 23]]
+```
+
+
+</div>
+</div>
+</div>
+
+
+
+### set comprehension
+
+use set comprehension to find all the unique words in the song "knights of the round table" by monty python
+
+> 1. sort the words in the set using the `sorted()` function 
+> 1. see if there are words that look similar
+> 2. remove duplicates by turning all words into lowercase
+> 3. use the `.replace('.', '')` function to remove the coma `'.'` characters in words
+      - alernatively remove special characters using the `str.translate()` and `str.maketrans()` functions
+> 4. print all the unique words in this song
 
 
 
@@ -453,7 +507,7 @@ sum([menu[food] for food in order ])
 <div markdown="1" class="cell code_cell">
 <div class="input_area" markdown="1">
 ```python
-### useful song lyrics
+### useful: song lyrics
 knights_of_round_table = """
 We're knights of the round table
 We dance whene'er we're able
@@ -570,53 +624,7 @@ sorted(
 
 
 
-# Create a matrix
-use list comprehension to create an NxM marix with numbers going from 0 to NxM
-
-example with N=6 M=4
-```
-[[0,  1,  2,  3],
- [4,  5,  6,  7],
- [8,  9,  10, 11],
- [12, 13, 14, 15],
- [16, 17, 18, 19],
- [20, 21, 22, 23]]
-```
-
-
-
-<div markdown="1" class="cell code_cell">
-<div class="input_area" markdown="1">
-```python
-nrows = 6
-ncols = 4
-[ [i for i in range(i, i+ncols)] for i in range(0, nrows*ncols, ncols)] 
-
-```
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output_subarea" markdown="1">
-
-
-{:.output_data_text}
-```
-[[0, 1, 2, 3],
- [4, 5, 6, 7],
- [8, 9, 10, 11],
- [12, 13, 14, 15],
- [16, 17, 18, 19],
- [20, 21, 22, 23]]
-```
-
-
-</div>
-</div>
-</div>
-
-
-
-# using sets to test a password
+### using sets to test a password
 can you use a `set` to check that a password has one of the following special characters:
 ```
 special_chars = """!@#$%^&*()-=_+`~;'"|/.,<>?"""
@@ -652,7 +660,329 @@ set(passw) & set(special_chars)
 
 
 
-# even_numbers()
+# pprint
+
+
+
+sometimes regular old `print()` makes it difficult to read a data structure.
+for instance take a look at the following code
+
+```
+people = [
+    ['adva', 28, 'physicist'],
+    ['ben', 25, 'hairdresser'],
+    ['carmel', 30, 'mountaineer'],
+    ['daria', 32, 'doctor'],
+    ['edward', 45, 'king']
+    ]
+
+print(people)
+```
+
+1. whats weird or annoying about the output of the program? try it yourself
+2. run the following code which imports a __pretty print__ function called `pprint`
+    ```
+    from pprint import pprint
+    pprint(people)
+    ```
+   any differece?
+3. read the documentation of the pprint function https://docs.python.org/3.7/library/pprint.html
+4. try using pprint with parameter `depth=1`
+4. try using pprint with parameter `indent=4`
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+people = [
+    ['adva', 28, 'physicist'],
+    ['ben', 25, 'hairdresser'],
+    ['carmel', 30, 'mountaineer'],
+    ['daria', 32, 'doctor'],
+    ['edward', 45, 'king']
+    ]
+print(' ', 1, '-' * 20, sep='\n')
+print(people)
+
+# 2 
+print(' ', 2, '-' * 20, sep='\n')
+from pprint import pprint
+pprint(people)
+
+# 4
+print(' ', 4, '-' * 20, sep='\n')
+pprint(people, indent=3, depth=1)
+
+
+# 5
+print(' ', 5, '-' * 20, sep='\n')
+pprint(people, indent=4)
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+ 
+1
+--------------------
+[['adva', 28, 'physicist'], ['ben', 25, 'hairdresser'], ['carmel', 30, 'mountaineer'], ['daria', 32, 'doctor'], ['edward', 45, 'king']]
+ 
+2
+--------------------
+[['adva', 28, 'physicist'],
+ ['ben', 25, 'hairdresser'],
+ ['carmel', 30, 'mountaineer'],
+ ['daria', 32, 'doctor'],
+ ['edward', 45, 'king']]
+ 
+4
+--------------------
+[[...], [...], [...], [...], [...]]
+ 
+5
+--------------------
+[   ['adva', 28, 'physicist'],
+    ['ben', 25, 'hairdresser'],
+    ['carmel', 30, 'mountaineer'],
+    ['daria', 32, 'doctor'],
+    ['edward', 45, 'king']]
+```
+</div>
+</div>
+</div>
+
+
+
+# zip
+
+
+
+### basic use of the zip function
+look at the following code, read it, can you figure out what it does?
+
+```
+fruits = ["apricots", "banannas", "cherries"]
+colors = ["pink", "yellow", "red"]
+for fruit, color in zip(fruits, colors):
+    print(fruit, "are", color)
+```
+
+1. copy the code below and try it for yourself to see if your were right
+
+2. read the documentation for the zip function https://docs.python.org/3.7/library/functions.html#zip
+
+3.  we have data about people in **columns**
+    ```
+    first_name_column = ['adva', 'ben', 'carmel']
+    age_column = [28, 25, 30]
+    job_column = ['physicist', 'hairdresser', 'mountaineer']
+    ```
+    we would like to print data about each person with one **row per person**, in csv format
+   
+    expected output:
+    ```
+    adva, 28, physicist
+    ben, 25, hairdresser
+    carmel, 30, mountaineer
+    daria, 32, doctor
+    edward, 45, king
+    ```
+
+4. now we want the data as a list of lists,
+   that is a list of rows, where each row is the data for a person
+
+   expected output ( **use `pprint()`** ):
+    ```
+    [['adva', 28, 'physicist'],
+     ['ben', 25, 'hairdresser'],
+     ['carmel', 30, 'mountaineer'],
+     ['daria', 32, 'doctor'],
+     ['edward', 45, 'king']]
+    ```
+    
+   hint: we provide a few solutions, its worthwhile to go through them
+
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+### useful: data
+first_name_column = ['adva', 'ben', 'carmel', 'daria', 'edward']
+age_column = [28, 25, 30, 32, 45]
+job_column = ['physicist', 'hairdresser', 'mountaineer', 'doctor', 'king']
+
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+from pprint import pprint
+
+# 3
+for name, age, job in zip(first_name_column, age_column, job_column):
+    print(name, age, job, sep=', ')
+
+from pprint import pprint
+# 4 solution A
+data = [ [name, age, job] for name, age, job in zip(first_name_column, age_column, job_column)]
+print()
+pprint(data)
+
+# 4 solution B
+data = [ row for row in zip(first_name_column, age_column, job_column)]
+print()
+pprint(data)
+
+# 4 solution C
+data = list(zip(first_name_column, age_column, job_column))
+print()
+pprint(data)
+
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+adva, 28, physicist
+ben, 25, hairdresser
+carmel, 30, mountaineer
+daria, 32, doctor
+edward, 45, king
+
+[['adva', 28, 'physicist'],
+ ['ben', 25, 'hairdresser'],
+ ['carmel', 30, 'mountaineer'],
+ ['daria', 32, 'doctor'],
+ ['edward', 45, 'king']]
+
+[('adva', 28, 'physicist'),
+ ('ben', 25, 'hairdresser'),
+ ('carmel', 30, 'mountaineer'),
+ ('daria', 32, 'doctor'),
+ ('edward', 45, 'king')]
+
+[('adva', 28, 'physicist'),
+ ('ben', 25, 'hairdresser'),
+ ('carmel', 30, 'mountaineer'),
+ ('daria', 32, 'doctor'),
+ ('edward', 45, 'king')]
+```
+</div>
+</div>
+</div>
+
+
+
+### unzipping
+> There’s a question that comes up frequently in forums for new Pythonistas: “If there’s a `zip()` function, then why is there no `unzip()` function that does the opposite?”
+
+> The reason why there’s no `unzip()` function in Python is because the opposite of `zip()` is… well, `zip()`. So, how do you unzip Python objects?
+
+here's a trick:
+```
+rows = [['adva', 28, 'physicist'],
+        ['ben', 25, 'hairdresser'],
+        ['carmel', 30, 'mountaineer'],
+        ['daria', 32, 'doctor'],
+        ['edward', 45, 'king']]
+
+# notice the * unpacking operator
+name_col, age_col, job_col = zip(*rows)
+
+print(name_col)
+print(age_col)
+print(job_col)
+```
+
+notice how it turns rows of data into columns of data?
+
+1. now, using just one line, calculate a variable called `columns` from `rows` using `zip()`. 
+
+   print `columns` ( **use `pprint()`** )
+   
+2. now, using just one line, reverse `columns` back into rows using `zip()`
+
+> **you've learned how to transpose between columns and rows of data**
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+### useful: data
+rows = [['adva', 28, 'physicist'],
+        ['ben', 25, 'hairdresser'],
+        ['carmel', 30, 'mountaineer'],
+        ['daria', 32, 'doctor'],
+        ['edward', 45, 'king']]
+
+```
+</div>
+
+</div>
+
+
+
+<div markdown="1" class="cell code_cell">
+<div class="input_area" markdown="1">
+```python
+print(' ', 1, '-' * 20, sep='\n')
+columns = list(zip(*rows))
+pprint(columns)
+
+print(' ', 2, '-' * 20, sep='\n')
+rows2 = list(zip(*columns))
+pprint(rows)
+
+
+```
+</div>
+
+<div class="output_wrapper" markdown="1">
+<div class="output_subarea" markdown="1">
+{:.output_stream}
+```
+ 
+1
+--------------------
+[('adva', 'ben', 'carmel', 'daria', 'edward'),
+ (28, 25, 30, 32, 45),
+ ('physicist', 'hairdresser', 'mountaineer', 'doctor', 'king')]
+ 
+2
+--------------------
+[['adva', 28, 'physicist'],
+ ['ben', 25, 'hairdresser'],
+ ['carmel', 30, 'mountaineer'],
+ ['daria', 32, 'doctor'],
+ ['edward', 45, 'king']]
+```
+</div>
+</div>
+</div>
+
+
+
+# Generators and coroutins
+
+
+
+### `even_numbers()` infinite lazy list
 1. write a function called `even_numbers()` that returns an infinite lazy list with all the even numbers
 ```
 0, 2, 4, 6, 8, ...
@@ -725,9 +1055,11 @@ for num, _ in zip(evens, range(20)):
 
 
 
-# line_reader()
+### `line_reader()`
+> did you ever think about how *```for line open('myfile')```* actually works?
 
 imagine files had only one function: `.readline()`
+
 can you write a generator function called `line_reader` so that you could still write an easy for loop over the file's content?
 
 - use the `silly_open()` function provided below to get file objects that indeed only have a `.readline()` function and nothing else
@@ -835,7 +1167,7 @@ I have to push the pram a lot.
 
 
 
-# yield triangles
+### yield triangles
 remember the function `triangle(n)` that prints a triangle?
 ```
 def triangle(n):
@@ -891,7 +1223,7 @@ print('\n'.join(lines))
 
 
 
-# yield passwords
+### yield passwords
 can you write a generator function (function with 'yield' statement) that:
 1. uses input() to ask the user for a password
 2. checks the password (not too long, not too short, has both upper and lower characters)
